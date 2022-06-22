@@ -1,0 +1,15 @@
+<svg data-name="그룹 3107" xmlns="http://www.w3.org/2000/svg" width="84" height="37" viewBox="0 0 84 37">
+    <g data-name="logo / x56">
+        <path style="fill:none" d="M0 0h36v36H0z"/>
+        <g data-name="그룹 12">
+            <g data-name="그룹 11">
+                <path data-name="패스 212" d="M460.142 444.9a2.579 2.579 0 1 1 5.159 0 2.581 2.581 0 1 1-5.159 0zm3.782 0c0-.984-.461-1.564-1.2-1.564s-1.2.581-1.2 1.564.454 1.612 1.2 1.612 1.2-.619 1.2-1.612z" transform="translate(-456.484 -414.691)" style="fill:#4b62e8"/>
+                <path data-name="패스 213" d="M476.715 442.547h1.377l1.4 2.432.552 1.127h.038a14.517 14.517 0 0 1-.181-1.878v-1.68h1.286v5.082h-1.377l-1.391-2.452-.552-1.114h-.038a18.341 18.341 0 0 1 .174 1.878v1.687h-1.286z" transform="translate(-466.856 -414.849)" style="fill:#4b62e8"/>
+            </g>
+        </g>
+        <path data-name="패스 221" d="M491.519 378.713h6.028l11.482 29.154H503z" transform="translate(-476.143 -375.059)" style="fill:#4b62e8"/>
+        <path data-name="패스 222" d="M466.394 399.166h-6.253l11.514-20.453h6.253z" transform="translate(-456.487 -375.059)" style="fill:#4b62e8"/>
+        <path data-name="패스 223" d="M497.084 422.493h-6.253l11.514-20.453h6.255z" transform="translate(-475.713 -389.607)" style="fill:#4b62e8"/>
+    </g>
+    <text transform="translate(42 29)" style="fill:#666;font-size:28px;font-family:Roboto-Bold,Roboto;font-weight:700"><tspan x="0" y="0">EIS</tspan></text>
+</svg>

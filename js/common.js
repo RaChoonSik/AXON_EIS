@@ -40,8 +40,6 @@ var fn = (function() {
 
 			//ui
 			fn.ui();
-
-			//fn.closeMenu();
 			
 		},
 
@@ -49,13 +47,20 @@ var fn = (function() {
 		lnb : function(){
 			$(document).on("click", "#lnb .depth1", function(){
 				$(this).closest("#lnb").addClass("on");
-				$('.nav-menu.depth').show();
-				//var myFunc = conthead();
-				//myFunc();
+				$(".drop-tg").removeClass("open").find(".info").removeClass("on");
+				$(".my-menu button").removeClass("on");
+				$('.board-wrap').hide();
+				$(".nav-menu.depth").show();
+				if($(".search-box").css("display") == "block") {
+					$(".search-box").animate(
+						{left:0},100,function(){
+							$(".search-box").hide().removeAttr('style');
+						}
+					);
+				}
 				if($(this).closest("li").hasClass("active")){
 					$(this).closest("li").removeClass("active");
 				}else{
-					$(".inner-menu").slideUp();
 					$(this).closest("li").addClass("active").siblings().removeClass("active");
 				}
 			});
@@ -64,7 +69,17 @@ var fn = (function() {
 				$("#lnb .my-menu button").removeClass("on");
 				$(this).toggleClass("on");
 			});
+			$(document).on("click", ".my-menu .folder", function(){
+				$(".nav-menu").hide();
+				$(".nav-menu.folder").show();
+				$(".search-box").animate(
+					{left:0},100,function(){
+						$(".search-box").hide().removeAttr('style');
+					}
+				);
+			});
 			$(document).on("click", ".my-menu .search", function(){
+				$(".nav-menu").hide();
 				$(".search-box").show();
 			});
 			$(document).on("click", ".btm-option .fix", function(){
@@ -72,6 +87,7 @@ var fn = (function() {
 				$(this).addClass("on");
 			});
 			$(document).on("click", ".btn-menu-close", function(){
+				$(".btm-option .cont, .btm-option .set").removeClass("on");
 				$(this).closest(".menu-list").animate(
 					{left:0},100,function(){
 						$(this).closest(".menu-list").hide().removeAttr('style');
@@ -80,13 +96,15 @@ var fn = (function() {
 				$("#lnb .my-menu button").removeClass("on");
 			});
 			$(document).on("click", ".btm-option .cont", function(){
-				$(this).addClass("on");
+				$(this).addClass("on").siblings("a").removeClass("on");
 				$("#lnb").addClass("on");
+				$(".nav-menu").hide();
 				$(".nav-menu.cont").show();
 			});
 			$(document).on("click", ".btm-option .set", function(){
-				$(this).addClass("on");
+				$(this).addClass("on").siblings("a").removeClass("on");
 				$("#lnb").addClass("on");
+				$(".nav-menu").hide();
 				$(".nav-menu.setting").show();
 			});
 			
@@ -95,6 +113,7 @@ var fn = (function() {
 		//conthead
 		conthead : function(){
 			$(document).on("click", ".cont-head .btn-fold", function(){
+				$(this).closest(".info").toggleClass("on").closest(".drop-tg").siblings().removeClass("open").find(".info").removeClass("on");
 				if($(this).closest(".drop-tg").hasClass("open")){
 					$(this).closest(".drop-tg").removeClass("open");
 					$(this).text("열기");
@@ -102,14 +121,10 @@ var fn = (function() {
 					$(this).closest(".drop-tg").addClass("open");
 					$(this).text("닫기");
 				}
-			});
-			$(document).on("click", ".btn-board", function(){
-				if($(".board-wrap").css("display") == "block") {
-					$(".board-wrap").hide();
-				} else {
+				if($(".btn-board").closest(".drop-tg").hasClass("open")){
 					$(".board-wrap").show();
-					//closeMenu();
-					fn.closeMenu();
+				} else {
+					$(".board-wrap").hide();
 				}
 			});
 
@@ -121,13 +136,6 @@ var fn = (function() {
 					$(".cont-head .util .service").addClass("open");
 				}
 			});
-
-			// function closeMenu (){
-			// 	$(".search-box").hide();
-			// 	$(".my-menu button").removeClass("on");
-			// 	$(".btm-option").removeClass("on");
-			// }
-			//return closeMenu();
 		},
 
 		//toggle
@@ -282,6 +290,8 @@ var fn = (function() {
 
 		swipers : function(){
 			var swiper = new Swiper(".main-tabs-swiper", {
+				observeParents :true,
+				observer : true,
 				slidesPerView: 5,
 				navigation: {
 					nextEl: ".main-tabs-wrap .swiper-button-next",
@@ -311,7 +321,7 @@ var fn = (function() {
 			$(".search-box").hide();
 			$(".my-menu button").removeClass("on");
 			$(".btm-option").removeClass("on");
-			console.log('tes');
+			//$(".cont-head .util .open .link").hide();
 		},
 
 		//popupOpen
