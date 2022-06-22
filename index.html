@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>EIS INDEX</title>
+    <style>
+      body{margin:0;padding:0;font-family:Malgun Gothic, "맑은 고딕", Dotum, "돋움", sans-serif;}
+      .guideindex{padding:20px 10px 40px;background:#fff;color:#000;}
+      .guideindex .guideh1{margin:0;color:#5668F0;font-size:26px;font-weight:600;text-align:center;}
+      .guideindex .guideh2{margin:30px 0 10px;font-size:16px;font-weight:600;}
+      .guideindex .guidedesc{margin-left:10px;color:#f00;font-size:13px;}
+      .guideindex .guide_tbl {width:100%;margin:0;text-align:center;border-top:2px #5668F0 solid;border-collapse:collapse;border-right:1px #dedede solid;}
+      .guideindex .guide_tbl tr > th,
+      .guideindex .guide_tbl tr > td {padding:4px 8px;border-left:1px #dedede solid;border-top:1px #dedede solid;vertical-align:top;}
+      .guideindex .guide_tbl thead tr:first-child > th,
+      .guideindex .guide_tbl tbody tr:first-child > th,
+      .guideindex .guide_tbl tbody tr:first-child > td {border-top:none;}
+      .guideindex .guide_tbl thead tr > th {background:#eee;font-size:13px;vertical-align:middle;}
+      .guideindex .guide_tbl tbody tr > td {vertical-align:top;}
+      .guideindex .guide_tbl thead tr > th {color:#000;font-weight:bold;}
+      .guideindex .guide_tbl tbody {font-size:13px;border-bottom:1px #ccc solid;border-top:1px #ccc solid;}
+      .guideindex .guide_tbl .alC {text-align:center !important;}
+      .guideindex .guide_tbl .alL {text-align:left !important;}
+      .guideindex .guide_tbl .alR {text-align:right !important;}
+      .guideindex .guide_tbl{min-width:980px;margin:0 auto;box-sizing: border-box;}
+      .guideindex .guide_tbl a{color:#222;text-decoration:none;}
+      .guideindex .guide_tbl a:hover{color:#5668F0;}
+      .guideindex .guide_tbl .chk th,
+      .guideindex .guide_tbl .chk td{color: blue !important;}
+      .guideindex .guide_tbl tbody.add th,
+      .guideindex .guide_tbl tbody.add td{color:#00a383 !important;}
+      .guideindex .guide_tbl tbody.add2 th,
+      .guideindex .guide_tbl tbody.add2 td{color:#a38300 !important;}
+      .guideindex .guide_tbl .caution{color:#f00;font-size:12px;text-align:left;}
+      .guideindex .guide_tbl .complete{background-color:#ccc;}
+      .guideindex .guide_tbl .remove{background-color:#fdeaea;}
+      .guideindex .guide_tbl .graytxt{color:#888;font-size:12px;}
+      .guideindex .guide_tbl .color-blue{color:#5668F0;}
+      .guideindex .guide_tbl .del {background:#ddd !important;}
+      .guideindex .guide_tbl .del * {text-decoration:line-through;}
+      .guideindex .guide_tbl .del .caution {text-decoration:none;}
+      .guideindex .btn_top{margin-bottom:20px;}
+      .guideindex .btn_top a{display:inline-block;height:32px;line-height:30px;padding:0 10px;background:#444;color:#fff;font-size:13px;font-weight:500;text-align:center;vertical-align:middle;border-radius:6px;border:1px solid #E1E1E1;text-decoration:none;}
+      
+      .guideindex .btn_area{display:none;position:fixed;bottom:4%;right:50px;}
+      .guideindex .btn_area button{position:relative;display:block;width:50px;height:50px;margin:0;padding:0;background:#fff;color:#aaa;font-size:30px;text-align:center;border:2px solid #ccc;outline:none;box-sizing:border-box;border-radius:5px;box-shadow:0px 3px 6px rgba(0,0,0,0.16);cursor:pointer;transition:all 0.4s;}
+      .guideindex .btn_area button:before{display:block;position:absolute;top:50%;left:50%;margin-left:-8px; width:15px;height:15px;background:transparent;border-top:2px solid #aaa;border-left:2px solid #aaa;} 
+      .guideindex .btn_area button:hover{border:2px solid #5668F0;}
+      .guideindex .btn_area button:hover:before{border-top:2px solid #5668F0;border-left:2px solid #5668F0;}
+      .guideindex .btn_area .btn_up{margin-bottom:10px;}
+      .guideindex .btn_area .btn_up:before{content:'';margin-top:-3px; transform:rotate(45deg);}
+      .guideindex .btn_area .btn_down:before{content:'';margin-top:-10px;transform:rotate(-135deg)}
+  </style>
+  
+	<script src="js/jquery_2.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".num").each(function(index){
+        index+=1;
+        $(this).text(index);
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+          // console.log("a");
+          btnArea = document.getElementById("btnArea");
+          window.onscroll = function(){scrollFunction();};
+          function scrollFunction(){
+            if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+              btnArea.style.display = 'block';
+            }else{
+              btnArea.style.display = 'none';
+            }
+          }
+    
+          var up = document.querySelector(".btn_up");
+          var down = document.querySelector(".btn_down");
+          up.addEventListener("click", function(){
+            document.documentElement.scrollTop = 0;
+          });
+          down.addEventListener("click", function(){
+            var el = document.querySelector('.guideindex');
+            document.documentElement.scrollTop = el.scrollHeight;
+          });
+      });
+    </script>
+</head>
+
+<body>
+  <div class="guideindex">
+    <!-- <div class="btn_top">
+      <a href="index.html">EMS INDEX 바로가기</a>
+      <a href="index_rns.html">RNS INDEX 바로가기</a>
+      <a href="index_sms.html">SMS INDEX 바로가기</a>
+      <a href="index_push.html">PUSH INDEX 바로가기</a>
+      <a href="index_sys.html">공통설정 INDEX 바로가기</a>
+    </div> -->
+    <h1 class="guideh1">EIS INDEX</h1>
+
+    <table class="guide_tbl">
+      <colgroup>
+        <col style="width:5%" />
+        <col style="width:13%" />
+        <col style="width:13%" />
+        <col style="width:13%" />
+        <col style="width:13%" />
+        <col style="width:9%" />
+        <col style="width:7%" />
+        <col style="width:auto" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">번호</th>
+          <th scope="col">1Depth</th>
+          <th scope="col">2Depth</th>
+          <th scope="col">3Depth</th>
+          <th scope="col">파일명</th>
+          <th scope="col">완료일</th>
+          <th scope="col">작업자</th>
+          <th scope="col">비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff4f4;">
+          <th scope="row">※</th>
+          <td class="alL">공통</td>
+          <td class="alL">include 샘플</td>
+          <td class="alL"></td>
+          <td class="alL"><a href="html/common/layout_sample.html" target="_blank">layout_sample.html</a></td>
+          <td></td>
+          <td></td>
+          <td class="caution">내부 구조 참고용</td>
+        </tr>
+        <tr style="background:#fff4f4;">
+          <th scope="row">※</th>
+          <td class="alL">공통</td>
+          <td class="alL">main 레이아웃</td>
+          <td class="alL"></td>
+          <td class="alL"><a href="html/common/home.html" target="_blank">home.html</a></td>
+          <td></td>
+          <td></td>
+          <td>LNB,head 포함</td>
+        </tr>
+        <tr>
+          <th scope="row" class="num"></th>
+          <td class="alL">404에러</td>
+          <td class="alL"></td>
+          <td class="alL"></td>
+          <td class="alL"><a href="html/common/inaccessible_notfound.html" target="_blank">inaccessible_notfound.html</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      
+
+      </tbody>
+    </table>
+    
+    <div id="btnArea" class="btn_area">
+      <button class="btn_up"></button>
+      <button class="btn_down"></button>
+    </div>
+  </div>
+</body>
+</html>

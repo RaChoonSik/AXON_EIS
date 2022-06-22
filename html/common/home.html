@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="EIS">
+	<meta name="description" content="EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EIS 공통 레이아웃</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-big, font-small -->
+	<div id="wrap">
+
+		<div id="lnb">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+				
+				<!-- <div class="btn-mail">
+					<button type="button" class="btn fullblue" onclick="fn.popupOpen('#popup_mailsend');">신규발송</button>
+				</div> -->
+	
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명">
+								<img src="../../img/common/menu_folder.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다">
+								<img src="../../img/common/menu_chart_pie.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_chart_square_bar.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_presentation_chart_line.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_presentation_chart_bar.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_clipboard_list.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">설정</a>
+					<a href="javascript:;" class="fix">고정</a>
+				</div>
+			</div>
+
+			<!-- 검색박스 -->
+			<div class="search-box menu-list">
+				<div class="inner-wrap">
+					<h2 class="tit">무엇을 찾으시나요?</h2>
+					<div class="com-searchbox">
+						<input type="text" placeholder="검색어를 입력하세요." title="검색어를 입력하세요.">
+					</div>
+					<div class="result-wrap">
+						<p class="menu-txt">검색결과</p>
+						<div class="result-menu">
+							<div class="title">보고서</div>
+							<ul>
+								<li>
+									<p>대분류 &gt; 중분류1</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류2</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+							</ul>
+						</div>
+						<div class="result-menu">
+							<div class="title">KPI 대시보드</div>
+							<ul>
+								<li>
+									<p>대분류 &gt; 중분류1</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류2</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+								<li>
+									<p>대분류 &gt; 중분류3</p>
+									<a href="#">영업현황 보고서</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" class="btn-menu-close">닫기</button>
+				</div>
+			</div>
+			<!-- //검색박스 -->
+
+			<!-- 기본메뉴 -->
+			<div class="nav-menu depth menu-list">
+				<div class="inner-wrap">
+					<div class="depth-folder-tit">
+						<p class="dep">2뎁스 메뉴명</p>
+						<p class="fold">폴더명3</p>
+						<button type="button" class="modify">수정</button>
+					</div>
+					<div class="cont">
+						<p class="menu-txt">보고서</p>
+						<ul class="toggle">
+							<li class="active"><!-- 활성화 : li class="open" 추가 -->
+								<button type="button" class="btn-toggle folder">폴더명 1</button>
+								<ul class="depth2">
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last doc">보고서명_KPI보고서 보고서명_KPI보고서</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">내용이 길고 에러표시 내용이 길고 에러표시</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last doc">내용</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<button type="button" class="btn-toggle folder">접힌 폴더명 2</button>
+								<ul class="depth2">
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="btn-menu-close">닫기</button>
+				</div>
+
+			</div>
+			<!-- //기본메뉴 -->
+
+			<!-- 컨텐츠관리 -->
+			<div class="nav-menu cont menu-list">
+				<div class="inner-wrap">
+					<div class="cont">
+						<ul class="toggle">
+							<li class="open active"><!-- 활성화 : li class="open" 추가 -->
+								<button type="button" class="btn-toggle folder">EXCEL 관리</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">EXCEL 설정</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">EXCEL 업로드</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">EXCEL 로그</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">EXCEL 데이터 보기</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">보고서</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">보고서 COMMENT 관리</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="btn-menu-close">닫기</button>
+				</div>
+
+			</div>
+			<!-- //컨텐츠관리 -->
+
+			<!-- 설정 -->
+			<div class="nav-menu setting menu-list">
+				<div class="inner-wrap">
+					<div class="cont">
+						<ul class="toggle">
+							<li class="open active"><!-- 활성화 : li class="open" 추가 -->
+								<button type="button" class="btn-toggle folder">계정 관리</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">사용자</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">부서</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">그룹 관리</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">사용자 그룹</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">역할 그룹</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">사용자그룹 역할 Mapping</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">보고서 관리</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">보고서 메뉴</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">보고서</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">KPI 대시보드</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">KPI 메뉴</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">KPI</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">데이터 관리</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">업무 분류</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">휴일 관리</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">캘린더 관리</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">공통코드 분류</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">공통코드</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">서버 설정</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">서버 정보</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">데이터베이스 설정</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">데이터 종별 DB 설정</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">시스템 로그</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">사용자 접속</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">보고서 사용</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">시스템 로그</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last">로그 집계</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="open active">
+								<button type="button" class="btn-toggle folder">CI 설정</button>
+								<ul class="depth2">
+									<li>
+										<a href="#">
+											<span class="last">123</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="btn-menu-close">닫기</button>
+				</div>
+
+			</div>
+			<!-- //설정 -->
+
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>서비스 타이틀</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="info">
+						<a href="javascript:;" class="btn-util item04">게시판</a>
+						<button type="button" class="btn-board">열기</button>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">사용자 정보수정</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- 게시판 -->
+				<div class="board-wrap">
+					<div class="inner">
+						<div class="board-box">
+							<p class="tit"><a href="#">게시판</a></p>
+							<ul>
+								<li>
+									<div class="link">
+										<a href="#">코멘트가 있으면서 내용이 길어짐 비즈니스 성공을 열어줄 성실하고 든든한 파트너가 되어봅시다.</a>
+										<span class="comment">(3)</span>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+								<li>
+									<div class="link">
+										<a href="#">코멘트가 없으면서 내용이 길어 말줄임이 생긴다 코멘트가 없으면서 내용이 길어 말줄임이 생긴다</a>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+								<li>
+									<div class="link">
+										<a href="#">세번째 내용</a>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div class="board-box">
+							<p class="tit"><a href="#">FAQ</a></p>
+							<ul>
+								<li>
+									<div class="link">
+										<a href="#">비즈니스 성공을 열어줄 성실하고 든든한 파트너가 되어 든든한 파트너가 되어 말줄임 길어짐 내용이 길어</a>
+										<span class="comment">(3)</span>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div class="board-box">
+							<p class="tit"><a href="#">보고서 맵</a></p>
+							<!-- 내용 없을 때 -->
+							<div class="empty-result">
+								<p class="txt">등록된 보고서 맵이 없습니다.</p>
+							</div>
+							<!-- //내용 없을 때 -->
+						</div>
+						<div class="board-box">
+							<p class="tit"><a href="#">게시판</a></p>
+							<ul>
+								<li>
+									<div class="link">
+										<a href="#">코멘트가 있으면서 내용이 길어짐 비즈니스 성공을 열어줄 성실하고 든든한 파트너가 되어봅시다.</a>
+										<span class="comment">(3)</span>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+								<li>
+									<div class="link">
+										<a href="#">코멘트가 없으면서 내용이 길어 말줄임이 생긴다 코멘트가 없으면서 내용이 길어 말줄임이 생긴다</a>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+								<li>
+									<div class="link">
+										<a href="#">세번째 내용</a>
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div class="board-box">
+							<p class="tit"><a href="#">용어사전</a></p>
+							<!-- 내용 없을 때 -->
+							<div class="empty-result">
+								<p class="txt">등록된 용어사전이 없습니다.</p>
+							</div>
+							<!-- //내용 없을 때 -->
+						</div>
+						<div class="board-box empty">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<div class="main-tabs-wrap">
+					<div class="main-tabs-swiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide on">
+								<p onClick="location.href=''">대분류1 대분류1 대분류1 대분류1 대분류1 대분류1</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류2</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류3</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류4</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류5</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류6</p>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				
+				<div class="main-visual">
+					<img src="../../img/common/sub_logo.png" alt="EIS" class="logo">
+					<div class="txt-box">
+						<p class="sub-txt">Enders Biz Solution</p>
+						<h3 class="main-txt">Sales, Marketing!<br>Your Success!!</h3>
+					</div>
+					<div class="toggle-wrap">
+						<input type="checkbox" id="toggle" checked> 
+						<label for="toggle" class="toggle-switch">
+							<span class="toggle-button"></span>
+						</label>
+					</div>
+				</div>
+
+				<!-- ban-off 추가 -->
+				<div class="doc-list-wrap">
+					<div class="docu-box">
+						<p class="title">최근 사용 보고서</p>
+						<div class="head">
+							<div>보고서</div>
+							<div>유형</div>
+							<div>조회일시</div>
+						</div>
+						<ul class="doc-list">
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합 내용이 길어지면 내용이 길어지면 내용이 길다 내용이 경영정보 종합 내용이 길어지면 내용이 길어지면 내용이 길다 내용이</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">KPI</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last"> 길다 내용이</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">KPI</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 길다 내용이</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">KPI</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합 내용이</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">KPI</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><a href="javascript:;"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">경영정보 종합</span></a></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+							<li>
+								<div class="cate"><span class="dep">대분류 &gt; 중분류 &gt;</span> <span class="last">20개 20개</span></div>
+								<div class="type">보고서</div>
+								<div class="time">2020-01-01 PM 10:00:23</div>
+							</li>
+						</ul>
+					</div>
+					<div class="docu-box">
+						<p class="title">개인 최근 사용 보고서</p>
+						<div class="head">
+							<div>보고서</div>
+							<div>유형</div>
+							<div>조회일시</div>
+						</div>
+						<!-- 내용 없을 때 empty 추가 -->
+						<ul class="doc-list empty">
+							<li>
+								<div class="empty-result">
+									<p class="txt">등록된 개인 최근 사용 보고서가 없습니다.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+	<!-- 팝업// -->
+	<div id="popup_mailsend" class="poplayer popmailsend"><!-- id값 수정 가능 -->
+		<div class="inner">
+			<header>
+				<h2>EMS 신규 메일 발송</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<!-- 팝업내용 -->
+					<ul class="list-wrap">
+						<li>
+							<strong>단기메일</strong>
+							<p>
+								지정된 수신자(들)에게<br>
+								1회만 메일 발송이 필요한 경우
+							</p>
+							<a href="javascript:;">바로가기</a>
+						</li>
+						<li>
+							<strong>정기메일</strong>
+							<p>
+								지정된 수신자(들)에게<br>
+								정기적으로 메일 발송이 필요한 경우
+							</p>
+							<a href="javascript:;">바로가기</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popup_mailsend');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popup_mailsend');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+	</div>
+	<!-- //팝업 -->
+</body>
+</html>

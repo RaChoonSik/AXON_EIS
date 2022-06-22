@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="EIS">
+	<meta name="description" content="EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EIS 공통 레이아웃</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	
+	<script>
+		//퍼블에서 html 인클루드 할 때
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			file = elmnt.getAttribute("include-html");
+			if (file) {
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+					if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+					if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+					/* Remove the attribute, and call this function once more: */
+					elmnt.removeAttribute("include-html");
+					includeHTML();
+				}
+				}
+				xhttp.open("GET", file, true);
+				xhttp.send();
+				/* Exit the function: */
+				return;
+			}
+			}
+		}
+		
+	</script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-big, font-small -->
+	<div id="wrap">
+
+		<div id="lnb" include-html="layout_lnb.html"></div>
+
+		<!-- content// -->
+		<div id="content">
+			<section class="cont-head" include-html="layout_head.html"></section>
+			<section class="cont-body" include-html="layout_contents.html"></section>
+			
+		</div>
+		<!-- // content -->
+	</div>
+	<script>
+		includeHTML();
+
+		//실제 개발 시엔 스와이퍼 관련 js 제거하기 (common.js에서 제어)
+		var swiper = new Swiper(".main-tabs-swiper", {
+				observeParents :true,
+				observer : true,
+				slidesPerView: 5,
+				navigation: {
+					nextEl: ".main-tabs-wrap .swiper-button-next",
+					prevEl: ".main-tabs-wrap .swiper-button-prev",
+				},
+				allowTouchMove: false,
+			});
+	</script>
+
+</body>
+</html>
