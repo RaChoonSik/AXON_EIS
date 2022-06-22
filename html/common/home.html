@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
 	<meta name="Author" content="enders">
-	<meta name="keywords" content="EIS">
-	<meta name="description" content="EIS">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>EIS 공통 레이아웃</title>
 	<link rel="stylesheet" href="../../css/reset.css">
@@ -19,7 +19,7 @@
 </head>
 
 <body class="font-basic">
-	<!-- font size : font-basic, font-big, font-small -->
+	<!-- font size : font-basic, font-big, font-small     -->
 	<div id="wrap">
 
 		<div id="lnb">
@@ -83,6 +83,80 @@
 					<a href="javascript:;" class="fix">고정</a>
 				</div>
 			</div>
+
+			<!-- 내폴더 -->
+			<div class="nav-menu folder menu-list">
+				<div class="inner-wrap">
+					<div class="depth-folder-tit">
+						<p class="dep">내폴더</p>
+						<p class="fold">폴더명3</p>
+						<button type="button" class="modify">수정</button>
+					</div>
+					<div class="cont">
+						<p class="menu-txt">보고서</p>
+						<ul class="toggle">
+							<li class="active"><!-- 활성화 : li class="open" 추가 -->
+								<button type="button" class="btn-toggle folder">폴더명 1</button>
+								<ul class="depth2">
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last doc">보고서명_KPI보고서 보고서명_KPI보고서</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">내용이 길고 에러표시 내용이 길고 에러표시</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="last doc">내용</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<button type="button" class="btn-toggle folder">접힌 폴더명 2</button>
+								<ul class="depth2">
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="error">
+											<span class="last doc">경영정보 종합_KPI</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="btn-menu-close">닫기</button>
+				</div>
+
+			</div>
+			<!-- //내폴더 -->
 
 			<!-- 검색박스 -->
 			<div class="search-box menu-list">
@@ -187,7 +261,6 @@
 					<div class="depth-folder-tit">
 						<p class="dep">2뎁스 메뉴명</p>
 						<p class="fold">폴더명3</p>
-						<button type="button" class="modify">수정</button>
 					</div>
 					<div class="cont">
 						<p class="menu-txt">보고서</p>
@@ -602,9 +675,11 @@
 						</div>
 					</div>
 					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
-					<div class="info">
-						<a href="javascript:;" class="btn-util item04">게시판</a>
-						<button type="button" class="btn-board">열기</button>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
 					</div>
 					
 					<div class="user drop-tg">
@@ -757,7 +832,7 @@
 				</div>
 				
 				<div class="main-visual">
-					<img src="../../img/common/sub_logo.png" alt="EIS" class="logo">
+					<img src="../../img/common/sub_logo.svg" alt="EIS" class="logo">
 					<div class="txt-box">
 						<p class="sub-txt">Enders Biz Solution</p>
 						<h3 class="main-txt">Sales, Marketing!<br>Your Success!!</h3>
