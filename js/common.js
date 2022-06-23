@@ -315,13 +315,27 @@ var fn = (function() {
 					$('.main-visual').addClass('ban-off');
 					$('.doc-list-wrap').addClass('ban-off');
 				}
-			});		
+			});
+			$(document).on("click",".report-wrap .tool .bread button",function(){
+				$(this).closest(".bread").addClass("on");
+			});
+			$(window).scroll(function(){
+				var offTop = $(document).scrollTop();
+				if(offTop == 0 ){
+					$("#wrap").addClass("top");
+				} else {
+					$("#wrap").removeClass("top");
+				}
+			});
+			$(document).on("click",".report-wrap .tool .btn-close", function(){
+				$(this).closest(".bread").removeClass("on");
+
+			});
 		},
 		closeMenu : function(){
 			$(".search-box").hide();
 			$(".my-menu button").removeClass("on");
 			$(".btm-option").removeClass("on");
-			//$(".cont-head .util .open .link").hide();
 		},
 
 		//popupOpen
@@ -401,9 +415,12 @@ $(document).ready(function(){
 
 });
 
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
+
 
 $(window).on("load", function(){
 	//init
 	fn.common();
 });
-

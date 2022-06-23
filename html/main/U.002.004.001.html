@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-big, font-small     -->
+	<div id="wrap" class="top">
+
+		<div id="lnb">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+				
+				<!-- <div class="btn-mail">
+					<button type="button" class="btn fullblue" onclick="fn.popupOpen('#popup_mailsend');">신규발송</button>
+				</div> -->
+	
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명">
+								<img src="../../img/common/menu_folder.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다">
+								<img src="../../img/common/menu_chart_pie.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_chart_square_bar.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_presentation_chart_line.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_presentation_chart_bar.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴">
+								<img src="../../img/common/menu_clipboard_list.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">설정</a>
+					<a href="javascript:;" class="fix">고정</a>
+				</div>
+			</div>
+			<!-- lnb 메뉴 추가 -->
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>서비스 타이틀</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">사용자 정보수정</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+				<!-- 게시판 추가 -->
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<div class="main-tabs-wrap">
+					<div class="main-tabs-swiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide on">
+								<p onClick="location.href=''">대분류1 대분류1 대분류1 대분류1 대분류1 대분류1</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류2</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류3</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류4</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류5</p>
+							</li>
+							<li class="swiper-slide">
+								<p onClick="location.href=''">대분류6</p>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+
+				<!-- 보고서 영역 -->
+				<div class="report-wrap">
+					<div class="top">
+						<p class="tit">보고서명</p>
+						<div class="tool">
+							<div class="info"><button>인포</button></div>
+							<div class="bread">
+								<button>전체경로</button>
+								<div class="full">
+									<button class="btn-close">닫기</button>
+									<span>공용 폴더 &gt; 대분류 &gt; 중분류 &gt; 보고서명 긴보고서명 긴</span>
+								</div>
+							</div>
+							<div class="comm"><button>코멘트</button></div>
+							<div class="bookmark"><button>북마크</button></div>
+							<div class="memo"><button>메모</button></div>
+						</div>
+					</div>
+					<div class="cont">
+						보고서 영역
+					</div>
+				</div>
+				
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+</body>
+</html>
