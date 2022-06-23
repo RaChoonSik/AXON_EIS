@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EIS 공통 레이아웃</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			fn.popupOpen('#popPwChange');
+		});
+	</script>
+</head>
+
+<body class="font-basic">
+	<div id="wrap" class="">
+		<div style="padding:30px;">
+
+			<!-- 팝업 확인용 버튼// -->
+			<button type="button" class="btn big fullblue
+			" onclick="fn.popupOpen('#popPwChange');">팝업 열기</button>
+			<!-- //팝업 확인용 버튼 -->
+
+		</div>
+	</div>
+
+	<!-- 팝업// -->
+	<div id="popPwChange" class="poplayer popsetting"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>비밀번호 3개월 경과</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="gray-hor-tb">
+						<table class="editpw layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="low">신규 비밀번호</th>
+									<td>
+										<div class="pw-area">
+											<input type="password" placeholder="신규 비밀번호" style="width:280px;" title="신규 비밀번호">
+											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="low">비밀번호 확인</th>
+									<td>
+										<div class="pw-area">
+											<input type="password" placeholder="비밀번호 확인" style="width:280px;" title="비밀번호 확인">
+											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="error-msg">* 영문자, 숫자, 특수문자를 포함한 8~16 자리 설정</p>
+					</div>
+	
+					
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big">1개월 연장</button>
+						<button type="button" class="btn big fullblue">등록</button>
+					</div>
+					<!-- //btn-wrap -->
+					
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popPwChange');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popPwChange');"></span>
+	</div>
+	<!-- //팝업 -->
+</body>
+</html>
