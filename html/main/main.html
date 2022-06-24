@@ -32,44 +32,44 @@
 				<h1>AXon EIS</h1>
 	
 				<div class="my-menu">
-					<button type="button" class="folder">내폴더</button>
-					<button type="button" class="search">검색</button>
+					<button type="button" class="folder" data-target="folder">내폴더</button>
+					<button type="button" class="search" data-target="search">검색</button>
 				</div>
 				<!-- 메뉴// -->
 				<nav> 
 					<ul>
 						<li><!-- 현재페이지 : li class="active" 추가 -->
-							<a href="javascript:;" class="depth1" title="메뉴명">
+							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
 								<img src="../../img/common/menu_folder.png" alt="메뉴">
 								<span>메뉴명</span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다">
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다" data-target="menu">
 								<img src="../../img/common/menu_chart_pie.png" alt="메뉴">
 								<span>메뉴명123 메뉴명이 길게 표시된다</span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:;" class="depth1" title="메뉴">
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
 								<img src="../../img/common/menu_chart_square_bar.png" alt="메뉴">
 								<span>메뉴</span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:;" class="depth1" title="메뉴">
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
 								<img src="../../img/common/menu_presentation_chart_line.png" alt="메뉴">
-								<span>메뉴</span>
+								<span>메뉴123</span>
 							</a>
 						</li>
-						<li class="active">
-							<a href="javascript:;" class="depth1" title="메뉴">
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
 								<img src="../../img/common/menu_presentation_chart_bar.png" alt="메뉴">
 								<span>메뉴</span>
 							</a>
 						</li>
 						<li>
-							<a href="javascript:;" class="depth1" title="메뉴">
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
 								<img src="../../img/common/menu_clipboard_list.png" alt="메뉴">
 								<span>메뉴</span>
 							</a>
@@ -78,8 +78,8 @@
 				</nav>
 				<!-- //메뉴 -->
 				<div class="btm-option">
-					<a href="#" class="cont">컨텐츠 관리</a>
-					<a href="#" class="set">설정</a>
+					<a href="#" class="menu cont" data-target="cont">컨텐츠 관리</a>
+					<a href="#" class="menu set" data-target="set">설정</a>
 					<a href="javascript:;" class="fix">고정</a>
 				</div>
 			</div>
@@ -152,7 +152,7 @@
 							</li>
 						</ul>
 					</div>
-					<button type="button" class="btn-menu-close">닫기</button>
+					<button type="button" class="btn-menu-handle">리사이징</button>
 				</div>
 
 			</div>
@@ -250,7 +250,7 @@
 							</ul>
 						</div>
 					</div>
-					<button type="button" class="btn-menu-close">닫기</button>
+					<button type="button" class="btn-menu-handle">리사이징</button>
 				</div>
 			</div>
 			<!-- //검색박스 -->
@@ -432,7 +432,7 @@
 							</li>
 						</ul>
 					</div>
-					<button type="button" class="btn-menu-close">닫기</button>
+					<button type="button" class="btn-menu-handle">리사이징</button>
 				</div>
 
 			</div>
@@ -443,7 +443,7 @@
 				<div class="inner-wrap">
 					<div class="cont">
 						<ul class="toggle">
-							<li class="open active"><!-- 활성화 : li class="open" 추가 -->
+							<li class="active"><!-- 활성화 : li class="open" 추가 -->
 								<button type="button" class="btn-toggle folder">EXCEL 관리</button>
 								<ul class="depth2">
 									<li>
@@ -468,7 +468,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">보고서</button>
 								<ul class="depth2">
 									<li>
@@ -480,7 +480,7 @@
 							</li>
 						</ul>
 					</div>
-					<button type="button" class="btn-menu-close">닫기</button>
+					<button type="button" class="btn-menu-handle">리사이징</button>
 				</div>
 
 			</div>
@@ -491,7 +491,7 @@
 				<div class="inner-wrap">
 					<div class="cont">
 						<ul class="toggle">
-							<li class="open active"><!-- 활성화 : li class="open" 추가 -->
+							<li class="active"><!-- 활성화 : li class="open" 추가 -->
 								<button type="button" class="btn-toggle folder">계정 관리</button>
 								<ul class="depth2">
 									<li>
@@ -506,7 +506,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">그룹 관리</button>
 								<ul class="depth2">
 									<li>
@@ -526,7 +526,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">보고서 관리</button>
 								<ul class="depth2">
 									<li>
@@ -541,7 +541,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">KPI 대시보드</button>
 								<ul class="depth2">
 									<li>
@@ -556,7 +556,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">데이터 관리</button>
 								<ul class="depth2">
 									<li>
@@ -586,7 +586,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">서버 설정</button>
 								<ul class="depth2">
 									<li>
@@ -606,7 +606,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">시스템 로그</button>
 								<ul class="depth2">
 									<li>
@@ -631,7 +631,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="open active">
+							<li class="active">
 								<button type="button" class="btn-toggle folder">CI 설정</button>
 								<ul class="depth2">
 									<li>
@@ -643,7 +643,7 @@
 							</li>
 						</ul>
 					</div>
-					<button type="button" class="btn-menu-close">닫기</button>
+					<button type="button" class="btn-menu-handle">리사이징</button>
 				</div>
 
 			</div>
@@ -833,11 +833,8 @@
 				
 				<div class="main-visual">
 					<div class="img-box">
-						<img src="../../img/common/sub_logo.svg" alt="EIS" class="logo">
-						<div class="txt-box">
-							<p class="sub-txt">Enders Biz Solution</p>
-							<h3 class="main-txt">Sales, Marketing!<br>Your Success!!</h3>
-						</div>
+						<img src="../../img/common/img_main_bg.png" class="img-on" alt="Enders Biz Solution Sales, Marketing! Your Success!!">
+						<img src="../../img/common/img_main_bg_off.png" class="img-off" alt="Enders Biz Solution Sales, Marketing! Your Success!!">
 						<div class="toggle-wrap">
 							<input type="checkbox" id="toggle" checked> 
 							<label for="toggle" class="toggle-switch">
