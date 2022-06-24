@@ -16,6 +16,10 @@
 	<script src="../../js/jquery_library.js"></script>
 	<script src="../../js/swiper.min.js"></script>
 	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
 </head>
 
 <body class="font-basic">
@@ -26,10 +30,6 @@
 			<div class="lnb-wrap">
 				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
 				<h1>AXon EIS</h1>
-				
-				<!-- <div class="btn-mail">
-					<button type="button" class="btn fullblue" onclick="fn.popupOpen('#popup_mailsend');">신규발송</button>
-				</div> -->
 	
 				<div class="my-menu">
 					<button type="button" class="folder">내폴더</button>
@@ -167,7 +167,7 @@
 					<div class="top">
 						<p class="tit">보고서명</p>
 						<div class="tool">
-							<div class="info"><button>인포</button></div>
+							<div class="info"><button onclick="fn.popupOpen('#popReportInfo');">도움말</button></div>
 							<div class="bread">
 								<button>전체경로</button>
 								<div class="full">
@@ -191,6 +191,67 @@
 		</div>
 		<!-- // content -->
 	</div>
+
+	<!-- 보고서 도움말// -->
+	<div id="popReportInfo" class="poplayer popmailsend"><!-- id값 수정 가능 -->
+		<div class="inner large">
+			<header>
+				<h2>보고서 도움말</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<h3 class="pop-title">템플릿 신규등록</h3>
+
+					<table class="grid">
+						<caption>그리드 정보</caption>
+						<colgroup>
+							<col style="width:7%;">
+							<col style="width:7%;">
+							<col style="width:12%;">
+							<col style="width:9%;">
+							<col>
+							<col style="width:10%;">
+							<col style="width:10%;">
+							<col style="width:10%;">
+							<col style="width:8%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">담당부서</th>
+								<th scope="col">등록일</th>
+								<th scope="col">데이터주기</th>
+								<th scope="col">최근실행일시</th>
+								<th scope="col">12개월</th>
+								<th scope="col">6개월</th>
+								<th scope="col">3개월</th>
+								<th scope="col">상태</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>영업</td>
+								<td>기획</td>
+								<td>YYYY.MM.DD</td>
+								<td>M-1</td>
+								<td>YYYY.MM.DD HH:MI:SS</td>
+								<td>0</td>
+								<td>12</td>
+								<td>123</td>
+								<td>정상</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="pop-title">보고서 개요</h3>
+					<textarea>보고서 개요가 들어간다</textarea>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportInfo');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReportInfo');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+	</div>
+	<!-- //보고서 도움말 -->
 
 </body>
 </html>

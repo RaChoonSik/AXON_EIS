@@ -413,6 +413,36 @@ $(document).ready(function(){
 		}                
 	});
 
+	//LNB 메뉴 리사이즈 핸들링
+	function ResizerDemo(element) {
+		element = $(element);
+		var handler = $('<div class="resizer-handler"></div>');
+		var info = $('<div class="resizer-info"></div>');
+	
+		element.append(handler);
+		element.append(info);
+	
+		var hammer = new Hammer(element[0], {recognizers: [
+			[Hammer.Pan, { threshold: 0}]
+		]});
+	
+		var startWidth;
+		element.on('mousedown', function(e){
+			e.preventDefault();
+		});
+		hammer.on('panstart', function(e) {
+			startWidth = element[0].clientWidth;
+		});
+	
+		hammer.on('panmove', function(e) {
+			element[0].style.width = (startWidth + e.deltaX) + 'px';
+			info.html(element[0].clientWidth + 'px x ' + element[0].clientHeight + 'px');
+		})
+	}
+	$('#lnb .nav-menu').each(function(idx, element){
+        new ResizerDemo(element);
+    });
+
 });
 
 $(window).on('beforeunload', function() {
