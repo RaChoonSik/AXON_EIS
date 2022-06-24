@@ -20,6 +20,16 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			//등록일시 : datePicker
+			var date = new Date();
+			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			  $(".datepickerrange.fromDate input").datepicker('setDate', firstday);
+			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+		});
+		</script>
 </head>
 
 <body class="font-basic">
@@ -175,7 +185,7 @@
 									<span>공용 폴더 &gt; 대분류 &gt; 중분류 &gt; 보고서명 긴보고서명 긴</span>
 								</div>
 							</div>
-							<div class="comm"><button>코멘트</button></div>
+							<div class="comm"><button onclick="fn.popupOpen('#popReportComment');">코멘트</button></div>
 							<div class="bookmark"><button>북마크</button></div>
 							<div class="memo"><button>메모</button></div>
 						</div>
@@ -193,14 +203,14 @@
 	</div>
 
 	<!-- 보고서 도움말// -->
-	<div id="popReportInfo" class="poplayer popmailsend"><!-- id값 수정 가능 -->
+	<div id="popReportInfo" class="poplayer"><!-- id값 수정 가능 -->
 		<div class="inner large">
 			<header>
 				<h2>보고서 도움말</h2>
 			</header>
 			<div class="popcont">
 				<div class="cont">
-					<h3 class="pop-title">템플릿 신규등록</h3>
+					<h3 class="pop-title">보고서 기본 항목</h3>
 
 					<table class="grid">
 						<caption>그리드 정보</caption>
@@ -244,7 +254,67 @@
 					</table>
 
 					<h3 class="pop-title">보고서 개요</h3>
-					<textarea>보고서 개요가 들어간다</textarea>
+					<div class="report-desc">
+						<p>개요</p>
+						<textarea>보고서 개요가 들어간다</textarea>
+					</div>
+
+					<h3 class="pop-title">보고서 항목</h3>
+					<table class="grid">
+						<caption>그리드 정보</caption>
+						<colgroup>
+							<col style="width:10%;">
+							<col style="width:15%;">
+							<col style="width:12%;">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">No</th>
+								<th scope="col">항목명</th>
+								<th scope="col">구분</th>
+								<th scope="col">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 안녕하세요</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportInfo');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
@@ -252,6 +322,122 @@
 		<span class="poplayer-background" onclick="fn.popupClose('#popReportInfo');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
 	</div>
 	<!-- //보고서 도움말 -->
+
+	<!-- 보고서 코멘트// -->
+	<div id="popReportComment" class="poplayer">
+		<div class="inner">
+			<header>
+				<h2>보고서 코멘트</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<h3 class="pop-title">조회</h3>
+
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="low">게시일자</th>
+									<td>
+										<div class="list-item">
+											<div class="datepickerrange fromDate">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+											<span class="hyppen date"></span>
+											<div class="datepickerrange toDate">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="low">코멘트 내용</th>
+									<td>
+										
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="error-msg">* 영문자, 숫자, 특수문자를 포함한 8~16 자리 설정</p>
+					</div>
+
+					<h3 class="pop-title">보고서 개요</h3>
+					<div class="report-desc">
+						<p>개요</p>
+						<textarea>보고서 개요가 들어간다</textarea>
+					</div>
+
+					<h3 class="pop-title">보고서 항목</h3>
+					<table class="grid">
+						<caption>그리드 정보</caption>
+						<colgroup>
+							<col style="width:10%;">
+							<col style="width:15%;">
+							<col style="width:12%;">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">No</th>
+								<th scope="col">항목명</th>
+								<th scope="col">구분</th>
+								<th scope="col">설명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 안녕하세요</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>실적1</td>
+								<td>항목</td>
+								<td class="tal">설명 가나다</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportComment');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReportInfo, #popReportComment');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+	</div>
+	<!-- //보고서 코멘트 -->
 
 </body>
 </html>

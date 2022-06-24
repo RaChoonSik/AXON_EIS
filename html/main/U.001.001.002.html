@@ -41,7 +41,7 @@
 	</div>
 
 	<!-- 팝업// -->
-	<div id="popPwReset" class="poplayer popsetting"><!-- id값 수정 가능 -->
+	<div id="popPwReset" class="poplayer"><!-- id값 수정 가능 -->
 		<div class="inner small">
 			<header>
 				<h2>비밀번호 초기화</h2>
@@ -77,7 +77,8 @@
 									<th scope="low">비밀번호 확인</th>
 									<td>
 										<div class="pw-area">
-											<input type="password" placeholder="비밀번호 확인" style="width:280px;" title="비밀번호 확인">
+											<!-- 틀렸을 때 에러 error 추가 -->
+											<input type="password" placeholder="비밀번호 확인" style="width:280px;" title="비밀번호 확인" class="error">
 											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
 										</div>
 									</td>

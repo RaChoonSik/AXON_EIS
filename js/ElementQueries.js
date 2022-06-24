@@ -437,16 +437,16 @@
                 defaultCssInjected = true;
             }
 
-            for (var i = 0, j = document.styleSheets.length; i < j; i++) {
-                try {
-                    if (document.styleSheets[i].href && 0 === document.styleSheets[i].href.indexOf('file://')) {
-                        console.warn("CssElementQueries: unable to parse local css files, " + document.styleSheets[i].href);
-                    }
+            // for (var i = 0, j = document.styleSheets.length; i < j; i++) {
+            //     try {
+            //         if (document.styleSheets[i].href && 0 === document.styleSheets[i].href.indexOf('file://')) {
+            //             console.warn("CssElementQueries: unable to parse local css files, " + document.styleSheets[i].href);
+            //         }
 
-                    readRules(document.styleSheets[i].cssRules || document.styleSheets[i].rules || document.styleSheets[i].cssText);
-                } catch (e) {
-                }
-            }
+            //         readRules(document.styleSheets[i].cssRules || document.styleSheets[i].rules || document.styleSheets[i].cssText);
+            //     } catch (e) {
+            //     }
+            // }
 
             findResponsiveImages();
         };

@@ -7,7 +7,7 @@
  * --------------------------------
 */
 /* scroll */
-::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar {width: 8px; height:8px;}
 ::-webkit-scrollbar-track {display:none;}
 ::-webkit-scrollbar-thumb {background: #c1c1c1; border-radius: 4px;}
 
@@ -144,6 +144,8 @@ input[type="text"]:read-only, input[type="password"]:read-only, input[type="numb
 {color:#888;background: #e1e1e1;}
 input[type="text"]:read-only:focus, input[type="password"]:read-only:focus, input[type="number"]:read-only:focus, input[type="email"]:read-only:focus, input[type="search"]:read-only:focus 
 {border:0 !important;}
+input:focus {border:1px solid #111;}
+input.error {border: 1px solid #d4373c;}
 
 /* input checkbox */
 input[type="checkbox"] {position:absolute;width:0;height:0;font-size:0;line-height:0;opacity:0;overflow:hidden;}
@@ -584,13 +586,14 @@ tbody.sortable td {background-color:transparent;}
 .poplayer .inner.large {width:1104px;max-width:1104px;}
 .poplayer header {position:relative;height: 40px;padding: 10px 60px 8px 20px;background:#F2F2F2;}
 .poplayer header h2 {color:#111;font-size: var(--font-size-14);font-weight: normal;text-align: left;}
-.poplayer .popcont {max-height:710px;padding: 20px 20px 0 20px;overflow-y:auto;}
+.poplayer .popcont {max-height:710px;padding: 20px 20px 0 20px;overflow-y:auto;max-height: 654px;}
 .poplayer .popcont::-webkit-scrollbar {width:10px;}
 .poplayer .popcont::-webkit-scrollbar-thumb {background-color:#ccc;border-radius:30px;}
 .poplayer .popcont::-webkit-scrollbar-track {background-color:#fff;}
-.poplayer .popcont .pop-title {position:relative;margin-bottom: 12px;color:#111;font-size: var(--font-size-18);font-weight:500;}
+.poplayer .popcont .pop-title {position:relative;margin-top: 24px;margin-bottom: 12px;color:#111;font-size: var(--font-size-18);font-weight:500;}
+.poplayer .popcont .pop-title:first-child {margin-top:0;}
 .poplayer .popcont .pop-title:before {/* content:""; */position:absolute;top:4px;left:0;width:2px;height:20px;background:#111;}
-.poplayer .cont {position:relative;padding-bottom:20px;text-align:left;}
+.poplayer .cont {position:relative;padding-bottom:20px;text-align:left;/* max-height: 634px; */}
 .poplayer .btn_popclose {display:block;position:absolute;right: 8px;top: 8px;width: 24px;height: 24px;background: url("../img/common/btn_popclose.png") no-repeat 0 0;}
 .poplayer .poplayer-background {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(36,36,36,0.8);}
 
@@ -603,7 +606,7 @@ tbody.sortable td {background-color:transparent;}
 /* IE 호환성 문제 주석처리  :: 추후삭제예정
 .poplayer .graybox .list-area > ul > li {width:46%;margin-right:49px;} */
 .poplayer .graybox .list-area > ul > li:nth-of-type(2n) {margin-right:0;}
-.poplayer .datepickerrange {width:calc(50% - 7px);}
+.poplayer .datepickerrange {width: 126px;}
 .poplayer .datepickerrange label input {padding-right:30px;}
 .poplayer .hyppen.date {margin:0 3px;}
 .poplayer .graybox .list-area.type-short {padding:10px 20px 20px;}
@@ -636,6 +639,7 @@ tbody.sortable td {background-color:transparent;}
 #login .login-inner input {height:50px;margin-top: 16px;margin-left:0;padding: 0 10px;font-size: var(--font-size-16);}
 #login .login-inner input + input {margin-top:12px;}
 #login .login-inner input:focus {color:#111;border: 2px solid #111;}
+#login .login-inner input.error {border:2px solid #d4373c;}
 #login .login-inner .error {margin-top:10px;text-align:left;}
 #login .login-inner .error p {color:#ff0000;}
 #login .login-inner .btn.login {display:block;width:100%;height: 50px;margin-top: 40px;margin-left:0px;margin-bottom: 12px;font-size: var(--font-size-16);font-weight:600;line-height: 48px;border-radius:5px;}
@@ -955,6 +959,7 @@ tbody.sortable td {background-color:transparent;}
 .search-box .tit {font-size: var(--font-size-18);font-weight: normal;}
 .search-box .com-searchbox {margin-top:10px;}
 .search-box .com-searchbox input {height: 40px;padding-left: 40px;background: url('../img/common/ico_search.png') #fff no-repeat left 8px center;font-size: var(--font-size-14);}
+.search-box .com-searchbox input:focus {border:2px solid #111;}
 .menu-list .menu-txt {margin-top:32px;margin-bottom: 14px;color:#666;font-size: var(--font-size-14);}
 .result-wrap .title {color:#111; font-size: var(--font-size-14);}
 .result-wrap .result-menu + .result-menu {margin-top:46px;}
@@ -1098,5 +1103,8 @@ tbody.sortable td {background-color:transparent;}
 .report-wrap .tool .bread .full .btn-close {position:absolute;top: 4px;right: 4px; font-size:0; width:20px; height:20px;background: url('../img/common/ico_x_tooltip.png') no-repeat 0 0;}
 .report-wrap .tool .bread.on .full {display:block;}
 .report-wrap .tool .bread .full:after {position:absolute; display:block;top: -6px;right: 25px;width: 0px;height: 0px;border-bottom: 12px solid #666;border-left: 10px solid transparent;border-right: 10px solid transparent; content:'';}
+.report-desc {display: flex;border:1px solid #e1e1e1;}
+.report-desc p {width:120px;height: 110px;padding-top: 44px;background: #f2f2f2;flex-shrink: 0;border-right: 1px solid #e1e1e1;text-align: center;vertical-align: middle;}
+.report-desc textarea {border-radius: 0;height: 110px;padding: 16px 20px;border: 0;}
 
 .resizer-handler {position: absolute;right: 0;top: 0;bottom: 0;width: 0;padding: 0 1px;cursor:ew-resize;}
