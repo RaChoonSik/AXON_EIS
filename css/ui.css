@@ -7,3 +7,16 @@
 .doc-acc-list .name, .doc-acc-list .date {display:inline-block; text-align: center; vertical-align: middle; font-size:var(--font-size-13); color:#666;}
 .doc-acc-list .name {width: 60px;}
 .doc-acc-list .cont {display:none; padding:16px 0 16px 68px;background: #f5f7ff;border-top: 1px solid #e1e1e1;font-size:var(--font-size-12);line-height: 20px;}
+.doc-acc-list.memo li {position: relative;}
+.doc-acc-list.memo .title {width: 410px;/* margin-left: 20px; */background: url('../img/common/ico_doc_b.png') no-repeat left center;}
+.doc-acc-list.memo .chk {position:absolute; left:20px;top: 10px;}
+.doc-acc-list.memo .head {padding-left: 58px;}
+.folder-tree {max-height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;}
+.folder-tree .root {width: 260px;font-size: var(--font-size-14);}
+.folder-tree .toggle {width:260px;}
+.folder-tree .ui-sortable-handle {background:url('../img/common/bg_sortable.png') no-repeat right center;}
+.memo-lock {overflow: hidden;}
+.memo-lock .pop-title {float:left;}
+.memo-lock .toggle-txt-wrap {float:right;}
+.toggle-txt-wrap span {display: inline-block;margin-right: 8px;font-size: var(--font-size-12); color:#444;vertical-align: middle;}
+.toggle-txt-wrap .toggle-wrap {display:inline-block;vertical-align: middle;}

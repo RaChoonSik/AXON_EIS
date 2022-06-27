@@ -155,7 +155,7 @@ var fn = (function() {
 			$(document).on("click", ".toggle .btn-toggle", function(){
 				if($(this).closest("li").hasClass("open")){
 					$(this).closest("li").removeClass("open");
-				}else if ($(this).parents('.nav-menu').length == 1) {
+				}else if ($(this).parents('.nav-menu, .folder-tree').length == 1) {
 					$(this).closest("li").toggleClass("open");
 				} else {
 					$(this).closest("li").addClass("open").siblings().removeClass("open");
@@ -178,6 +178,15 @@ var fn = (function() {
 					$(this).closest("ul").parent("li").addClass("open");
 				}
 			});
+
+			// $(document).on("click", ".folder-tree .toggle", function(){
+			// 	if($(this).closest("li").hasClass("open")){
+			// 		$(this).closest("li").removeClass("open");
+			// 	}else{
+			// 		$(this).closest("li").addClass("open");
+			// 	}
+			// });
+
 			$(document).on("click", ".toggle-unfold button", function(){
 				if(!$(this).hasClass(".btn-toggle")){
 					$(".toggle-unfold li").removeClass("active");
@@ -345,12 +354,12 @@ var fn = (function() {
 			});
 		},
 		accodion : function(){
-			$(document).on("click",".accordion li", function(){
-				if($(this).hasClass("on")) {
-					$(this).removeClass("on").find(".cont").slideUp();
+			$(document).on("click",".accordion li .head", function(){
+				if($(this).closest("li").hasClass("on")) {
+					$(this).closest("li").removeClass("on").find(".cont").slideUp();
 				} else {
-					$(this).addClass("on").find(".cont").slideDown();
-					$(this).siblings("li").removeClass("on").find(".cont").slideUp();
+					$(this).closest("li").addClass("on").find(".cont").slideDown();
+					$(this).closest("li").siblings("li").removeClass("on").find(".cont").slideUp();
 				}
 			});
 		},
