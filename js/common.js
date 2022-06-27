@@ -40,6 +40,8 @@ var fn = (function() {
 
 			//ui
 			fn.ui();
+
+			fn.accodion();
 			
 		},
 
@@ -342,10 +344,15 @@ var fn = (function() {
 
 			});
 		},
-		targetAdd : function(){
-			// var tg = $(this).attr('data-target');
-			// $('#lnb').addClass(tg);
-			// console.log(tg);
+		accodion : function(){
+			$(document).on("click",".accordion li", function(){
+				if($(this).hasClass("on")) {
+					$(this).removeClass("on").find(".cont").slideUp();
+				} else {
+					$(this).addClass("on").find(".cont").slideDown();
+					$(this).siblings("li").removeClass("on").find(".cont").slideUp();
+				}
+			});
 		},
 
 		//popupOpen

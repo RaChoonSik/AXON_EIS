@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../../css/jquery_library.css">
 	<link rel="stylesheet" href="../../css/swiper-bundle.css">
 	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
 	<script src="../../js/jquery_2.1.1.min.js"></script>
 	<script src="../../js/jquery_library.js"></script>
 	<script src="../../js/swiper.min.js"></script>
@@ -186,7 +187,7 @@
 								</div>
 							</div>
 							<div class="comm"><button onclick="fn.popupOpen('#popReportComment');">코멘트</button></div>
-							<div class="bookmark"><button>북마크</button></div>
+							<div class="bookmark"><button onclick="fn.popupOpen('#popReportBookmark');">북마크</button></div>
 							<div class="memo"><button>메모</button></div>
 						</div>
 					</div>
@@ -361,81 +362,119 @@
 								<tr>
 									<th scope="low">코멘트 내용</th>
 									<td>
-										
+										<input type="text" placeholder="검색 키워드를 입력하세요.">
 									</td>
 								</tr>
 							</tbody>
 						</table>
-						<p class="error-msg">* 영문자, 숫자, 특수문자를 포함한 8~16 자리 설정</p>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">검색</button>
 					</div>
 
-					<h3 class="pop-title">보고서 개요</h3>
-					<div class="report-desc">
-						<p>개요</p>
-						<textarea>보고서 개요가 들어간다</textarea>
+					<h3 class="pop-title">영업보고서명</h3>
+					<div class="doc-acc-list">
+						<ul class="accordion">
+							<li>
+								<div class="head">
+									<div class="title">보고서 Comment 제목 보고서ent 제목</div>
+									<p class="name">홍길동</p>
+									<div class="date">2021.01.01 12:31</div>
+								</div>
+								<div class="cont">
+									문제가 지속 되는 경우 아래의 정보를 기재하여 고객센터를 통해 문의 부탁드립니다.<br>
+									이용 중인 앱에 가입/인증된 연락처를 확인해주세요.<br>
+									특정 채팅방에서만 알림이 오지 않는지, 모든 채팅방에 문의 증상이 해당하는지 확인해주세요.<br>
+									애플리케이션을 완전히 종료하고 앱 아이콘에 신규 메시지가 있을 때 뱃지카운트가 업데이트되는지 확인해주세요. 
+								</div>
+							</li>
+							<li>
+								<div class="head">
+									<div class="title">보고서 Comment 제목 보고서ent 제목</div>
+									<p class="name">홍길동</p>
+									<div class="date">2021.01.01 12:31</div>
+								</div>
+								<div class="cont">
+									문제가 지속 되는 경우 아래의 정보를 기재하여 고객센터를 통해 문의 부탁드립니다.<br>
+									이용 중인 앱에 가입/인증된 연락처를 확인해주세요.<br>
+									특정 채팅방에서만 알림이 오지 않는지, 모든 채팅방에 문의 증상이 해당하는지 확인해주세요.<br>
+									애플리케이션을 완전히 종료하고 앱 아이콘에 신규 메시지가 있을 때 뱃지카운트가 업데이트되는지 확인해주세요. 
+								</div>
+							</li>
+							<li>
+								<div class="head">
+									<div class="title">보고서 Comment 제목 보고서ent 제목 내용 길게 내용 길게 내용 길게 내용 길게 내용 길게 내용 길게 </div>
+									<p class="name">홍길동</p>
+									<div class="date">2021.01.01 12:31</div>
+								</div>
+								<div class="cont">
+									문제가 지속 되는 경우 아래의 정보를 기재하여 고객센터를 통해 문의 부탁드립니다.<br>
+									이용 중인 앱에 가입/인증된 연락처를 확인해주세요.<br>
+									특정 채팅방에서만 알림이 오지 않는지, 모든 채팅방에 문의 증상이 해당하는지 확인해주세요.<br>
+									애플리케이션을 완전히 종료하고 앱 아이콘에 신규 메시지가 있을 때 뱃지카운트가 업데이트되는지 확인해주세요. 
+								</div>
+							</li>
+						</ul>
 					</div>
 
-					<h3 class="pop-title">보고서 항목</h3>
-					<table class="grid">
-						<caption>그리드 정보</caption>
-						<colgroup>
-							<col style="width:10%;">
-							<col style="width:15%;">
-							<col style="width:12%;">
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">No</th>
-								<th scope="col">항목명</th>
-								<th scope="col">구분</th>
-								<th scope="col">설명</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>실적1</td>
-								<td>항목</td>
-								<td class="tal">설명 가나다 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 설명을 길게 입력 안녕하세요</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>실적1</td>
-								<td>항목</td>
-								<td class="tal">설명 가나다</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>실적1</td>
-								<td>항목</td>
-								<td class="tal">설명 가나다</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>실적1</td>
-								<td>항목</td>
-								<td class="tal">설명 가나다</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>실적1</td>
-								<td>항목</td>
-								<td class="tal">설명 가나다</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>실적1</td>
-								<td>항목</td>
-								<td class="tal">설명 가나다</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="paging">
+						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+						<button type="button" class="active">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+					</div>
 				</div>
 			</div>
 			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportComment');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
 		</div>
-		<span class="poplayer-background" onclick="fn.popupClose('#popReportInfo, #popReportComment');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+		<span class="poplayer-background" onclick="fn.popupClose('#popReportComment');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+	</div>
+	<!-- //보고서 코멘트 -->
+
+	<!-- 보고서 코멘트// -->
+	<div id="popReportBookmark" class="poplayer">
+		<div class="inner">
+			<header>
+				<h2>내폴더 등록</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<h3 class="pop-title">조회</h3>
+
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="low">Alias 명칭</th>
+									<td>
+										<input type="text" placeholder="영업보고서명">
+									</td>
+								</tr>
+								<tr>
+									<th scope="low">보고서명</th>
+									<td>
+										<p class="repo-name">대분류 &gt; 중분류 &gt; 영업보고서명</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">검색</button>
+					</div>
+
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportBookmark');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReportBookmark');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
 	</div>
 	<!-- //보고서 코멘트 -->
 
