@@ -204,6 +204,25 @@ var fn = (function() {
 				$(this).addClass("active").siblings().removeClass("active");
 				$(".tab-cont > div").eq(index).addClass("active").siblings().removeClass("active");
 			});
+
+			$( function() {
+				var tabs = $(".report-control").tabs();
+				var previouslyFocused = false;
+
+				tabs.find(".ui-tabs-nav").sortable({
+					axis: "x",
+
+					start: function(event, ui) {
+						previouslyFocused = document.activeElement === ui.item[ 0 ];
+					},
+					stop: function(event, ui) {
+						tabs.tabs("refresh");
+					if (previouslyFocused) {
+						ui.item.trigger("focus");
+					}
+				}
+				});
+			});
 		},
 
 		//tableinfobox
@@ -352,6 +371,10 @@ var fn = (function() {
 				$(this).closest(".bread").removeClass("on");
 
 			});
+			// $(function(){
+			// 	$("#popMyHomeMod .repo-tabs > ul > li:last-child").addClass("ui-tabs-active");
+			// });
+
 		},
 		accodion : function(){
 			$(document).on("click",".accordion li .head", function(){

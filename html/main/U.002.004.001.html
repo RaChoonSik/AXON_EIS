@@ -36,7 +36,7 @@
 				//items: '.sort-item'
     		});
 		});
-		</script>
+	</script>
 </head>
 
 <body class="font-basic">
@@ -179,26 +179,56 @@
 					<div class="swiper-button-prev"></div>
 				</div>
 
-				<!-- 보고서 영역 -->
-				<div class="report-wrap">
-					<div class="top">
-						<p class="tit">보고서명</p>
-						<div class="tool">
-							<div class="info"><button onclick="fn.popupOpen('#popReportInfo');">도움말</button></div>
-							<div class="bread">
-								<button>전체경로</button>
-								<div class="full">
-									<button class="btn-close">닫기</button>
-									<span>공용 폴더 &gt; 대분류 &gt; 중분류 &gt; 보고서명 긴보고서명 긴</span>
+				<div class="report-control">
+					<!-- 보고서탭 -->
+					<div class="repo-tabs">
+						<ul class="ui-tabs-nav">
+							<li><a href="#repo1" class="ellipsis">보고서1 보고서1 보고서1 보고서1 보고서123</a><button class="close">닫기</button></li>
+							<li><a href="#repo2" class="ellipsis">보고서2</a><button class="close">닫기</button></li>
+						</ul>
+					</div>
+					<!-- 보고서 영역 -->
+					<div class="report-wrap" id="repo1">
+						<div class="top">
+							<p class="tit">보고서명</p>
+							<div class="tool">
+								<div class="info"><button onclick="fn.popupOpen('#popReportInfo');">도움말</button></div>
+								<div class="bread">
+									<button>전체경로</button>
+									<div class="full">
+										<button class="btn-close">닫기</button>
+										<span>공용 폴더 &gt; 대분류 &gt; 중분류 &gt; 보고서명 긴보고서명 긴</span>
+									</div>
 								</div>
+								<div class="comm"><button onclick="fn.popupOpen('#popReportComment');">코멘트</button></div>
+								<div class="bookmark"><button onclick="fn.popupOpen('#popReportBookmark');">북마크</button></div>
+								<div class="memo"><button onclick="fn.popupOpen('#popReportMemo');">메모</button></div>
 							</div>
-							<div class="comm"><button onclick="fn.popupOpen('#popReportComment');">코멘트</button></div>
-							<div class="bookmark"><button onclick="fn.popupOpen('#popReportBookmark');">북마크</button></div>
-							<div class="memo"><button onclick="fn.popupOpen('#popReportMemo');">메모</button></div>
+						</div>
+						<div class="cont">
+							보고서 영역
 						</div>
 					</div>
-					<div class="cont">
-						보고서 영역
+					<div class="report-wrap" id="repo2">
+						<div class="top">
+							<p class="tit">보고서명</p>
+							<div class="tool">
+								<div class="info"><button onclick="fn.popupOpen('#popReportInfo');">도움말</button></div>
+								<div class="bread">
+									<button>전체경로</button>
+									<div class="full">
+										<button class="btn-close">닫기</button>
+										<span>공용 폴더 &gt; 대분류 &gt; 중분류 &gt; 보고서명 긴보고서명 긴</span>
+									</div>
+								</div>
+								<div class="comm"><button onclick="fn.popupOpen('#popReportComment');">코멘트</button></div>
+								<div class="bookmark"><button onclick="fn.popupOpen('#popReportBookmark');">북마크</button></div>
+								<div class="memo"><button onclick="fn.popupOpen('#popReportMemo');">메모</button></div>
+							</div>
+						</div>
+						<div class="cont">
+							보고서 영역2222222222
+						</div>
 					</div>
 				</div>
 				

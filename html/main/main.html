@@ -21,6 +21,17 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+		});
+		function tabLast(){
+			var tIdx = $("#popMyHomeSet .repo-tabs > ul > li").length - 1;
+			$("#popMyHomeSet .report-control").tabs({
+				active : tIdx
+			})
+		}
+	</script>
 </head>
 
 <body class="font-basic">
@@ -646,9 +657,238 @@
 					</div>
 					<button type="button" class="btn-menu-handle">리사이징</button>
 				</div>
-
 			</div>
 			<!-- //설정 -->
+
+			<!-- my home 설정 -->
+			<div id="popMyHomeSet" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner large">
+					<header>
+						<h2>My Home 설정</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="memo-lock">
+								<h3 class="pop-title">조회</h3>
+								<div class="toggle-txt-wrap">
+									<span>첫 페이지 자동실행</span>
+									<div class="toggle-wrap">
+										<input type="checkbox" id="home-toggle1"> 
+										<label for="home-toggle1" class="toggle-switch">
+											<span class="toggle-button"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="bg-box">
+								<div class="ipt-box">
+									<label for="ipt1">Tab 명</label>
+									<input type="text" id="ipt1" style="width:280px;" placeholder="Tab명을 입력하세요.">
+								</div>
+								<div class="ipt-box">
+									<label for="ipt2">보고서 경로</label>
+									<input type="text" id="ipt2" style="width:466px;" value="공용 폴더 -> 대분류 -> 중분류 -> 영업보고서명 " readonly>
+								</div>
+							</div>
+
+							<div class="report-control">
+								<!-- 보고서탭 -->
+								<div class="repo-tabs">
+									<ul class="ui-tabs-nav">
+										<li><a href="#repo1" class="ellipsis">보고서1 보고서1 보고서1 보고서1 보고서123</a><button class="close">닫기</button></li>
+										<li><a href="#repo2" class="ellipsis">보고서2</a><button class="close">닫기</button></li>
+										<li><a href="#repo3" class="ellipsis">보고서3</a><button class="close">닫기</button></li>
+										<li><a href="#repo4" class="ellipsis">보고서4</a><button class="close">닫기</button></li>
+										<li><a href="#repo5" class="ellipsis">보고서5</a><button class="close">닫기</button></li>
+									</ul>
+								</div>
+								<!-- 보고서 영역 -->
+								<!-- 설정 팝업에서는 툴팁 기능 삭제 -->
+								<div class="report-wrap" id="repo1">
+									<div class="top">
+										<p class="tit">보고서명</p>
+										<div class="tool">
+											<div class="info"><button class="event-none">도움말</button></div>
+											<div class="bread">
+												<button class="event-none">전체경로</button>
+											</div>
+											<div class="comm"><button class="event-none">코멘트</button></div>
+											<div class="bookmark"><button class="event-none">북마크</button></div>
+											<div class="memo"><button class="event-none">메모</button></div>
+										</div>
+									</div>
+									<div class="cont">
+										보고서 영역
+									</div>
+								</div>
+								<div class="report-wrap" id="repo2">
+									<div class="top">
+										<p class="tit">보고서명</p>
+										<div class="tool">
+											<div class="info"><button class="event-none">도움말</button></div>
+											<div class="bread">
+												<button class="event-none">전체경로</button>
+											</div>
+											<div class="comm"><button class="event-none">코멘트</button></div>
+											<div class="bookmark"><button class="event-none">북마크</button></div>
+											<div class="memo"><button class="event-none">메모</button></div>
+										</div>
+									</div>
+									<div class="cont">
+										보고서 영역2222222222
+									</div>
+								</div>
+								<div class="report-wrap" id="repo3">
+									<div class="top">
+										<p class="tit">보고서명</p>
+										<div class="tool">
+											<div class="info"><button class="event-none">도움말</button></div>
+											<div class="bread">
+												<button class="event-none">전체경로</button>
+											</div>
+											<div class="comm"><button class="event-none">코멘트</button></div>
+											<div class="bookmark"><button class="event-none">북마크</button></div>
+											<div class="memo"><button class="event-none">메모</button></div>
+										</div>
+									</div>
+									<div class="cont">
+										보고서 영역3
+									</div>
+								</div>
+								<div class="report-wrap" id="repo4">
+									<div class="top">
+										<p class="tit">보고서명</p>
+										<div class="tool">
+											<div class="info"><button class="event-none">도움말</button></div>
+											<div class="bread">
+												<button class="event-none">전체경로</button>
+											</div>
+											<div class="comm"><button class="event-none">코멘트</button></div>
+											<div class="bookmark"><button class="event-none">북마크</button></div>
+											<div class="memo"><button class="event-none">메모</button></div>
+										</div>
+									</div>
+									<div class="cont">
+										보고서 영역4
+									</div>
+								</div>
+								<div class="report-wrap" id="repo5">
+									<div class="top">
+										<p class="tit">보고서명</p>
+										<div class="tool">
+											<div class="info"><button class="event-none">도움말</button></div>
+											<div class="bread">
+												<button class="event-none">전체경로</button>
+											</div>
+											<div class="comm"><button class="event-none">코멘트</button></div>
+											<div class="bookmark"><button class="event-none">북마크</button></div>
+											<div class="memo"><button class="event-none">메모</button></div>
+										</div>
+									</div>
+									<div class="cont">
+										보고서 영역5
+									</div>
+								</div>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">저장</button>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popMyHomeSet');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popMyHomeSet');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+			</div>
+			<!-- //my home 설정 -->
+
+			<!-- my home 수정 -->
+			<div id="popMyHomeMod" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner large">
+					<header>
+						<h2>My Home 수정</h2>
+					</header>
+					<div class="popcont" style="max-height:700px;">
+						<div class="cont">
+							<div class="memo-lock">
+								<div class="toggle-txt-wrap">
+									<span>첫 페이지 자동실행</span>
+									<div class="toggle-wrap">
+										<input type="checkbox" id="home-toggle2"> 
+										<label for="home-toggle2" class="toggle-switch">
+											<span class="toggle-button"></span>
+										</label>
+									</div>
+									<button type="button" class="btn small fullblue plus add-tab">Tab 추가</button>
+								</div>
+							</div>
+
+							<div class="report-control">
+								<!-- 보고서탭 -->
+								<div class="repo-tabs">
+									<ul class="ui-tabs-nav">
+										<li><a href="#repo11" class="ellipsis">보고서1 보고서1 보고서1 보고서1 보고서123</a><button class="close">닫기</button></li>
+										<li><a href="#repo55" class="ellipsis">보고서5</a><button class="close">닫기</button></li>
+									</ul>
+								</div>
+								<!-- 보고서 영역 -->
+								<!-- 설정 팝업에서는 툴팁 기능 삭제 -->
+								<div class="report-wrap" id="repo11">
+									<div class="bg-box">
+										<div class="ipt-box">
+											<label for="ipt1">Tab 명</label>
+											<input type="text" id="ipt11" style="width:280px;" placeholder="Tab명을 입력하세요.">
+										</div>
+										<div class="ipt-box">
+											<label for="ipt2">보고서 경로</label>
+											<input type="text" id="ipt22" style="width:466px;" value="공용 폴더 -> 대분류 -> 중분류 -> 영업보고서명 " readonly>
+										</div>
+									</div>
+									<div class="top">
+										<p class="tit">보고서명</p>
+										<div class="tool">
+											<div class="info"><button class="event-none">도움말</button></div>
+											<div class="bread">
+												<button class="event-none">전체경로</button>
+											</div>
+											<div class="comm"><button class="event-none">코멘트</button></div>
+											<div class="bookmark"><button class="event-none">북마크</button></div>
+											<div class="memo"><button class="event-none">메모</button></div>
+										</div>
+									</div>
+									<div class="cont">
+										보고서 영역
+									</div>
+								</div>
+								
+								<!-- 탭추가 url 페이지 -->
+								<div class="report-wrap url-page" id="repo55">
+									<div class="bg-box">
+										<div class="ipt-box">
+											<label for="ipt21">Tab 명</label>
+											<input type="text" id="ipt21" style="width:280px;" placeholder="Tab명을 입력하세요.">
+										</div>
+										<div class="ipt-box">
+											<label for="ipt222">외부 URL</label>
+											<input type="text" id="ipt222" style="width:466px;" value="https://www.enders.co.kr" placeholder="외부 URL을 입력하세요.">
+										</div>
+									</div>
+									<div class="cont">
+										url 페이지
+									</div>
+								</div>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">저장</button>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popMyHomeMod');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popMyHomeMod');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+			</div>
+			<!-- //my home 수정 -->
 
 		</div>
 		
@@ -670,8 +910,8 @@
 							<button type="button" class="btn-fold">열기</button>
 						</div>
 						<div class="link">
-							<a href="javascript:;">My Home 설정</a>
-							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;" onclick="fn.popupOpen('#popMyHomeSet'); tabLast();">My Home 설정</a>
+							<a href="javascript:;" onclick="fn.popupOpen('#popMyHomeMod');">My Home 수정</a>
 							<a href="javascript:;">My Home 실행</a>
 						</div>
 					</div>
@@ -837,8 +1077,8 @@
 						<img src="../../img/common/img_main_bg.png" class="img-on" alt="Enders Biz Solution Sales, Marketing! Your Success!!">
 						<img src="../../img/common/img_main_bg_off.png" class="img-off" alt="Enders Biz Solution Sales, Marketing! Your Success!!">
 						<div class="toggle-wrap">
-							<input type="checkbox" id="toggle" checked> 
-							<label for="toggle" class="toggle-switch">
+							<input type="checkbox" id="main-v-toggle" checked> 
+							<label for="main-v-toggle" class="toggle-switch">
 								<span class="toggle-button"></span>
 							</label>
 						</div>
