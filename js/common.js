@@ -273,21 +273,21 @@ var fn = (function() {
 			bFile.on("change", function(){ // 값이 변경되면
 				bFilevalue = $(this).val().split("\\");
 				bFilename = bFilevalue[bFilevalue.length-1]; // 파일명
-				//bfilesize = $(obj).siblings(".file-view").find(".kb");
+				var bfilesize = $(this).siblings(".file-view").find(".kb");
 				//var error = $(obj).closest(".fileupload").siblings(".list-star");
 				if($(this).val() != ""){
-					var afileSize = $(this).files[0].size;
-					console.log($(this).val());
+					var fileSize = $(this)[0].files[0].size;
 				}
 				
-				
-				$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">(9KB)</span><button class="del">삭제</button></li>')
+
 				//$(this).siblings(".upload-name").val(filename);
 				
-				// var s = ['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'],
-				// e = Math.floor(Math.log(fileSize) / Math.log(1024));
-				// bfilesize.text((fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e]);
-				// return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
+				var s = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'],
+				e = Math.floor(Math.log(fileSize) / Math.log(1024));
+				//bfilesize.text((fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e]);
+				var conSize = (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
+				$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">('+conSize+')</span><button class="del">삭제</button></li>')
+				return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
 
 			});
 		
