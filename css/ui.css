@@ -9,6 +9,7 @@
 .doc-acc-list .cont {display:none; padding:16px 0 16px 68px;background: #f5f7ff;border-top: 1px solid #e1e1e1;font-size:var(--font-size-12);line-height: 20px;}
 .doc-acc-list.memo li {position: relative;}
 .doc-acc-list.memo .title {width: 410px;/* margin-left: 20px; */background: url('../img/common/ico_doc_b.png') no-repeat left center;}
+.doc-acc-list.memo .on .title {background-image: url('../img/common/ico_doc_on.png');}
 .doc-acc-list.memo .chk {position:absolute; left:20px;top: 10px;}
 .doc-acc-list.memo .head {padding-left: 58px;}
 .folder-tree {max-height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;}
@@ -21,7 +22,9 @@
 .toggle-txt-wrap span {display: inline-block;margin-right: 8px;font-size: var(--font-size-12); color:#444;vertical-align: middle;}
 .toggle-txt-wrap .toggle-wrap {display:inline-block;vertical-align: middle;}
 .bg-box {margin-bottom: 24px;padding:20px 40px; background:#f6f6f6;border-radius: 4px;font-size: 0;}
+.h3-title + .bg-box {margin-top: 12px;}
 #popMyHomeSet .report-wrap .cont {height: 330px;}
 #popMyHomeMod .report-wrap .cont {height: 380px;}
 #popMyHomeMod .report-wrap.url-page .cont {margin-top:24px; border-top:1px solid #d8d8d8; border-radius: 5px;}
 #popMyHomeMod .add-tab {margin-left:20px;}
+.page-title {height: 38px;margin: 0 -8px;padding-bottom: 11px;padding-left: 40px;border-bottom:1px solid #e1e1e1;font-size: var(--font-size-17);font-weight: 500;line-height: 28px;}

@@ -114,6 +114,13 @@ var fn = (function() {
 					$(this).addClass("on").siblings(".menu").removeClass("on");
 				}
 			});
+
+			$(document).on("dblclick",".btn-menu-handle", function(){
+				$("#lnb").removeAttr("data-open");
+				$("#lnb .depth1").closest("li").removeClass("active");
+				$("#lnb .my-menu button").removeClass("on");
+				$(".btm-option .menu").removeClass("on");
+			});
 			
 		},
 
@@ -369,7 +376,6 @@ var fn = (function() {
 			});
 			$(document).on("click",".report-wrap .tool .btn-close", function(){
 				$(this).closest(".bread").removeClass("on");
-
 			});
 			// $(function(){
 			// 	$("#popMyHomeMod .repo-tabs > ul > li:last-child").addClass("ui-tabs-active");

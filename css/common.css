@@ -63,7 +63,8 @@
 .event-none {pointer-events: none;}
 
 /* btn */
-.btn-wrap {position:relative;margin-top: 24px;font-size:0;text-align:center;}
+.btn-wrap {position:relative;margin-top: 24px;font-size:0; text-align:center;}
+.bg-box .btn-wrap {margin-top:16px;}
 .btn-wrap:after {display:block;content:'';clear:both;}
 .btn-wrap .btn {margin-left: 8px;}
 .btn-wrap .btn:first-child {margin-left:0;}
@@ -338,42 +339,43 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .title-area .required {float:right;margin-top:8px;color:#f00;font-size:11px;}
 .title-area .btn-wrap {float:right;margin-top: 0;}
 .title-area .btn-wrap .required {float:none;display:inline-block;margin-right:20px;vertical-align:top;}
-.graybox .title-area .total {display:inline-block;margin-top:6px;margin-left:6px;color:#888;font-size:12px;vertical-align:middle;}
-.graybox .title-area .total em {font-weight:400;}
-.graybox .title-area .select{float:right;width:106px;margin-left:8px;background:#fff;text-align:center;}
-.graybox .title-area .select select{width:100%;}
-.graybox .list-area {padding:15px 20px;background:#fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
-.graybox .list-area > ul {display:table;width:100%;}
-.graybox .list-area > ul + ul {margin-top:15px;}
-.graybox .list-area > ul > li {display:table;float:left;width:47%;margin-top:10px;margin-right:6%;}
-.graybox .list-area > ul > li:nth-of-type(2n) {margin-right:0;}
-.graybox .list-area > ul > li:nth-of-type(-n + 2) {margin-top:0;}
-.graybox .list-area > ul > li > label {display:table-cell;width:95px;padding-right:5px;color:#444;font-weight:600;word-break:break-all;}
-.graybox .list-area > ul > li > label.vt {padding-top:10px;}
-.graybox .list-area > ul > li.col-full {width:100% !important;margin-right:0;}
-.graybox .list-area > ul > li.col-full:nth-of-type(2) {margin-top:10px;}
-.graybox .list-area > ul > li.col-full + .col-full {margin-top:10px !important;}
-.graybox .list-area .list-item {display:table-cell;width:calc(100% - 95px);font-size:0;}
-.graybox .list-area .list-item input[type="radio"] + span,
-.graybox .list-area .list-item input[type="checkbox"] + span {height:32px;line-height:30px;}
-.graybox .list-area .list-item input[type="radio"] + span:before,
-.graybox .list-area .list-item input[type="checkbox"] + span:before {top:6px;}
-.graybox .list-area .list-item .select {vertical-align:middle;}
-.graybox .list-area .list-item .inline-txt {display:inline-block;margin-right:5px;color:#666;font-size:12px;vertical-align:middle;}
-.graybox .list-area .list-item .inline-txt ~ .inline-txt {margin-left:5px;}
-.graybox .list-area .list-item .inline-txt + .btn {margin-left:15px;}
-.graybox .list-area .list-item .inline-txt:last-child {margin-right:0;}
-.graybox .list-area .list-item .inline-txt.line-height40 {line-height:32px;}
-.graybox .list-area .list-item .btn {margin-left:5px;}
-.graybox .list-area .querybox {margin-top:10px;}
-.graybox .list-area .querybox .btn {margin-left:0;}
-.graybox .list-area .querybox p {display:inline-block;margin-left:10px;color:#888;font-size:12px;vertical-align:middle;}
-.graybox .table-area tr:first-child th,
-.graybox .table-area tr:first-child td {border-top:0;}
-.graybox .table-area th {padding:10px 10px 10px 20px;color:#444;font-weight:600;text-align:left;border-top:1px solid #E1E1E1;}
-.graybox .table-area td {padding:10px;color:#666;line-height:20px;border-top:1px solid #E1E1E1;}
-.graybox .table-area tr.pdtb-small td {padding-top:6px;padding-bottom:6px;}
-.graybox .grid-area {padding:10px 20px 5px;background:#fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow-y:auto;}
+.title-area .total {display:inline-block;margin-top:6px;margin-left:6px;color:#888;font-size:12px;vertical-align:middle;}
+.title-area .total em {font-weight:400;}
+.title-area .select{float:right;/* width: 100px; */width: auto;margin-left:8px;background:#fff;text-align:center;}
+.title-area .select select{width:100%;}
+.list-area {/* padding:15px 20px; *//* background:#fff; */border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.list-area > ul {display:table;width:100%;}
+.list-area > ul + ul {margin-top:15px;}
+.list-area > ul > li {display:table;float:left;width:37%;margin-top:10px;margin-right:6%;}
+.list-area > ul > li:nth-child(even) {width:57%;}
+.list-area > ul > li:nth-of-type(2n) {margin-right:0;}
+.list-area > ul > li:nth-of-type(-n + 2) {margin-top:0;}
+.list-area > ul > li > label {display:table-cell;width:95px;padding-right:5px;color:#444;font-weight: bold;word-break:break-all;}
+.list-area > ul > li > label.vt {padding-top:10px;}
+.list-area > ul > li.col-full {width:100% !important;margin-right:0;}
+.list-area > ul > li.col-full:nth-of-type(2) {margin-top:10px;}
+.list-area > ul > li.col-full + .col-full {margin-top:10px !important;}
+.list-area .list-item {display:table-cell;width:calc(100% - 95px);font-size:0;}
+.list-area .list-item input[type="radio"] + span,
+.list-area .list-item input[type="checkbox"] + span {height:32px;line-height:30px;}
+.list-area .list-item input[type="radio"] + span:before,
+.list-area .list-item input[type="checkbox"] + span:before {top:6px;}
+.list-area .list-item .select {vertical-align:middle;}
+.list-area .list-item .inline-txt {display:inline-block;margin-right:5px;color:#666;font-size:12px;vertical-align:middle;}
+.list-area .list-item .inline-txt ~ .inline-txt {margin-left:5px;}
+.list-area .list-item .inline-txt + .btn {margin-left:15px;}
+.list-area .list-item .inline-txt:last-child {margin-right:0;}
+.list-area .list-item .inline-txt.line-height40 {line-height:32px;}
+.list-area .list-item .btn {margin-left:5px;}
+.list-area .querybox {margin-top:10px;}
+.list-area .querybox .btn {margin-left:0;}
+.list-area .querybox p {display:inline-block;margin-left:10px;color:#888;font-size:12px;vertical-align:middle;}
+.table-area tr:first-child th,
+.table-area tr:first-child td {border-top:0;}
+.table-area th {padding:10px 10px 10px 20px;color:#444;font-weight:600;text-align:left;border-top:1px solid #E1E1E1;}
+.table-area td {padding:10px;color:#666;line-height:20px;border-top:1px solid #E1E1E1;}
+.table-area tr.pdtb-small td {padding-top:6px;padding-bottom:6px;}
+.grid-area {padding:10px 20px 5px;background:#fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow-y:auto;}
 .graybox .text-area {padding:20px;background:#fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
 .graybox .text-area .txt-gray {color:#888;line-height:30px;}
 .graybox .defination-area {padding:0 20px 20px;background:#fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
@@ -479,8 +481,8 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid tbody tr td.no_data {padding:80px 0;text-align:center;}
 .grid tfoot td {padding:15px 5px;background:#F9F9F9;color:#666;font-size:14px;vertical-align:middle;line-height:20px;border-top:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1;}
 .grid input[type="checkbox"] + span {margin:0;}
-.grid a {color:#5668F0;text-decoration:underline;}
-.grid a:not(.btn):hover {color:#374291;}
+/* .grid a {color:#5668F0;text-decoration:underline;} */
+.grid a:not(.btn):hover {color:#4b62e8;}
 .grid .txt-black {color:#111;font-weight:500;}
 
 /* grid type-black */
