@@ -242,7 +242,7 @@ var fn = (function() {
 		},
 
 		//html등록팝업, 파일등록팝업 내 fileupload
-		fileupload : function(){
+		fileupload : function(obj){
 			var fileTarget = $(".fileupload input[type='file']"),
 				filevalue,
 				filename; // 파일명
@@ -265,6 +265,36 @@ var fn = (function() {
 				}
 				
 			});
+
+			var bFile = $(".board-file input[type='file']"), 
+			bFilevalue, 
+			bFilename; // 파일명
+
+			bFile.on("change", function(){ // 값이 변경되면
+				bFilevalue = $(this).val().split("\\");
+				bFilename = bFilevalue[bFilevalue.length-1]; // 파일명
+				//bfilesize = $(obj).siblings(".file-view").find(".kb");
+				//var error = $(obj).closest(".fileupload").siblings(".list-star");
+				if($(this).val() != ""){
+					var afileSize = $(this).files[0].size;
+					console.log($(this).val());
+				}
+				
+				
+				$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">(9KB)</span><button class="del">삭제</button></li>')
+				//$(this).siblings(".upload-name").val(filename);
+				
+				// var s = ['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'],
+				// e = Math.floor(Math.log(fileSize) / Math.log(1024));
+				// bfilesize.text((fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e]);
+				// return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
+
+			});
+		
+			$(document).on("click", ".file-list li .del", function(){
+				$(this).closest('li').remove();
+			});
+			
 		},
 
 		//html등록팝업, 파일등록팝업 내 fileReset
@@ -305,6 +335,7 @@ var fn = (function() {
 				e = Math.floor(Math.log(fileSize) / Math.log(1024));
 			filesize.text((fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e]);
 			return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
+			
 		},
 
 		//editPassword

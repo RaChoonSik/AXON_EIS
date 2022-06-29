@@ -19,6 +19,7 @@
 
 /* margin, padding */
 .mgt0 {margin-top:0px !important;}
+.mgt8 {margin-top:8px !important;}
 .mgt10 {margin-top:10px !important;}
 .mgt15 {margin-top:15px !important;}
 .mgt30 {margin-top:30px !important;}
@@ -68,7 +69,7 @@
 .btn-wrap:after {display:block;content:'';clear:both;}
 .btn-wrap .btn {margin-left: 8px;}
 .btn-wrap .btn:first-child {margin-left:0;}
-.btn {display:inline-block;position:relative;height: 32px;line-height:30px;padding:0 10px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
+.btn {display:inline-block;position:relative;height: 32px;line-height:30px;padding: 0 8px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
 .btn:disabled {background:#E1E1E1 !important;color:#fff;border-color:#E1E1E1 !important;pointer-events:none;}
 /* .btn.blue {color:#5668F0;}
 .btn.purple {color:#AF00EE;}
@@ -87,15 +88,17 @@
 .btn.big {min-width:130px;height: 32px;color:#444;font-size: var(--font-size-13);border-color:#E5E5E5;}
 .btn.big:disabled {background:#fff;color:#E1E1E1;border-color:#E5E5E5;}
 .btn.big.fullblue {color:#fff;border-color:#5668F0;}
-.btn.big.fullpurple {color:#fff;border-color:#AF00EE;}
+/* .btn.big.fullpurple {color:#fff;border-color:#AF00EE;}
 .btn.big.fullred {color:#fff;border-color:#D4373C;}
 .btn.big.fullgreen {color:#fff;border-color:#1CBC91;}
 .btn.big.fullorange {color:#fff;border-color:#F9984E;}
-.btn.big.fullpink {color:#fff;border-color:#F26674;}
+.btn.big.fullpink {color:#fff;border-color:#F26674;} */
 .btn.plus:before {content:"";display:inline-block;width:15px;height:100%;margin-left:-2px;margin-right:3px;background:url("../img/common/btn_plus.png") no-repeat 0 45%;vertical-align:middle;}
-.btn.plusgray:before {content:"";display:inline-block;width:15px;height:100%;margin-left:-2px;margin-right:3px;background:url("../img/common/btn_plus_gray.png") no-repeat 0 45%;vertical-align:middle;}
+.btn.plusgray:before {content:"";display:inline-block;width: 24px;height:100%;margin-left:-2px;margin-right: 8px;background:url("../img/common/btn_plus_gray.png") no-repeat 0 45%;vertical-align:middle;}
 .btn-search{width:32px;height:32px;background:url('../img/common/btn_search.png') no-repeat 0 1px / contain;border-radius:4px;border:1px solid #D8D8D8;}
 .btn.h40 {height:40px;}
+.btn.page-prev {padding-left: 25px; background:url('../img/common/ico_arrow_left_on.png') #fff no-repeat 10px center;}
+.btn.page-next {padding-right: 25px; background:url('../img/common/ico_arrow_right_on.png') #fff no-repeat right 10px center;}
 
 /* label */
 label {position:relative;}
@@ -114,7 +117,7 @@ table.layout-fixed {table-layout:fixed;}
 .gray-hor-tb th {padding-left: 12px;background: #f2f2f2; color:#888; font-size:var(--font-size-13);font-weight: normal;text-align: left;}
 .gray-hor-tb th, .gray-hor-tb td {height:40px; border-bottom:1px solid #e1e1e1;}
 .gray-hor-tb tr:first-child th, .gray-hor-tb tr:first-child td {border-top:1px solid #e1e1e1;}
-.gray-hor-tb td {padding:0 8px;}
+.gray-hor-tb td {padding: 0 8px;background-color: #fff;}
 
 /* list */
 .list-style li {position:relative;margin-top:5px;padding-left:10px;color:#222;font-size:13px;}
@@ -242,7 +245,8 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .calendar-date .btn-calendar:hover {background-image:url("../img/ems/btn_calendar_on.png");}
 
 /* datepicker range */
-.datepickerrange {display:inline-block;width:calc(50% - 14px);vertical-align:middle;}
+.datepickerrange {display:inline-block;width: calc(50% - 14px);vertical-align:middle;}
+.gray-hor-tb .datepickerrange {width: calc(50% - 17px);}
 .datepickerrange:first-child {margin-left:0;}
 .datepickerrange.period label {width:47%;}
 .datepickerrange label {position:relative;width:100%;}
@@ -334,7 +338,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /* graybox */
 .graybox {position:relative;border-radius:5px;box-shadow:0px 3px 10px rgba(141,141,141,0.16);overflow:hidden;}
 .graybox ~ .graybox {margin-top:30px;}
-.title-area {margin-top: 24px;height:50px;}
+.title-area {margin-top: 24px;margin-bottom: 8px;height: 32px;}
 .title-area .h3-title {display:inline-block;margin-top:4px;vertical-align:middle;}
 .title-area .required {float:right;margin-top:8px;color:#f00;font-size:11px;}
 .title-area .btn-wrap {float:right;margin-top: 0;}
@@ -438,7 +442,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /* fileupload (input + btn + script) */
 .fileupload > * {display:inline-block;vertical-align:middle;}
 .fileupload .label {width:calc(100% - 48px);color:#888;font-size:14px;}
-.fileupload .btn {margin-left:5px;}
+.fileupload .btn {/* margin-left:5px; */}
 .fileupload .inputfile {position:relative;}
 .fileupload .inputfile .filesize {position:absolute;top:6px;right:10px;color:#888;font-size:13px;font-weight:200;}
 
@@ -474,7 +478,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid {position:relative;text-align:center;}
 .grid thead th {/* position:sticky; */top:0;padding:10px 5px;background:#fff;font-size: var(--font-size-13);text-align:center;border-top: 1px solid #E1E1E1;background: #f2f2f2;color: #888;font-weight: 500;}
 .grid tbody th {padding:10px 5px;color:#444;background:#fff;font-size:12px;text-align:left;vertical-align:middle;line-height:20px;border-top:1px solid #E1E1E1;word-break:break-word;}
-.grid tbody td {padding:10px 5px;color:#666;background:#fff;font-size: var(--font-size-12);vertical-align:middle;line-height: 19px;border-top:1px solid #E1E1E1;word-break:break-word;}
+.grid tbody td {padding:10px 5px;color:#666;/* background:#fff; */font-size: var(--font-size-12);vertical-align:middle;line-height: 19px;border-top:1px solid #E1E1E1;word-break:break-word;}
 .grid tbody tr:first-child th,
 .grid tbody tr:first-child td {/* border-top:none; */}
 .grid tbody tr:last-child td {border-bottom: 1px solid #e1e1e1;}
@@ -482,7 +486,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid tfoot td {padding:15px 5px;background:#F9F9F9;color:#666;font-size:14px;vertical-align:middle;line-height:20px;border-top:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1;}
 .grid input[type="checkbox"] + span {margin:0;}
 /* .grid a {color:#5668F0;text-decoration:underline;} */
-.grid a:not(.btn):hover {color:#4b62e8;}
+.grid a:not(.btn):hover {color: #5668F0;text-decoration: underline;}
 .grid .txt-black {color:#111;font-weight:500;}
 
 /* grid type-black */

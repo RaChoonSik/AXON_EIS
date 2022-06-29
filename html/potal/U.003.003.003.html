@@ -21,7 +21,6 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
-
 	<script>
 		$(document).ready(function(){
 			//등록일시 : datePicker
@@ -104,7 +103,7 @@
 			<!-- cont-head// -->
 			<section class="cont-head">
 				<div class="title">
-					<h2 style="color:red;">오브젝트 샘플 오브젝트 샘플</h2>
+					<h2>서비스 타이틀</h2>
 				</div>
 
 				<div class="util">
@@ -146,119 +145,23 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<div class="title-area">
-					<h3 class="h3-title">내폴더</h3>
-					<div class="btn-wrap">
-						<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
-						<button type="button" class="btn small" onclick="fn.popupOpen('#popReportFolder');">수정</button>
-						<button type="button" class="btn small">삭제</button>
-						<div class="select">
-							<select>
-								<option>10</option>
-								<option>25</option>
-								<option>50</option>
-								<option>100</option>
-								<option>200</option>
-							</select>
-						</div>
-					</div>
-				</div>
-
-				<div class="bg-box">
-					<div class="list-area">
-						<ul>
-							<li>
-								<label>발송일시</label>
-								<div class="list-item">
-									<div class="datepickerrange fromDate">
-										<label>
-											<input type="text" readonly>
-										</label>
-									</div>
-									<span class="hyppen date"></span>
-									<div class="datepickerrange toDate">
-										<label>
-											<input type="text" readonly>
-										</label>
-									</div>
-								</div>
-							</li>
-							<li>
-								<label>키워드</label>
-								<div class="list-item">
-									<input type="text" placeholder="검색 키워드를 입력해주세요.">
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue">검색</button>
-					</div>
-				</div>
-
-				<div class="memo-lock">
-					<h3 class="pop-title">영업보고서명</h3>
-					<div class="toggle-txt-wrap">
-						<span>공개여부</span>
-						<div class="toggle-wrap">
-							<input type="checkbox" id="toggle"> 
-							<label for="toggle" class="toggle-switch">
-								<span class="toggle-button"></span>
-							</label>
-						</div>
-					</div>
-				</div>
-
-				<table class="grid">
-					<caption>그리드 정보</caption>
-					<colgroup>
-						<col style="width:7%;">
-						<col style="width:7%;">
-						<col style="width:12%;">
-						<col style="width:9%;">
-						<col>
-						<col style="width:10%;">
-						<col style="width:10%;">
-						<col style="width:10%;">
-						<col style="width:8%;">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">분류</th>
-							<th scope="col">담당부서</th>
-							<th scope="col">등록일</th>
-							<th scope="col">데이터주기</th>
-							<th scope="col">최근실행일시</th>
-							<th scope="col">12개월</th>
-							<th scope="col">6개월</th>
-							<th scope="col">3개월</th>
-							<th scope="col">상태</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>영업</td>
-							<td>기획</td>
-							<td>YYYY.MM.DD</td>
-							<td>M-1</td>
-							<td>YYYY.MM.DD HH:MI:SS</td>
-							<td>0</td>
-							<td>12</td>
-							<td>123</td>
-							<td>정상</td>
-						</tr>
-					</tbody>
-				</table>
+				<h3 class="page-title">게시판 신규 등록</h3>
 
 				<div class="gray-hor-tb">
 					<table class="layout-fixed">
 						<colgroup>
 							<col style="width:110px;">
 							<col>
+							<col style="width:110px;">
+							<col>
 						</colgroup>
 						<tbody>
 							<tr>
-								<th scope="low">게시일자</th>
+								<th scope="low">제목</th>
+								<td colspan="3">게시글 제목입니다.</td>
+							</tr>
+							<tr>
+								<th scope="low">게시기간</th>
 								<td>
 									<div class="list-item">
 										<div class="datepickerrange fromDate">
@@ -274,30 +177,47 @@
 										</div>
 									</div>
 								</td>
-							</tr>
-							<tr>
-								<th scope="low">코멘트 내용</th>
-								<td>
-									<input type="text" placeholder="검색 키워드를 입력하세요." title="코멘트 내용">
-								</td>
+								<th scope="low">팝업여부</th>
+								<td><div class="chk"><label><input type="checkbox"><span>팝업</span></label></div></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 
-
-				<div class="paging">
-					<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
-					<button type="button" class="active">1</button>
-					<button type="button">2</button>
-					<button type="button">3</button>
-					<button type="button">4</button>
-					<button type="button">5</button>
-					<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+				<div class="title-area">
+					<h3 class="h3-title">본문</h3>
 				</div>
 
-				<div class="chk"><label><input type="checkbox"><span></span></label></div>
-				<div class="chk"><label><input type="checkbox"><span>체크</span></label></div>
+				<textarea placeholder="본문을 입력하세요." class="board-input"></textarea>
+
+				<div class="gray-hor-tb mgt8">
+					<table class="layout-fixed">
+						<colgroup>
+							<col style="width:110px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="low">첨부파일</th>
+								<td>
+									<div class="list-item">
+										<div class="file-view">
+											<div class="board-file"><label class="btn plusgray mt8"><input type="file">파일등록</label></div>
+	
+											<ul class="file-list">
+												<!-- <li><span class="file">filename.ppt</span><span class="kb">()</span><button class="del">삭제</button></li> -->
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn big h40">목록</button>
+					<button type="button" class="btn big fullblue h40">저장</button>
+				</div>
 				
 			</section>
 			<!-- //cont-body -->
