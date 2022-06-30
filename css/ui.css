@@ -29,6 +29,7 @@
 #popMyHomeMod .add-tab {margin-left:20px;}
 .page-title {height: 46px;margin:-8px -8px 0;padding-bottom: 11px;padding-left: 40px;padding:8px 0 11px 40px; border-bottom:1px solid #e1e1e1; background-color: #fff; font-size: var(--font-size-17);font-weight: 500;line-height: 28px;}
 .page-title + .gray-hor-tb {margin-top:24px;}
+.page-title + .h3-title {margin-top:24px;}
 .board-cont {padding: 12px 20px;min-height: 350px; border:1px solid #e1e1e1;background-color: #fff;}
 .file-list {/* padding: 8px 0; */}
 .file-list li {position: relative;padding: 6px 8px;border:1px solid #e1e1e1; border-top:0;}
@@ -44,3 +45,6 @@
 .board-file + .file-list li:first-child {margin-top:8px;}
 .file-view {padding: 8px 0;}
 .board-input {height:350px;padding: 12px 20px;}
+.gray-hor-tb .lock {background: url('../img/common/lock-closed.png') #fff no-repeat right 4px center;}
+.gray-hor-tb td.lock {background-position: right 12px center;}
+.gray-hor-tb .lock input {width: calc(100% - 40px);}
