@@ -30,10 +30,10 @@
 			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
 			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
 
-			$('.folder-tree .toggle, .folder-tree .toggle .depth2').sortable(function() {
-				connectWith: '.folder-tree .toggle, .folder-tree .toggle .depth2'
-				//group: 'nested',
-				//items: '.sort-item'
+			$('.folder-tree .toggle').sortable({});
+			$('.folder-tree .toggle .depth2').sortable({
+				items: $('.folder-tree .toggle .depth2 li'),
+				connectWith: '.folder-tree .toggle .depth2'
     		});
 		});
 	</script>
@@ -206,7 +206,7 @@
 							</div>
 						</div>
 						<div class="cont">
-							보고서 영역
+							영역1							
 						</div>
 					</div>
 					<div class="report-wrap" id="repo2">

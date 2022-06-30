@@ -15,7 +15,12 @@
 .folder-tree {margin-top: 8px;max-height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;}
 .folder-tree .root {width: 260px;font-size: var(--font-size-14);}
 .folder-tree .toggle {width:260px;}
-.folder-tree .ui-sortable-handle {background:url('../img/common/bg_sortable.png') no-repeat right center;}
+.folder-tree .ui-sortable-handle {background: url('../img/common/bg_sortable.png') no-repeat right 2px;}
+.folder-tree .toggle li.open > .depth2 {min-height: 2px;}
+/* .folder-tree .toggle li.open .btn-toggle {background:none;}
+.folder-tree .toggle .depth2 li:first-child:after {position:absolute;top: -32px;left: -50px; width:20px; height:20px;background: url('../img/common/btn_toggle.png') no-repeat 0 0;background-position: 0 -20px; content:'';} */
+
+
 .memo-lock {overflow: hidden;}
 .memo-lock .pop-title {float:left;}
 .memo-lock .toggle-txt-wrap {float:right;}

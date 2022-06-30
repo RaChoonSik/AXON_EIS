@@ -162,7 +162,7 @@ var fn = (function() {
 			$(document).on("click", ".toggle .btn-toggle", function(){
 				if($(this).closest("li").hasClass("open")){
 					$(this).closest("li").removeClass("open");
-				}else if ($(this).parents('.nav-menu, .folder-tree').length == 1) {
+				} else if ($(this).parents('.nav-menu, .folder-tree').length == 1) {
 					$(this).closest("li").toggleClass("open");
 				} else {
 					$(this).closest("li").addClass("open").siblings().removeClass("open");
@@ -174,6 +174,11 @@ var fn = (function() {
 					$(this).closest("li").addClass("active");
 				}
 			});
+			// $(document).on("ready", ".toggle .depth2", function(){
+			// 	if(!$(this).find('li')){
+			// 		$(this).siblings('.btn-toggle').css('background','none');
+			// 	}
+			// });
 		},
 
 		//toggleunfold
