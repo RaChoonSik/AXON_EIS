@@ -21,6 +21,7 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+
 </head>
 
 <body class="font-basic">
@@ -136,34 +137,65 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<div class="main-tabs-wrap">
-					<div class="main-tabs-swiper">
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide on">
-								<p onClick="location.href=''">대분류1 대분류1 대분류1 대분류1 대분류1 대분류1</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류2</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류3</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류4</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류5</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류6</p>
-							</li>
-						</ul>
-					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
+				<h3 class="page-title">FAQ 수정</h3>
+
+				<div class="gray-hor-tb">
+					<table class="layout-fixed">
+						<colgroup>
+							<col style="width:110px;">
+							<col>
+							<col style="width:110px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="low">제목</th>
+								<td colspan="3">게시글 제목입니다.</td>
+							</tr>
+							<tr>
+								<th scope="low">작성자</th>
+								<td>홍길동</td>
+								<th scope="low">게시일자</th>
+								<td>2020-01-01 15:00</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 
-				컨텐츠
+				<div class="title-area">
+					<h3 class="h3-title">FAQ 내용</h3>
+				</div>
+
+				<textarea placeholder="본문을 입력하세요." class="board-input"></textarea>
+
+				<div class="gray-hor-tb mgt8">
+					<table class="layout-fixed">
+						<colgroup>
+							<col style="width:110px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="low">첨부파일</th>
+								<td>
+									<div class="list-item">
+										<div class="file-view">
+											<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
+	
+											<ul class="file-list">
+												<li><span class="file">filename.ppt</span><span class="kb">(9KB)</span><button class="del">삭제</button></li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn big h40">목록</button>
+					<button type="button" class="btn big fullblue h40">저장</button>
+				</div>
 				
 			</section>
 			<!-- //cont-body -->

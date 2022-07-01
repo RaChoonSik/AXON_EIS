@@ -328,6 +328,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 #lnb.on nav > ul > li {position:relative;}
 #lnb.on nav > ul > li.active {background:#4b62e8;}
 #lnb.on nav > ul > li.active > a {color:#fff;border-top-right-radius:5px;border-top-left-radius:5px;}
+#lnb nav {max-height:calc(100% - 40px);}
 
 /**
 * --------------------------------
@@ -973,7 +974,7 @@ tbody.sortable td {background-color:transparent;}
 .top .search-box {top:48px;}
 .menu-list .inner-wrap {height: 100%;padding-right: 36px;overflow-y: auto;}
 .nav-menu .inner-wrap {padding-right:0;}
-.search-box .tit {font-size: var(--font-size-18);font-weight: normal;}
+.search-box .tit {font-size: var(--font-size-18);padding-bottom: 20px;font-weight: normal;border-bottom: 1px solid #e1e1e1;}
 .com-searchbox {margin-top:10px;}
 .com-searchbox input {height: 40px;padding-left: 40px;background: url('../img/common/ico_search.png') #fff no-repeat left 8px center;font-size: var(--font-size-14);}
 .search-box .com-searchbox input:focus {border:2px solid #111;}
@@ -1016,22 +1017,27 @@ tbody.sortable td {background-color:transparent;}
 .nav-menu.setting .inner-wrap,
 .nav-menu.cont .inner-wrap {/* margin-top: 32px; */padding-top: 20px;}
 
-.board-wrap {display: none;position: absolute;top:48px;right: 0;left: 0;padding:32px 40px;height: 414px;background: #fff;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);z-index: 11;}
-.board-wrap .inner {overflow: hidden;}
-.board-wrap .board-box {float: left;padding-right: 30px;padding-left: 36px;border-bottom: 1px solid #e1e1e1;border-left:  1px solid #e1e1e1;width:calc(100% / 3);height: 175px;}
+.board-wrap {display: none;position: absolute;top:48px;right: 0;left: 0;padding:32px 40px;/* height: 376px; */background: #fff;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);z-index: 10;}
+.board-wrap .inner {display: flex;overflow: hidden;}
+.board-wrap .board-box {float: left;padding-right: 30px;padding-left: 36px;/* border-bottom: 1px solid #e1e1e1; *//* border-left:  1px solid #e1e1e1; */width:calc(100% / 3);/* height: 250px; */}
 .board-wrap .board-box .tit {margin-bottom: 10px;font-size: var(--font-size-14);font-weight: bold;}
 .board-wrap .board-box ul > li a {display: inline-block;/* max-width: 370px; */font-size: var(--font-size-13); color:#111;text-overflow: ellipsis;/* -webkit-line-clamp: 1; *//* -webkit-box-orient: vertical; */white-space: nowrap;overflow: hidden;text-decoration: underline;}
 .board-wrap .board-box a:hover {color:#4b62e8;}
 .board-wrap .board-box .link {display:flex;}
 .board-wrap .board-box .link .comment {display: inline-block;font-size: var(--font-size-13); color:#4b62e8;}
 .board-wrap .board-box .desc {font-size: var(--font-size-11);color: #888;}
-.board-wrap .board-box li + li {margin-top:4px;}
-.board-wrap .board-box:nth-child(n+4) {padding-top: 20px;border-bottom: 0;}
-.board-wrap .board-box:nth-child(3n-2) {border-left: 0;}
+.board-wrap .board-box li + li {margin-top: 8px;}
+.board-wrap .board-box:nth-child(3n-2) {padding-left: 0;}
 .empty-result {padding-top: 70px;background: url('../img/common/ico_mark.png') no-repeat center top 20px;text-align: center;}
+.board-wrap .board-box:last-child {padding-right: 0;}
 .board-wrap .board-box.empty {background: url('../img/common/empty_graph.png') no-repeat center center;background-size: 80%;}
+.board-wrap .pop-layer {margin-top:40px;}
+.board-wrap .pop-layer button {padding-left: 28px;font-size: var(--font-size-14);font-weight: bold;}
+.board-wrap .pop-layer button + button {margin-left:40px;}
+.board-wrap .pop-layer .dic {background:url('../img/common/icon_search_dictionary.png') no-repeat left center;}
+.board-wrap .pop-layer .map {background:url('../img/common/icon_document_search.png') no-repeat left center;}
 .empty-result .txt {font-size: var(--font-size-14); color:#666;}
-.btn-menu-handle {position:absolute;right: -20px;bottom: 260px;height: 40px;width: 20px; background:url('../img/common/ico_liner.png') #e1e1e1 no-repeat center center;border-radius: 0 5px 5px 0; font-size:0;box-shadow: 1px 2px 2px 0 #e1e1e1;cursor: ew-resize;}
+.btn-menu-handle {position:absolute;right: -20px;bottom: 260px;height: 40px;width: 20px; background:url('../img/common/ico_liner.png') #e1e1e1 no-repeat center center;border-radius: 0 5px 5px 0; font-size:0;box-shadow: 1px 2px 2px 0 #e1e1e1;cursor: pointer;}
 
 
 /* 대분류 1뎁스 스와이퍼 */
