@@ -440,11 +440,15 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .filebox > * {display:inline-block;vertical-align:middle;}
 
 /* fileupload (input + btn + script) */
+.fileupload {display: flex;position:relative;gap: 8px;}
 .fileupload > * {display:inline-block;vertical-align:middle;}
 .fileupload .label {width:calc(100% - 48px);color:#888;font-size:14px;}
 .fileupload .btn {/* margin-left:5px; */}
-.fileupload .inputfile {position:relative;}
+.fileupload .inputfile {position:relative;display: flex;flex: 1;}
+.fileupload .inputfile input:read-only, .fileupload .inputfile input:disabled {background-color:#fff;}
+.fileupload .inputfile input:focus {border: 1px solid #e1e1e1 !important;}
 .fileupload .inputfile .filesize {position:absolute;top:6px;right:10px;color:#888;font-size:13px;font-weight:200;}
+.fileupload .file-del {position: absolute; width:24px; height:24px;right: 10px;top: 4px;border: 0;background: url('../img/common/btn_del.png') no-repeat center center; font-size:0;}
 
 /* filelist */
 .filelist {margin-top:10px;}

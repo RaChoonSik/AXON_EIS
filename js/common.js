@@ -271,34 +271,29 @@ var fn = (function() {
 				
 			});
 
-			var bFile = $(".board-file input[type='file']"), 
-			bFilevalue, 
-			bFilename; // 파일명
+			// var bFile = $(".board-file input[type='file']"), 
+			// bFilevalue, 
+			// bFilename; 
 
-			bFile.on("change", function(){ // 값이 변경되면
-				bFilevalue = $(this).val().split("\\");
-				bFilename = bFilevalue[bFilevalue.length-1]; // 파일명
-				var bfilesize = $(this).siblings(".file-view").find(".kb");
-				//var error = $(obj).closest(".fileupload").siblings(".list-star");
-				if($(this).val() != ""){
-					var fileSize = $(this)[0].files[0].size;
-				}
+			// bFile.on("change", function(){ /
+			// 	bFilevalue = $(this).val().split("\\");
+			// 	bFilename = bFilevalue[bFilevalue.length-1]; 
+			// 	var bfilesize = $(this).siblings(".file-view").find(".kb");
+			// 	if($(this).val() != ""){
+			// 		var fileSize = $(this)[0].files[0].size;
+			// 	}
 				
+			// 	var s = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'],
+			// 	e = Math.floor(Math.log(fileSize) / Math.log(1024));
+			// 	var conSize = (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
+			// 	$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">('+conSize+')</span><button class="del">삭제</button></li>')
+			// 	return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
 
-				//$(this).siblings(".upload-name").val(filename);
-				
-				var s = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'],
-				e = Math.floor(Math.log(fileSize) / Math.log(1024));
-				//bfilesize.text((fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e]);
-				var conSize = (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
-				$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">('+conSize+')</span><button class="del">삭제</button></li>')
-				return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
-
-			});
+			// });
 		
-			$(document).on("click", ".file-list li .del", function(){
-				$(this).closest('li').remove();
-			});
+			// $(document).on("click", ".file-list li .del", function(){
+			// 	$(this).closest('li').remove();
+			// });
 			
 		},
 
@@ -336,7 +331,7 @@ var fn = (function() {
 				$(obj).closest(".inputfile").siblings("button.btn").removeClass("hide");
 				$(obj).closest(".inputfile").siblings("label.btn").addClass("hide");
 			}
-			var s = ['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'],
+			var s = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'],
 				e = Math.floor(Math.log(fileSize) / Math.log(1024));
 			filesize.text((fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e]);
 			return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
