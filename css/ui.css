@@ -53,3 +53,11 @@
 .gray-hor-tb .lock {background: url('../img/common/lock-closed.png') #fff no-repeat right 4px center;}
 .gray-hor-tb td.lock {background-position: right 12px center;}
 .gray-hor-tb .lock input {width: calc(100% - 40px);}
+
+.word-table table th,
+.word-table table td {border-left:1px solid #E1E1E1;}
+.word-table table td {border-bottom:1px solid #E1E1E1;border-right: 1px solid #E1E1E1; border-left:0;}
+.word-table table td + td:last-child {border-right: 0;}
+.word-table table thead tr:first-child th:first-child,
+.word-table table tbody tr:first-child td:first-child {border-left: 0;}
+#popWordDic .com-searchbox {width: 370px;margin: 0 auto;}

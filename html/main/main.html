@@ -175,7 +175,7 @@
 				<div class="inner-wrap">
 					<h2 class="tit">무엇을 찾으시나요?</h2>
 					<div class="com-searchbox">
-						<input type="text" placeholder="검색어를 입력하세요." title="검색어를 입력하세요.">
+						<input type="text" placeholder="검색어를 입력하세요." title="검색">
 					</div>
 					<div class="result-wrap">
 						<p class="menu-txt">검색결과</p>
@@ -890,6 +890,117 @@
 			</div>
 			<!-- //my home 수정 -->
 
+			<!-- 용어사전 -->
+			<div id="popWordDic" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner large">
+					<header>
+						<h2>용어 사전</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="bg-box">
+								<div class="com-searchbox">
+									<input type="text" placeholder="검색어를 입력하세요." title="용어사전 검색">
+								</div>
+							</div>
+							<div class="word-table">
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<colgroup>
+										<col style="width:10%;">
+										<col style="width:27%;">
+										<col style="width:19%;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="3">No</th>
+											<th scope="col">단어 (Kor)</th>
+											<th scope="col" rowspan="3">약어</th>
+											<th scope="col" rowspan="3">설명</th>
+										</tr>
+										<tr>
+											<th scope="col">단어 (Eng)</th>
+										</tr>
+										<tr>
+											<th scope="col">시스템</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3">1</td>
+											<td>매출액</td>
+											<td rowspan="3">매출액</td>
+											<td rowspan="3">- 영업 이익은 얼마인가요?</td>
+										</tr>
+										<tr>
+											<td>Sale Amount</td>
+										</tr>
+										<tr>
+											<td>SALE_AMT</td>
+										</tr>
+										<tr>
+											<td rowspan="3">2</td>
+											<td>매출액</td>
+											<td rowspan="3">매출액</td>
+											<td rowspan="3">- 영업 이익은 얼마인가요?</td>
+										</tr>
+										<tr>
+											<td>Sale Amount</td>
+										</tr>
+										<tr>
+											<td>SALE_AMT</td>
+										</tr>
+										<tr>
+											<td rowspan="3">3</td>
+											<td>매출액</td>
+											<td rowspan="3">매출액</td>
+											<td rowspan="3">- 영업 이익은 얼마인가요?</td>
+										</tr>
+										<tr>
+											<td>Sale Amount</td>
+										</tr>
+										<tr>
+											<td>SALE_AMT</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">저장</button>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popWordDic');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popWordDic');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+			</div>
+			<!-- //용어사전 -->
+
+			<!-- 용어사전 -->
+			<div id="popReportMap" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner">
+					<header>
+						<h2>보고서 맵</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="bg-box">
+								<div class="com-searchbox">
+									<input type="text" placeholder="검색어를 입력하세요." title="용어사전 검색">
+								</div>
+							</div>
+							
+ 
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportMap');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popReportMap');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+			</div>
+			<!-- //용어사전 -->
+
 		</div>
 		
 
@@ -988,15 +1099,15 @@
 							</ul>
 						</div>
 						<div class="board-box">
-							<p class="tit"><a href="#">보고서 맵</a></p>
+							<p class="tit"><a href="javascript:;" onclick="fn.popupOpen('#popReportMap');">보고서 맵</a></p>
 							<!-- 내용 없을 때 -->
 							<div class="empty-result">
-								<a href="#" class="txt">바로가기</a>
+								<a href="javascript:;" class="txt" onclick="fn.popupOpen('#popReportMap');">바로가기</a>
 							</div>
 							<!-- //내용 없을 때 -->
 						</div>
 						<div class="board-box">
-							<p class="tit"><a href="#">게시판</a></p>
+							<p class="tit"><a href="#">QnA</a></p>
 							<ul>
 								<li>
 									<div class="link">
@@ -1029,10 +1140,10 @@
 							</ul>
 						</div>
 						<div class="board-box">
-							<p class="tit"><a href="#">용어사전</a></p>
+							<p class="tit"><a href="javascript:;" onclick="fn.popupOpen('#popWordDic');">용어사전</a></p>
 							<!-- 내용 없을 때 -->
 							<div class="empty-result">
-								<a href="#" class="txt">바로가기</a>
+								<a href="javascript:;" class="txt" onclick="fn.popupOpen('#popWordDic');">바로가기</a>
 							</div>
 							<!-- //내용 없을 때 -->
 						</div>
