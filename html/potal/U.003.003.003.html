@@ -36,7 +36,7 @@
 	<!-- font size : font-basic, font-medium, font-large -->
 	<div id="wrap">
 
-		<div id="lnb">
+		<div id="lnb" class="on">
 			<div class="lnb-wrap">
 				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
 				<h1>AXon EIS</h1>
@@ -90,7 +90,7 @@
 				<div class="btm-option">
 					<a href="#" class="cont">컨텐츠 관리</a>
 					<a href="#" class="set">설정</a>
-					<a href="javascript:;" class="fix">고정</a>
+					<a href="javascript:;" class="fix on">고정</a>
 				</div>
 			</div>
 			<!-- lnb 메뉴 추가 -->
@@ -103,7 +103,7 @@
 			<!-- cont-head// -->
 			<section class="cont-head">
 				<div class="title">
-					<h2>서비스 타이틀</h2>
+					<h2>고객사 시스템명</h2>
 				</div>
 
 				<div class="util">
@@ -147,76 +147,78 @@
 			<section class="cont-body">
 				<h3 class="page-title">게시판 신규 등록</h3>
 
-				<div class="gray-hor-tb">
-					<table class="layout-fixed">
-						<colgroup>
-							<col style="width:110px;">
-							<col>
-							<col style="width:110px;">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="low">제목</th>
-								<td colspan="3">게시글 제목입니다.</td>
-							</tr>
-							<tr>
-								<th scope="low">게시기간</th>
-								<td>
-									<div class="list-item">
-										<div class="datepickerrange fromDate">
-											<label>
-												<input type="text" readonly>
-											</label>
+				<div class="inner-cont">
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="low">제목</th>
+									<td colspan="3">게시글 제목입니다.</td>
+								</tr>
+								<tr>
+									<th scope="low">게시기간</th>
+									<td>
+										<div class="list-item">
+											<div class="datepickerrange fromDate">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+											<span class="hyppen date"></span>
+											<div class="datepickerrange toDate">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
 										</div>
-										<span class="hyppen date"></span>
-										<div class="datepickerrange toDate">
-											<label>
-												<input type="text" readonly>
-											</label>
-										</div>
-									</div>
-								</td>
-								<th scope="low">팝업여부</th>
-								<td><div class="chk"><label><input type="checkbox"><span>팝업</span></label></div></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<div class="title-area">
-					<h3 class="h3-title">본문</h3>
-				</div>
-
-				<textarea placeholder="본문을 입력하세요." class="board-input"></textarea>
-
-				<div class="gray-hor-tb mgt8">
-					<table class="layout-fixed">
-						<colgroup>
-							<col style="width:110px;">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="low">첨부파일</th>
-								<td>
-									<div class="list-item">
-										<div class="file-view">
-											<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
+									</td>
+									<th scope="low">팝업여부</th>
+									<td><div class="chk"><label><input type="checkbox"><span>팝업</span></label></div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 	
-											<ul class="file-list">
-												<li><span class="file">filename.ppt</span><span class="kb">(3KB)</span><button class="del">삭제</button></li>
-											</ul>
+					<div class="title-area">
+						<h3 class="h3-title">본문</h3>
+					</div>
+	
+					<textarea placeholder="본문을 입력하세요." class="board-input"></textarea>
+	
+					<div class="gray-hor-tb mgt8">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="low">첨부파일</th>
+									<td>
+										<div class="list-item">
+											<div class="file-view">
+												<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
+		
+												<ul class="file-list">
+													<li><span class="file">filename.ppt</span><span class="kb">(3KB)</span><button class="del">삭제</button></li>
+												</ul>
+											</div>
 										</div>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="btn-wrap">
-					<button type="button" class="btn big h40">목록</button>
-					<button type="button" class="btn big fullblue h40">저장</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big h40">목록</button>
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
 				</div>
 				
 			</section>

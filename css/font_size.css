@@ -7,6 +7,7 @@
     --font-size-17: 17px;
     --font-size-18: 18px;
     --font-size-20: 20px;
+    --font-size-24: 24px;
 }
 .font-medium {
     --font-size-11: 13px;
@@ -17,6 +18,7 @@
     --font-size-17: 19px;
     --font-size-18: 20px;
     --font-size-20: 22px;
+    --font-size-24: 26px;
 }
 .font-large {
     --font-size-11: 15px;
@@ -27,4 +29,5 @@
     --font-size-17: 21px;
     --font-size-18: 22px;
     --font-size-20: 24px;
+    --font-size-24: 28px;
 }

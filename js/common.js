@@ -382,9 +382,9 @@ var fn = (function() {
 					$('.doc-list-wrap').addClass('ban-off');
 				}
 			});
-			$(document).on("click",".report-wrap .tool .bread button",function(){
-				$(this).closest(".bread").addClass("on");
-			});
+			// $(document).on("click",".report-wrap .tool .bread button",function(){
+			// 	$(this).closest(".bread").addClass("on");
+			// });
 			$(window).scroll(function(){
 				var offTop = $(document).scrollTop();
 				if(offTop == 0 ){
@@ -393,12 +393,14 @@ var fn = (function() {
 					$("#wrap").removeClass("top");
 				}
 			});
-			$(document).on("click",".report-wrap .tool .btn-close", function(){
-				$(this).closest(".bread").removeClass("on");
+			$(".report-wrap .tool .bread button").on({
+				mouseenter: function () {
+					$(this).closest(".bread").addClass("on");
+				},
+				mouseleave: function () {
+					$(this).closest(".bread").removeClass("on");
+				}
 			});
-			// $(function(){
-			// 	$("#popMyHomeMod .repo-tabs > ul > li:last-child").addClass("ui-tabs-active");
-			// });
 
 		},
 		accodion : function(){

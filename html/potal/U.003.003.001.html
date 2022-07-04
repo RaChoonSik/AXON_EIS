@@ -36,7 +36,7 @@
 	<!-- font size : font-basic, font-medium, font-large -->
 	<div id="wrap">
 
-		<div id="lnb">
+		<div id="lnb" class="on">
 			<div class="lnb-wrap">
 				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
 				<h1>AXon EIS</h1>
@@ -90,7 +90,7 @@
 				<div class="btm-option">
 					<a href="#" class="cont">컨텐츠 관리</a>
 					<a href="#" class="set">설정</a>
-					<a href="javascript:;" class="fix">고정</a>
+					<a href="javascript:;" class="fix on">고정</a>
 				</div>
 			</div>
 			<!-- lnb 메뉴 추가 -->
@@ -103,7 +103,7 @@
 			<!-- cont-head// -->
 			<section class="cont-head">
 				<div class="title">
-					<h2>서비스 타이틀</h2>
+					<h2>고객사 시스템명</h2>
 				</div>
 
 				<div class="util">
@@ -147,106 +147,108 @@
 			<section class="cont-body">
 				<h3 class="page-title">게시판</h3>
 
-				<h3 class="h3-title">조회</h3>
-				<div class="bg-box">
-					<div class="list-area">
-						<ul>
-							<li>
-								<label>게시일자</label>
-								<div class="list-item">
-									<div class="datepickerrange fromDate">
-										<label>
-											<input type="text" readonly>
-										</label>
+				<div class="inner-cont">
+					<h3 class="h3-title">조회</h3>
+					<div class="bg-box">
+						<div class="list-area">
+							<ul>
+								<li>
+									<label>게시일자</label>
+									<div class="list-item">
+										<div class="datepickerrange fromDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+										<span class="hyppen date"></span>
+										<div class="datepickerrange toDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
 									</div>
-									<span class="hyppen date"></span>
-									<div class="datepickerrange toDate">
-										<label>
-											<input type="text" readonly>
-										</label>
+								</li>
+								<li>
+									<label>키워드</label>
+									<div class="list-item">
+										<input type="text" placeholder="검색 키워드를 입력해주세요.">
 									</div>
-								</div>
-							</li>
-							<li>
-								<label>키워드</label>
-								<div class="list-item">
-									<input type="text" placeholder="검색 키워드를 입력해주세요.">
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue">검색</button>
-					</div>
-				</div>
-
-				<div class="title-area">
-					<h3 class="h3-title">게시글</h3>
-					<div class="btn-wrap">
-						<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
-						<div class="select">
-							<select>
-								<option>10</option>
-								<option>25</option>
-								<option>50</option>
-								<option>100</option>
-								<option>200</option>
-							</select>
+								</li>
+							</ul>
+						</div>
+						<div class="btn-wrap">
+							<button type="button" class="btn big fullblue">검색</button>
 						</div>
 					</div>
-				</div>
-
-				<table class="grid">
-					<caption>그리드 정보</caption>
-					<colgroup>
-						<col style="width:7%;">
-						<col>
-						<col style="width:8%;">
-						<col style="width:8%;">
-						<col style="width:8%;">
-						<col style="width:8%;">
-						<col style="width:6%;">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">번호</th>
-							<th scope="col">제목</th>
-							<th scope="col">작성자</th>
-							<th scope="col">게시일자</th>
-							<th scope="col">첨부파일</th>
-							<th scope="col">조회수</th>
-							<th scope="col">상태</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>211</td>
-							<td><a href="#" class="ellipsis tal">시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목 시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목</a></td>
-							<td>홍길동</td>
-							<td>2022. 05. 01</td>
-							<td>해당</td>
-							<td>23</td>
-							<td>정상</td>
-						</tr>
-						<tr>
-							<td>211</td>
-							<td><a href="#" class="ellipsis tal">시공지 제목 시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목</a></td>
-							<td>홍길동</td>
-							<td>2022. 05. 01</td>
-							<td></td>
-							<td>121</td>
-							<td>삭제</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="paging">
-					<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
-					<button type="button" class="active">1</button>
-					<button type="button">2</button>
-					<button type="button">3</button>
-					<button type="button">4</button>
-					<button type="button">5</button>
-					<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+	
+					<div class="title-area">
+						<h3 class="h3-title">게시글</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
+							<div class="select">
+								<select>
+									<option>10</option>
+									<option>25</option>
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+								</select>
+							</div>
+						</div>
+					</div>
+	
+					<table class="grid">
+						<caption>그리드 정보</caption>
+						<colgroup>
+							<col style="width:7%;">
+							<col>
+							<col style="width:8%;">
+							<col style="width:8%;">
+							<col style="width:8%;">
+							<col style="width:8%;">
+							<col style="width:6%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">번호</th>
+								<th scope="col">제목</th>
+								<th scope="col">작성자</th>
+								<th scope="col">게시일자</th>
+								<th scope="col">첨부파일</th>
+								<th scope="col">조회수</th>
+								<th scope="col">상태</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>211</td>
+								<td><a href="#" class="ellipsis tal">시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목 시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목</a></td>
+								<td>홍길동</td>
+								<td>2022. 05. 01</td>
+								<td>해당</td>
+								<td>23</td>
+								<td>정상</td>
+							</tr>
+							<tr>
+								<td>211</td>
+								<td><a href="#" class="ellipsis tal">시공지 제목 시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목</a></td>
+								<td>홍길동</td>
+								<td>2022. 05. 01</td>
+								<td></td>
+								<td>121</td>
+								<td>삭제</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="paging">
+						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+						<button type="button" class="active">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+					</div>
 				</div>
 
 				
