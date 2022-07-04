@@ -26,7 +26,7 @@
 .memo-lock .toggle-txt-wrap {float:right;}
 .toggle-txt-wrap span {display: inline-block;margin-right: 8px;font-size: var(--font-size-12); color:#444;vertical-align: middle;}
 .toggle-txt-wrap .toggle-wrap {display:inline-block;vertical-align: middle;}
-.bg-box {margin-bottom: 24px;padding:20px 40px; background:#f6f6f6;border-radius: 4px;font-size: 0;}
+.bg-box {margin-bottom: 16px;padding:20px 40px; background:#f6f6f6;border-radius: 4px;font-size: 0;}
 .h3-title + .bg-box {margin-top: 12px;}
 #popMyHomeSet .report-wrap .cont {height: 330px;}
 #popMyHomeMod .report-wrap .cont {height: 380px;}
