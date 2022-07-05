@@ -16,7 +16,7 @@
 .folder-tree .root {width: 260px;font-size: var(--font-size-14);}
 .folder-tree .toggle {width:260px;}
 .folder-tree .ui-sortable-handle {background: url('../img/common/bg_sortable.png') no-repeat right 2px;}
-.folder-tree .toggle li.open ul {min-height: 2px;}
+.folder-tree .toggle li.open ul {min-height: 20px;}
 /* .folder-tree .toggle li.open .btn-toggle {background:none;}
 .folder-tree .toggle .depth2 li:first-child:after {position:absolute;top: -32px;left: -50px; width:20px; height:20px;background: url('../img/common/btn_toggle.png') no-repeat 0 0;background-position: 0 -20px; content:'';} */
 
@@ -63,3 +63,5 @@
 .word-table table tbody tr:first-child td:first-child {border-left: 0;}
 #popWordDic .com-searchbox,
 #popReportMap .com-searchbox {width: 370px;margin: 0 auto;}
+#popMyHomeSet .report-wrap {border-radius: 0;}
+#popMyHomeSet .report-wrap .top {border-radius: 0;}

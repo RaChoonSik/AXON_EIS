@@ -996,7 +996,7 @@ tbody.sortable td {background-color:transparent;}
 .depth-folder-tit .fold {display:inline-block; position: relative; margin-left:24px;padding: 2px 4px;border-radius: 4px;background: #e1e1e1;}
 .depth-folder-tit .fold:before {display:block; position:absolute;left: -18px;top: 6px; width:8px; height:13px;background: url('../img/common/ico_arrow_right_666.png') no-repeat 0 0;content: '';}
 .depth-folder-tit .modify {position: absolute;right: 16px;width:24px; height:24px; font-size:0; background:url('../img/common/ico_edit.png') no-repeat center center;}
-.nav-menu {/* display: none; */position: absolute;top: 0;left: 0;max-width: 600px;bottom: 0;min-width: 260px;background: #f6f6f6;box-shadow: 1px 2px 2px 0 #e1e1e1;visibility: hidden;transition: left 0.1s, visibility 0.1s;}
+.nav-menu {/* display: none; */position: absolute;top: 0;left: 0;max-width: 600px;bottom: 0;width: 260px;min-width: 260px;background: #f6f6f6;box-shadow: 1px 2px 2px 0 #e1e1e1;visibility: hidden;transition: left 0.1s, visibility 0.1s;}
 #lnb[data-open="menu"] .nav-menu.depth,
 #lnb[data-open="folder"] .nav-menu.folder,
 #lnb[data-open="search"] .search-box,
@@ -1006,9 +1006,10 @@ tbody.sortable td {background-color:transparent;}
 .folder-tree .toggle li > .btn-toggle,
 .nav-menu .toggle li > .btn-toggle {font-size:var(--font-size-14); color:#666;font-weight: normal;}
 .folder-tree .toggle li > .folder,
-.nav-menu .toggle li > .folder {position:relative;padding-left: 50px !important;}
+.nav-menu .toggle li > .folder {position:relative;padding-left: 50px !important;cursor: default;}
 .folder-tree .toggle li > .folder:before,
 .nav-menu .toggle li > .folder:before {display:block; position:absolute;left: 20px;top: 2px; width:24px; height:26px; background:url('../img/common/ico_folder.png') no-repeat 0 0; content:'';}
+.folder-tree .toggle ul > li > a {cursor: default;}
 .folder-tree .toggle ul > li > a,
 .nav-menu .toggle ul > li > a {position: relative;display: inline-block;max-width: 100%;padding-left: 22px;color: #666;}
 .nav-menu .toggle ul > li > a.error {max-width: 90%;}
@@ -1020,7 +1021,7 @@ tbody.sortable td {background-color:transparent;}
 .nav-menu.setting .inner-wrap,
 .nav-menu.cont .inner-wrap {/* margin-top: 32px; */padding-top: 20px;}
 
-.board-wrap {display: none;position: absolute;top:48px;right: 0;left: 0;padding:32px 40px;/* height: 376px; */background: #fff;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);z-index: 10;}
+.board-wrap {display: none;position: absolute;top: 58px;right: 0;left: 0;padding:32px 40px;/* height: 376px; */background: #fff;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);z-index: 10;}
 .board-wrap .inner {display: flex;overflow: hidden;}
 .board-wrap .board-box {float: left;padding-right: 30px;padding-left: 36px;/* border-bottom: 1px solid #e1e1e1; *//* border-left:  1px solid #e1e1e1; */width:calc(100% / 3);/* height: 250px; */}
 .board-wrap .board-box .tit {margin-bottom: 10px;font-size: var(--font-size-14);font-weight: bold;}
@@ -1049,6 +1050,8 @@ tbody.sortable td {background-color:transparent;}
 .main-tabs-swiper p:before {display:block; left:0;top: 12px; position:absolute; height:16px; width:1px; content:'';background: #b1b1b1;}
 .main-tabs-swiper li:first-child p:before {display:none;}
 .main-tabs-swiper li.on p {background: #5668f0;color: #fff;}
+.main-tabs-swiper li.on + li p:before, 
+.main-tabs-swiper li.on p:before {display:none;}
 .main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 44px 0;}
 .main-tabs-wrap .swiper-button-prev:after,
 .main-tabs-wrap .swiper-button-next:after {display:none;}

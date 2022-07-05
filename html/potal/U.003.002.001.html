@@ -32,7 +32,7 @@
 
 			$('.folder-tree .toggle').sortable({});
 			$('.folder-tree .toggle ul').sortable({
-				items: $('.folder-tree .toggle .depth2 li'),
+				items: $('.folder-tree .toggle ul li'),
 				connectWith: '.folder-tree .toggle ul'
     		});
 		});
@@ -165,7 +165,11 @@
 							<button type="button" class="btn-fold">열기</button>
 						</div>
 						<div class="link">
-							<a href="javascript:;">사용자 정보수정</a>
+							<a href="javascript:;">개인정보 수정</a>
+							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;">개인 통계</a>
+							<a href="javascript:;">스케줄</a>
+							<a href="javascript:;">시스템 정보</a>
 							<a href="javascript:;">로그아웃</a>
 						</div>
 					</div>
@@ -176,33 +180,6 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<div class="main-tabs-wrap">
-					<div class="main-tabs-swiper">
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide on">
-								<p onClick="location.href=''">대분류1 대분류1 대분류1 대분류1 대분류1 대분류1</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류2</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류3</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류4</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류5</p>
-							</li>
-							<li class="swiper-slide">
-								<p onClick="location.href=''">대분류6</p>
-							</li>
-						</ul>
-					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-				</div>
-
 				<div class="inner-cont">
 					<div class="report-control">
 						<!-- 보고서탭 -->

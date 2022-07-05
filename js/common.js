@@ -81,8 +81,14 @@ var fn = (function() {
 			});
 
 			$(document).on("click", ".btm-option .fix", function(){
-				$("#lnb").addClass("on");
-				$(this).toggleClass("on");
+				if($(this).hasClass("on")){
+					$("#lnb").removeClass("on");
+					$(this).removeClass("on");
+					$("#lnb").removeAttr("data-open");
+				} else {
+					$("#lnb").addClass("on");
+					$(this).addClass("on");
+				}
 			});
 
 			$(document).on("click", ".btm-option .menu", function(){
