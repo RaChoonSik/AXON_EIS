@@ -297,7 +297,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .user .info span {display:block;margin-top: 0;color: #888;font-size: var(--font-size-11);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 .cont-head .util .info button {position:absolute;top: 0px;right: 0px;width:100%;height: 100%;background: url("../img/common/conthead_utilbutton.png") no-repeat center right;text-indent:-9999px;}
 .cont-head .util .info .btn-util.on + button {background-position: left center !important; transform: rotate(-180deg);}
-.cont-head .util .link {display:none;position:absolute;top: 47px;right: 0;width: 150px;padding: 4px 0;background:#fff;border-radius:10px;box-shadow: 0px 3px 6px rgba(0,0,0,0.16);z-index: 2;}
+.cont-head .util .link {display:none;position:absolute;top: 47px;right: 0;width: 150px;padding: 4px 0;background:#fff;border-radius:10px;box-shadow: 0px 3px 6px rgba(0,0,0,0.16);z-index: 10;}
 .cont-head .util .link a {display:block;height:30px;line-height:28px;padding-left:15px;color:#090808;font-size:14px;}
 .cont-head .util .link a:hover {background:#F2F2F2;}
 .cont-head .util .service {display:none;position:absolute;top:62px;left:-15px;width:120px;padding:5px 0;background:#fff;border-radius:10px;box-shadow:0px 3px 6px rgba(0,0,0,0.16);z-index:9;}
@@ -312,10 +312,10 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /* lnb */
 #lnb .lnb-wrap {position:fixed;top:0;left:0;width: 60px;height:100%;background:#242424;z-index: 11;}
 
-
 #lnb.on {position:fixed;top:0;left:0;height:100%;background:#242424;z-index: 11;/* transition: width 0.1s; */}
 #lnb.on .lnb-wrap {width: 240px;background: #242424;height: 100%;}
 #lnb .logo {display: block;margin: 32px auto 76px;text-align: center;}
+#lnb .logo img {width:40px;}
 #lnb.on .logo {display:block;margin: 32px 0 0;text-align:center;}
 #lnb h1 {font-size:0;}
 #lnb.on h1 {margin-top: 6px;padding-bottom: 32px;color:#fff;font-size: var(--font-size-20);font-weight:500;text-align:center;border-bottom:1px solid #3B3B3B;}
@@ -601,8 +601,8 @@ tbody.sortable td {background-color:transparent;}
 .poplayer {display:none;position:fixed;top:0;right:0;left:0;bottom:0;text-align:center;z-index:100;}
 .poplayer.open {display:block;}
 .poplayer:after {display:inline-block;content:'';height:100%;vertical-align:middle;}
-.poplayer .inner {position:relative;display:inline-block;max-width:740px;width:100%;min-height:200px;background:#fff;vertical-align:middle;border-radius:5px;overflow:hidden;z-index:1;}
-.poplayer .inner.small {min-width: 450px;max-width: 450px;}
+.poplayer .inner {position:relative;display:inline-block;max-width:740px;width:100%;min-height: 160px;background:#fff;vertical-align:middle;border-radius:5px;overflow:hidden;z-index:1;}
+.poplayer .inner.small {/* min-width: 450px; */max-width: 450px;}
 .poplayer .inner.medium {max-width:900px;}
 .poplayer .inner.large {width:1104px;max-width:1104px;}
 .poplayer header {position:relative;height: 40px;padding: 10px 60px 8px 20px;background:#F2F2F2;}
@@ -1117,8 +1117,10 @@ tbody.sortable td {background-color:transparent;}
 .doc-list-wrap.ban-off .doc-list.empty .empty-result {margin-top: 270px;text-align: center;}
 
 /* 보고서 */
-.report-wrap {display:none;/* height:600px; */padding: 0 !important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 0 0 5px 5px;background: #fff !important;overflow: hidden;}
-.report-wrap .top {display:flex;justify-content: space-between;align-items: center; padding:0 20px; height:46px;border: 1px solid #d8d8d8;border-bottom: 0;background: #f2f2f2;}
+.report-wrap {display:none;/* height:600px; */padding: 0 !important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;overflow: hidden;}
+.repo-tabs + .report-wrap {border-radius: 0 0 5px 5px;}
+.report-wrap .top {display:flex;justify-content: space-between;align-items: center; padding:0 20px; height:46px;border: 1px solid #d8d8d8;border-bottom: 0;background: #f2f2f2; border-radius: 5px 5px 0 0;}
+.repo-tabs + .report-wrap .top {border-radius: 0;}
 .report-wrap .top .tit {font-size:var(--font-size-14);font-weight: 500;}
 .report-wrap .tool {display:flex;gap: 16px;}
 .report-wrap .tool > div > button {font-size:0; width:24px; height:24px;}

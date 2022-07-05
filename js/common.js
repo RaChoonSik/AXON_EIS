@@ -81,7 +81,7 @@ var fn = (function() {
 			});
 
 			$(document).on("click", ".btm-option .fix", function(){
-				$("#lnb").toggleClass("on");
+				$("#lnb").addClass("on");
 				$(this).toggleClass("on");
 			});
 
