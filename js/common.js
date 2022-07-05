@@ -119,6 +119,9 @@ var fn = (function() {
 		conthead : function(){
 			$(document).on("click", ".cont-head .btn-fold", function(){
 				$(this).closest(".info").toggleClass("on").closest(".drop-tg").siblings().removeClass("open").find(".info").removeClass("on");
+				$("#lnb").removeAttr("data-open");
+				$("#lnb nav > ul > li").removeClass("active");
+				$(".my-menu button, .btm-option .menu").removeClass("on");
 				$(".menu-list").animate(
 					{left:0},100,function(){
 						$(".menu-list").hide().removeAttr('style');
@@ -164,7 +167,7 @@ var fn = (function() {
 			});
 			$(document).on("click", ".toggle button", function(){
 				if(!$(this).hasClass(".btn-toggle")){
-					$(".toggle li").removeClass("active");
+					$(".toggle > li").removeClass("active");
 					$(this).closest("li").addClass("active");
 				}
 			});
@@ -388,9 +391,10 @@ var fn = (function() {
 					$('.doc-list-wrap').addClass('ban-off');
 				}
 			});
-			// $(document).on("click",".report-wrap .tool .bread button",function(){
-			// 	$(this).closest(".bread").addClass("on");
-			// });
+			$(document).on("click", ".nav-menu .toggle ul li", function(){
+				$(this).closest(".toggle").find("ul li").removeClass("active");
+				$(this).addClass("active");
+			});
 			$(window).scroll(function(){
 				var offTop = $(document).scrollTop();
 				if(offTop == 0 ){

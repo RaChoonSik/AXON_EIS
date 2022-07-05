@@ -196,8 +196,10 @@
 
 			<!-- 검색박스 -->
 			<div class="search-box menu-list">
+				<div class="depth-folder-tit">
+					<p class="dep">검색</p>
+				</div>
 				<div class="inner-wrap">
-					<h2 class="tit">검색</h2>
 					<div class="com-searchbox">
 						<input type="text" placeholder="검색어를 입력하세요." title="검색">
 					</div>
@@ -1088,6 +1090,7 @@
 					</header>
 					<div class="popcont">
 						<div class="cont">
+							<h3 class="pop-title">내폴더</h3>
 							<div class="gray-hor-tb">
 								<table class="layout-fixed">
 									<colgroup>
@@ -1098,27 +1101,135 @@
 									</colgroup>
 									<tbody>
 										<tr>
-											<th scope="low">Alias 명</th>
+											<th scope="row">Alias 명</th>
 											<td colspan="3"><input type="text" placeholder="Alias 명" title="Alias 명" value="홍길동"></td>
 										</tr>
 										<tr>
-											<th scope="low">로그인 ID</th>
+											<th scope="row">로그인 ID</th>
 											<td><input type="text" placeholder="로그인 ID" title="로그인 ID" value="Hong2022" readonly></td>
-											<th scope="low">사용자명</th>
+											<th scope="row">사용자명</th>
 											<td><input type="text" placeholder="사용자명" title="사용자명" value="홍길동" readonly></td>
+										</tr>
+										<tr>
+											<th scope="row">핸드폰번호</th>
+											<td><input type="text" placeholder="핸드폰번호" title="핸드폰번호" value="01012341234"></td>
+											<th scope="row">이메일</th>
+											<td><input type="text" placeholder="이메일" title="이메일" value="text@text.co.kr"></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
+
+							<h3 class="pop-title">디자인 스타일</h3>
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">대분류 TOP 메뉴</th>
+											<td>
+												<div class="select">
+													<select>
+														<option>Top 메뉴 켜기(On)</option>
+														<option>Top 메뉴 끄기(Off)</option>
+													</select>
+												</div>
+											</td>
+											<th scope="row">글자크기</th>
+											<td>
+												<div class="select">
+													<select>
+														<option>표준글자</option>
+														<option>큰글자</option>
+														<option>가장큰글자</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h3 class="pop-title">상태 정보</h3>
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">부서 정보</th>
+											<td colspan="3"><input type="text" placeholder="부서 정보" title="부서 정보" value="IT 운영팀" readonly></td>
+										</tr>
+										<tr>
+											<th scope="row">최종 접속 정보</th>
+											<td><input type="text" placeholder="최종 접속 정보" title="최종 접속 정보" value="2021년 12월 31일  16:01:01" readonly></td>
+											<th scope="row">비밀번호 변경일</th>
+											<td><input type="text" placeholder="비밀번호 변경일" title="비밀번호 변경일" value="2021년 12월 31일  16:01:01" readonly></td>
+										</tr>
+										<tr>
+											<th scope="row">My Home<br>자동실행</th>
+											<td><input type="text" placeholder="자동실행" title="자동실행" value="예 (Yes)" readonly></td>
+											<th scope="row">모바일 인증 허용</th>
+											<td><input type="text" placeholder="모바일 인증 허용" title="모바일 인증 허용" value="아니오 (No)" readonly></td>
+										</tr>
+										<tr>
+											<th scope="row">SSO 인증 허용</th>
+											<td><input type="text" placeholder="SSO 인증 허용" title="SSO 인증 허용" value="예 (Yes)아니오 (No)" readonly></td>
+											<th scope="row">IP  상태</th>
+											<td><input type="text" placeholder="IP  상태" title="IP  상태" value="IP ( 127.0.0.1 ) 체크 아니오 (No)" readonly></td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="2">매핑 사용자 그룹</th>
+											<th scope="col" colspan="2">매핑 역할 그룹</th>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<table class="grid">
+								<caption>그리드 정보</caption>
+								<colgroup>
+									<col style="width:50%;">
+									<col style="width:50%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">매핑 사용자 그룹</th>
+										<th scope="col">매핑 역할 그룹</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											- IT 운영 관리그룹<br>
+											- 영업데이터 관리 그룹
+										</td>
+										<td>
+											<textarea disabled>
+												- IT 운영 관리그룹
+												- 영업데이터 관리 그룹
+											</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 
 							<div class="btn-wrap">
 								<button type="button" class="btn big fullblue h40">저장</button>
 							</div>
 						</div>
 					</div>
-					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popWordDic');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popPersonMod');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
 				</div>
-				<span class="poplayer-background" onclick="fn.popupClose('#popWordDic');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+				<span class="poplayer-background" onclick="fn.popupClose('#popPersonMod');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
 			</div>
 			<!-- //개인정보 수정 -->
 

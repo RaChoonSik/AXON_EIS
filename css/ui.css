@@ -49,7 +49,6 @@
 .board-file .plusgray {cursor: pointer;}
 .board-file + .file-list li:first-child {margin-top:8px;}
 .file-view {padding: 8px 0;}
-.file-view .btn-file {/* margin-bottom: 8px; */}
 .board-input {height:350px;padding: 12px 20px;}
 .gray-hor-tb .lock {background: url('../img/common/lock-closed.png') #fff no-repeat right 4px center;}
 .gray-hor-tb td.lock {background-position: right 12px center;}
