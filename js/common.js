@@ -214,6 +214,7 @@ var fn = (function() {
 				$(".tab-cont > div").eq(index).addClass("active").siblings().removeClass("active");
 			});
 
+
 			$( function() {
 				var tabs = $(".report-control").tabs();
 				var previouslyFocused = false;

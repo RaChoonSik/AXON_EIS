@@ -73,3 +73,7 @@
 .indv-total li {float:left; width: 20%; text-align: center;}
 .indv-total li .num {font-size:28px; color:#5668f0; font-weight: 900;}
 .indv-total li span {display:block; font-size:var(--font-size-12);}
+.bar-chartwrap {position:relative;margin-bottom: 12px;border: 1px solid #e1e1e1;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);}
+.bar-chartwrap > div {position:absolute;width:100%;height:100%;}
+.indv-graph .graphBox {display:none;}
+.indv-graph .graphBox.active {display:block;}

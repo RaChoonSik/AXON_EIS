@@ -11,7 +11,7 @@
 ::-webkit-scrollbar-track {display:none;}
 ::-webkit-scrollbar-thumb {background: #c1c1c1; border-radius: 4px;}
 #lnb nav::-webkit-scrollbar-thumb,
-.menu-list .inner-wrap::-webkit-scrollbar-thumb {background:#666;}
+.menu-list .inner-wrap::-webkit-scrollbar-thumb {background:#888;}
 
 /* float */
 .fl {float:left !important;}
@@ -168,13 +168,14 @@ input[type="checkbox"]:checked:disabled + span {cursor:default;}
 
 /* input radio */
 input[type="radio"] {position:absolute;width:0;height:0;font-size:0;line-height:0;opacity:0;overflow:hidden;}
-input[type="radio"] + span {display:inline-block;position:relative;min-height:20px;margin-right:30px;padding-left:26px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;vertical-align:top;}
+input[type="radio"] + span {display:inline-block;position:relative;min-height:20px;/* margin-right: 24px; */padding-left:26px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;vertical-align:top;}
 input[type="radio"] + span:before {content:"";display:inline-block;position:absolute;top:0;left:0;width:20px;height:20px;background:url("../img/common/form_rdo.png") no-repeat 0 0;background-position-y:0;background-size:100%;}
 input[type="radio"]:checked + span:before {background-position-y:-25px;}
 input[type="radio"]:disabled + span:before {background-position-y:-50px;}
 input[type="radio"]:checked:disabled + span:before {background-position-y:-75px;}
 input[type="radio"]:disabled + span,
 input[type="radio"]:checked:disabled + span {cursor:default;}
+.radiobox label + label {margin-left:24px;}
 
 /* input button */
 input[type="button"] {cursor:pointer;}
@@ -1064,7 +1065,7 @@ tbody.sortable td {background-color:transparent;}
 .board-wrap .pop-layer .dic {background:url('../img/common/icon_search_dictionary.png') no-repeat left center;}
 .board-wrap .pop-layer .map {background:url('../img/common/icon_document_search.png') no-repeat left center;}
 .empty-result .txt {font-size: var(--font-size-14); color:#666;}
-.btn-menu-handle {position:absolute;right: -20px;bottom: 260px;height: 40px;width: 20px; background:url('../img/common/ico_liner.png') #e1e1e1 no-repeat center center;border-radius: 0 5px 5px 0; font-size:0;box-shadow: 1px 2px 2px 0 #e1e1e1;cursor: pointer;}
+.btn-menu-handle {position:absolute;right: -20px;bottom: 260px;height: 40px;width: 20px;background: url('../img/common/ico_liner.png') #3c3c3c no-repeat center center;border-radius: 0 5px 5px 0; font-size:0;box-shadow: 1px 2px 2px 0 #e1e1e1;cursor: pointer;}
 
 
 /* 대분류 1뎁스 스와이퍼 */
@@ -1086,7 +1087,7 @@ tbody.sortable td {background-color:transparent;}
 .main-tabs-wrap .swiper-button-next.swiper-button-disabled {opacity: 1;}
 .main-tabs-wrap .swiper-button-prev.swiper-button-disabled {display: none;background-image: url('../img/common/ico_arrow_left.png');background-position: center center;}
 .main-tabs-wrap .swiper-button-next.swiper-button-disabled {display: none;background-image: url('../img/common/ico_arrow_right.png');background-position: center center;}
-.main-visual {height: 306px;margin-top: 8px;background: #f4f7ff; border-radius: 5px;}
+.main-visual {width: calc(100% - 80px);height: 306px;margin: 8px auto 0;background: #f4f7ff;border-radius: 5px;}
 .main-visual:first-child {margin-top:0;}
 .main-visual .img-box {position:relative;margin: 0 auto;max-width: 1040px;height: 100%;/* background: url('../img/common/main_bg.png') no-repeat right 90px center; */}
 .main-visual.ban-off .img-box {/* margin: 0 0 0 20px; */}

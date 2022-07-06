@@ -126,7 +126,7 @@
 					<div class="depth-folder-tit">
 						<p class="dep">내폴더</p>
 						<p class="fold">폴더명3</p>
-						<button type="button" class="modify">수정</button>
+						<button type="button" class="modify" onclick="fn.popupOpen('#popMyFolder');">수정</button>
 					</div>
 					<div class="cont">
 						<p class="menu-txt">보고서</p>
@@ -1318,6 +1318,132 @@
 				<span class="poplayer-background" onclick="fn.popupClose('#popSystemInfo');"></span>
 			</div>
 			<!-- //시스템 정보 -->
+
+			<!-- 내폴더 설정// -->
+			<div id="popMyFolder" class="poplayer">
+				<div class="inner">
+					<header>
+						<h2>내폴더 설정</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+
+							<div class="title-area">
+								<h3 class="h3-title">내폴더</h3>
+								<div class="btn-wrap">
+									<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
+									<button type="button" class="btn small" onclick="fn.popupOpen('#popReportFolder');">수정</button>
+									<button type="button" class="btn small">삭제</button>
+									<button type="button" class="btn small">유효성</button>
+								</div>
+							</div>
+							<div class="folder-tree">
+								<div class="root">ROOT</div>
+								<ul class="toggle">
+									<li class="active"><!-- 활성화 : li class="open" 추가 -->
+										<a class="btn-toggle folder sort-item">폴더명 1 sort </a>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더</span>
+												</a>
+											</li>
+											<li class="active">
+												<a class="btn-toggle folder sort-item">폴더 안 폴더</a>
+												<ul class="depth3">
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">SUㄴㅁㄹㅇㄻ</span>
+														</a>
+													</li>
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">SUㄴㅁㄹㅇㄻ</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<a class="btn-toggle folder sort-item">폴더명 2</a>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더 44 </span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<a class="btn-toggle folder sort-item">폴더명 3</a>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더 13</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<a class="btn-toggle folder sort-item">폴더명 4</a>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더 sub</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">저장</button>
+							</div>
+
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popMyFolder');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popMyFolder');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+			</div>
+			<!-- //내폴더 설정 -->
+
+				<!-- 폴더명// -->
+				<div id="popReportFolder" class="poplayer">
+					<div class="inner small">
+						<header>
+							<h2>내폴더</h2>
+						</header>
+						<div class="popcont">
+							<div class="cont">
+								<div class="gray-hor-tb">
+									<table class="layout-fixed">
+										<colgroup>
+											<col style="width:110px;">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">폴더명</th>
+												<td>
+													<input type="text" placeholder="영업보고서명">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="btn-wrap">
+									<button type="button" class="btn big fullblue h40">저장</button>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportFolder');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+					</div>
+					<span class="poplayer-background" onclick="fn.popupClose('#popReportFolder');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<!-- //폴더명 -->
 
 		</div>
 		
