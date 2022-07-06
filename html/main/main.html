@@ -1188,39 +1188,34 @@
 											<td><input type="text" placeholder="IP  상태" title="IP  상태" value="IP ( 127.0.0.1 ) 체크 아니오 (No)" readonly></td>
 										</tr>
 										<tr>
-											<th scope="col" colspan="2">매핑 사용자 그룹</th>
-											<th scope="col" colspan="2">매핑 역할 그룹</th>
+											<th scope="col" colspan="2" class="tac">매핑 사용자 그룹</th>
+											<th scope="col" colspan="2" class="tac bd-left">매핑 역할 그룹</th>
+										</tr>
+										<tr>
+											<td colspan="2" class="txt-view">
+												<div>
+													- IT 운영 관리그룹<br>
+													- 영업데이터 관리 그룹
+												</div>
+											</td>
+											<td colspan="2" class="txt-view">
+												<div>
+													- SYS_ADMIN<br>
+													- EXCEL_ADMIN<br>
+													- IT 운영 관리그룹<br>
+													- 영업데이터 관리 그룹<br>
+													- IT 운영 관리그룹<br>
+													- 영업데이터 관리 그룹<br>
+													- IT 운영 관리그룹<br>
+													- 영업데이터 관리 그룹<br>
+													- IT 운영 관리그룹<br>
+													- 영업데이터 관리 그룹<br>
+												</div>
+											</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<table class="grid">
-								<caption>그리드 정보</caption>
-								<colgroup>
-									<col style="width:50%;">
-									<col style="width:50%;">
-								</colgroup>
-								<thead>
-									<tr>
-										<th scope="col">매핑 사용자 그룹</th>
-										<th scope="col">매핑 역할 그룹</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											- IT 운영 관리그룹<br>
-											- 영업데이터 관리 그룹
-										</td>
-										<td>
-											<textarea disabled>
-												- IT 운영 관리그룹
-												- 영업데이터 관리 그룹
-											</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
 
 							<div class="btn-wrap">
 								<button type="button" class="btn big fullblue h40">저장</button>
@@ -1232,6 +1227,97 @@
 				<span class="poplayer-background" onclick="fn.popupClose('#popPersonMod');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
 			</div>
 			<!-- //개인정보 수정 -->
+
+			<!-- 비밀번호 변경 -->
+			<div id="popPwReset" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner small">
+					<header>
+						<h2>비밀번호 변경</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="gray-hor-tb">
+								<table class="editpw layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">현재 비밀번호</th>
+											<td>
+												<div class="pw-area">
+													<input type="password" placeholder="현재 비밀번호" style="width:280px;" title="현재 비밀번호">
+													<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">신규 비밀번호</th>
+											<td>
+												<div class="pw-area">
+													<input type="password" placeholder="신규 비밀번호" style="width:280px;" title="신규 비밀번호">
+													<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">비밀번호 확인</th>
+											<td>
+												<div class="pw-area">
+													<!-- 틀렸을 때 에러 error 추가 -->
+													<input type="password" placeholder="비밀번호 확인" style="width:280px;" title="비밀번호 확인" class="error">
+													<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="error-msg">* 영문자, 숫자, 특수문자를 포함한 8~16 자리 설정</p>
+							</div>
+			
+							
+							<!-- btn-wrap// -->
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">확인</button>
+							</div>
+							<!-- //btn-wrap -->
+							
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popPwReset');"><span class="hidden">팝업닫기</span></button>
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popPwReset');"></span>
+			</div>
+			<!-- //비밀번호 변경 -->
+
+			<!-- 시스템 정보 -->
+			<div id="popSystemInfo" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner small">
+					<header>
+						<h2>시스템 정보</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="system-cont">
+								<h3 class="name">Axon EIS Builder 1.0 release 1</h3>
+								<p class="desc">Licensed Materials - Property of ENDERS Corp. © Copyright ENDERS</p>
+								<p class="txt">본 프로그램은 본 프로그램에 동봉된 라이센스 계약에 의하여 라이센스가 부여됩니다. 
+									본 라이센스 계약은 본 프로그램 디렉토리의 라이브러리의 “License” 또는 “ License” 테이블 안에 존재하거나, 해당되는 경우,
+									인쇄물로서 제공됩니다. 본 프로그램을 사용하기 전에 본 계약을 주의 깊게 읽으십시오.
+									본 프로그램을 사용하는 경우 귀하는 본 계약에 동의한 것으로 간주됩니다.
+								</p>
+							</div>
+			
+							
+							
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popSystemInfo');"><span class="hidden">팝업닫기</span></button>
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popSystemInfo');"></span>
+			</div>
+			<!-- //시스템 정보 -->
 
 		</div>
 		
@@ -1274,10 +1360,10 @@
 						</div>
 						<div class="link">
 							<a href="javascript:;" onclick="fn.popupOpen('#popPersonMod');">개인정보 수정</a>
-							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;" onclick="fn.popupOpen('#popPwReset');">비밀번호 변경</a>
 							<a href="javascript:;">개인 통계</a>
 							<a href="javascript:;">스케줄</a>
-							<a href="javascript:;">시스템 정보</a>
+							<a href="javascript:;" onclick="fn.popupOpen('#popSystemInfo');">시스템 정보</a>
 							<a href="javascript:;">로그아웃</a>
 						</div>
 					</div>

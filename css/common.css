@@ -66,7 +66,7 @@
 .event-none {pointer-events: none;}
 
 /* btn */
-.btn-wrap {position:relative;margin-top: 16px;font-size:0; text-align:center;}
+.btn-wrap {position:relative;margin-top: 24px;font-size:0; text-align:center;}
 .bg-box .btn-wrap {margin-top:16px;}
 .btn-wrap:after {display:block;content:'';clear:both;}
 .btn-wrap .btn {margin-left: 8px;}
@@ -153,7 +153,7 @@ input[type="text"]:read-only, input[type="password"]:read-only, input[type="numb
 {color:#888;background: #e1e1e1;}
 input[type="text"]:read-only:focus, input[type="password"]:read-only:focus, input[type="number"]:read-only:focus, input[type="email"]:read-only:focus, input[type="search"]:read-only:focus 
 {border:0 !important;}
-input:focus {border:1px solid #111;}
+input:focus {border: 1px solid #111 !important;}
 input.error {border: 1px solid #d4373c;}
 
 /* input checkbox */
@@ -989,7 +989,8 @@ tbody.sortable td {background-color:transparent;}
 .nav-menu .inner-wrap {padding-right:0;}
 .search-box .tit {font-size: var(--font-size-18);padding-bottom: 20px;font-weight: normal;border-bottom: 1px solid #e1e1e1;}
 .com-searchbox {margin-top: 32px;}
-.com-searchbox input {height: 40px;padding-left: 40px;background: url('../img/common/search.png') #666 no-repeat left 8px center;font-size: var(--font-size-14);border: 0;}
+.com-searchbox input {height: 40px;padding-left: 40px;background: url('../img/common/ico_search.png') #fff no-repeat left 8px center;font-size: var(--font-size-14);border: 0;}
+.search-box .com-searchbox input {background-image: url('../img/common/search.png'); background-color: #666;}
 .search-box .com-searchbox input:focus {border:2px solid #111;}
 .menu-list .menu-txt {margin-top:32px;margin-bottom: 14px;color: #fff;font-size: var(--font-size-14);}
 .result-wrap .title {color: #fff;font-size: var(--font-size-14);}
@@ -1184,3 +1185,7 @@ tbody.sortable td {background-color:transparent;}
 .accordion li.on {background-image: url('../img/common/ico_arrow_up.png');}
 .chk-input .chk {display:inline-block;}
 .chk-input .chk + input {width: calc(100% - 30px);}
+.txt-view {padding: 0 !important;background-color: #e1e1e1 !important;height: 140px !important;}
+.txt-view + .txt-view {border-left: 1px solid #fff;}
+.txt-view > div {padding: 12px 20px;height: 100%;overflow-y: auto;}
+.gray-hor-tb .bd-left {border-left:1px solid #fff;}

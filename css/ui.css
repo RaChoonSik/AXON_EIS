@@ -64,3 +64,6 @@
 #popReportMap .com-searchbox {width: 370px;margin: 0 auto;}
 #popMyHomeSet .report-wrap {border-radius: 0;}
 #popMyHomeSet .report-wrap .top {border-radius: 0;}
+.system-cont .name {font-size: var(--font-size-24); text-align: center;}
+.system-cont .desc {font-size: var(--font-size-12); text-align: center; color:#888;}
+.system-cont .txt {margin-top:20px; color:#666;font-size: var(--font-size-14);line-height: 27px;}
