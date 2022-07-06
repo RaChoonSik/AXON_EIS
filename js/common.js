@@ -395,6 +395,15 @@ var fn = (function() {
 				$(this).closest(".toggle").find("ul li").removeClass("active");
 				$(this).addClass("active");
 			});
+			
+			//lnb 닫기 공통
+			$(document).on("click", ".cont-body", function(){
+				$("#lnb").removeAttr("data-open");
+				$(".board-wrap").hide();
+				$("#lnb nav > ul > li").removeClass("active");
+				$(".my-menu button, .btm-option .menu").removeClass("on");
+				$('.cont-head .drop-tg').removeClass("open").find(".info").removeClass("on");
+			});
 			$(window).scroll(function(){
 				var offTop = $(document).scrollTop();
 				if(offTop == 0 ){
@@ -498,6 +507,28 @@ $(document).ready(function(){
 			$(".datepickerrange.fromDate input").datepicker( "option", "maxDate", selectedDate );
 		}                
 	});
+
+		//datepicker 월만 선택
+		$('.monthpicker input').datepicker({
+			dateFormat: 'yy.mm', //날짜 포맷이다.
+			//prevText: '이전 달',	// 마우스 오버시 이전달 텍스트
+			//nextText: '다음 달',	// 마우스 오버시 다음달 텍스트
+			closeText: '닫기', // 닫기 버튼 텍스트 변경
+			//currentText: '오늘', // 오늘 텍스트 변경
+			changeMonth: true,
+			changeYear: true,
+			showButtonPanel: true,
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],	//한글 캘린더중 월 표시를 위한 부분
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],	//한글 캘린더 중 월 표시를 위한 부분
+			onClose: function(monthNames, inst) { 
+				var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+				var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+				$(this).val($.datepicker.formatDate('yy.mm', new Date(year, month, 1)));
+			}
+		});
+		$(".monthpicker input").focus(function () {
+			$(".ui-datepicker-calendar").hide();
+		});
 
 	//LNB 메뉴 리사이즈 핸들링
 	function ResizerDemo(element) {

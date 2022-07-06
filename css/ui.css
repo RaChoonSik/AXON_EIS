@@ -67,3 +67,9 @@
 .system-cont .name {font-size: var(--font-size-24); text-align: center;}
 .system-cont .desc {font-size: var(--font-size-12); text-align: center; color:#888;}
 .system-cont .txt {margin-top:20px; color:#666;font-size: var(--font-size-14);line-height: 27px;}
+
+.indv-total {padding: 30px 40px;border:1px solid #e1e1e1;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);}
+.indv-total ul {overflow: hidden;}
+.indv-total li {float:left; width: 20%; text-align: center;}
+.indv-total li .num {font-size:28px; color:#5668f0; font-weight: 900;}
+.indv-total li span {display:block; font-size:var(--font-size-12);}

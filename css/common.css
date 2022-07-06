@@ -252,12 +252,18 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .datepickerrange:first-child {margin-left:0;}
 .datepickerrange.period label {width:47%;}
 .datepickerrange label {position:relative;width:100%;}
+.monthpicker label:after,
 .datepickerrange label:after {content:"";display:block;position:absolute;top:0;right:6px;width:32px;height:32px;background:url("../img/common/datepicker.png") no-repeat 0 -5px;}
 .datepickerrange label input {padding-right:40px;}
+.monthpicker label input[type="text"]:read-only,
 .datepickerrange label input[type="text"]:read-only{background:#fff;}
 .datepickerrange label input[type="text"]:disabled{background-color:#f0f0f0;}
 .datepickerrange .hyppen + label {margin-left:0;}
 .datepickerrange .ui-datepicker {padding:0 1px;display:block;width:100%;border:none;}
+.datepicker,
+.monthpicker {display:flex;}
+.datepicker label,
+.monthpicker label {flex: 1;}
 
 
 /**
@@ -990,7 +996,7 @@ tbody.sortable td {background-color:transparent;}
 .search-box .tit {font-size: var(--font-size-18);padding-bottom: 20px;font-weight: normal;border-bottom: 1px solid #e1e1e1;}
 .com-searchbox {margin-top: 32px;}
 .com-searchbox input {height: 40px;padding-left: 40px;background: url('../img/common/ico_search.png') #fff no-repeat left 8px center;font-size: var(--font-size-14);border: 0;}
-.search-box .com-searchbox input {background-image: url('../img/common/search.png'); background-color: #666;}
+.search-box .com-searchbox input {background-image: url('../img/common/search.png');background-color: #666;color: #fff;}
 .search-box .com-searchbox input:focus {border:2px solid #111;}
 .menu-list .menu-txt {margin-top:32px;margin-bottom: 14px;color: #fff;font-size: var(--font-size-14);}
 .result-wrap .title {color: #fff;font-size: var(--font-size-14);}

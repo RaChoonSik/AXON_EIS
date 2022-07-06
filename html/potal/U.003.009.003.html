@@ -22,6 +22,14 @@
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
 </head>
+<script>
+	$(document).ready(function(){
+		//등록일시 : datePicker
+		var date = new Date();
+		var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+		$(".monthpicker input").datepicker('setDate', new Date());
+	});
+</script>
 
 <body class="font-basic">
 	<!-- font size : font-basic, font-medium, font-large -->
@@ -164,10 +172,47 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">QnA</h3>
+				<h3 class="page-title">개인통계</h3>
 				<div class="inner-cont">
-					컨텐츠
-
+					<div class="bg-box">
+						<div class="list-area">
+							<ul>
+								<li>
+									<label>기준년월</label>
+									<div class="list-item">
+										<div class="monthpicker">
+											<label><input type="text" readonly></label>
+											<button type="button" class="btn fullblue small">등록</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="indv-total">
+						<ul>
+							<li>
+								<p class="num">30</p>
+								<span>접속횟수</span>
+							</li>
+							<li>
+								<p class="num">30</p>
+								<span>사용일</span>
+							</li>
+							<li>
+								<p class="num">310</p>
+								<span>조회 (건수)</span>
+							</li>
+							<li>
+								<p class="num">30</p>
+								<span>보고서 (본수)</span>
+							</li>
+							<li>
+								<p class="num">30</p>
+								<span>사용시간 (H)</span>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 			<!-- //cont-body -->
