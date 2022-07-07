@@ -23,7 +23,11 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			
+			$('#popMyFolder .folder-tree .toggle').sortable({});
+			$('#popMyFolder .folder-tree .toggle ul').sortable({
+				items: $('#popMyFolder .folder-tree .toggle ul li'),
+				connectWith: '#popMyFolder .folder-tree .toggle ul'
+			});
 		});
 		function tabLast(){
 			var tIdx = $("#popMyHomeSet .repo-tabs > ul > li").length - 1;
@@ -1439,9 +1443,9 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportFolder');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+						<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportFolder'); fn.ovHidden();"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
 					</div>
-					<span class="poplayer-background" onclick="fn.popupClose('#popReportFolder');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+					<span class="poplayer-background" onclick="fn.popupClose('#popReportFolder'); fn.ovHidden();"></span>
 				</div>
 				<!-- //폴더명 -->
 

@@ -250,7 +250,9 @@
 						<tbody>
 							<tr>
 								<td>211</td>
-								<td><a href="#" class="ellipsis tal">수정예정</a></td>
+								<td class="title">
+									<div class="lock"><a href="#" onclick="fn.popupOpen('#popBoardPw');">비밀번호 팝업 글</a></div>
+								</td>
 								<td>홍길동</td>
 								<td>2022. 05. 01</td>
 								<td>해당</td>
@@ -258,8 +260,54 @@
 								<td>정상</td>
 							</tr>
 							<tr>
+								<td></td>
+								<td class="title">
+									<div class="reply"><a href="#">re) 12312312</a></div>
+								</td>
+								<td>홍길동</td>
+								<td>2022. 05. 01</td>
+								<td></td>
+								<td>시스템 공지</td>
+								<td>정상</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="title">
+									<div class="reply"><a href="#">re) re) 12312312</a></div>
+								</td>
+								<td>홍길동</td>
+								<td>2022. 05. 01</td>
+								<td></td>
+								<td>시스템 공지</td>
+								<td>정상</td>
+							</tr>
+							<tr>
 								<td>211</td>
-								<td><a href="#" class="ellipsis tal">시공지 제목 시스템 공지 제목 시스템 공지 제목시스템 공지 제목시스템 공지 제목시스템 공지 제목</a></td>
+								<td class="title">
+									<div class="lock"><a href="#">12312312</a></div>
+								</td>
+								<td>홍길동</td>
+								<td>2022. 05. 01</td>
+								<td>해당</td>
+								<td>시스템 공지</td>
+								<td>정상</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="title">
+									<div class="reply"><a href="#">re)re) 12312312</a></div>
+								</td>
+								<td>홍길동</td>
+								<td>2022. 05. 01</td>
+								<td></td>
+								<td>시스템 공지</td>
+								<td>정상</td>
+							</tr>
+							<tr>
+								<td>211</td>
+								<td class="title">
+									<div class=""><a href="#">제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 </a></div>
+								</td>
 								<td>홍길동</td>
 								<td>2022. 05. 01</td>
 								<td>해당</td>
@@ -280,10 +328,54 @@
 				</div>
 			</section>
 			<!-- //cont-body -->
+
+			
 			
 		</div>
 		<!-- // content -->
 	</div>
 
+	<!-- 비밀번호 입력 -->
+	<div id="popBoardPw" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>비밀번호 입력</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="gray-hor-tb">
+						<table class="editpw layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">비밀번호</th>
+									<td>
+										<div class="pw-area">
+											<input type="password" placeholder="현재 비밀번호" style="width:280px;" title="현재 비밀번호">
+											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+	
+					
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">확인</button>
+					</div>
+					<!-- //btn-wrap -->
+					
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popBoardPw');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popBoardPw');"></span>
+	</div>
+	<!-- //비밀번호 입력 -->
 </body>
 </html>
