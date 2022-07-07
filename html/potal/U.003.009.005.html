@@ -173,7 +173,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">FAQ</h3>
+				<h3 class="page-title">스케줄 목록</h3>
 
 				<div class="inner-cont">
 					<h3 class="h3-title">조회</h3>
@@ -181,9 +181,37 @@
 						<div class="list-area">
 							<ul>
 								<li>
-									<label>키워드</label>
+									<label class="required">기준일자</label>
 									<div class="list-item">
-										<input type="text" placeholder="검색 키워드를 입력해주세요.">
+										<div class="datepickerrange fromDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+										<span class="hyppen date"></span>
+										<div class="datepickerrange toDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>상태</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>정상</option>
+												<option>중단</option>
+												<option>삭제</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>스케줄명</label>
+									<div class="list-item">
+										<input type="text" placeholder="스케줄명을 입력하세요.">
 									</div>
 								</li>
 							</ul>
@@ -194,9 +222,12 @@
 					</div>
 	
 					<div class="title-area">
-						<h3 class="h3-title">FAQ</h3>
+						<h3 class="h3-title">스케줄 목록</h3>
 						<div class="btn-wrap">
-							<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
+							<a href="#" class="btn small fullblue plus">신규등록</a>
+							<button type="button" class="btn small">복구</button>
+							<button type="button" class="btn small">중단</button>
+							<button type="button" class="btn small">삭제</button>
 							<div class="select">
 								<select>
 									<option>10</option>
@@ -212,43 +243,68 @@
 					<table class="grid">
 						<caption>그리드 정보</caption>
 						<colgroup>
-							<col style="width:7%;">
+							<col style="width:78px;">
 							<col>
+							<col style="width:13%;">
+							<col style="width:13%;">
 							<col style="width:8%;">
+							<col style="width:10%;">
 							<col style="width:8%;">
 							<col style="width:8%;">
 							<col style="width:8%;">
 						</colgroup>
 						<thead>
 							<tr>
-								<th scope="col">분류</th>
-								<th scope="col">제목</th>
-								<th scope="col">작성자</th>
-								<th scope="col">게시일자</th>
-								<th scope="col">첨부파일</th>
-								<th scope="col">조회수</th>
+								<th scope="col">선택</th>
+								<th scope="col">스케줄명</th>
+								<th scope="col">시작일자</th>
+								<th scope="col">종료일자</th>
+								<th scope="col">실행 주기</th>
+								<th scope="col">보고서</th>
+								<th scope="col">상태</th>
+								<th scope="col">등록일자</th>
+								<th scope="col">실행 이력</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>교육</td>
+								<td><div class="chk"><label><input type="checkbox"><span></span></label></div></td>
 								<td class="title">
 									<div><a href="#">제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 </a></div>
 								</td>
-								<td>홍길동</td>
-								<td>2022. 05. 01</td>
-								<td>해당</td>
-								<td>23</td>
+								<td>2022.01.01  15:30</td>
+								<td>9999.12.31  23:50</td>
+								<td>시간</td>
+								<td>영업종합 실적</td>
+								<td>정상</td>
+								<td>2022.04.01</td>
+								<td><a href="#">1건</a></td>
 							</tr>
 							<tr>
-								<td>인증</td>
+								<td><div class="chk"><label><input type="checkbox"><span></span></label></div></td>
 								<td class="title">
-									<div><a href="#">제목 입력</a></div>
+									<div><a href="#">제목 제목 내용 길게 제목 내용 길게 </a></div>
 								</td>
-								<td>홍길동</td>
-								<td>2022. 05. 01</td>
-								<td></td>
-								<td>121</td>
+								<td>2022.01.01  15:30</td>
+								<td>9999.12.31  23:50</td>
+								<td>시간</td>
+								<td>영업종합 실적</td>
+								<td>정상</td>
+								<td>2022.04.01</td>
+								<td><a href="#">1건</a></td>
+							</tr>
+							<tr>
+								<td><div class="chk"><label><input type="checkbox"><span></span></label></div></td>
+								<td class="title">
+									<div><a href="#">제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 </a></div>
+								</td>
+								<td>2022.01.01  15:30</td>
+								<td>9999.12.31  23:50</td>
+								<td>시간</td>
+								<td>영업종합 실적</td>
+								<td>정상</td>
+								<td>2022.04.01</td>
+								<td><a href="#">1건</a></td>
 							</tr>
 						</tbody>
 					</table>

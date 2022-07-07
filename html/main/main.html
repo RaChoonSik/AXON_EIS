@@ -1336,7 +1336,7 @@
 								<h3 class="h3-title">내폴더</h3>
 								<div class="btn-wrap">
 									<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
-									<button type="button" class="btn small" onclick="fn.popupOpen('#popReportFolder');">수정</button>
+									<button type="button" class="btn small" onclick="fn.popupOpen('#popReportName');">수정</button>
 									<button type="button" class="btn small">삭제</button>
 									<button type="button" class="btn small">유효성</button>
 								</div>
@@ -1414,40 +1414,83 @@
 			</div>
 			<!-- //내폴더 설정 -->
 
-				<!-- 폴더명// -->
-				<div id="popReportFolder" class="poplayer">
-					<div class="inner small">
-						<header>
-							<h2>내폴더</h2>
-						</header>
-						<div class="popcont">
-							<div class="cont">
-								<div class="gray-hor-tb">
-									<table class="layout-fixed">
-										<colgroup>
-											<col style="width:110px;">
-											<col>
-										</colgroup>
-										<tbody>
-											<tr>
-												<th scope="row">폴더명</th>
-												<td>
-													<input type="text" placeholder="영업보고서명">
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="btn-wrap">
-									<button type="button" class="btn big fullblue h40">저장</button>
-								</div>
+			<!-- 폴더명// -->
+			<div id="popReportFolder" class="poplayer">
+				<div class="inner small">
+					<header>
+						<h2>내폴더</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">폴더명</th>
+											<td>
+												<input type="text" placeholder="영업보고서명">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">저장</button>
 							</div>
 						</div>
-						<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportFolder'); fn.ovHidden();"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
 					</div>
-					<span class="poplayer-background" onclick="fn.popupClose('#popReportFolder'); fn.ovHidden();"></span>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportFolder'); fn.ovHidden();"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
 				</div>
-				<!-- //폴더명 -->
+				<span class="poplayer-background" onclick="fn.popupClose('#popReportFolder'); fn.ovHidden();"></span>
+			</div>
+			<!-- //폴더명 -->
+
+			<!-- 보고서 수정// -->
+			<div id="popReportName" class="poplayer">
+				<div class="inner small">
+					<header>
+						<h2>내폴더</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">원본 보고서</th>
+											<td>대분류 &gt; 중분류 &gt; 보고서명</td>
+										</tr>
+										<tr>
+											<th scope="row">보고서명</th>
+											<td>기존 보고서명</td>
+										</tr>
+										<tr>
+											<th scope="row">수정 보고서</th>
+											<td>
+												<input type="text" placeholder="보고서명을 입력하세요.">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">적용</button>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportName'); fn.ovHidden();"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popReportName'); fn.ovHidden();"></span>
+			</div>
+			<!-- //폴더명 -->
 
 		</div>
 		
