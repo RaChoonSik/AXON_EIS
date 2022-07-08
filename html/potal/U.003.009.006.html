@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+			//등록일시 : datePicker
+			var date = new Date();
+			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			$(".datepicker input").datepicker('setDate', firstday);
+			//$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+
+		});
+	</script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-medium, font-large -->
+	<div id="wrap">
+
+		<div id="lnb" class="on">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+					
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
+								<img src="../../img/common/menu_chart01.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다" data-target="menu">
+								<img src="../../img/common/menu_chart02.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart03.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart04.png" alt="메뉴">
+								<span>메뉴123</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart05.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart06.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart07.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart08.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart09.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart10.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">시스템 설정</a>
+					<a href="javascript:;" class="fix on">고정</a>
+				</div>
+			</div>
+			<!-- lnb 메뉴 추가 -->
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>고객사 시스템명</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">개인정보 수정</a>
+							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;">개인 통계</a>
+							<a href="javascript:;">스케줄</a>
+							<a href="javascript:;">시스템 정보</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+				<!-- 게시판 추가 -->
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<h3 class="page-title">스케줄 신규 등록</h3>
+				<div class="inner-cont">
+					<h3 class="h3-title">스케줄 조건</h3>
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="required">발송유형</span></th>
+									<td>
+										<div class="radiobox">
+											<label for="rdo_01"><input type="radio" id="rdo_01" name="send_condition" checked=""><span>1회 발송</span></label>
+											<label for="rdo_02"><input type="radio" id="rdo_02" name="send_condition"><span>정기 발송</span></label>
+										</div>
+									</td>
+									<th scope="row"><span class="required">예약일시</span></th>
+									<td>
+										<div class="date-time">
+											<div class="datepicker">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+											<div class="select">
+												<select>
+													<option>10시</option>
+													<option>11시</option>
+												</select>
+											</div>
+											<div class="select">
+												<select>
+													<option>00분</option>
+													<option>01분</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">발송주기</span></th>
+									<td>
+										<div class="flex-group">
+											<div class="select time">
+												<select>
+													<option>시간</option>
+													<option>일</option>
+													<option>주</option>
+													<option>월</option>
+													<option>년</option>
+												</select>
+											</div>
+											<div class="chk"><label><input type="checkbox"><span>일</span></label></div>
+											<div class="chk"><label><input type="checkbox"><span>월</span></label></div>
+											<div class="chk"><label><input type="checkbox"><span>화</span></label></div>
+											<div class="chk"><label><input type="checkbox"><span>수</span></label></div>
+											<div class="chk"><label><input type="checkbox"><span>목</span></label></div>
+											<div class="chk"><label><input type="checkbox"><span>금</span></label></div>
+											<div class="chk"><label><input type="checkbox"><span>토</span></label></div>
+										</div>
+									</td>
+									<th scope="row"><span class="required">종료일시</span></th>
+									<td>
+										<div class="date-time">
+											<div class="datepicker">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+											<div class="select">
+												<select>
+													<option>10시</option>
+													<option>11시</option>
+												</select>
+											</div>
+											<div class="select">
+												<select>
+													<option>00분</option>
+													<option>01분</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">스케줄명</span></th>
+									<td>
+										<input type="text" placeholder="스케줄명을 입력하세요." title="스케줄명">
+									</td>
+									<th scope="row">기준설정</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="스케줄 조건이 설정되지 않았습니다." title="기준설정" readonly value="스케줄 조건이 설정되지 않았습니다.">
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popScheduleDB');">설정</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+	
+					<div class="title-area">
+						<h3 class="h3-title">메일 내용</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small fullblue plus">HTML등록</button>
+						</div>
+					</div>
+	
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="required">제목</span></th>
+									<td>
+										<input type="text" placeholder="메일 제목을 입력하세요." title="메일 제목">
+									</td>
+									<th scope="row">함수 입력</th>
+									<td>
+										<div class="flex-group gap8">
+											<div class="select">
+												<select>
+													<option>선택1</option>
+													<option>선택2</option>
+												</select>
+											</div>
+											<button type="button" class="btn small">제목</button>
+											<button type="button" class="btn small">내용</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">수신자</span></th>
+									<td colspan="3">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="스케줄 조건이 설정되지 않았습니다." title="기준설정" readonly value="스케줄 조건이 설정되지 않았습니다." >
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popReceiver');">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">내용</span></th>
+									<td colspan="3">
+										<div style="height:400px;">
+											에디터
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">보고서 첨부</span></th>
+									<td colspan="3">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="보고서가 등록되지 않았습니다." title="보고서 첨부" readonly>
+											<button type="file" class="btn small" onclick="fn.popupOpen('#');">선택</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">등록</button>
+						<button type="button" class="btn big h40">목록</button>
+					</div>
+				</div>
+				
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+	<!-- 스케줄 조건 설정 -->
+	<div id="popScheduleDB" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner">
+			<header>
+				<h2>스케줄 조건 설정</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="required">DB정보</span></th>
+									<td>
+										<div class="select" style="width:290px;">
+											<select>
+												<option>Data Mart DBMS</option>
+												<option>선택</option>
+												<option>선택2</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">SQL</span></th>
+									<td>
+										<div class="sql-area">
+											<textarea>
+SELECT YM AS 마감년월 
+, AMT1 as 실적1 , AMT2 as 실적2 , AMT3 as 실적3
+, AMT4 as 실적4 , AMT5 as 실적5 , AMT6 as 실적6
+, AMT7 as 실적7 , AMT8 as 실적8 , AMT9 as 실적9
+, ‘Y’ as CHK
+From TABLE 
+WHERE YM &gt; ‘SYSYM’ 
+											</textarea>
+											<div class="btn-wrap">
+												<button type="button" class="btn">확인</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">조건</span></th>
+									<td>
+										<div class="flex-group">
+											<div class="select flex-sh0" style="width:290px;">
+												<select>
+													<option>CHK</option>
+													<option>선택</option>
+													<option>선택2</option>
+												</select>
+											</div>
+											<div class="select">
+												<select>
+													<option>=</option>
+													<option>&lt;</option>
+													<option>&gt;</option>
+													<option>&lt;</option>
+													<option>&gt;=</option>
+													<option>!=</option>
+													<option>IN</option>
+												</select>
+											</div>
+											<div class="select">
+												<select>
+													<option>'Y'</option>
+													<option>'N'</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popScheduleDB');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popScheduleDB');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+	</div>
+	<!-- //스케줄 조건 설정 -->
+
+	<!-- 수신자 설정 팝업// -->
+	<div id="popReceiver" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
+		<div class="inner large">
+			<header>
+				<h2>수신자 설정</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<!-- 조직도// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">조직도</h3>
+							</div>
+							
+							<div class="content-area" style="height:440px; overflow:auto;">
+								<h4>그룹목록</h4>
+								<ul class="toggle">
+									<li><!-- 활성화 : li class="open" -->
+										<button type="button" class="btn-toggle">임원</button>
+										<ul class="depth2">
+											<li><!-- 활성화 : li class="active" -->
+												<button type="button" class="btn-toggle">지원전략본부</button>
+												<ul class="depth3">
+													<li>
+														<button type="button" class="btn-toggle">영업관리부</button>
+														<ul class="depth4">
+															<li>
+																<button type="button" class="last">영업1팀</button>
+															</li>
+															<li><button type="button" class="last">영업2팀</button></li>
+														</ul>
+													</li>
+													<li><button type="button" class="last">영업관리부 22</button></li>
+												</ul>
+											</li>
+											<li>
+												<button type="button" class="btn-toggle">지원전략본부 22</button>
+												<ul class="depth3">
+													<li>
+														<button type="button" class="btn-toggle">영업관리부 22</button>
+														<ul class="depth4">
+															<li>
+																<button type="button" class="last">영업1팀 22</button>
+															</li>
+															<li><button type="button" class="last">영업2팀 22 </button></li>
+														</ul>
+													</li>
+													<li><button type="button" class="last">영업관리부 22222</button></li>
+												</ul>
+											</li>
+											<li><button type="button" class="last">지원전략본부 33</button></li>
+											<li><button type="button" class="last">지원전략본부 44</button></li>
+										</ul>
+									</li>
+									<li>
+										<button type="button" class="btn-toggle">영업관리부</button>
+										<ul class="depth2">
+											<li><button type="button" class="last">영업팀</button></li>
+											<li><button type="button" class="last">사업관리팀</button></li>
+										</ul>
+									</li>
+									<li>
+										<button type="button" class="btn-toggle">마케팅부</button>
+										<ul class="depth2">
+											<li><button type="button" class="last">마케팅부 1</button></li>
+											<li><button type="button" class="last">마케팅부 2</button></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //조직도 -->
+	
+						<!-- 수신자// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">수신자 검색</h3>
+							</div>
+							<div class="item">
+								<input type="text" placeholder="사용자명 검색">
+								<button type="button" class="btn fullblue">검색</button>
+							</div>
+							<div class="user-list">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:40%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">사용자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3" style="padding:0;">
+											<div class="inner-table">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:40%;">
+														<col style="width:20%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>이름1</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //수신자 -->
+	
+						<!-- btn-area// -->
+						<div class="btn-area">
+							<button type="button" class="btn-add"><span class="hide">추가</span></button>
+							<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
+						</div>
+						<!-- //btn-area -->
+	
+						<!-- 사용자 매핑 목록// -->
+						<div class="graybox fr">
+							<div class="title-area">
+								<h3 class="h3-title">사용자 매핑 목록</h3>
+							</div>
+							
+							<div class="user-list" style="height: 198px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:40%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">수신자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3" style="padding:0;">
+											<div class="inner-table" style="height: 158px;">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:40%;">
+														<col style="width:20%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>이름1</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div class="mapp-inp">
+								<input type="text" placeholder="수신자명" name="수신자명" style="width:100px;">
+								<input type="text" placeholder="이메일 주소" name="이메일 주소">
+								<button type="button" class="btn fullblue flex-sh0">추가</button>
+							</div>
+
+							<div class="user-list" style="height:170px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:40%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">사용자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">삭제</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3" style="padding:0;">
+											<div class="inner-table" style="height: 130px;">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:40%;">
+														<col style="width:20%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>이름1</td>
+															<td>영업관리/과장</td>
+															<td><button class="btn-chk-del">삭제</button></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><button class="btn-chk-del">삭제</button></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><button class="btn-chk-del">삭제</button></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><button class="btn-chk-del">삭제</button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //사용자 매핑 목록 -->
+					</div>
+	
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">등록</button>
+						<button type="button" class="btn big">취소</button>
+					</div>
+					<!-- //btn-wrap -->
+	
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReceiver');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReceiver');"></span>
+	</div>
+	<!-- //수신자 설정 팝업 -->
+
+</body>
+</html>

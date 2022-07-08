@@ -21,6 +21,15 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+			//등록일시 : datePicker
+			var date = new Date();
+			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			$(".datepicker input").datepicker('setDate', firstday);
+			//$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -164,9 +173,9 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">QnA 신규</h3>
-
+				<h3 class="page-title">스케줄 신규 등록</h3>
 				<div class="inner-cont">
+					<h3 class="h3-title">스케줄 조건</h3>
 					<div class="gray-hor-tb">
 						<table class="layout-fixed">
 							<colgroup>
@@ -177,13 +186,91 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row">제목</th>
-									<td><input type="text" placeholder="제목을 입력하세요." title="제목"></td>
-									<th scope="row">비밀번호</th>
+									<th scope="row"><span class="required">발송유형</span></th>
 									<td>
-										<div class="chk-input">
-											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
-											<input type="password" placeholder="비밀번호 입력" title="비밀번호">
+										<div class="radiobox">
+											<label for="rdo_01"><input type="radio" id="rdo_01" name="send_condition" checked=""><span>1회 발송</span></label>
+											<label for="rdo_02"><input type="radio" id="rdo_02" name="send_condition"><span>정기 발송</span></label>
+										</div>
+									</td>
+									<th scope="row"><span class="required">예약일시</span></th>
+									<td>
+										<div class="date-time">
+											<div class="datepicker">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+											<div class="select">
+												<select>
+													<option>10시</option>
+													<option>11시</option>
+												</select>
+											</div>
+											<div class="select">
+												<select>
+													<option>00분</option>
+													<option>01분</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">발송주기</span></th>
+									<td>
+										<div class="flex-group">
+											<div class="select time">
+												<select disabled>
+													<option>시간</option>
+													<option>일</option>
+													<option>주</option>
+													<option>월</option>
+													<option>년</option>
+												</select>
+											</div>
+											<div class="chk"><label><input type="checkbox" disabled><span>일</span></label></div>
+											<div class="chk"><label><input type="checkbox" disabled><span>월</span></label></div>
+											<div class="chk"><label><input type="checkbox" disabled><span>화</span></label></div>
+											<div class="chk"><label><input type="checkbox" disabled><span>수</span></label></div>
+											<div class="chk"><label><input type="checkbox" disabled><span>목</span></label></div>
+											<div class="chk"><label><input type="checkbox" disabled><span>금</span></label></div>
+											<div class="chk"><label><input type="checkbox" disabled><span>토</span></label></div>
+										</div>
+									</td>
+									<th scope="row"><span class="required">종료일시</span></th>
+									<td>
+										<div class="date-time">
+											<div class="datepicker">
+												<label>
+													<input type="text" readonly disabled>
+												</label>
+											</div>
+											<div class="select">
+												<select disabled>
+													<option>10시</option>
+													<option>11시</option>
+												</select>
+											</div>
+											<div class="select">
+												<select disabled>
+													<option>00분</option>
+													<option>01분</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">스케줄명</span></th>
+									<td>
+										<input type="text" placeholder="스케줄명을 입력하세요." title="스케줄명" value="영업실적명">
+									</td>
+									<th scope="row">기준설정</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="스케줄 조건이 설정되지 않았습니다." title="기준설정" readonly value="기준이 설정 되었습니다.">
+											<button type="button" class="btn small" onclick="">설정</button>
 										</div>
 									</td>
 								</tr>
@@ -192,29 +279,63 @@
 					</div>
 	
 					<div class="title-area">
-						<h3 class="h3-title">QnA 내용</h3>
+						<h3 class="h3-title">메일 내용</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small fullblue plus">HTML등록</button>
+						</div>
 					</div>
 	
-					<textarea placeholder="본문을 입력하세요." class="board-input"></textarea>
-	
-					<div class="gray-hor-tb mgt8">
+					<div class="gray-hor-tb">
 						<table class="layout-fixed">
 							<colgroup>
+								<col style="width:110px;">
+								<col>
 								<col style="width:110px;">
 								<col>
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row">첨부파일</th>
+									<th scope="row"><span class="required">제목</span></th>
 									<td>
-										<div class="list-item">
-											<div class="file-view">
-												<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
-		
-												<ul class="file-list">
-													<li><span class="file">filename.ppt</span><span class="kb">(3KB)</span><button class="del">삭제</button></li>
-												</ul>
+										<input type="text" placeholder="메일 제목을 입력하세요." title="메일 제목" value="$:마감년월:$ 영업 실적 보고서">
+									</td>
+									<th scope="row">함수 입력</th>
+									<td>
+										<div class="flex-group gap8">
+											<div class="select">
+												<select disabled>
+													<option>선택1</option>
+													<option>선택2</option>
+												</select>
 											</div>
+											<button type="button" class="btn small">제목</button>
+											<button type="button" class="btn small">내용</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">수신자</span></th>
+									<td colspan="3">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="스케줄 조건이 설정되지 않았습니다." title="기준설정" value="aaa@enders.co.kr 외 3건 등록" readonly>
+											<button type="button" class="btn small" onclick="">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">내용</span></th>
+									<td colspan="3">
+										<div style="height:400px;">
+											에디터
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">보고서 첨부</span></th>
+									<td colspan="3">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="보고서가 등록되지 않았습니다." title="보고서 첨부" readonly>
+											<button type="file" class="btn small" onclick="">선택</button>
 										</div>
 									</td>
 								</tr>
@@ -222,7 +343,7 @@
 						</table>
 					</div>
 					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">저장</button>
+						<button type="button" class="btn big fullblue h40">등록</button>
 						<button type="button" class="btn big h40">목록</button>
 					</div>
 				</div>

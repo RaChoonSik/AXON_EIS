@@ -78,3 +78,61 @@
 .bar-chartwrap > div {position:absolute;width:100%;height:100%;}
 .indv-graph .graphBox {display:none;}
 .indv-graph .graphBox.active {display:block;}
+
+.flex-group .select.time {margin-right: 20px;}
+.sql-area {padding:12px 0;}
+.sql-area textarea {height: 320px;}
+.sql-area .btn-wrap {margin-top: 12px;text-align: right;}
+.sql-area .btn-wrap button {width:130px;}
+
+/* popup : 발송결재라인 등록 */
+.popsendenroll h4 {position:relative; padding-bottom:7px;font-size: var(--font-size-14);font-weight: normal;/* border-bottom:1px solid #111; */}
+.popsendenroll h4::after{content:'';display:block;clear:both;}
+.popsendenroll h4 .btn{position:absolute;top:-12px;right:0;}
+.popsendenroll h4 .btn-reset {position:absolute;top:0;right:0; width:24px;height:24px;background:url("../img/common/btn_reset.png") no-repeat 0 0;}
+.popsendenroll .graybox {float:left;width: 320px;/* height:490px; */margin-top:0 !important;box-shadow: none;border-radius: 0;}
+.popsendenroll .graybox + .graybox {margin-left: 24px;}
+.popsendenroll .content-area {padding: 12px 20px;border: 1px solid #ccc;}
+.popsendenroll .item {}
+.popsendenroll .item input {width: calc(100% - 52px);margin-right: 5px;}
+.popsendenroll .item .btn {width: 44px;}
+.popsendenroll .user {margin-top:20px;}
+.popsendenroll .user li {margin-top:10px;}
+.popsendenroll .user li:first-child{margin-top:0;}
+.popsendenroll .user strong {margin-right:10px;padding-left:17px;background:url("../img/ems/btn_user.png") no-repeat 0 4px;color:#666;font-weight:600;}
+.popsendenroll .user span {color:#666;}
+.popsendenroll .user span:last-child:before {content:"|";display:inline-block;margin:0 5px 0 3px;}
+.popsendenroll .user li.active strong {color:#5668F0;background-position:0 -23px;}
+.popsendenroll .btn-area {position:absolute;top:200px;left: 690px;}
+.popsendenroll .btn-area.sec {top:350px;}
+.popsendenroll .btn-area button {display:block;width:30px;height:30px;margin-bottom:15px;border-radius: 3px;border: 1px solid #e1e1e1;}
+.popsendenroll .btn-area .btn-add {background:url("../img/common/ico_arrow_right.png") #f6f6f6 no-repeat center center;}
+.popsendenroll .btn-area .btn-add:hover {background-image: url('../img/common/ico_arrow_right_on.png'); background-position: 11px 7px;}
+.popsendenroll .btn-area .btn-remove {background:url("../img/common/ico_arrow_left.png") #f6f6f6 no-repeat center center;}
+.popsendenroll .btn-area .btn-remove:hover {background-image: url('../img/common/ico_arrow_left_on.png');background-position: 9px 7px;}
+.popsendenroll .requester {display:flex;justify-content:space-between;margin-bottom:20px;padding:8px 13px 8px 23px;border-bottom:1px solid #E1E1E1;}
+.popsendenroll .requester span {color:#666;}
+.popsendenroll .grid-area {padding:0;}
+.popsendenroll .grid-area:not(:last-child){margin-bottom:20px;}
+.popsendenroll .grid thead th {padding: 9px 5px; font-weight:400;letter-spacing: -0.03em;}
+.popsendenroll .grid tbody tr {background-color:#fff;}
+.popsendenroll .grid tbody td{padding: 9px 5px;}
+.popsendenroll .grid tbody td:first-child {/* padding-left:30px; *//* letter-spacing: -0.03em; */}
+.popsendenroll .grid .selected {background-color:#f2f2f2;}
+.popsendenroll .btn-wrap {/* margin-top:15px; */}
+.popsendenroll .user-list {margin-top: 12px;height: 396px;overflow: hidden;}
+.popsendenroll .user-list tbody {/* height: 260px; */overflow-y: auto;}
+.popsendenroll .user-list tbody > tr > td {vertical-align: top;}
+
+/* popup : 결재라인 정보 */
+.poppaymentinfo h3 {padding-bottom:7px;font-size:16px;font-weight:600;border-bottom:1px solid #111;}
+.poppaymentinfo .popcont {padding-top:30px;}
+.poppaymentinfo .requester {display:flex;justify-content:space-between;margin-bottom:20px;padding:15px 13px 15px 23px;border-bottom:1px solid #E1E1E1;}
+.poppaymentinfo .requester span {color:#666;}
+.poppaymentinfo .grid thead th {font-weight:400;}
+.poppaymentinfo .grid tbody tr {background-color:#fff;}
+.poppaymentinfo .btn-wrap {margin-top:30px;}
+.inner-table {height: 356px;overflow-y: auto;}
+.inner-table table tr:first-child td {border-top:0;}
+.mapp-inp {display: flex;margin-top: 24px;gap: 8px;}
+.btn-chk-del {width:18px; height:18px; font-size:0; background: url('../img/common/checkbox_off.png') no-repeat 0 0;}

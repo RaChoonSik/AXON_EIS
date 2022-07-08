@@ -175,6 +175,7 @@
 			<!-- cont-body// -->
 			<section class="cont-body">
 				<div class="inner-cont">
+					<h3 class="h3-title">조회</h3>
 					<div class="title-area">
 						<h3 class="h3-title">내폴더</h3>
 						<div class="btn-wrap">
@@ -197,7 +198,7 @@
 						<div class="list-area">
 							<ul>
 								<li>
-									<label>발송일시</label>
+									<label class="required">발송일시</label>
 									<div class="list-item">
 										<div class="datepickerrange fromDate">
 											<label>
@@ -313,6 +314,51 @@
 							</tbody>
 						</table>
 					</div>
+
+					<br>
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="required">발송유형</span></th>
+									<td>
+										<div class="radiobox">
+											<label for="rdo_01"><input type="radio" id="rdo_01" name="send_condition" checked=""><span>1회 발송</span></label>
+											<label for="rdo_02"><input type="radio" id="rdo_02" name="send_condition"><span>정기 발송</span></label>
+										</div>
+									</td>
+									<th scope="row"><span class="required">예약일시</span></th>
+									<td>
+										<div class="date-time">
+											<div class="datepicker">
+												<label>
+													<input type="text" readonly>
+												</label>
+											</div>
+											<div class="select">
+												<select>
+													<option>10시</option>
+													<option>11시</option>
+												</select>
+											</div>
+											<div class="select">
+												<select>
+													<option>00분</option>
+													<option>01분</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 	
 	
 					<div class="paging">
@@ -325,12 +371,12 @@
 						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 					</div>
 	
-					<div class="chk"><label><input type="checkbox"><span></span></label></div>
+					<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
 					<div class="chk"><label><input type="checkbox"><span>체크</span></label></div>
 
 					<div class="radiobox">
-						<label for="rdo_01"><input type="radio" id="rdo_01" name="send_condition" checked><span>즉시발송</span></label>
-						<label for="rdo_02"><input type="radio" id="rdo_02" name="send_condition"><span>예약발송</span></label>
+						<label for="rdo_11"><input type="radio" id="rdo_11" name="send_condition" checked><span>즉시발송</span></label>
+						<label for="rdo_12"><input type="radio" id="rdo_12" name="send_condition"><span>예약발송</span></label>
 					</div>
 
 					<div class="select">

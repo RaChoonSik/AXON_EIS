@@ -157,7 +157,9 @@ var fn = (function() {
 		//toggle
 		toggle : function(){
 			$(document).on("click", ".toggle .btn-toggle", function(){
-				if($(this).closest("li").hasClass("open")){
+				if ($(this).parents(".folder-tree").length > 0) {
+					return 0;
+				} else if($(this).closest("li").hasClass("open")){
 					$(this).closest("li").removeClass("open");
 				} else if ($(this).parents('.nav-menu, .folder-tree').length == 1) {
 					$(this).closest("li").toggleClass("open");
