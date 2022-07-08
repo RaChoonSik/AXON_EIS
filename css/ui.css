@@ -29,10 +29,10 @@
 .toggle-txt-wrap .toggle-wrap {display:inline-block;vertical-align: middle;}
 .bg-box {margin-bottom: 16px;padding:20px 40px; background:#f6f6f6;border-radius: 4px;font-size: 0;}
 .h3-title + .bg-box {margin-top: 12px;}
-#popMyHomeSet .report-wrap .cont {height: 330px;}
-#popMyHomeMod .report-wrap .cont {height: 380px;}
-#popMyHomeMod .report-wrap.url-page .cont {margin-top:24px; border-top:1px solid #d8d8d8; border-radius: 5px;}
-#popMyHomeMod .add-tab {margin-left:20px;}
+.popMyHomeSet .report-wrap .cont {height: 330px;}
+.popMyHomeMod .report-wrap .cont {height: 380px;}
+.popMyHomeMod .report-wrap.url-page .cont {margin-top:24px; border-top:1px solid #d8d8d8; border-radius: 5px;}
+.popMyHomeMod .add-tab {margin-left:20px;}
 .page-title {height: 46px;margin: 0;padding-bottom: 11px;padding-left: 40px;padding:8px 0 11px 40px; border-bottom:1px solid #e1e1e1;background-color: #fff;font-size: var(--font-size-17);font-weight: 500;line-height: 28px;}
 .page-title + .gray-hor-tb {margin-top:24px;}
 .page-title + .h3-title {margin-top:24px;}
@@ -61,10 +61,10 @@
 .word-table table td + td:last-child {border-right: 0;}
 .word-table table thead tr:first-child th:first-child,
 .word-table table tbody tr:first-child td:first-child {border-left: 0;}
-#popWordDic .com-searchbox,
-#popReportMap .com-searchbox {width: 370px;margin: 0 auto;}
-#popMyHomeSet .report-wrap {border-radius: 0;}
-#popMyHomeSet .report-wrap .top {border-radius: 0;}
+.popWordDic .com-searchbox,
+.popReportMap .com-searchbox {width: 370px;margin: 0 auto;}
+.popMyHomeSet .report-wrap {border-radius: 0;}
+.popMyHomeSet .report-wrap .top {border-radius: 0;}
 .system-cont .name {font-size: var(--font-size-24); text-align: center;}
 .system-cont .desc {font-size: var(--font-size-12); text-align: center; color:#888;}
 .system-cont .txt {margin-top:20px; color:#666;font-size: var(--font-size-14);line-height: 27px;}
@@ -122,7 +122,7 @@
 .popsendenroll .btn-wrap {/* margin-top:15px; */}
 .popsendenroll .user-list {margin-top: 12px;height: 396px;overflow: hidden;}
 .popsendenroll .user-list tbody {/* height: 260px; */overflow-y: auto;}
-.popsendenroll .user-list tbody > tr > td {vertical-align: top;}
+.popsendenroll .user-list tbody > tr > td {/* vertical-align: top; */}
 
 /* popup : 결재라인 정보 */
 .poppaymentinfo h3 {padding-bottom:7px;font-size:16px;font-weight:600;border-bottom:1px solid #111;}
@@ -134,5 +134,15 @@
 .poppaymentinfo .btn-wrap {margin-top:30px;}
 .inner-table {height: 356px;overflow-y: auto;}
 .inner-table table tr:first-child td {border-top:0;}
+.inner-table table tr:last-child td {border-bottom: 0;}
 .mapp-inp {display: flex;margin-top: 24px;gap: 8px;}
 .btn-chk-del {width:18px; height:18px; font-size:0; background: url('../img/common/checkbox_off.png') no-repeat 0 0;}
+.popReportAdd .cont-wrap {overflow: hidden;}
+.popReportAdd .half-box {width: calc((100% - 20px) / 2 );}
+.popReportAdd .half-box:first-child {float:left;}
+.popReportAdd .half-box:last-child {float:right;}
+.popReportAdd .folder-tree {height: 400px;}
+.popReportAdd .link {padding:10px 20px; background: #f5f7ff; font-size: var(--font-size-12);}
+.popReportAdd .item {margin-top:12px;}
+.popReportAdd .item input {width: calc(100% - 52px); margin-right: 5px;}
+.popReportAdd .grid-wrap {height: 288px; margin-top:12px;}

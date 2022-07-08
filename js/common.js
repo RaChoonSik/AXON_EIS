@@ -157,9 +157,7 @@ var fn = (function() {
 		//toggle
 		toggle : function(){
 			$(document).on("click", ".toggle .btn-toggle", function(){
-				if ($(this).parents(".folder-tree").length > 0) {
-					return 0;
-				} else if($(this).closest("li").hasClass("open")){
+				if($(this).closest("li").hasClass("open")){
 					$(this).closest("li").removeClass("open");
 				} else if ($(this).parents('.nav-menu, .folder-tree').length == 1) {
 					$(this).closest("li").toggleClass("open");
@@ -433,8 +431,8 @@ var fn = (function() {
 
 		},
 		accodion : function(){
-			$(document).on("click",".folder-tree a", function(){
-				$(".folder-tree a").removeClass("view");
+			$(document).on("click",".folder-tree a, .folder-tree button", function(){
+				$(".folder-tree a, .folder-tree button").removeClass("view");
 				$(this).addClass("view");
 			});
 		},

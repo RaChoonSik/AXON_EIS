@@ -115,6 +115,7 @@ label {position:relative;}
 /* text */
 .txt-black {color:#111;font-size:14px;font-weight:200;line-height:20px;}
 .error-msg {color:#d4373c;margin-top: 2px;font-size:var(--font-size-12);}
+.confirm-msg {color:#5668f0;margin-top: 2px;font-size:var(--font-size-12);}
 
 /* table */
 table.layout-fixed {table-layout:fixed;}
@@ -173,6 +174,7 @@ input[type="checkbox"]:checked:disabled + span {cursor:default;}
 /* input radio */
 input[type="radio"] {position:absolute;width:0;height:0;font-size:0;line-height:0;opacity:0;overflow:hidden;}
 input[type="radio"] + span {display:inline-block;position:relative;min-height:20px;/* margin-right: 24px; */padding-left:26px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;vertical-align:top;}
+input[type="radio"] + span.blank {padding-left: 20px;}
 input[type="radio"] + span:before {content:"";display:inline-block;position:absolute;top:0;left:0;width:20px;height:20px;background:url("../img/common/form_rdo.png") no-repeat 0 0;background-position-y:0;background-size:100%;}
 input[type="radio"]:checked + span:before {background-position-y:-25px;}
 input[type="radio"]:disabled + span:before {background-position-y:-50px;}
@@ -516,7 +518,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid tbody tr td.no_data {padding:80px 0;text-align:center;}
 .grid tfoot td {padding:15px 5px;background:#F9F9F9;color:#666;font-size:14px;vertical-align:middle;line-height:20px;border-top:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1;}
 .grid input[type="checkbox"] + span {margin:0;}
-/* .grid a {color:#5668F0;text-decoration:underline;} */
+.grid a {text-decoration:underline;}
 .grid a:not(.btn):hover {color: #5668F0;text-decoration: underline;}
 .grid .txt-black {color:#111;font-weight:500;}
 

@@ -23,7 +23,9 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('#popMyFolder .folder-tree .toggle').sortable({});
+			$('#popMyFolder .folder-tree .toggle').sortable({
+				connectWith: '#popMyFolder .folder-tree .toggle ul'
+			});
 			$('#popMyFolder .folder-tree .toggle ul').sortable({
 				items: $('#popMyFolder .folder-tree .toggle ul li'),
 				connectWith: '#popMyFolder .folder-tree .toggle ul'
@@ -691,7 +693,7 @@
 			<!-- //설정 -->
 
 			<!-- my home 설정 -->
-			<div id="popMyHomeSet" class="poplayer"><!-- id값 수정 가능 -->
+			<div id="popMyHomeSet" class="poplayer popMyHomeSet"><!-- id값 수정 가능 -->
 				<div class="inner large">
 					<header>
 						<h2>My Home 설정</h2>
@@ -921,7 +923,7 @@
 			<!-- //my home 수정 -->
 
 			<!-- 용어사전 -->
-			<div id="popWordDic" class="poplayer"><!-- id값 수정 가능 -->
+			<div id="popWordDic" class="poplayer popWordDic"><!-- id값 수정 가능 -->
 				<div class="inner large">
 					<header>
 						<h2>용어 사전</h2>
@@ -1005,7 +1007,7 @@
 			<!-- //용어사전 -->
 
 			<!-- 보고서맵 -->
-			<div id="popReportMap" class="poplayer"><!-- id값 수정 가능 -->
+			<div id="popReportMap" class="poplayer popReportMap"><!-- id값 수정 가능 -->
 				<div class="inner">
 					<header>
 						<h2>보고서 맵</h2>
@@ -1344,7 +1346,7 @@
 							<div class="folder-tree">
 								<div class="root">ROOT</div>
 								<ul class="toggle">
-									<li class="active open"><!-- 활성화 : li class="open" 추가 -->
+									<li class="active"><!-- 활성화 : li class="open" 추가 -->
 										<a class="btn-toggle folder sort-item">폴더명 1 sort </a>
 										<ul class="depth2">
 											<li class="sort-item">
@@ -1352,7 +1354,7 @@
 													<span class="last">SUB 폴더</span>
 												</a>
 											</li>
-											<li class="active open">
+											<li class="active">
 												<a class="btn-toggle folder sort-item">폴더 안 폴더</a>
 												<ul class="depth3">
 													<li class="sort-item">
@@ -1369,7 +1371,7 @@
 											</li>
 										</ul>
 									</li>
-									<li class="active open">
+									<li class="active">
 										<a class="btn-toggle folder sort-item">폴더명 2</a>
 										<ul class="depth2">
 											<li class="sort-item">
@@ -1379,7 +1381,7 @@
 											</li>
 										</ul>
 									</li>
-									<li class="active open">
+									<li class="active">
 										<a class="btn-toggle folder sort-item">폴더명 3</a>
 										<ul class="depth2">
 											<li class="sort-item">
@@ -1389,7 +1391,7 @@
 											</li>
 										</ul>
 									</li>
-									<li class="active open">
+									<li class="active">
 										<a class="btn-toggle folder sort-item">폴더명 4</a>
 										<ul class="depth2">
 											<li class="sort-item">
