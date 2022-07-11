@@ -208,7 +208,7 @@
 									<td>
 										<div class="flex-group gap8">
 											<input type="text" placeholder="부서를 선택하세요." title="부서" readonly>
-											<button type="button" class="btn small">선택</button>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popUserTeam');">선택</button>
 										</div>
 									</td>
 									<th scope="row">전화번호</th>
@@ -256,14 +256,14 @@
 									<td>
 										<div class="flex-group gap8">
 											<input type="text" placeholder="사용자 그룹1 외 2개 매핑" title="그룹 매핑" readonly>
-											<button type="button" class="btn small" onclick="fn.popupOpen('#popUserMapping');">선택</button>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popGroupMapping');">선택</button>
 										</div>
 									</td>
 									<th scope="row">역할 매핑</th>
 									<td>
 										<div class="flex-group gap8">
 											<input type="text" placeholder="사용자 역할을 매핑하세요." title="역할 매핑" readonly>
-											<button type="button" class="btn small">선택</button>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popRoleMapping');">선택</button>
 										</div>
 									</td>
 								</tr>
@@ -292,7 +292,7 @@
 	</div>
 
 		<!-- 사용자 그룹 매핑 팝업// -->
-		<div id="popUserMapping" class="poplayer popsendenroll map"><!-- id값 수정 가능 -->
+		<div id="popGroupMapping" class="poplayer popsendenroll map"><!-- id값 수정 가능 -->
 			<div class="inner">
 				<header>
 					<h2>사용자 그룹 매핑</h2>
@@ -306,7 +306,10 @@
 									<h3 class="h3-title">사용자 그룹</h3>
 								</div>
 								<div class="item">
-									<input type="text" placeholder="사용자명 검색">
+									<div class="ipt-btn-del">
+										<input type="text" placeholder="사용자명 검색">
+										<button type="button" class="del">삭제</button>
+									</div>
 									<button type="button" class="btn fullblue">검색</button>
 								</div>
 								<div class="user-list" style="height:240px;">
@@ -431,6 +434,7 @@
 
 							</div>
 							<!-- //사용자 매핑 목록 -->
+
 						</div>
 		
 						<!-- btn-wrap// -->
@@ -441,11 +445,337 @@
 		
 					</div>
 				</div>
-				<button type="button" class="btn_popclose" onclick="fn.popupClose('#popUserMapping');"><span class="hidden">팝업닫기</span></button>
+				<button type="button" class="btn_popclose" onclick="fn.popupClose('#popGroupMapping');"><span class="hidden">팝업닫기</span></button>
 			</div>
-			<span class="poplayer-background" onclick="fn.popupClose('#popUserMapping');"></span>
+			<span class="poplayer-background" onclick="fn.popupClose('#popGroupMapping');"></span>
 		</div>
 		<!-- //사용자 그룹 매핑 팝업 -->
+
+		<!-- 사용자 역할 매핑 팝업// -->
+		<div id="popRoleMapping" class="poplayer popsendenroll map"><!-- id값 수정 가능 -->
+			<div class="inner">
+				<header>
+					<h2>사용자 역할 매핑</h2>
+				</header>
+				<div class="popcont">
+					<div class="cont">
+						<div class="clear">
+							<!-- 사용자 그룹// -->
+							<div class="graybox">
+								<div class="title-area">
+									<h3 class="h3-title">사용자 역할</h3>
+								</div>
+								<div class="gray-hor-tb">
+									<table class="layout-fixed">
+										<colgroup>
+											<col style="width:110px;">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">종별</th>
+												<td>
+													<div class="select">
+														<select>
+															<option>사용자 역할 검색</option>
+															<option>사용자 역할 검색1</option>
+														</select>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">역할명</th>
+												<td>
+													<div class="ipt-btn-del full">
+														<input type="text" placeholder="사용자 역할 검색">
+														<button type="button" class="del">삭제</button>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="btn-wrap tar">
+									<button type="button" class="btn fullblue">검색</button>
+								</div>
+								<div class="folder-tree system">
+									<ul class="toggle">
+										<li class="active open"><!-- 활성화 : li class="open" 추가 -->
+											<button type="button" class="btn-toggle folder sort-item">일반 역할</button>
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SUB 폴더</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="active open">
+											<button type="button" class="btn-toggle folder sort-item">시스템 역할</button>
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_ADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_EXCELADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_EXCELADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_EXCELADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_EXCELADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_EXCELADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SYS_EXCELADMIN</span>
+														<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- btn-area// -->
+							<div class="btn-area">
+								<button type="button" class="btn-add"><span class="hide">추가</span></button>
+								<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
+							</div>
+							<!-- //btn-area -->
+		
+							<!-- 사용자 매핑 목록// -->
+							<div class="graybox fr">
+								<div class="title-area">
+									<h3 class="h3-title">사용자 역할 매핑 목록</h3>
+								</div>
+								
+								<div class="user-list" style="height: 358px;">
+									<div class="inner-table">
+										<table class="grid">
+											<colgroup>
+												<col style="width:80%;">
+												<col style="width:20%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹2</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹3</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+												<tr>
+													<td>- 사용자 그룹1</td>
+													<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- //사용자 역할매핑 목록 -->
+
+						</div>
+		
+						<!-- btn-wrap// -->
+						<div class="btn-wrap">
+							<button type="button" class="btn big fullblue h40">저장</button>
+						</div>
+						<!-- //btn-wrap -->
+		
+					</div>
+				</div>
+				<button type="button" class="btn_popclose" onclick="fn.popupClose('#popRoleMapping');"><span class="hidden">팝업닫기</span></button>
+			</div>
+			<span class="poplayer-background" onclick="fn.popupClose('#popRoleMapping');"></span>
+		</div>
+		<!-- //사용자 역할 매핑 팝업 -->
+
+		<!-- 사용자 부서 선택// -->
+		<div id="popUserTeam" class="poplayer"><!-- id값 수정 가능 -->
+			<div class="inner small">
+				<header>
+					<h2>사용자 역할 매핑</h2>
+				</header>
+				<div class="popcont">
+					<div class="cont">
+						<div class="clear">
+							<!-- 사용자 그룹// -->
+							<div class="title-area">
+								<h3 class="h3-title">사용자 역할</h3>
+							</div>
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">부서명</th>
+											<td>
+												<input type="text" placeholder="부서명을 입력하세요." title="부서명을 입력하세요.">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btn-wrap mgt12">
+								<button type="button" class="btn fullblue big">검색</button>
+							</div>
+							<div class="user-list">
+								<table class="grid">
+									<colgroup>
+										<col style="width:70%;">
+										<col style="width:30%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">부서명</th>
+											<th scope="col">부서ID</th>
+										</tr>
+									</thead>
+								</table>
+								<div class="inner-table">
+									<ul class="user-team-list toggle">
+										<li class="active"><!-- 활성화 : li class="open" 추가 -->
+											<button type="button" class="btn-toggle folder sort-item">ROOT</button>
+											<div class="code"><a href="javascript:;">ORG1232</a></div>
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SUB 폴더</span>
+													</a>
+													<div class="code"><a href="javascript:;">ORG1232</a></div>
+												</li>
+												<li class="active">
+													<button type="button" class="btn-toggle folder sort-item">3뎁스</button>
+													<ul class="depth3">
+														<li class="sort-item">
+															<a href="#">
+																<span class="last">SUB 폴더3</span>
+															</a>
+														</li>
+														<li class="sort-item">
+															<a href="#">
+																<span class="last">SUB 폴더3</span>
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="active">
+											<button type="button" class="btn-toggle folder sort-item">폴더명 2</button>
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">영업1팀 </span>
+													</a>
+													<div class="code"><a href="javascript:;">ORG1232</a></div>
+												</li>
+											</ul>
+										</li>
+										<li class="active">
+											<button type="button" class="btn-toggle folder sort-item">폴더명 3</button>
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">영업 2팀</span>
+													</a>
+													<div class="code"><a href="javascript:;">ORG1232</a></div>
+												</li>
+											</ul>
+										</li>
+										<li class="active">
+											<button type="button" class="btn-toggle folder sort-item">폴더명 4</button>
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SUB 폴더 sub</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+		
+					</div>
+				</div>
+				<button type="button" class="btn_popclose" onclick="fn.popupClose('#popUserTeam');"><span class="hidden">팝업닫기</span></button>
+			</div>
+			<span class="poplayer-background" onclick="fn.popupClose('#popUserTeam');"></span>
+		</div>
+		<!-- //사용자 부서 선택 -->
 
 </body>
 </html>

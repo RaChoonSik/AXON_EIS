@@ -435,6 +435,15 @@ var fn = (function() {
 				$(".folder-tree a, .folder-tree button").removeClass("view");
 				$(this).addClass("view");
 			});
+			$(document).on("click",".accordion .head", function(){
+				var cont = $(this).closest('li').find('.cont');
+				if(cont.hasClass('on')){
+					cont.removeClass('on').slideUp('fast');
+				} else {
+					cont.slideDown('fast').addClass('on');
+					$(this).closest('li').siblings().find('.cont').slideUp('fast').removeClass('on');
+				}
+			});
 		},
 
 		//popupOpen

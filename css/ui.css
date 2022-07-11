@@ -94,7 +94,7 @@
 .popsendenroll .graybox + .graybox {margin-left: 24px;}
 .popsendenroll .content-area {padding: 12px 20px;border: 1px solid #ccc;}
 .popsendenroll .item {}
-.popsendenroll .item input {width: calc(100% - 52px);margin-right: 5px;}
+.popsendenroll .item input {}
 .popsendenroll .item .btn {width: 44px;}
 .popsendenroll .user {margin-top:20px;}
 .popsendenroll .user li {margin-top:10px;}
@@ -155,3 +155,20 @@
 .popsendenroll.map .user-list {border:1px solid #ccc;}
 .popsendenroll.map .grid td {padding: 6px 0;text-align: left; border-top:0;}
 .popsendenroll.map .inner-table {padding: 12px 0 12px 20px;}
+.ipt-btn-del {position: relative;display: inline-block;width: calc(100% - 52px);margin-right: 5px;}
+.ipt-btn-del.full {width:100%;}
+.ipt-btn-del .del {position:absolute;top: 3px;right: 8px; width:24px; height:24px; font-size:0;background: url('../img/common/btn_del.png') no-repeat center center;}
+.folder-tree.system {height: 213px;margin-top: 24px;}
+.folder-tree.system .sort-item .chk {position: absolute;top: 6px; right:0;}
+.folder-tree.system .toggle .view {background-color: transparent;}
+
+.user-team-list {}
+.user-team-list li {border-top: 1px solid #e1e1e1;font-size: 0 !important;}
+.user-team-list .sort-item > a,
+.user-team-list .btn-toggle {display: inline-block;width: 70%;font-size: var(--font-size-12) !important;vertical-align: middle;}
+.user-team-list .code {display: inline-block;width: 30%;vertical-align: middle;text-align: center;}
+.user-team-list .code a {font-size: var(--font-size-12);text-decoration: underline;}
+.user-team-list .last {position:relative;}
+.user-team-list.toggle .last:before {top: 0;left: -20px;}
+.user-team-list .sort-item {padding: 6px 0 7px 40px;}
+.user-team-list.toggle li .btn-toggle {padding: 7px 0 7px 40px;}
