@@ -21,15 +21,6 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
-	<script>
-		$(document).ready(function(){
-			//등록일시 : datePicker
-			var date = new Date();
-			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
-			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
-			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
-		});
-	</script>
 </head>
 
 <body class="font-basic">
@@ -196,7 +187,7 @@
 					<div class="title-area">
 						<h3 class="h3-title">FAQ</h3>
 						<div class="btn-wrap">
-							<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
+							<button type="button" class="btn small fullblue plus">신규등록</button>
 							<div class="select">
 								<select>
 									<option>10</option>
@@ -209,49 +200,51 @@
 						</div>
 					</div>
 	
-					<table class="grid">
-						<caption>그리드 정보</caption>
-						<colgroup>
-							<col style="width:7%;">
-							<col>
-							<col style="width:8%;">
-							<col style="width:8%;">
-							<col style="width:8%;">
-							<col style="width:8%;">
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">분류</th>
-								<th scope="col">제목</th>
-								<th scope="col">작성자</th>
-								<th scope="col">게시일자</th>
-								<th scope="col">첨부파일</th>
-								<th scope="col">조회수</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>교육</td>
-								<td class="title">
-									<div><a href="#">제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 </a></div>
-								</td>
-								<td>홍길동</td>
-								<td>2022. 05. 01</td>
-								<td>해당</td>
-								<td>23</td>
-							</tr>
-							<tr>
-								<td>인증</td>
-								<td class="title">
-									<div><a href="#">제목 입력</a></div>
-								</td>
-								<td>홍길동</td>
-								<td>2022. 05. 01</td>
-								<td></td>
-								<td>121</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="table-wr4ap">
+						<table class="grid">
+							<caption>그리드 정보</caption>
+							<colgroup>
+								<col style="width:7%;">
+								<col>
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">분류</th>
+									<th scope="col">제목</th>
+									<th scope="col">작성자</th>
+									<th scope="col">게시일자</th>
+									<th scope="col">첨부파일</th>
+									<th scope="col">조회수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>교육</td>
+									<td class="title">
+										<div><a href="#">제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 </a></div>
+									</td>
+									<td>홍길동</td>
+									<td>2022. 05. 01</td>
+									<td>해당</td>
+									<td>23</td>
+								</tr>
+								<tr>
+									<td>인증</td>
+									<td class="title">
+										<div><a href="#">제목 입력</a></div>
+									</td>
+									<td>홍길동</td>
+									<td>2022. 05. 01</td>
+									<td></td>
+									<td>121</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<div class="paging">
 						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
 						<button type="button" class="active">1</button>

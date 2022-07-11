@@ -23,11 +23,7 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			//등록일시 : datePicker
-			var date = new Date();
-			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
-			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
-			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+			
 		});
 	</script>
 </head>
@@ -173,7 +169,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">QnA</h3>
+				<h3 class="page-title">부서 관리 목록</h3>
 
 				<div class="inner-cont">
 					<h3 class="h3-title">조회</h3>
@@ -181,25 +177,31 @@
 						<div class="list-area">
 							<ul>
 								<li>
-									<label>등록일자</label>
+									<label>부서 ID</label>
 									<div class="list-item">
-										<div class="datepickerrange fromDate">
-											<label>
-												<input type="text" readonly>
-											</label>
-										</div>
-										<span class="hyppen date"></span>
-										<div class="datepickerrange toDate">
-											<label>
-												<input type="text" readonly>
-											</label>
-										</div>
+										<input type="text" placeholder="부서ID를 입력하세요.">
 									</div>
 								</li>
 								<li>
-									<label>키워드</label>
+									<label>부서명</label>
 									<div class="list-item">
-										<input type="text" placeholder="검색 키워드를 입력해주세요.">
+										<input type="text" placeholder="부서명을 입력하세요.">
+									</div>
+								</li>
+								<li>
+									<label>종별</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>임원</option>
+												<option>본부</option>
+												<option>사업부</option>
+												<option>팀</option>
+												<option>실</option>
+												<option>출장소</option>
+											</select>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -210,9 +212,10 @@
 					</div>
 	
 					<div class="title-area">
-						<h3 class="h3-title">QnA</h3>
+						<h3 class="h3-title">FAQ</h3>
 						<div class="btn-wrap">
-							<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popReportFolder');">신규등록</button>
+							<button type="button" class="btn small fullblue plus">신규등록</button>
+							<button type="button" class="btn small">삭제</button>
 							<div class="select">
 								<select>
 									<option>10</option>
@@ -225,98 +228,56 @@
 						</div>
 					</div>
 	
-					<div class="table-wrap">
-						<table class="grid">
-							<caption>그리드 정보</caption>
-							<colgroup>
-								<col style="width:7%;">
-								<col>
-								<col style="width:8%;">
-								<col style="width:8%;">
-								<col style="width:8%;">
-								<col style="width:8%;">
-								<col style="width:6%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">번호</th>
-									<th scope="col">제목</th>
-									<th scope="col">작성자</th>
-									<th scope="col">게시일자</th>
-									<th scope="col">첨부파일</th>
-									<th scope="col">조회수</th>
-									<th scope="col">상태</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>211</td>
-									<td class="title">
-										<div class="lock"><a href="#" onclick="fn.popupOpen('#popBoardPw');">비밀번호 팝업 글</a></div>
-									</td>
-									<td>홍길동</td>
-									<td>2022. 05. 01</td>
-									<td>해당</td>
-									<td>시스템 공지</td>
-									<td>정상</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td class="title">
-										<div class="reply"><a href="#">re) 12312312</a></div>
-									</td>
-									<td>홍길동</td>
-									<td>2022. 05. 01</td>
-									<td></td>
-									<td>시스템 공지</td>
-									<td>정상</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td class="title">
-										<div class="reply"><a href="#">re) re) 12312312</a></div>
-									</td>
-									<td>홍길동</td>
-									<td>2022. 05. 01</td>
-									<td></td>
-									<td>시스템 공지</td>
-									<td>정상</td>
-								</tr>
-								<tr>
-									<td>211</td>
-									<td class="title">
-										<div class="lock"><a href="#">12312312</a></div>
-									</td>
-									<td>홍길동</td>
-									<td>2022. 05. 01</td>
-									<td>해당</td>
-									<td>시스템 공지</td>
-									<td>정상</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td class="title">
-										<div class="reply"><a href="#">re)re) 12312312</a></div>
-									</td>
-									<td>홍길동</td>
-									<td>2022. 05. 01</td>
-									<td></td>
-									<td>시스템 공지</td>
-									<td>정상</td>
-								</tr>
-								<tr>
-									<td>211</td>
-									<td class="title">
-										<div class=""><a href="#">제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 제목 내용 길게 </a></div>
-									</td>
-									<td>홍길동</td>
-									<td>2022. 05. 01</td>
-									<td>해당</td>
-									<td>시스템 공지</td>
-									<td>정상</td>
-								</tr>
-							</tbody>
-						</table>
+					<table class="grid">
+						<caption>그리드 정보</caption>
+						<colgroup>
+							<col style="width:10%;">
+							<col>
+							<col style="width:10%;">
+							<col style="width:13%;">
+							<col style="width:15%;">
+							<col style="width:10%;">
+							<col style="width:13%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">선택</th>
+								<th scope="col">부서명</th>
+								<th scope="col">사용자 ID</th>
+								<th scope="col">종별</th>
+								<th scope="col">상위부서</th>
+								<th scope="col">부서장</th>
+								<th scope="col">등록일자</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="team-tree-items">
+						<ul class="depth open">
+							<li class="depth1">
+								<div class="check"><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></div>
+								<div class="team">
+									<a href="javascript:;" class="tit">영업본부</a>
+								</div>
+								<div class="code"><a href="#">ORG10001</a></div>
+								<div class="type">본부</div>
+								<div class="top"></div>
+								<div class="name">홍길동</div>
+								<div class="date">2002-01-01</div>
+								<ul class="depth">
+									<li class="depth2">
+										<div class="check"><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></div>
+										<div class="team">
+											<a href="javascript:;" class="tit">영업 서울 사업부</a>
+										</div>
+										<div class="code"><a href="#">ORG10001</a></div>
+										<div class="type">사업부</div>
+										<div class="top">영업 본부</div>
+										<div class="name">홍길동</div>
+										<div class="date">2002-01-01</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 					<div class="paging">
 						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
@@ -328,56 +289,13 @@
 						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 					</div>
 				</div>
+				
 			</section>
 			<!-- //cont-body -->
-
-			
 			
 		</div>
 		<!-- // content -->
 	</div>
 
-	<!-- 비밀번호 입력 -->
-	<div id="popBoardPw" class="poplayer"><!-- id값 수정 가능 -->
-		<div class="inner small">
-			<header>
-				<h2>비밀번호 입력</h2>
-			</header>
-			<div class="popcont">
-				<div class="cont">
-					<div class="gray-hor-tb">
-						<table class="editpw layout-fixed">
-							<colgroup>
-								<col style="width:110px;">
-								<col>
-							</colgroup>
-							<tbody>
-								<tr>
-									<th scope="row">비밀번호</th>
-									<td>
-										<div class="pw-area">
-											<input type="password" placeholder="현재 비밀번호" style="width:280px;" title="현재 비밀번호">
-											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-	
-					
-					<!-- btn-wrap// -->
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">확인</button>
-					</div>
-					<!-- //btn-wrap -->
-					
-				</div>
-			</div>
-			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popBoardPw');"><span class="hidden">팝업닫기</span></button>
-		</div>
-		<span class="poplayer-background" onclick="fn.popupClose('#popBoardPw');"></span>
-	</div>
-	<!-- //비밀번호 입력 -->
 </body>
 </html>
