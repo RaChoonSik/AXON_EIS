@@ -79,7 +79,7 @@
 .indv-graph .graphBox {display:none;}
 .indv-graph .graphBox.active {display:block;}
 
-.flex-group .select.time {margin-right: 20px;}
+.flex-group .select.time {margin-right: 8px;min-width: 100px;width: 100px;}
 .sql-area {padding:12px 0;}
 .sql-area textarea {height: 320px;}
 .sql-area .btn-wrap {margin-top: 12px;text-align: right;}
@@ -146,3 +146,4 @@
 .popReportAdd .item {margin-top:12px;}
 .popReportAdd .item input {width: calc(100% - 52px); margin-right: 5px;}
 .popReportAdd .grid-wrap {height: 288px; margin-top:12px;}
+.flex-group .day .chk {display:inline-block; margin-left:12px;}
