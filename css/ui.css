@@ -147,3 +147,11 @@
 .popReportAdd .item input {width: calc(100% - 52px); margin-right: 5px;}
 .popReportAdd .grid-wrap {height: 288px; margin-top:12px;}
 .flex-group .day .chk {display:inline-block; margin-left:12px;}
+.gray-hor-tb .line-txt {margin-left:24px; margin-right:8px;}
+.gray-hor-tb .user-line {line-height: 1.8;}
+.gray-hor-tb .tb-pd8 {padding:8px 0;}
+
+.popsendenroll.map .btn-area {left: 335px;}
+.popsendenroll.map .user-list {border:1px solid #ccc;}
+.popsendenroll.map .grid td {padding: 6px 0;text-align: left; border-top:0;}
+.popsendenroll.map .inner-table {padding: 12px 0 12px 20px;}
