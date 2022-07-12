@@ -24,11 +24,13 @@
 	<script>
 		$(document).ready(function(){
 			$('#popMyFolder .folder-tree .toggle').sortable({
-				connectWith: '#popMyFolder .folder-tree .toggle ul'
+				connectWith: '#popMyFolder .folder-tree .toggle ul',
+				tolerance: "pointer"
 			});
 			$('#popMyFolder .folder-tree .toggle ul').sortable({
 				items: $('#popMyFolder .folder-tree .toggle ul li'),
-				connectWith: '#popMyFolder .folder-tree .toggle ul'
+				connectWith: '#popMyFolder .folder-tree .toggle ul',
+				tolerance: "pointer"
 			});
 		});
 		function tabLast(){

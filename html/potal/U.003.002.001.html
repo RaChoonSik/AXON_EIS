@@ -31,11 +31,13 @@
 			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
 
 			$('.folder-tree .toggle').sortable({
-				connectWith: '.folder-tree .toggle ul'
+				connectWith: '.folder-tree .toggle ul',
+				tolerance: "pointer"
 			});
 			$('.folder-tree .toggle ul').sortable({
 				items: $('.folder-tree .toggle ul li'),
-				connectWith: '.folder-tree .toggle ul'
+				connectWith: '.folder-tree .toggle ul',
+				tolerance: "pointer"
 			});
 		});
 	</script>
