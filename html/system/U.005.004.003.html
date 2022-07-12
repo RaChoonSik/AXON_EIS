@@ -164,10 +164,10 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 신규 등록</h3>
+				<h3 class="page-title">사용자 역할 신규 수정</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">사용자 정보</h3>
+					<h3 class="h3-title">사용자 역할 정보</h3>
 					<div class="gray-hor-tb">
 						<table class="layout-fixed">
 							<colgroup>
@@ -178,70 +178,44 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">사용자 ID</span></th>
-									<td colspan="3">
-										<div class="flex-group gap8">
-											<input type="text" placeholder="사용자 ID를 입력하세요." title="사용자 ID" style="width: calc(50% - 63px);">
-											<button type="button" class="btn small">중복관리</button>
-											<div class="confirm-msg">
-												<p>* 사용가능</p>
-											</div>
-										</div>
+									<th scope="row"><span class="required">역할 ID</span></th>
+									<td>
+										<input type="text" placeholder="역할ID는 자동 발행 됩니다." title="역할 ID" value="RL0000001" readonly>
+									</td>
+									<th scope="row"><span class="required">역할명</span></th>
+									<td>
+										<input type="text" placeholder="사용자 역할명을 입력하세요." title="역할명" value="일반 조화가">
 									</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">사용자명</span></th>
-									<td><input type="text" placeholder="사용자명을 입력하세요." title="사용자명"></td>
-									<th scope="row">영문명</th>
-									<td><input type="text" placeholder="사용자 영문명을 입력하세요." title="영문명"></td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">로그인 ID</span></th>
-									<td colspan="3">
-										<div class="flex-group gap8">
-											<input type="text" placeholder="로그인 ID를 입력하세요." title="ID" style="width: calc(50% - 63px);">
-											<button type="button" class="btn small">중복관리</button>
-											<div class="error-msg">
-												<p>* 사용불가</p>
-											</div>
+									<th scope="row"><span class="required">종별</span></th>
+									<td>
+										<div class="select">
+											<select>
+												<option>일반 사용자</option>
+												<option>KPI 분석가</option>
+											</select>
 										</div>
 									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">부서</span></th>
+									<th scope="row">사용자 매핑</th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="부서를 선택하세요." title="부서" readonly>
+											<input type="text" placeholder="사용자를 등록하세요." title="사용자 매핑" value="홍길동 외 3명" readonly>
 											<button type="button" class="btn small">선택</button>
 										</div>
 									</td>
-									<th scope="row">전화번호</th>
-									<td><input type="text" placeholder="전화번호를 입력하세요." title="전화번호"></td>
 								</tr>
 								<tr>
-									<th scope="row">핸드폰번호</th>
-									<td><input type="text" placeholder="핸드폰 번호를 입력하세요." title="핸드폰번호"></td>
-									<th scope="row"><span class="required">이메일</span></th>
-									<td><input type="text" placeholder="이메일 주소를 입력하세요." title="이메일"></td>
-								</tr>
-								<tr>
-									<th scope="row">IP 주소</th>
+									<th scope="row">설명</th>
 									<td colspan="3">
-										<div class="flex-group gap8">
-											<input type="text" placeholder="0.0.0.0" title="ID" style="width: calc(50% - 63px);">
-											<div class="chk"><label><input type="checkbox"><span>IP 주소 체크</span></label></div>
-										</div>
+										<div class="tb-pd8"><textarea placeholder="역할 설명을 입력하세요.">정형보고서 실행을 위한 사용자 역할 매핑</textarea></div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row">옵션</th>
-									<td colspan="3">
-										<div class="flex-group">
-											<div class="chk"><label><input type="checkbox"><span>모바일 인증</span></label></div>
-											<div class="chk"><label><input type="checkbox"><span>SSO허용</span></label></div>
-											<div class="chk"><label><input type="checkbox"><span>미사용</span></label></div>
-										</div>
-									</td>
+									<th scope="row">최종 수정자</th>
+									<td>홍길동</td>
+									<th scope="row">최종 수정일시</th>
+									<td>2020-01-01 15:00</td>
 								</tr>
 							</tbody>
 						</table>

@@ -164,10 +164,10 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 신규 등록</h3>
+				<h3 class="page-title">부서 신규 등록</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">사용자 정보</h3>
+					<h3 class="h3-title">부서 정보</h3>
 					<div class="gray-hor-tb">
 						<table class="layout-fixed">
 							<colgroup>
@@ -178,10 +178,10 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">사용자 ID</span></th>
+									<th scope="row"><span class="required">부서 ID</span></th>
 									<td colspan="3">
 										<div class="flex-group gap8">
-											<input type="text" placeholder="사용자 ID를 입력하세요." title="사용자 ID" style="width: calc(50% - 63px);">
+											<input type="text" placeholder="부서 ID를 입력하세요." title="부서 ID" style="width: calc(50% - 63px);">
 											<button type="button" class="btn small">중복관리</button>
 											<div class="confirm-msg">
 												<p>* 사용가능</p>
@@ -190,56 +190,39 @@
 									</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">사용자명</span></th>
-									<td><input type="text" placeholder="사용자명을 입력하세요." title="사용자명"></td>
+									<th scope="row"><span class="required">부서명</span></th>
+									<td><input type="text" placeholder="부서명을 입력하세요." title="부서명"></td>
 									<th scope="row">영문명</th>
-									<td><input type="text" placeholder="사용자 영문명을 입력하세요." title="영문명"></td>
+									<td><input type="text" placeholder="부서 영문명을 입력하세요." title="영문명"></td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">로그인 ID</span></th>
-									<td colspan="3">
-										<div class="flex-group gap8">
-											<input type="text" placeholder="로그인 ID를 입력하세요." title="ID" style="width: calc(50% - 63px);">
-											<button type="button" class="btn small">중복관리</button>
-											<div class="error-msg">
-												<p>* 사용불가</p>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">부서</span></th>
+									<th scope="row"><span class="required">상위부서</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="부서를 선택하세요." title="부서" readonly>
+											<input type="text" placeholder="상위부서를 선택하세요." title="상위부서" readonly>
 											<button type="button" class="btn small">선택</button>
 										</div>
 									</td>
-									<th scope="row">전화번호</th>
-									<td><input type="text" placeholder="전화번호를 입력하세요." title="전화번호"></td>
-								</tr>
-								<tr>
-									<th scope="row">핸드폰번호</th>
-									<td><input type="text" placeholder="핸드폰 번호를 입력하세요." title="핸드폰번호"></td>
-									<th scope="row"><span class="required">이메일</span></th>
-									<td><input type="text" placeholder="이메일 주소를 입력하세요." title="이메일"></td>
-								</tr>
-								<tr>
-									<th scope="row">IP 주소</th>
-									<td colspan="3">
+									<th scope="row">부서장</th>
+									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="0.0.0.0" title="ID" style="width: calc(50% - 63px);">
-											<div class="chk"><label><input type="checkbox"><span>IP 주소 체크</span></label></div>
+											<input type="text" placeholder="부서 리더를 선택하세요." title="부서장" readonly>
+											<button type="button" class="btn small">선택</button>
 										</div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row">옵션</th>
+									<th scope="row"><span class="required">종별</span></th>
 									<td colspan="3">
-										<div class="flex-group">
-											<div class="chk"><label><input type="checkbox"><span>모바일 인증</span></label></div>
-											<div class="chk"><label><input type="checkbox"><span>SSO허용</span></label></div>
-											<div class="chk"><label><input type="checkbox"><span>미사용</span></label></div>
+										<div class="select" style="width: calc(50% - 63px);">
+											<select>
+												<option>임원</option>
+												<option>본부</option>
+												<option>사업부</option>
+												<option>팀</option>
+												<option>실</option>
+												<option>출장소</option>
+											</select>
 										</div>
 									</td>
 								</tr>

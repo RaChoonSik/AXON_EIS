@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-medium, font-large -->
+	<div id="wrap">
+
+		<div id="lnb" class="on">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+					
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
+								<img src="../../img/common/menu_chart01.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다" data-target="menu">
+								<img src="../../img/common/menu_chart02.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart03.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart04.png" alt="메뉴">
+								<span>메뉴123</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart05.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart06.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart07.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart08.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart09.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart10.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">시스템 설정</a>
+					<a href="javascript:;" class="fix on">고정</a>
+				</div>
+			</div>
+			<!-- lnb 메뉴 추가 -->
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>고객사 시스템명</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">개인정보 수정</a>
+							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;">개인 통계</a>
+							<a href="javascript:;">스케줄</a>
+							<a href="javascript:;">시스템 정보</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+				<!-- 게시판 추가 -->
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<h3 class="page-title">부서 정보 수정</h3>
+
+				<div class="inner-cont">
+					<h3 class="h3-title">부서 정보</h3>
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="required">부서 ID</span></th>
+									<td colspan="3">
+										<input type="text" placeholder="부서 ID를 입력하세요." title="부서 ID" style="width: calc(50% - 63px);" value="ORG1231" readonly>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">부서명</span></th>
+									<td><input type="text" placeholder="부서명을 입력하세요." title="부서명" value="영업본부"></td>
+									<th scope="row">영문명</th>
+									<td><input type="text" placeholder="부서 영문명을 입력하세요." title="영문명" value="SALES DIV"></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">상위부서</span></th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="상위부서를 선택하세요." title="상위부서" value="ROOT" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popUserTeam');">선택</button>
+										</div>
+									</td>
+									<th scope="row">부서장</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="부서 리더를 선택하세요." title="부서장" value="홍길동" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popTeamLeader');">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">종별</span></th>
+									<td colspan="3">
+										<div class="select" style="width: calc(50% - 63px);">
+											<select>
+												<option>임원</option>
+												<option>본부</option>
+												<option>사업부</option>
+												<option>팀</option>
+												<option>실</option>
+												<option>출장소</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>최종 수정자</th>
+									<td>홍길동</td>
+									<th>최종 수정일시</th>
+									<td>2020-01-01 15:00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+	
+
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">수정</button>
+						<button type="button" class="btn big h40">목록</button>
+					</div>
+				</div>
+				
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+	<!-- 사용자 부서 선택// -->
+	<div id="popUserTeam" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>상위 부서 검색</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<div class="gray-hor-tb">
+							<table class="layout-fixed">
+								<colgroup>
+									<col style="width:110px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">부서명</th>
+										<td>
+											<input type="text" placeholder="부서명을 입력하세요." title="부서명">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btn-wrap mgt12">
+							<button type="button" class="btn fullblue big">검색</button>
+						</div>
+						<div class="user-list team-tree">
+							<table class="grid">
+								<colgroup>
+									<col>
+									<col style="width:100px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">부서명</th>
+										<th scope="col">부서ID</th>
+									</tr>
+								</thead>
+							</table>
+							<div class="inner-table">
+								<ul class="user-team-list toggle">
+									<li class="active"><!-- 활성화 : li class="open" 추가 -->
+										<button type="button" class="btn-toggle folder sort-item">ROOT</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더</span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+											<li class="active">
+												<button type="button" class="btn-toggle folder sort-item">3뎁스</button>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+												<ul class="depth3">
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">영업본부</span>
+														</a>
+														<div class="code"><a href="javascript:;">ORG1232</a></div>
+													</li>
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">SUB 폴더3</span>
+														</a>
+														<div class="code"><a href="javascript:;">ORG1232</a></div>
+													</li>
+													<li class="active">
+														<button type="button" class="btn-toggle folder sort-item">4뎁스</button>
+														<div class="code"><a href="javascript:;">ORG1232</a></div>
+														<ul class="depth4">
+															<li class="sort-item">
+																<a href="#">
+																	<span class="last">영업</span>
+																</a>
+																<div class="code"><a href="javascript:;">ORG1232</a></div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<button type="button" class="btn-toggle folder sort-item">인사본부</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">영업1팀 </span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<button type="button" class="btn-toggle folder sort-item">폴더명 3</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">영업 2팀</span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<button type="button" class="btn-toggle folder sort-item">폴더명 4</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더 sub</span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popUserTeam');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popUserTeam');"></span>
+	</div>
+	<!-- //사용자 부서 선택 -->
+
+	<!-- 사용자 부서 선택// -->
+	<div id="popTeamLeader" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>부서장 검색</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<div class="gray-hor-tb">
+							<table class="layout-fixed">
+								<colgroup>
+									<col style="width:110px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">사용자명</th>
+										<td>
+											<input type="text" placeholder="사용자명을 입력하세요." title="사용자명">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btn-wrap mgt12">
+							<button type="button" class="btn fullblue big">검색</button>
+						</div>
+						<div class="user-list team-tree">
+							<table class="grid">
+								<colgroup>
+									<col style="width:50px;">
+									<col style="width:100px;">
+									<col style="width:100px;">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">No</th>
+										<th scope="col">사용자명</th>
+										<th scope="col">사용자 ID</th>
+										<th scope="col">부서</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><a href="javascript:;">홍길동</a></td>
+										<td><a href="javascript:;">S0001</a></td>
+										<td>경영지원</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><a href="javascript:;">홍길동</a></td>
+										<td><a href="javascript:;">S0002</a></td>
+										<td>경영지원</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><a href="javascript:;">홍길동</a></td>
+										<td><a href="javascript:;">S0003</a></td>
+										<td>경영지원</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><a href="javascript:;">홍길동</a></td>
+										<td><a href="javascript:;">S0004</a></td>
+										<td>경영지원</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><a href="javascript:;">홍길동</a></td>
+										<td><a href="javascript:;">S0005</a></td>
+										<td>인사</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="paging">
+							<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+							<button type="button" class="active">1</button>
+							<button type="button">2</button>
+							<button type="button">3</button>
+							<button type="button">4</button>
+							<button type="button">5</button>
+							<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popTeamLeader');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popTeamLeader');"></span>
+	</div>
+	<!-- //사용자 부서 선택 -->
+
+</body>
+</html>

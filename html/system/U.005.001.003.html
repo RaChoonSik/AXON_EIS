@@ -662,15 +662,11 @@
 		<div id="popUserTeam" class="poplayer"><!-- id값 수정 가능 -->
 			<div class="inner small">
 				<header>
-					<h2>사용자 역할 매핑</h2>
+					<h2>부서 검색</h2>
 				</header>
 				<div class="popcont">
 					<div class="cont">
 						<div class="clear">
-							<!-- 사용자 그룹// -->
-							<div class="title-area">
-								<h3 class="h3-title">사용자 역할</h3>
-							</div>
 							<div class="gray-hor-tb">
 								<table class="layout-fixed">
 									<colgroup>
@@ -681,7 +677,7 @@
 										<tr>
 											<th scope="row">부서명</th>
 											<td>
-												<input type="text" placeholder="부서명을 입력하세요." title="부서명을 입력하세요.">
+												<input type="text" placeholder="부서명을 입력하세요." title="부서명">
 											</td>
 										</tr>
 									</tbody>
@@ -705,7 +701,7 @@
 								</table>
 								<div class="inner-table">
 									<ul class="user-team-list toggle">
-										<li class="active open"><!-- 활성화 : li class="open" 추가 -->
+										<li class="active"><!-- 활성화 : li class="open" 추가 -->
 											<button type="button" class="btn-toggle folder sort-item">ROOT</button>
 											<div class="code"><a href="javascript:;">ORG1232</a></div>
 											<ul class="depth2">
@@ -715,7 +711,7 @@
 													</a>
 													<div class="code"><a href="javascript:;">ORG1232</a></div>
 												</li>
-												<li class="active open">
+												<li class="active">
 													<button type="button" class="btn-toggle folder sort-item">3뎁스</button>
 													<div class="code"><a href="javascript:;">ORG1232</a></div>
 													<ul class="depth3">
@@ -731,7 +727,7 @@
 															</a>
 															<div class="code"><a href="javascript:;">ORG1232</a></div>
 														</li>
-														<li class="active open">
+														<li class="active">
 															<button type="button" class="btn-toggle folder sort-item">4뎁스</button>
 															<div class="code"><a href="javascript:;">ORG1232</a></div>
 															<ul class="depth4">
@@ -787,7 +783,6 @@
 								</div>
 							</div>
 						</div>
-		
 					</div>
 				</div>
 				<button type="button" class="btn_popclose" onclick="fn.popupClose('#popUserTeam');"><span class="hidden">팝업닫기</span></button>

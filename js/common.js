@@ -396,6 +396,13 @@ var fn = (function() {
 				$(this).closest(".toggle").find("ul li").removeClass("active");
 				$(this).addClass("active");
 			});
+			$(document).on("click", ".team-tree-items .team a", function(){
+				if($(this).closest('li').hasClass('last')) {
+					return 0;
+				} else {
+					$(this).closest("li").toggleClass('open');
+				}
+			});
 			
 			//lnb 닫기 공통
 			$(document).on("click", ".cont-body", function(){
