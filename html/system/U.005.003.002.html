@@ -192,7 +192,7 @@
 									<td colspan="3">
 										<div class="flex-group gap8">
 											<input type="text" placeholder="사용자를 등록하세요." style="width: calc(50% - 63px);" title="사용자 매핑" value="사용자를 등록하세요." readonly>
-											<button type="button" class="btn small">선택</button>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popReceiver');">선택</button>
 										</div>
 									</td>
 								</tr>
@@ -219,6 +219,279 @@
 		</div>
 		<!-- // content -->
 	</div>
+
+	<!-- 수신자 설정 팝업// -->
+	<div id="popReceiver" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
+		<div class="inner large">
+			<header>
+				<h2>사용자 매핑</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<!-- 조직도// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">조직도</h3>
+							</div>
+							
+							<div class="content-area" style="height:440px; overflow:auto;">
+								<h4>그룹목록</h4>
+								<ul class="toggle">
+									<li><!-- 활성화 : li class="open" -->
+										<button type="button" class="btn-toggle">임원</button>
+										<ul class="depth2">
+											<li><!-- 활성화 : li class="active" -->
+												<button type="button" class="btn-toggle">지원전략본부</button>
+												<ul class="depth3">
+													<li>
+														<button type="button" class="btn-toggle">영업관리부</button>
+														<ul class="depth4">
+															<li>
+																<button type="button" class="last">영업1팀</button>
+															</li>
+															<li><button type="button" class="last">영업2팀</button></li>
+														</ul>
+													</li>
+													<li><button type="button" class="last">영업관리부 22</button></li>
+												</ul>
+											</li>
+											<li>
+												<button type="button" class="btn-toggle">지원전략본부 22</button>
+												<ul class="depth3">
+													<li>
+														<button type="button" class="btn-toggle">영업관리부 22</button>
+														<ul class="depth4">
+															<li>
+																<button type="button" class="last">영업1팀 22</button>
+															</li>
+															<li><button type="button" class="last">영업2팀 22 </button></li>
+														</ul>
+													</li>
+													<li><button type="button" class="last">영업관리부 22222</button></li>
+												</ul>
+											</li>
+											<li><button type="button" class="last">지원전략본부 33</button></li>
+											<li><button type="button" class="last">지원전략본부 44</button></li>
+										</ul>
+									</li>
+									<li>
+										<button type="button" class="btn-toggle">영업관리부</button>
+										<ul class="depth2">
+											<li><button type="button" class="last">영업팀</button></li>
+											<li><button type="button" class="last">사업관리팀</button></li>
+										</ul>
+									</li>
+									<li>
+										<button type="button" class="btn-toggle">마케팅부</button>
+										<ul class="depth2">
+											<li><button type="button" class="last">마케팅부 1</button></li>
+											<li><button type="button" class="last">마케팅부 2</button></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //조직도 -->
+	
+						<!-- 수신자// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">사용자 검색</h3>
+							</div>
+							<div class="item">
+								<div class="ipt-btn-del">
+									<input type="text" placeholder="사용자명 검색">
+									<button type="button" class="del">삭제</button>
+								</div>
+								<button type="button" class="btn fullblue">검색</button>
+							</div>
+							<div class="user-list">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:40%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">사용자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3" style="padding:0;">
+											<div class="inner-table">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:40%;">
+														<col style="width:20%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>이름1</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //수신자 -->
+	
+						<!-- btn-area// -->
+						<div class="btn-area">
+							<button type="button" class="btn-add"><span class="hide">추가</span></button>
+							<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
+						</div>
+						<!-- //btn-area -->
+	
+						<!-- 사용자 매핑 목록// -->
+						<div class="graybox fr">
+							<div class="title-area">
+								<h3 class="h3-title">사용자 매핑 목록</h3>
+							</div>
+							
+							<div class="user-list" style="height: 440px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:40%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">수신자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3" style="padding:0;">
+											<div class="inner-table" style="height: 400px;">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:40%;">
+														<col style="width:20%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>이름1</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //사용자 매핑 목록 -->
+					</div>
+	
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+					<!-- //btn-wrap -->
+	
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReceiver');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReceiver');"></span>
+	</div>
+	<!-- //수신자 설정 팝업 -->
 
 </body>
 </html>

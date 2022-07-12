@@ -121,6 +121,7 @@
 .popsendenroll .grid .selected {background-color:#f2f2f2;}
 .popsendenroll .btn-wrap {/* margin-top:15px; */}
 .popsendenroll .user-list {margin-top: 12px;height: 396px;overflow: hidden;}
+.popsendenroll .title-area + .user-list {margin-top:0;}
 .popsendenroll .user-list tbody {/* height: 260px; */overflow-y: auto;}
 .popsendenroll .user-list tbody > tr > td {/* vertical-align: top; */}
 
@@ -209,3 +210,13 @@
 .team-tree-items .depth2 > .team {padding-left:40px;}
 .team-tree-items .depth3 > .team {padding-left:60px;}
 .team-tree-items .depth4 > .team {padding-left:80px;}
+
+.group-map {overflow: hidden;}
+.group-map > .graybox {width:calc((100% - 40px) / 3);}
+.group-map .mapping-group {float: right;width:calc(((100% - 40px) / 3) * 2);}
+.mapping-group .gray-bar {padding: 4px 12px;background: #f2f2f2;border: 1px solid #ccc;border-bottom: 0;}
+.mapping-group .lb {display: inline-block;width: 62px;font-size: var(--font-size-13); color:#888;vertical-align: middle;}
+.mapping-group .select {width: calc(47% - 90px);}
+.mapping-group .map-cont {position: relative;padding: 12px 20px;overflow: hidden;background-color: #fff;border: 1px solid #ccc;border-top: 0;}
+.popsendenroll .mapping-group .btn-area {top: 42%;right: 49%; left:auto;transform: translateX(25%);-ms-transform: translateX(25%);-moz-transform: translateX(25%);-webkit-transform: translateX(25%);}
+.popsendenroll .mapping-group .graybox {width: 45%;}
