@@ -12,7 +12,7 @@
 .doc-acc-list.memo .on .title {background-image: url('../img/common/ico_doc_on.png');}
 .doc-acc-list.memo .chk {position:absolute; left:20px;top: 10px;}
 .doc-acc-list.memo .head {padding-left: 58px;}
-.folder-tree {margin-top: 8px;height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;}
+.folder-tree {margin-top: 8px;height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;background: #fff;}
 .folder-tree .root {width: 260px;font-size: var(--font-size-14);}
 .folder-tree .toggle {width:260px;}
 .folder-tree .ui-sortable-handle {background: url('../img/common/bg_sortable.png') no-repeat right 8px;}
@@ -133,9 +133,6 @@
 .poppaymentinfo .grid thead th {font-weight:400;}
 .poppaymentinfo .grid tbody tr {background-color:#fff;}
 .poppaymentinfo .btn-wrap {margin-top:30px;}
-.inner-table {height: 356px;overflow-y: auto;}
-.inner-table table tr:first-child td {border-top:0;}
-.inner-table table tr:last-child td {border-bottom: 0;}
 .mapp-inp {display: flex;margin-top: 24px;gap: 8px;}
 .btn-chk-del {width:18px; height:18px; font-size:0; background: url('../img/common/checkbox_off.png') no-repeat 0 0;}
 .popReportAdd .cont-wrap {overflow: hidden;}
@@ -147,6 +144,7 @@
 .popReportAdd .item {margin-top:12px;}
 .popReportAdd .item input {width: calc(100% - 52px); margin-right: 5px;}
 .popReportAdd .grid-wrap {height: 288px; margin-top:12px;}
+.popReportAdd .grid-wrap > .grid > tbody > tr > td {border-bottom: 0;}
 .flex-group .day .chk {display:inline-block; margin-left:12px;}
 .gray-hor-tb .line-txt {margin-left:24px; margin-right:8px;}
 .gray-hor-tb .user-line {line-height: 1.8;}
@@ -155,6 +153,7 @@
 .popsendenroll.map .btn-area {left: 335px;}
 .popsendenroll.map .user-list {border:1px solid #ccc;}
 .popsendenroll.map .grid td {padding: 6px 0;text-align: left; border-top:0;}
+.popsendenroll.map .grid tr:last-child td {border-bottom: 0;}
 .popsendenroll.map .inner-table {padding: 12px 0 12px 20px;}
 .ipt-btn-del {position: relative;display: inline-block;width: calc(100% - 52px);margin-right: 5px;}
 .ipt-btn-del.full {width:100%;}
@@ -165,6 +164,7 @@
 
 .user-list.team-tree {margin-top:24px;}
 .user-team-list li {border-top: 1px solid #e1e1e1;font-size: 0 !important;}
+.user-team-list > li:last-child {border-bottom: 1px solid #e1e1e1;}
 .user-team-list .sort-item > a,
 .user-team-list .btn-toggle {display: inline-block;width: calc(100% - 100px); font-size: var(--font-size-12) !important;vertical-align: middle;}
 .user-team-list .code {display: inline-block; width: 100px;vertical-align: middle;text-align: center;}
@@ -220,3 +220,12 @@
 .mapping-group .map-cont {position: relative;padding: 12px 20px;overflow: hidden;background-color: #fff;border: 1px solid #ccc;border-top: 0;}
 .popsendenroll .mapping-group .btn-area {top: 42%;right: 49%; left:auto;transform: translateX(25%);-ms-transform: translateX(25%);-moz-transform: translateX(25%);-webkit-transform: translateX(25%);}
 .popsendenroll .mapping-group .graybox {width: 45%;}
+.report-menu {display: flex;gap: 20px;}
+.report-menu .left {min-width: 320px;width: 30%; flex-shrink: 0;}
+.report-menu .folder-tree {height: 458px;margin-top: 0;}
+.popRepoAdd .btn-area {left: 335px;}
+.sort-tb tr.ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
+
+.inner-table {height: 356px;overflow-y: auto;}
+.inner-table table tr:first-child td {border-top:0;}
+.inner-table table tr:last-child td {border-bottom: 1px solid #e1e1e1;}
