@@ -516,7 +516,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid tbody td {padding:10px 5px;min-height: 40px;color:#666;/* background:#fff; */font-size: var(--font-size-12);vertical-align:middle;line-height: 19px;border-top:1px solid #E1E1E1;word-break:break-word;}
 .grid tbody tr:first-child th,
 .grid tbody tr:first-child td {/* border-top:none; */}
-.grid tbody > tr:last-child td {/* border-bottom: 1px solid #e1e1e1; */}
+.grid tbody > tr:last-child td {border-bottom: 1px solid #e1e1e1;}
 .grid tbody tr td.no_data {padding:80px 0;text-align:center;}
 .grid tfoot td {padding:15px 5px;background:#F9F9F9;color:#666;font-size:14px;vertical-align:middle;line-height:20px;border-top:1px solid #E1E1E1;border-bottom:1px solid #E1E1E1;}
 .grid input[type="checkbox"] + span {margin:0;}

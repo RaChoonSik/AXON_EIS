@@ -23,17 +23,14 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-
-			$('.report-menu .folder-tree .toggle').sortable({
-				connectWith: '.report-menu .folder-tree .toggle ul',
-				tolerance: "pointer"
+			$(document).on("click", ".report-sauce input[name='repo_sauce']", function(){
+				var index = $(this).closest("label").index();
+				if(index == 0){ 
+					$(".attr_disabled").attr({disabled:true, placeholder:'등록된 보고서가 없습니다.'});
+				}else{
+					$(".attr_disabled").removeAttr("disabled").attr('placeholder','외부 URL을 입력하세요.');
+				}
 			});
-			$('.report-menu .folder-tree .toggle ul').sortable({
-				items: $('.report-menu .folder-tree .toggle ul li'),
-				connectWith: '.report-menu .folder-tree .toggle ul',
-				tolerance: "pointer"
-			});
-			$('.sort-tb tbody').sortable({});
 		});
 	</script>
 </head>
@@ -179,164 +176,97 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">보고서 메뉴 관리</h3>
+				<h3 class="page-title">보고서 신규 등록</h3>
+
 				<div class="inner-cont">
-					<div class="report-menu">
-						<div class="left">
-							<div class="title-area">
-								<h3 class="h3-title">보고서 메뉴</h3>
-								<div class="btn-wrap">
-									<button type="button" class="btn small">삭제</button>
-								</div>
-							</div>
-							<div class="folder-tree">
-								<div class="root">ROOT</div>
-								<ul class="toggle">
-									<li class="active"><!-- 활성화 : li class="open" 추가 -->
-										<a class="btn-toggle folder sort-item">폴더명 1 sort </a>
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더</span>
-												</a>
-											</li>
-											<li class="active">
-												<a class="btn-toggle folder sort-item">폴더 안 폴더</a>
-												<ul class="depth3">
-													<li class="sort-item">
-														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ</span>
-														</a>
-													</li>
-													<li class="sort-item">
-														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ</span>
-														</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 2</a>
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더 44 </span>
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 3</a>
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더 13</span>
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 4</a>
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더 sub</span>
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-	
-						<div class="right">
-							<div class="title-area">
-								<h3 class="h3-title">메뉴 정보 : 신규</h3>
-								<div class="btn-wrap">
-									<button type="button" class="btn small fullblue plus">신규</button>
-								</div>
-							</div>
-							<!-- 메뉴정보 -->
-							<div class="gray-hor-tb">
-								<table class="layout-fixed">
-									<colgroup>
-										<col style="width:110px;">
-										<col>
-									</colgroup>
-									<tbody>
-										<tr>
-											<th scope="row"><span class="required">메뉴 ID</span></th>
-											<td>
-												<input type="text" placeholder="메뉴 ID는 자동 발행됩니다." title="부서 ID" style="width: 50%" readonly>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row"><span class="required">메뉴명</span></th>
-											<td>
-												<input type="text" placeholder="메뉴명" title="메뉴명" style="width: 50%" value="일반 조회가">
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">상위메뉴</th>
-											<td>
-												<div class="flex-group gap8">
-													<input type="text" placeholder="상위메뉴" title="상위메뉴" style="width: 50%" value="ROOT" readonly>
-													<button type="button" class="btn small" onclick="fn.popupOpen('#popFolderMenu');">선택</button>
+					<h3 class="h3-title">보고서 정보</h3>
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><span class="required">보고서 ID</span></th>
+									<td><input type="text" placeholder="보고서ID는 자동 발행 됩니다." title="보고서 ID" readonly></td>
+									<th scope="row"><span class="required">보고서명</span></th>
+									<td><input type="text" placeholder="보고서명을 입력하세요." title="보고서명"></td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">업무분류</span></th>
+									<td>
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>1</option>
+												<option>2</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row">보고서메뉴</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="등록된 메뉴가 없습니다." title="보고서메뉴" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popReportMenu');">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">보고서 소스</span></th>
+									<td colspan="3">
+										<div>
+											<div class="report-sauce">
+												<div class="radiobox">
+													<label for="rdo_1"><input type="radio" id="rdo_1" name="repo_sauce" checked=""><span>보고서</span></label>
+													<label for="rdo_2"><input type="radio" id="rdo_2" name="repo_sauce"><span>외부 URL</span></label>
 												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">보고서 등록</th>
-											<td>
 												<div class="flex-group gap8">
-													<input type="text" placeholder="보고서 등록" title="보고서 등록" style="width: 50%" value="보고서가 등록되지 않습니다." readonly>
-													<button type="button" class="btn small" onclick="fn.popupOpen('#popRepoAdd');">선택</button>
+													<input type="text" placeholder="등록된 보고서가 없습니다." title="보고서 소스" disabled class="attr_disabled">
+													<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+													<button type="button" class="btn" onclick="fn.popupOpen('#popPreview');">미리보기</button>
 												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">사용자 매핑</th>
-											<td>
-												<div class="flex-group gap8">
-													<input type="text" placeholder="사용자 매핑" title="사용자 매핑" style="width: 50%" value="사용자가 매핑되지 않습니다." readonly>
-													<button type="button" class="btn small" onclick="fn.popupOpen('#popReceiver');">선택</button>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">역할 매핑</th>
-											<td>
-												<div class="flex-group gap8">
-													<input type="text" placeholder="역할 매핑" title="역할 매핑" style="width: 50%" value="일반사용자 외 3건" readonly>
-													<button type="button" class="btn small" onclick="fn.popupOpen('#popRoleMapping');">선택</button>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">메뉴 설명</th>
-											<td>
-												<div class="tb-pd8"><textarea placeholder="메뉴 정보 설명 입력" style="width:50%;"></textarea></div>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">최종 수정자</th>
-											<td>홍길동</td>
-										</tr>
-										<tr>
-											<th scope="row">최종 수정일시</th>
-											<td>2020-01-01 15:00</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사용자 매핑</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="매핑된 사용자가 없습니다." title="사용자 매핑" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popReceiver');">선택</button>
+										</div>
+									</td>
+									<th scope="row">역할 매핑</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="매핑된 역할이 없습니다." title="역할 매핑" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popRoleMapping');">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">설명</th>
+									<td colspan="3">
+										<div class="tb-pd8">
+											<textarea placeholder="역할 설명을 입력하세요."></textarea>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
+	
+
 					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">저장</button>
+						<button type="button" class="btn big fullblue h40">등록</button>
+						<button type="button" class="btn big h40">목록</button>
 					</div>
 				</div>
+				
 			</section>
 			<!-- //cont-body -->
 			
@@ -344,328 +274,202 @@
 		<!-- // content -->
 	</div>
 
-	<!-- 상위메뉴 설정// -->
-	<div id="popFolderMenu" class="poplayer">
+	<!-- 팝업// -->
+	<div id="popup_fileenroll" class="poplayer popfileenroll"><!-- id값 수정 가능 -->
 		<div class="inner small">
 			<header>
-				<h2>상위메뉴 설정</h2>
+				<h2>파일 등록</h2>
 			</header>
 			<div class="popcont">
 				<div class="cont">
-					<div class="folder-tree">
-						<div class="root">ROOT</div>
-						<ul class="toggle">
-							<li class="active"><!-- 활성화 : li class="open" 추가 -->
-								<a class="btn-toggle folder sort-item">폴더명 1 sort </a>
-								<ul class="depth2">
-									<li class="sort-item">
-										<a href="#">
-											<span class="last">SUB 폴더</span>
-										</a>
-									</li>
-									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더 안 폴더</a>
-										<ul class="depth3">
+					<form>
+						<fieldset>
+							<legend>파일 등록</legend>
+	
+							<div class="fileupload">
+								<div class="inputfile">
+									<input type="file" id="file1" name="file1" class="hide" onchange="fn.fileCheck(this)">
+									<input type="text" class="upload-name ellipsis" placeholder="보고서 파일 선택" readonly>
+								</div>
+								<label for="file1" class="btn fullblue small">첨부</label>
+								<button type="button" class="btn file-del hide" onclick="fn.fileReset(this);">삭제</button>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">등록</button>
+							</div>
+	
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll');"></span>
+	</div>
+	<!-- //팝업 -->
+
+	<!-- 보고서 메뉴 매핑 팝업// -->
+	<div id="popReportMenu" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
+		<div class="inner">
+			<header>
+				<h2>보고서 메뉴 매핑</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<!-- 사용자 그룹// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">보고서 목록</h3>
+							</div>
+							<div class="folder-tree system mgt8" style="height:436px;">
+								<ul class="toggle">
+									<li class="active open"><!-- 활성화 : li class="open" 추가 -->
+										<button type="button" class="btn-toggle folder sort-item">일반 역할</button>
+										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
-													<span class="last">SUㄴㅁㄹㅇㄻ</span>
+													<span class="last">SUB 폴더</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="active open">
+										<button type="button" class="btn-toggle folder sort-item">시스템 역할</button>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_ADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
 												</a>
 											</li>
 											<li class="sort-item">
 												<a href="#">
-													<span class="last">SUㄴㅁㄹㅇㄻ</span>
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
 												</a>
 											</li>
 										</ul>
 									</li>
 								</ul>
-							</li>
-							<li class="active">
-								<a class="btn-toggle folder sort-item">폴더명 2</a>
-								<ul class="depth2">
-									<li class="sort-item">
-										<a href="#">
-											<span class="last">SUB 폴더 44 </span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="active">
-								<a class="btn-toggle folder sort-item">폴더명 3</a>
-								<ul class="depth2">
-									<li class="sort-item">
-										<a href="#">
-											<span class="last">SUB 폴더 13</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="active">
-								<a class="btn-toggle folder sort-item">폴더명 4</a>
-								<ul class="depth2">
-									<li class="sort-item">
-										<a href="#">
-											<span class="last">SUB 폴더 sub</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">저장</button>
-					</div>
-
-				</div>
-			</div>
-			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popFolderMenu');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
-		</div>
-		<span class="poplayer-background" onclick="fn.popupClose('#popFolderMenu');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
-	</div>
-	<!-- //상위메뉴 설정 -->
-
-	<!-- 보고서 등록// -->
-	<div id="popRepoAdd" class="poplayer popsendenroll popRepoAdd"><!-- id값 수정 가능 -->
-		<div class="inner">
-			<header>
-				<h2>보고서 등록</h2>
-			</header>
-			<div class="popcont">
-				<div class="cont">
-					<div class="clear">
-	
-						<!-- 수신자// -->
-						<div class="graybox">
-							<div class="title-area">
-								<h3 class="h3-title">보고서 목록</h3>
-							</div>
-							<div class="gray-hor-tb">
-								<table class="layout-fixed">
-									<colgroup>
-										<col style="width:110px;">
-										<col>
-									</colgroup>
-									<tbody>
-										<tr>
-											<th scope="row">보고서명</th>
-											<td>
-												<input type="text" placeholder="보고서명을 입력하세요" title="보고서명">
-											</td>
-										</tr>
-										<tr>
-											<th scope="row">업무분류</th>
-											<td>
-												<div class="select">
-													<select>
-														<option>영업</option>
-														<option>재무</option>
-														<option>기타</option>
-													</select>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="btn-wrap tar">
-								<button type="button" class="btn fullblue">검색</button>
-							</div>
-							<div class="user-list" style="height:278px; margin-top:32px;">
-								<table class="grid">
-									<colgroup>
-										<col style="width:30%;">
-										<col style="width:30%;">
-										<col style="width:20%;">
-										<col style="width:20%;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">보고서명</th>
-											<th scope="col">유형</th>
-											<th scope="col">업무분류</th>
-											<th scope="col">선택</th>
-										</tr>
-									</thead>
-									<tr>
-										<td colspan="4" class="scroll-area">
-											<div class="inner-table" style="height:237px;">
-												<table class="grid">
-													<colgroup>
-														<col style="width:30%;">
-														<col style="width:30%;">
-														<col style="width:20%;">
-														<col style="width:20%;">
-													</colgroup>
-													<tbody>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>재무</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>항목</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>항목</td>
-															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</td>
-									</tr>
-								</table>
 							</div>
 						</div>
-						<!-- //수신자 -->
-	
+
 						<!-- btn-area// -->
-						<div class="btn-area">
+						<div class="btn-area" style="left:333px;">
 							<button type="button" class="btn-add"><span class="hide">추가</span></button>
 							<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
 						</div>
 						<!-- //btn-area -->
 	
-						<!-- 사용자 매핑 목록// -->
+						<!-- 역할 매핑 목록// -->
 						<div class="graybox fr">
 							<div class="title-area">
-								<h3 class="h3-title">보고서 등록 목록</h3>
+								<h3 class="h3-title">역할 매핑 목록</h3>
 							</div>
 							
-							<div class="user-list" style="height: 435px;">
+							<div class="user-list" style="height: 437px;">
 								<table class="grid">
 									<colgroup>
-										<col style="width:30%;">
-										<col style="width:30%;">
-										<col style="width:20%;">
+										<col style="width:80%;">
 										<col style="width:20%;">
 									</colgroup>
 									<thead>
 										<tr>
-											<th scope="col">보고서명</th>
-											<th scope="col">유형</th>
-											<th scope="col">업무분류</th>
+											<th scope="col">메뉴</th>
 											<th scope="col">선택</th>
 										</tr>
 									</thead>
 									<tr>
-										<td colspan="4" class="scroll-area">
-											<div class="inner-table" style="height: 394px;">
-												<table class="grid sort-tb">
+										<td colspan="2" class="scroll-area">
+											<div class="inner-table" style="height: 397px;">
+												<table class="grid">
 													<colgroup>
-														<col style="width:30%;">
-														<col style="width:30%;">
-														<col style="width:20%;">
+														<col style="width:80%;">
 														<col style="width:20%;">
 													</colgroup>
 													<tbody>
 														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>기타</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>영업</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>영업</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>손익계산서</td>
-															<td>REPORT</td>
-															<td>재무</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>월간영업</td>
-															<td>REPORT</td>
-															<td>영업</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>대차대조</td>
-															<td>REPORT</td>
-															<td>영업</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>그룹웨어 공지</td>
-															<td>URL</td>
-															<td>기타</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>그룹웨어 공지</td>
-															<td>URL</td>
-															<td>기타</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>그룹웨어 공지</td>
-															<td>URL</td>
-															<td>기타</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>그룹웨어 공지</td>
-															<td>URL</td>
-															<td>기타</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 														<tr>
-															<td>그룹웨어 공지</td>
-															<td>URL</td>
-															<td>기타</td>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td class="tal">폴더명1 &gt; SUB폴더명1</td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
 													</tbody>
@@ -676,9 +480,8 @@
 								</table>
 							</div>
 						</div>
-						<!-- //사용자 매핑 목록 -->
+						<!-- //역할 매핑 목록 -->
 					</div>
-	
 					<!-- btn-wrap// -->
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue h40">저장</button>
@@ -687,18 +490,17 @@
 	
 				</div>
 			</div>
-			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popRepoAdd');"><span class="hidden">팝업닫기</span></button>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReportMenu');"><span class="hidden">팝업닫기</span></button>
 		</div>
-		<span class="poplayer-background" onclick="fn.popupClose('#popRepoAdd');"></span>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReportMenu');"></span>
 	</div>
-	<!-- //보고서 등록 -->
+	<!-- //보고서 메뉴 매핑 팝업 -->
 
-	
-	<!-- 메뉴 사용자 매핑// -->
+	<!-- 보고서 사용자 매핑// -->
 	<div id="popReceiver" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
 		<div class="inner large">
 			<header>
-				<h2>메뉴 사용자 매핑</h2>
+				<h2>보고서 사용자 매핑</h2>
 			</header>
 			<div class="popcont">
 				<div class="cont">
@@ -971,10 +773,6 @@
 						</div>
 						<!-- //사용자 매핑 목록 -->
 					</div>
-	
-					<div class="tar mgt4">
-						<div class="chk"><label><input type="checkbox"><span>하위 객체 권한 상속</span></label></div>
-					</div>
 					<!-- btn-wrap// -->
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue h40">저장</button>
@@ -987,13 +785,13 @@
 		</div>
 		<span class="poplayer-background" onclick="fn.popupClose('#popReceiver');"></span>
 	</div>
-	<!-- //메뉴 사용자 매핑 -->
+	<!-- //보고서 사용자 매핑 -->
 
-	<!-- 사용자 역할 매핑 팝업// -->
+	<!--보고서 역할 매핑 팝업// -->
 	<div id="popRoleMapping" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
 		<div class="inner">
 			<header>
-				<h2>메뉴 역할 매핑</h2>
+				<h2>보고서 역할 매핑</h2>
 			</header>
 			<div class="popcont">
 				<div class="cont">
@@ -1182,6 +980,30 @@
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
@@ -1191,12 +1013,8 @@
 							</div>
 						</div>
 						<!-- //역할 매핑 목록 -->
-
 					</div>
 	
-					<div class="tar mgt4">
-						<div class="chk"><label><input type="checkbox" checked><span>하위 객체 권한 상속</span></label></div>
-					</div>
 					<!-- btn-wrap// -->
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue h40">저장</button>
@@ -1209,7 +1027,40 @@
 		</div>
 		<span class="poplayer-background" onclick="fn.popupClose('#popRoleMapping');"></span>
 	</div>
-	<!-- //사용자 역할 매핑 팝업 -->
+	<!-- //보고서 역할 매핑 팝업 -->
+
+	<!-- 미리보기 -->
+	<div id="popPreview" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner">
+			<header>
+				<h2>미리보기</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">보고서 소스</th>
+									<td>https://www.endders.co.kr</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="report-preview" style="background-color:lightgray;">
+						<!-- 개발시 백그라운드 스타일 삭제 -->
+						보고서 영역
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popPreview');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popPreview');"></span>
+	</div>
 
 </body>
 </html>
