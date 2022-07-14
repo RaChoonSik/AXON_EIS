@@ -23,7 +23,19 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-
+			$(document).on("click", ".sauce-type input[name='repo_sauce']", function(){
+				var index = $(this).closest("label").index();
+				if(index == 0){ 
+					$('.sauce-type .flex-group input').attr({disabled:true, placeholder:'소스를 등록하세요.'}).val('');
+					$(this).closest('.sauce-type').attr('data-idx','idx1')
+				} else if (index == 1){
+					$(this).closest('.sauce-type').attr('data-idx','idx2')
+				}
+				else{
+					$('.sauce-type .flex-group input').removeAttr("disabled").attr('placeholder','URL 을 등록하세요');
+					$(this).closest('.sauce-type').attr('data-idx','idx3')
+				}
+			});
 		});
 	</script>
 </head>
@@ -169,105 +181,152 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">보고서 목록</h3>
+				<h3 class="page-title">KPI 지표 신규 등록</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">조회</h3>
-					<div class="bg-box">
-						<div class="list-area">
-							<ul>
-								<li>
-									<label>보고서명</label>
-									<div class="list-item">
-										<input type="text" placeholder="보고서명 검색">
-									</div>
-								</li>
-								<li>
-									<label>업무 분류</label>
-									<div class="list-item">
-										<div class="select">
-											<select>
-												<option>분류1</option>
-												<option>분류2</option>
-												<option>분류3</option>
-											</select>
-										</div>
-									</div>
-								</li>
-								
-							</ul>
-						</div>
-					</div>
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue">검색</button>
-					</div>
-	
-					<div class="title-area">
-						<h3 class="h3-title">게시글</h3>
-						<div class="btn-wrap">
-							<a href="#" class="btn small fullblue plus">신규등록</a>
-							<button type="button" class="btn small">삭제</button>
-							<div class="select">
-								<select>
-									<option>10</option>
-									<option>25</option>
-									<option>50</option>
-									<option>100</option>
-									<option>200</option>
-								</select>
-							</div>
-						</div>
-					</div>
-	
-					<div class="table-wrap">
-						<table class="grid">
-							<caption>그리드 정보</caption>
+					<h3 class="h3-title">KPI 지표 정보</h3>
+					<div class="gray-hor-tb">
+						<table class="layout-fixed">
 							<colgroup>
-								<col style="width:78px;">
+								<col style="width:110px;">
 								<col>
-								<col style="width:15%;">
-								<col style="width:15%;">
-								<col style="width:15%;">
-								<col style="width:15%;">
+								<col style="width:110px;">
+								<col>
 							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">선택</th>
-									<th scope="col">보고서명</th>
-									<th scope="col">보고서 ID</th>
-									<th scope="col">유형</th>
-									<th scope="col">업무분류</th>
-									<th scope="col">실행 이력</th>
-								</tr>
-							</thead>
 							<tbody>
 								<tr>
-									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-									<td><a href="#">영업요약</a></td>
-									<td><a href="#">RE0000003</a></td>
-									<td>REPORT</td>
-									<td>영업</td>
-									<td>2022-04-01</td>
+									<th scope="row"><span class="required">KPI ID</span></th>
+									<td><input type="text" placeholder="KPI 지표ID는 자동 발번 됩니다." title="KPI ID" readonly value="KR00000003"></td>
+									<th scope="row"><span class="required">KPI 지표명</span></th>
+									<td><input type="text" placeholder="지표명을 입력하세요." title="KPI 지표명" value="영업 목표 지표"></td>
 								</tr>
 								<tr>
-									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
-									<td><a href="#">월간영업</a></td>
-									<td><a href="#">RE0000003</a></td>
-									<td>REPORT</td>
-									<td>영업</td>
-									<td>2022-04-01</td>
+									<th scope="row"><span class="required">KPI 메뉴</span></th>
+									<td>
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>1</option>
+												<option>2</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row">업무분류</th>
+									<td>
+										<div class="flex-group">
+											<div class="select">
+												<select>
+													<option>영업</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+											</div>
+											<div class="select flex-sh0" style="width:100px;">
+												<select>
+													<option>일</option>
+													<option>주</option>
+													<option>월</option>
+													<option>분기</option>
+													<option>반기</option>
+													<option>년도</option>
+												</select>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">소스 유형</span></th>
+									<td colspan="3">
+										<div>
+											<div class="sauce-type" data-idx="idx1">
+												<div class="radiobox">
+													<label for="rdo_1"><input type="radio" id="rdo_1" name="repo_sauce" checked=""><span>보고서</span></label>
+													<label for="rdo_2"><input type="radio" id="rdo_2" name="repo_sauce"><span>HTML</span></label>
+													<label for="rdo_3"><input type="radio" id="rdo_3" name="repo_sauce"><span>외부 URL</span></label>
+												</div>
+												<div class="flex-group gap8">
+													<input type="text" placeholder="소스를 등록하세요" title="보고서 소스" disabled class="attr_disabled" value="Abcdedfg001.vbf">
+													<div class="select">
+														<select>
+															<option>선택</option>
+															<option>유형1</option>
+														</select>
+													</div>
+													<button type="button" class="btn small fullblue file" onclick="fn.popupOpen('#popup_fileenroll');">소스등록</button>
+													<button type="button" class="btn set" onclick="fn.popupOpen('#');">설정</button>
+													<button type="button" class="btn" onclick="fn.popupOpen('#popPreview');">미리보기</button>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">포틀릿 사이즈</span></th>
+									<td>
+										<div class="flex-group portlet-size">
+											<div class="select">
+												<select>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+											</div>
+											<span class="hyppen">X</span>
+											<div class="select">
+												<select>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+											</div>
+										</div>
+									</td>
+									<th scope="row">상세보고서</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="상세보고서를 등록하세요." title="상세보고서" readonly value="영업 현황 보고서">
+											<button type="button" class="btn small">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사용자 매핑</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="사용자를 등록하세요." title="사용자 매핑" readonly value="홍길동 외 3명">
+											<button type="button" class="btn small">선택</button>
+										</div>
+									</td>
+									<th scope="row">역할 매핑</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="역할을 등록하세요." title="역할 매핑" readonly value="일반 사용자 외 2개">
+											<button type="button" class="btn small">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">설명</th>
+									<td colspan="3">
+										<div class="tb-pd8">
+											<textarea placeholder="설명을 등록하세요.">- 시스템코드는 수정이 불가 합니다.</textarea>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">최종 수정자</th>
+									<td>홍길동</td>
+									<th scope="row">최종 수정일시</th>
+									<td>2020-01-01 15:00</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div class="paging">
-						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
-						<button type="button" class="active">1</button>
-						<button type="button">2</button>
-						<button type="button">3</button>
-						<button type="button">4</button>
-						<button type="button">5</button>
-						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+	
+
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">등록</button>
+						<button type="button" class="btn big h40">목록</button>
 					</div>
 				</div>
 				
@@ -277,8 +336,6 @@
 		</div>
 		<!-- // content -->
 	</div>
-
-	
 
 </body>
 </html>
