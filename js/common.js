@@ -393,8 +393,10 @@ var fn = (function() {
 				}
 			});
 			$(document).on("click", ".nav-menu .toggle ul li", function(){
-				$(this).closest(".toggle").find("ul li").removeClass("active");
-				$(this).addClass("active");
+				if($(this).hasClass('active') == false) {
+					$(this).closest(".toggle").find("ul li").removeClass("on");
+					$(this).addClass("on");
+				}
 			});
 			$(document).on("click", ".team-tree-items .team a", function(){
 				if($(this).closest('li').hasClass('last')) {

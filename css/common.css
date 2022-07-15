@@ -594,8 +594,8 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .toggle li {position:relative;/* margin-top: 12px; *//* padding: 6px 0; */font-size: 0;}
 .toggle > li {padding:0;}
 .toggle ul > li {padding-left:30px;font-size: var(--font-size-14);}
-.nav-menu .toggle ul > li a:hover{background-color: rgb(0 0 0 / 15%);}
-.nav-menu .toggle ul > li.active a:hover{background-color: transparent;}
+.nav-menu .toggle ul > li:hover{background-color: rgb(0 0 0 / 15%);}
+.nav-menu .toggle ul > li.active:hover{background-color: transparent;}
 .toggle li button {display: inline-block;width: 100%;padding: 6px 0;padding-left: 22px;position: relative;color:#666;font-size: var(--font-size-14);text-align: left;}
 .toggle li .btn-toggle {padding: 6px 0 6px 20px;background: url("../img/common/btn_toggle.png") no-repeat 0 0;font-size: var(--font-size-14);}
 .toggle .depth2,
@@ -611,7 +611,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .nav-menu .toggle li.open > .btn-toggle,
 .nav-menu .toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;}
 .nav-menu .toggle li .btn-toggle {background: url('../img/common/btn_toggle_w.png') no-repeat 0 0;}
-.nav-menu .toggle ul li.active {background-color: #4d67ff;}
+.nav-menu .toggle ul li.on {background-color: #4d67ff;}
 
 /* toggle-unfold */
 .toggle-unfold li{position:relative;}
@@ -1060,14 +1060,14 @@ tbody.sortable td {background-color:transparent;}
 .nav-menu .toggle li > .folder:before {display:block; position:absolute;left: 20px;top: 8px; width:24px;height: 24px; background:url('../img/common/ico_folder.png') no-repeat 0 0; content:'';}
 .nav-menu .toggle li > .folder:before {background-image:url('../img/common/ico_folder_w.png');}
 .folder-tree .toggle ul > li > a,
-.nav-menu .toggle ul > li > a {position: relative;display: inline-block;width: 100%;/* max-width: 100%; */padding: 6px 0;padding-left: 22px;color: #fff;font-size: 0;}
+.nav-menu .toggle ul > li > a {position: relative;display: b;width: 100%;/* max-width: 100%; */padding: 6px 0;padding-left: 24px;color: #fff;font-size: 0;}
 .nav-menu .toggle ul > li > a {width:auto;max-width: 100%;}
 .folder-tree .toggle ul > li > a {cursor: default; color:#666;}
 .nav-menu .toggle ul > li > a.error {max-width: 90%;}
 .nav-menu .cont {padding: 0 20px;}
 .folder-tree .toggle ul > li > a span,
 .nav-menu .toggle ul > li > a span {display: inline-block;width: 100%;font-size: var(--font-size-14);line-height: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-.nav-menu .doc:before {background-image: url('../img/common/ico_doc_w.png');}
+.nav-menu .doc:before {width: 24px;height: 24px;background-image: url('../img/common/ico_doc_w.png');background-position: center center;}
 .nav-menu ul > li .error:after {position:absolute; width:16px; height:16px;right: -24px;top: 8px; background:url('../img/common/ico_error.png') no-repeat 0 0; content:'';}
 .nav-menu.setting .inner-wrap,
 .nav-menu.cont .inner-wrap {/* margin-top: 32px; */padding-top: 20px;}

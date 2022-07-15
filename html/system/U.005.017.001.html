@@ -21,6 +21,10 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -164,63 +168,139 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 역할 신규 등록</h3>
+				<h3 class="page-title">데이터 DB 설정</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">사용자 역할 정보</h3>
-					<div class="gray-hor-tb">
-						<table class="layout-fixed">
+					<div class="title-area">
+						<h3 class="h3-title">데이터 DB 목록</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small fullblue plus">신규등록</button>
+							<button type="button" class="btn small">삭제</button>
+						</div>
+					</div>
+	
+					<div class="table-wrap">
+						<table class="grid server-set">
+							<caption>그리드 정보</caption>
 							<colgroup>
-								<col style="width:110px;">
+								<col style="width:78px;">
+								<col style="width:15%;">
+								<col style="width:15%;">
+								<col style="width:14%;">
 								<col>
-								<col style="width:110px;">
-								<col>
+								<col style="width:78px;">
+								<col style="width:13%;">
 							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">종별코드</th>
+									<th scope="col">종별코드명</th>
+									<th scope="col">데이터베이스</th>
+									<th scope="col">설명</th>
+									<th scope="col">사용여부</th>
+									<th scope="col">등록일자</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">역할 ID</span></th>
-									<td>
-										<input type="text" placeholder="역할ID는 자동 발행 됩니다." title="역할 ID" disabled>
-									</td>
-									<th scope="row"><span class="required">역할명</span></th>
-									<td>
-										<input type="text" placeholder="사용자 역할명을 입력하세요." title="역할명">
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">종별</span></th>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><input type="text" placeholder="BIZDATA" title="종별코드"></td>
+									<td><input type="text" placeholder="업무 데이터" title="종별코드명"></td>
 									<td>
 										<div class="select">
 											<select>
-												<option>일반 사용자</option>
-												<option>KPI 분석가</option>
+												<option>DB1</option>
 											</select>
 										</div>
 									</td>
-									<th scope="row">사용자 매핑</th>
-									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="사용자를 등록하세요." title="사용자 매핑" value="사용자를 등록하세요." readonly>
-											<button type="button" class="btn small">선택</button>
-										</div>
-									</td>
+									<td><input type="text" placeholder="설명" title="설명"></td>
+									<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+									<td>2022.01.01 18:00</td>
 								</tr>
 								<tr>
-									<th scope="row">설명</th>
-									<td colspan="3">
-										<div class="tb-pd8"><textarea placeholder="역할 설명을 입력하세요."></textarea></div>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><input type="text" placeholder="CALENDER" title="종별코드"></td>
+									<td><input type="text" placeholder="캘린더" title="종별코드명"></td>
+									<td>
+										<div class="select">
+											<select>
+												<option>DB2</option>
+											</select>
+										</div>
 									</td>
+									<td><input type="text" placeholder="설명" title="설명"></td>
+									<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+									<td>2022.01.01 18:00</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><input type="text" placeholder="CODE" title="종별코드"></td>
+									<td><input type="text" placeholder="공통코드" title="종별코드명"></td>
+									<td>
+										<div class="select">
+											<select>
+												<option>DB3</option>
+											</select>
+										</div>
+									</td>
+									<td><input type="text" placeholder="설명" title="설명"></td>
+									<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+									<td>2022.01.01 18:00</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><input type="text" placeholder="EXCEL" title="종별코드"></td>
+									<td><input type="text" placeholder="엑셀 업로드" title="종별코드명"></td>
+									<td>
+										<div class="select">
+											<select>
+												<option>DB4</option>
+											</select>
+										</div>
+									</td>
+									<td><input type="text" placeholder="설명" title="설명"></td>
+									<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+									<td>2022.01.01 18:00</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><input type="text" placeholder="SYSTEM" title="종별코드"></td>
+									<td><input type="text" placeholder="시스템 정보" title="종별코드명"></td>
+									<td>
+										<div class="select">
+											<select>
+												<option>DB5</option>
+											</select>
+										</div>
+									</td>
+									<td><input type="text" placeholder="설명" title="설명"></td>
+									<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+									<td>2022.01.01 18:00</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><input type="text" placeholder="KPIDATA" title="종별코드"></td>
+									<td><input type="text" placeholder="KPI 지표" title="종별코드명"></td>
+									<td>
+										<div class="select">
+											<select>
+												<option>DB6</option>
+											</select>
+										</div>
+									</td>
+									<td><input type="text" placeholder="설명" title="설명"></td>
+									<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+									<td>2022.01.01 18:00</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-	
-
 					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">등록</button>
-						<button type="button" class="btn big h40">목록</button>
+						<button type="button" class="btn big fullblue h40">저장</button>
 					</div>
 				</div>
+
 				
 			</section>
 			<!-- //cont-body -->

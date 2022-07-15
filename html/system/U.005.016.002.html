@@ -164,10 +164,15 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 역할 신규 등록</h3>
+				<h3 class="page-title">데이터베이스 신규 등록</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">사용자 역할 정보</h3>
+					<div class="title-area">
+						<h3 class="h3-title">데이터베이스 정보</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small">연결 테스트</button>
+						</div>
+					</div>
 					<div class="gray-hor-tb">
 						<table class="layout-fixed">
 							<colgroup>
@@ -178,37 +183,103 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">역할 ID</span></th>
+									<th scope="row"><span class="required">데이터베이스 ID</span></th>
 									<td>
-										<input type="text" placeholder="역할ID는 자동 발행 됩니다." title="역할 ID" disabled>
+										<input type="text" placeholder="데이터베이스ID는 자동 발행 됩니다." title="데이터베이스 ID" disabled>
 									</td>
-									<th scope="row"><span class="required">역할명</span></th>
+									<th scope="row"><span class="required">데이터베이스명</span></th>
 									<td>
-										<input type="text" placeholder="사용자 역할명을 입력하세요." title="역할명">
+										<input type="text" placeholder="데이터베이스명을 입력하세요." title="데이터베이스명">
 									</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">종별</span></th>
+									<th scope="row"><span class="required">서버</span></th>
 									<td>
 										<div class="select">
 											<select>
-												<option>일반 사용자</option>
-												<option>KPI 분석가</option>
+												<option>선택</option>
+												<option>AXONEIS_SERVER</option>
+												<option>서버</option>
 											</select>
 										</div>
 									</td>
-									<th scope="row">사용자 매핑</th>
+									<th scope="row"><span class="required">DB종류</span></th>
 									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="사용자를 등록하세요." title="사용자 매핑" value="사용자를 등록하세요." readonly>
-											<button type="button" class="btn small">선택</button>
+										<div class="select">
+											<select>
+												<option>Oracle</option>
+												<option>MSSQL</option>
+												<option>MYSQL</option>
+											</select>
 										</div>
 									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">서비스 ID</span></th>
+									<td>
+										<input type="text" placeholder="서비스ID를 입력하세요." title="서비스 ID">
+									</td>
+									<th scope="row"><span class="required">포트번호</span></th>
+									<td>
+										<input type="text" placeholder="포트번호를 입력하세요." title="포트번호">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">DB USER</span></th>
+									<td>
+										<input type="text" placeholder="DB USER ID 를 입력하세요." title="DB USER">
+									</td>
+									<th scope="row"><span class="required">DB 비밀번호</span></th>
+									<td class="editpw">
+										<div class="pw-area">
+											<input type="password" placeholder="DB 비밀번호를 입력하세요." title="DB 비밀번호">
+											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">접속 유형</span></th>
+									<td>
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>Java(Thin)</option>
+												<option>Java(OCI)</option>
+												<option>Java(WAS)</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row"><span class="required">JNDI 문자열</span></th>
+									<td><input type="text" placeholder="" title="JNDI 문자열"></td>
+								</tr>
+								<tr>
+									<th scope="row">DB 세션 범위</th>
+									<td>
+										<div class="flex-group portlet-size">
+											<div class="select">
+												<select>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+											</div>
+											<span class="hyppen">~</span>
+											<div class="select">
+												<select>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+												</select>
+											</div>
+										</div>
+									</td>
+									<th scope="row"><span class="required">DB 문자열 셋</span></th>
+									<td><input type="text" placeholder="" title="DB 문자열 셋"></td>
 								</tr>
 								<tr>
 									<th scope="row">설명</th>
 									<td colspan="3">
-										<div class="tb-pd8"><textarea placeholder="역할 설명을 입력하세요."></textarea></div>
+										<div class="tb-pd8"><textarea placeholder="설명을 입력하세요."></textarea></div>
 									</td>
 								</tr>
 							</tbody>

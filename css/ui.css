@@ -76,8 +76,18 @@
 .indv-total li span {display:block; font-size:var(--font-size-12);}
 .bar-chartwrap {position:relative;margin-bottom: 12px;border: 1px solid #e1e1e1;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);}
 .bar-chartwrap > div {position:absolute;width:100%;height:100%;}
+.indv-graph {margin-top:24px;}
 .indv-graph .graphBox {display:none;}
 .indv-graph .graphBox.active {display:block;}
+.indv-graph .graphBox .grid tr.total td {font-weight: bold; color:#111;}
+.indv-graph .graphBox .grid tr.depth td:first-child {text-align: left;}
+.indv-graph .graphBox .grid tr.depth td:first-child span {position:relative;}
+.indv-graph .graphBox .grid tr.depth td:first-child span:before {position:absolute;left: -25px; height:20px; width:20px;background: url('../img/common/btn_toggle.png') no-repeat 0 -8px; content:'';}
+.indv-graph .graphBox .grid tr.depth1 td:first-child  {padding-left: 40px;}
+.indv-graph .graphBox .grid tr.depth2 td:first-child  {padding-left: 60px;}
+.indv-graph .graphBox .grid tr.depth3 td:first-child  {padding-left: 80px;}
+.indv-graph .graphBox .grid tr.depth4 td:first-child  {padding-left: 100px;}
+.indv-graph .graphBox .grid tr.last td:first-child span:before {position:absolute;left: -25px; height:20px; width:20px;  background:url('../img/common/row.png') no-repeat 0 0; content:'';}
 
 .flex-group .select.time {margin-right: 8px;min-width: 100px;width: 100px;}
 .sql-area {padding:12px 0;}

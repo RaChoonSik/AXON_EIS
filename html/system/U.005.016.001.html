@@ -21,6 +21,11 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -164,61 +169,179 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 역할 신규 등록</h3>
+				<h3 class="page-title">데이터베이스 관리 목록</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">사용자 역할 정보</h3>
-					<div class="gray-hor-tb">
-						<table class="layout-fixed">
+					<h3 class="h3-title">조회</h3>
+					<div class="bg-box">
+						<div class="list-area">
+							<ul>
+								<li>
+									<label>데이터베이스</label>
+									<div class="list-item">
+										<input type="text" placeholder="데이터베이스 검색">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">검색</button>
+					</div>
+	
+					<div class="title-area">
+						<h3 class="h3-title">데이터베이스 목록</h3>
+						<div class="btn-wrap">
+							<a href="#" class="btn small fullblue plus">신규등록</a>
+							<button type="button" class="btn small">삭제</button>
+							<div class="select">
+								<select>
+									<option>10</option>
+									<option>25</option>
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+								</select>
+							</div>
+						</div>
+					</div>
+	
+					<div class="table-wrap">
+						<table class="grid">
+							<caption>그리드 정보</caption>
 							<colgroup>
-								<col style="width:110px;">
+								<col style="width:50px;">
 								<col>
-								<col style="width:110px;">
-								<col>
+								<col style="width:15%;">
+								<col style="width:13%;">
+								<col style="width:12%;">
+								<col style="width:11%;">
+								<col style="width:15%;">
 							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">데이터베이스명</th>
+									<th scope="col">데이터베이스 ID</th>
+									<th scope="col">서버</th>
+									<th scope="col">종별</th>
+									<th scope="col">서비스 ID</th>
+									<th scope="col">접속 유형</th>
+									<th scope="col">등록일자</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">역할 ID</span></th>
-									<td>
-										<input type="text" placeholder="역할ID는 자동 발행 됩니다." title="역할 ID" disabled>
-									</td>
-									<th scope="row"><span class="required">역할명</span></th>
-									<td>
-										<input type="text" placeholder="사용자 역할명을 입력하세요." title="역할명">
-									</td>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">메타시스템</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>메타시스템</td>
+									<td>MySQL</td>
+									<td>METADB</td>
+									<td>Java(OCI)</td>
+									<td>2022.04.01</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">종별</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>일반 사용자</option>
-												<option>KPI 분석가</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row">사용자 매핑</th>
-									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="사용자를 등록하세요." title="사용자 매핑" value="사용자를 등록하세요." readonly>
-											<button type="button" class="btn small">선택</button>
-										</div>
-									</td>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
 								</tr>
 								<tr>
-									<th scope="row">설명</th>
-									<td colspan="3">
-										<div class="tb-pd8"><textarea placeholder="역할 설명을 입력하세요."></textarea></div>
-									</td>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">메타시스템</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>메타시스템</td>
+									<td>MySQL</td>
+									<td>METADB</td>
+									<td>Java(OCI)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">DW</a></td>
+									<td><a href="#">DB0000001</a></td>
+									<td>DW</td>
+									<td>Oracle</td>
+									<td>METADB</td>
+									<td>Java(Thin)</td>
+									<td>2022.04.01</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-	
-
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">등록</button>
-						<button type="button" class="btn big h40">목록</button>
+					<div class="paging">
+						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+						<button type="button" class="active">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 					</div>
 				</div>
 				
@@ -228,6 +351,8 @@
 		</div>
 		<!-- // content -->
 	</div>
+
+	
 
 </body>
 </html>
