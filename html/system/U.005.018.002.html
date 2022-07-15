@@ -298,7 +298,7 @@
 						<div class="list-area">
 							<ul>
 								<li>
-									<label>기준일자</label>
+									<label class="required">기준일자</label>
 									<div class="list-item">
 										<div class="datepickerrange fromDate">
 											<label>
@@ -313,37 +313,49 @@
 										</div>
 									</div>
 								</li>
+								<li>
+									<label>상태</label>
+									<div class="list-item">
+										<div class="flex-group gap8">
+											<div class="select">
+												<select>
+													<option>선택</option>
+													<option>Success</option>
+													<option>Failure</option>
+												</select>
+											</div>
+											<div class="chk"><label><input type="checkbox"><span>모바일접속</span></label></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>부서</label>
+									<div class="list-item">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="부서가 선택되지 않았습니다." title="상세보고서" readonly>
+											<button type="button" class="btn small">선택</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>실적구분</label>
+									<div class="list-item">
+										<div class="radiobox">
+											<label for="rdo_1"><input type="radio" id="rdo_1" name="opt1" checked><span>발생건수</span></label>
+											<label for="rdo_2"><input type="radio" id="rdo_2" name="opt1"><span>인원수</span></label>
+										</div>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="indv-total">
-						<ul>
-							<li>
-								<p class="num">30</p>
-								<span>접속횟수</span>
-							</li>
-							<li>
-								<p class="num">30</p>
-								<span>사용일</span>
-							</li>
-							<li>
-								<p class="num">310</p>
-								<span>조회 (건수)</span>
-							</li>
-							<li>
-								<p class="num">30</p>
-								<span>보고서 (본수)</span>
-							</li>
-							<li>
-								<p class="num">30</p>
-								<span>사용시간 (H)</span>
-							</li>
-						</ul>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">검색</button>
 					</div>
 
 					<div class="indv-graph">
 						<div class="title-area">
-							<h3 class="h3-title">요약 현황 :  2021.04.01 ~ 2021.04.30 / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
+							<h3 class="h3-title">요약 현황 :  <span>2021.04.01 ~ 2021.04.30</span> / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
 							<div class="btn-wrap">
 								<div class="radiobox">
 									<label for="rdo_01"><input type="radio" id="rdo_01" name="indivChart" checked><span>시간대별</span></label>
