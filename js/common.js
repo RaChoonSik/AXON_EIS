@@ -392,9 +392,9 @@ var fn = (function() {
 					$('.doc-list-wrap').addClass('ban-off');
 				}
 			});
-			$(document).on("click", ".nav-menu .toggle ul li", function(){
-				if($(this).hasClass('active') == false) {
-					$(this).closest(".toggle").find("ul li").removeClass("on");
+			$(document).on("click", ".nav-menu .toggle li", function(){
+				if($(this).children().length == 1) {
+					$(this).closest(".toggle").find("li").removeClass("on");
 					$(this).addClass("on");
 				}
 			});

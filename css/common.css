@@ -594,9 +594,10 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .toggle li {position:relative;/* margin-top: 12px; *//* padding: 6px 0; */font-size: 0;}
 .toggle > li {padding:0;}
 .toggle ul > li {padding-left:30px;font-size: var(--font-size-14);}
-.nav-menu .toggle ul > li:hover{background-color: rgb(0 0 0 / 15%);}
+.nav-menu .toggle li > a:hover, .nav-menu .toggle ul > li:hover > a {background-color: rgb(0 0 0 / 15%);}
 .nav-menu .toggle ul > li.active:hover{background-color: transparent;}
-.toggle li button {display: inline-block;width: 100%;padding: 6px 0;padding-left: 22px;position: relative;color:#666;font-size: var(--font-size-14);text-align: left;}
+.toggle li button {/* display: inline-block; *//* width: 100%; */padding: 6px 0;padding-left: 22px;position: relative;color:#666;font-size: var(--font-size-14);text-align: left;}
+.nav-menu .toggle li button {display:inline-block; width:100%;}
 .toggle li .btn-toggle {padding: 6px 0 6px 20px;background: url("../img/common/btn_toggle.png") no-repeat 0 0;font-size: var(--font-size-14);}
 .toggle .depth2,
 .toggle .depth3,
@@ -611,7 +612,8 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .nav-menu .toggle li.open > .btn-toggle,
 .nav-menu .toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;}
 .nav-menu .toggle li .btn-toggle {background: url('../img/common/btn_toggle_w.png') no-repeat 0 0;}
-.nav-menu .toggle ul li.on {background-color: #4d67ff;}
+.nav-menu .toggle li.on:hover a,
+.nav-menu .toggle li.on a {background-color: #4d67ff;}
 
 /* toggle-unfold */
 .toggle-unfold li{position:relative;}
@@ -1052,25 +1054,26 @@ tbody.sortable td {background-color:transparent;}
 .folder-tree .toggle li > .btn-toggle,
 .nav-menu .toggle li > .btn-toggle {display: block;width: 100%;font-size:var(--font-size-14);color: #fff;font-weight: normal;text-align: left;}
 .folder-tree .toggle li > .btn-toggle {color:#666;}
-/* .folder-tree .toggle li > .btn-toggle:hover, */
+/* .nav-menu .toggle > li , */
 .nav-menu .toggle li > .btn-toggle:hover {background-color: rgba(0, 0, 0, 0.15);}
 .folder-tree .toggle li > .folder,
 .nav-menu .toggle li > .folder {position:relative;padding-left: 50px !important;padding: 6px 0;cursor: default;}
 .folder-tree .toggle li > .folder:before,
 .nav-menu .toggle li > .folder:before {display:block; position:absolute;left: 20px;top: 8px; width:24px;height: 24px; background:url('../img/common/ico_folder.png') no-repeat 0 0; content:'';}
 .nav-menu .toggle li > .folder:before {background-image:url('../img/common/ico_folder_w.png');}
-.folder-tree .toggle ul > li > a,
-.nav-menu .toggle ul > li > a {position: relative;display: b;width: 100%;/* max-width: 100%; */padding: 6px 0;padding-left: 24px;color: #fff;font-size: 0;}
-.nav-menu .toggle ul > li > a {width:auto;max-width: 100%;}
-.folder-tree .toggle ul > li > a {cursor: default; color:#666;}
-.nav-menu .toggle ul > li > a.error {max-width: 90%;}
+.folder-tree .toggle li > a,
+.nav-menu .toggle li > a {position: relative;display: inline-block;width: 100%;/* max-width: 100%; */padding: 6px 0;padding-left: 24px;color: #fff;font-size: 0;}
+.nav-menu .toggle ul > li > a {display: block;/* width:auto; *//* max-width: 100%; */white-space: nowrap;}
+.folder-tree .toggle ul > li > a {cursor: default; color:#666;font-size: var(--font-size-14);}
+.nav-menu .toggle ul > li > a.error {max-width: 95%;}
 .nav-menu .cont {padding: 0 20px;}
-.folder-tree .toggle ul > li > a span,
-.nav-menu .toggle ul > li > a span {display: inline-block;width: 100%;font-size: var(--font-size-14);line-height: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.folder-tree .toggle > li > a span,
+.nav-menu .toggle li > a span {display: inline-block;width: 100%;font-size: var(--font-size-14);line-height: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .nav-menu .doc:before {width: 24px;height: 24px;background-image: url('../img/common/ico_doc_w.png');background-position: center center;}
-.nav-menu ul > li .error:after {position:absolute; width:16px; height:16px;right: -24px;top: 8px; background:url('../img/common/ico_error.png') no-repeat 0 0; content:'';}
+.nav-menu ul > li .error span:after {position:absolute; width:16px; height:16px;right: -24px;top: 8px; background:url('../img/common/ico_error.png') no-repeat 0 0; content:'';}
 .nav-menu.setting .inner-wrap,
 .nav-menu.cont .inner-wrap {/* margin-top: 32px; */padding-top: 20px;}
+.nav-menu .toggle > li > .error {max-width: 95%;}
 
 .board-wrap {display: none;position: absolute;top: 58px;right: 0;left: 0;padding:32px 40px;/* height: 376px; */background: #fff;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);z-index: 10;}
 .board-wrap .inner {display: flex;overflow: hidden;}

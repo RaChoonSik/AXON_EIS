@@ -35,6 +35,11 @@
 				barChart.resize();
 				barChart2.resize();
 			});
+
+			$(document).on("click", ".indv-graph .graphBox .grid tbody td:first-child span", function() {
+				var depIdx = $(this).closest('.depth').attr('class');
+				console.log(depIdx);
+			});
 	
 	
 			/* 시간대 막대그래프 */
@@ -440,7 +445,7 @@
 											<td>123</td>
 											<td>67664</td>
 										</tr>
-										<tr class="depth depth1">
+										<tr class="depth row1">
 											<td><span>영업본부</span></td>
 											<td>11</td>
 											<td>123</td>
@@ -468,7 +473,7 @@
 											<td>123</td>
 											<td>67664</td>
 										</tr>
-										<tr class="depth depth2">
+										<tr class="depth row2">
 											<td><span>영업팀</span></td>
 											<td>11</td>
 											<td>123</td>
@@ -496,7 +501,7 @@
 											<td>123</td>
 											<td>67664</td>
 										</tr>
-										<tr class="depth depth3 last">
+										<tr class="depth row3 last">
 											<td><span>영업1팀</span></td>
 											<td>11</td>
 											<td>123</td>
@@ -524,7 +529,7 @@
 											<td>123</td>
 											<td>67664</td>
 										</tr>
-										<tr class="depth depth2 last">
+										<tr class="depth row2 last">
 											<td><span>영업</span></td>
 											<td>11</td>
 											<td>123</td>
@@ -669,7 +674,7 @@
 											<td>123</td>
 											<td>67664</td>
 										</tr>
-										<tr class="depth depth1">
+										<tr class="depth row1">
 											<td><span>영업본부</span></td>
 											<td>11</td>
 											<td>123</td>
@@ -704,7 +709,7 @@
 											<td>123</td>
 											<td>67664</td>
 										</tr>
-										<tr class="depth depth2 last">
+										<tr class="depth row2 last">
 											<td><span>영업11</span></td>
 											<td>11</td>
 											<td>123</td>
