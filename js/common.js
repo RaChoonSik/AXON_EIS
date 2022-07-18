@@ -445,12 +445,14 @@ var fn = (function() {
 				$(this).addClass("view");
 			});
 			$(document).on("click",".accordion .head", function(){
-				var cont = $(this).closest('li').find('.cont');
+				var cont = $(this).closest('li');
 				if(cont.hasClass('on')){
-					cont.removeClass('on').slideUp('fast');
+					//$(this).closest('li').removeClass('open');
+					cont.removeClass('on').find('.cont').slideUp('fast');
 				} else {
-					cont.slideDown('fast').addClass('on');
-					$(this).closest('li').siblings().find('.cont').slideUp('fast').removeClass('on');
+					//$(this).closest('li').addClass('open');
+					cont.addClass('on').find('.cont').slideDown('fast');
+					$(this).closest('li').siblings().removeClass('on').find('.cont').slideUp('fast');
 				}
 			});
 		},

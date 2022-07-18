@@ -12,6 +12,7 @@
 .doc-acc-list.memo .on .title {background-image: url('../img/common/ico_doc_on.png');}
 .doc-acc-list.memo .chk {position:absolute; left:20px;top: 10px;}
 .doc-acc-list.memo .head {padding-left: 58px;}
+.doc-acc-list .step {font-size: var(--font-size-13); font-weight: 500;}
 .folder-tree {margin-top: 8px;height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;background: #fff;}
 .folder-tree .root {width: 260px;font-size: var(--font-size-14);}
 .folder-tree .toggle {width:260px;}
