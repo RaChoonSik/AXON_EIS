@@ -23,11 +23,7 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			//등록일시 : datePicker
-			var date = new Date();
-			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
-			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
-			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+
 		});
 	</script>
 </head>
@@ -173,7 +169,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 접속 상세</h3>
+				<h3 class="page-title">엑셀 데이터 목록</h3>
 
 				<div class="inner-cont">
 					<h3 class="h3-title">조회</h3>
@@ -181,64 +177,36 @@
 						<div class="list-area">
 							<ul>
 								<li>
-									<label class="required">기준일자</label>
+									<label>데이터명</label>
 									<div class="list-item">
-										<div class="datepickerrange fromDate">
-											<label>
-												<input type="text" readonly>
-											</label>
-										</div>
-										<span class="hyppen date"></span>
-										<div class="datepickerrange toDate">
-											<label>
-												<input type="text" readonly>
-											</label>
-										</div>
+										<input type="text" placeholder="데이터명을 입력하세요." title="데이터명">
 									</div>
 								</li>
 								<li>
-									<label>상태</label>
+									<label>테이블</label>
 									<div class="list-item">
-										<div class="flex-group gap8">
-											<div class="select">
-												<select>
-													<option>선택</option>
-													<option>Success</option>
-													<option>Failure</option>
-												</select>
-											</div>
-											<div class="chk"><label><input type="checkbox"><span>모바일접속</span></label></div>
+										<div class="select">
+											<select>
+												<option>분류1</option>
+												<option>분류2</option>
+												<option>분류3</option>
+											</select>
 										</div>
 									</div>
 								</li>
-								<li>
-									<label>IP 주소</label>
-									<div class="list-item"><input type="text" placeholder="IP주소를 입력하세요." title="IP 주소"></div>
-								</li>
-								<li>
-									<label>로그인ID</label>
-									<div class="list-item"><input type="text" placeholder="로그인ID를 입력하세요." title="로그인ID"></div>
-								</li>
-								<li>
-									<label>사용자명</label>
-									<div class="list-item"><input type="text" placeholder="사용자명을 입력하세요." title="사용자명"></div>
-								</li>
-								<li>
-									<label>메시지</label>
-									<div class="list-item"><input type="text" placeholder="검색 키워드를 입력하세요." title="메시지"></div>
-								</li>
+								
 							</ul>
 						</div>
 					</div>
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue">검색</button>
-						<button type="button" class="btn big">초기화</button>
 					</div>
 	
 					<div class="title-area">
-						<h3 class="h3-title">로그 내역 : <span>123</span>건</h3>
+						<h3 class="h3-title">게시글</h3>
 						<div class="btn-wrap">
-							<button type="button" class="btn small fullblue download">다운로드</button>
+							<a href="#" class="btn small fullblue plus">신규등록</a>
+							<button type="button" class="btn small">삭제</button>
 							<div class="select">
 								<select>
 									<option>10</option>
@@ -255,55 +223,57 @@
 						<table class="grid">
 							<caption>그리드 정보</caption>
 							<colgroup>
+								<col style="width:78px;">
 								<col style="width:10%;">
-								<col style="width:10%;">
-								<col style="width:10%;">
-								<col style="width:8%;">
-								<col style="width:10%;">
-								<col style="width:8%;">
-								<col style="width:10%;">
-								<col style="width:8%;">
+								<col style="width:12%;">
 								<col style="width:10%;">
 								<col>
+								<col style="width:10%;">
+								<col style="width:12%;">
+								<col style="width:15%;">
 							</colgroup>
 							<thead>
 								<tr>
-									<th scope="col">Timestamp</th>
-									<th scope="col">Session ID</th>
-									<th scope="col">IP</th>
-									<th scope="col">Port No</th>
-									<th scope="col">로그인ID</th>
-									<th scope="col">사용자명</th>
-									<th scope="col">인증구분</th>
-									<th scope="col">상태</th>
-									<th scope="col">모바일접속</th>
-									<th scope="col">메시지</th>
+									<th scope="col">선택</th>
+									<th scope="col">데이터명</th>
+									<th scope="col">데이터베이스</th>
+									<th scope="col">스키마명</th>
+									<th scope="col">테이블</th>
+									<th scope="col">테이블명</th>
+									<th scope="col">시스템 정보</th>
+									<th scope="col">등록일자</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>텍스트</td>
-									<td>텍스트</td>
-									<td>127.0.0.1</td>
-									<td>8800</td>
-									<td>idid1234</td>
-									<td>홍길동</td>
-									<td>텍스트</td>
-									<td>Success</td>
-									<td>123</td>
-									<td>메시지 메시지</td>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">데이터명</a></td>
+									<td>SYSDB</td>
+									<td>ADMIN</td>
+									<td>TB_TABLE_NAME</td>
+									<td>테이블명12</td>
+									<td>Y</td>
+									<td>2022-04-01</td>
 								</tr>
 								<tr>
-									<td>텍스트</td>
-									<td>텍스트</td>
-									<td>127.0.0.1</td>
-									<td>8800</td>
-									<td>idid1234</td>
-									<td>홍길동</td>
-									<td>텍스트</td>
-									<td>Success</td>
-									<td>123</td>
-									<td>메시지 메시지</td>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">데이터명</a></td>
+									<td>SYSDB</td>
+									<td>ADMIN</td>
+									<td>TB_TABLE_NAME</td>
+									<td>테이블명12</td>
+									<td>-</td>
+									<td>2022-04-01</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td><a href="#">데이터명</a></td>
+									<td>SYSDB</td>
+									<td>ADMIN</td>
+									<td>TB_TABLE_NAME</td>
+									<td>테이블명12</td>
+									<td>Y</td>
+									<td>2022-04-01</td>
 								</tr>
 							</tbody>
 						</table>
@@ -318,7 +288,6 @@
 						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 					</div>
 				</div>
-
 				
 			</section>
 			<!-- //cont-body -->
@@ -326,6 +295,8 @@
 		</div>
 		<!-- // content -->
 	</div>
+
+	
 
 </body>
 </html>

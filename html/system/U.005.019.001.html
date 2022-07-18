@@ -173,7 +173,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 접속 상세</h3>
+				<h3 class="page-title">보고서 조회 상세</h3>
 
 				<div class="inner-cont">
 					<h3 class="h3-title">조회</h3>
@@ -212,8 +212,16 @@
 									</div>
 								</li>
 								<li>
-									<label>IP 주소</label>
-									<div class="list-item"><input type="text" placeholder="IP주소를 입력하세요." title="IP 주소"></div>
+									<label>종별</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>보고서</option>
+												<option>KPI</option>
+											</select>
+										</div>
+									</div>
 								</li>
 								<li>
 									<label>로그인ID</label>
@@ -224,8 +232,8 @@
 									<div class="list-item"><input type="text" placeholder="사용자명을 입력하세요." title="사용자명"></div>
 								</li>
 								<li>
-									<label>메시지</label>
-									<div class="list-item"><input type="text" placeholder="검색 키워드를 입력하세요." title="메시지"></div>
+									<label>보고서명</label>
+									<div class="list-item"><input type="text" placeholder="보고서명을 입력하세요." title="보고서명"></div>
 								</li>
 							</ul>
 						</div>
@@ -255,15 +263,19 @@
 						<table class="grid">
 							<caption>그리드 정보</caption>
 							<colgroup>
-								<col style="width:10%;">
-								<col style="width:10%;">
-								<col style="width:10%;">
 								<col style="width:8%;">
-								<col style="width:10%;">
 								<col style="width:8%;">
-								<col style="width:10%;">
 								<col style="width:8%;">
-								<col style="width:10%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:5%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:5%;">
+								<col style="width:5%;">
+								<col style="width:5%;">
+								<col style="width:5%;">
 								<col>
 							</colgroup>
 							<thead>
@@ -274,9 +286,13 @@
 									<th scope="col">Port No</th>
 									<th scope="col">로그인ID</th>
 									<th scope="col">사용자명</th>
-									<th scope="col">인증구분</th>
+									<th scope="col">보고서 명</th>
+									<th scope="col">종별</th>
 									<th scope="col">상태</th>
-									<th scope="col">모바일접속</th>
+									<th scope="col">모바일실행</th>
+									<th scope="col">추출건수</th>
+									<th scope="col">소요시간</th>
+									<th scope="col">조회 매체</th>
 									<th scope="col">메시지</th>
 								</tr>
 							</thead>
@@ -288,8 +304,12 @@
 									<td>8800</td>
 									<td>idid1234</td>
 									<td>홍길동</td>
-									<td>텍스트</td>
+									<td>보고서</td>
 									<td>Success</td>
+									<td>123</td>
+									<td>123</td>
+									<td>123</td>
+									<td>123</td>
 									<td>123</td>
 									<td>메시지 메시지</td>
 								</tr>
@@ -300,8 +320,12 @@
 									<td>8800</td>
 									<td>idid1234</td>
 									<td>홍길동</td>
-									<td>텍스트</td>
+									<td>보고서</td>
 									<td>Success</td>
+									<td>123</td>
+									<td>123</td>
+									<td>123</td>
+									<td>123</td>
 									<td>123</td>
 									<td>메시지 메시지</td>
 								</tr>

@@ -164,10 +164,10 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">부서 정보 수정</h3>
+				<h3 class="page-title">엑셀 데이터 기준 정보 신규</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">부서 정보</h3>
+					<h3 class="h3-title">기준 정보</h3>
 					<div class="gray-hor-tb">
 						<table class="layout-fixed">
 							<colgroup>
@@ -178,53 +178,76 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">부서 ID</span></th>
-									<td colspan="3">
-										<input type="text" placeholder="부서 ID를 입력하세요." title="부서 ID" style="width: calc(50% - 63px);" value="ORG1231" readonly>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">부서명</span></th>
-									<td><input type="text" placeholder="부서명을 입력하세요." title="부서명" value="영업본부"></td>
-									<th scope="row">영문명</th>
-									<td><input type="text" placeholder="부서 영문명을 입력하세요." title="영문명" value="SALES DIV"></td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">상위부서</span></th>
+									<th scope="row"><span class="required">데이터명</span></th>
 									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="상위부서를 선택하세요." title="상위부서" value="ROOT" readonly>
-											<button type="button" class="btn small" onclick="fn.popupOpen('#popUserTeam');">선택</button>
-										</div>
+										<input type="text" placeholder="데이터명을 입력하세요." title="데이터명">
 									</td>
-									<th scope="row">부서장</th>
+									<th scope="row">옵션</th>
 									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="부서 리더를 선택하세요." title="부서장" value="홍길동" readonly>
-											<button type="button" class="btn small" onclick="fn.popupOpen('#popTeamLeader');">선택</button>
-										</div>
+										<div class="chk"><label><input type="checkbox"><span>시스템 정보</span></label></div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">종별</span></th>
-									<td colspan="3">
-										<div class="select" style="width: calc(50% - 63px);">
+									<th scope="row"><span class="required">데이터베이스</span></th>
+									<td>
+										<div class="select">
 											<select>
-												<option>임원</option>
-												<option>본부</option>
-												<option>사업부</option>
-												<option>팀</option>
-												<option>실</option>
-												<option>출장소</option>
+												<option>선택</option>
+												<option>11</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row"><span class="required">테이블</span></th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="테이블을 선택하세요." title="테이블" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#');">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">기준 컬럼</span></th>
+									<td>
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>11</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row"><div class="required">데이터주기</div></th>
+									<td>
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>11</option>
 											</select>
 										</div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row">최종 수정자</th>
-									<td>홍길동</td>
-									<th scope="row">최종 수정일시</th>
-									<td>2020-01-01 15:00</td>
+									<th scope="row">처리SCRIPT</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="테이터 처리 로직을 등록하세요." title="처리SCRIPT" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#');">등록</button>
+										</div>
+									</td>
+									<th scope="row">권한 매핑</th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="담당자를 등록하세요." title="권한 매핑" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#');">선택</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">설명</th>
+									<td colspan="3">
+										<div class="tb-pd8">
+											<textarea placeholder="설명을 입력하세요."></textarea>
+										</div>
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -232,7 +255,7 @@
 	
 
 					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">수정</button>
+						<button type="button" class="btn big fullblue h40">등록</button>
 						<button type="button" class="btn big h40">목록</button>
 					</div>
 				</div>

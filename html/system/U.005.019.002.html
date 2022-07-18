@@ -173,7 +173,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 접속 상세</h3>
+				<h3 class="page-title">보고서 조회 상세</h3>
 
 				<div class="inner-cont">
 					<h3 class="h3-title">조회</h3>
@@ -197,14 +197,14 @@
 									</div>
 								</li>
 								<li>
-									<label>상태</label>
+									<label>종별</label>
 									<div class="list-item">
 										<div class="flex-group gap8">
 											<div class="select">
 												<select>
 													<option>선택</option>
-													<option>Success</option>
-													<option>Failure</option>
+													<option>보고서</option>
+													<option>KPI</option>
 												</select>
 											</div>
 											<div class="chk"><label><input type="checkbox"><span>모바일접속</span></label></div>
@@ -212,31 +212,23 @@
 									</div>
 								</li>
 								<li>
-									<label>IP 주소</label>
-									<div class="list-item"><input type="text" placeholder="IP주소를 입력하세요." title="IP 주소"></div>
-								</li>
-								<li>
-									<label>로그인ID</label>
-									<div class="list-item"><input type="text" placeholder="로그인ID를 입력하세요." title="로그인ID"></div>
-								</li>
-								<li>
-									<label>사용자명</label>
-									<div class="list-item"><input type="text" placeholder="사용자명을 입력하세요." title="사용자명"></div>
-								</li>
-								<li>
-									<label>메시지</label>
-									<div class="list-item"><input type="text" placeholder="검색 키워드를 입력하세요." title="메시지"></div>
+									<label>부서</label>
+									<div class="list-item">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="부서가 선택되지 않았습니다." title="상세보고서" readonly="">
+											<button type="button" class="btn small">선택</button>
+										</div>
+									</div>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue">검색</button>
-						<button type="button" class="btn big">초기화</button>
 					</div>
 	
 					<div class="title-area">
-						<h3 class="h3-title">로그 내역 : <span>123</span>건</h3>
+						<h3 class="h3-title">요약 현황 :  <span>2021.04.01 ~ 2021.04.30</span> / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
 						<div class="btn-wrap">
 							<button type="button" class="btn small fullblue download">다운로드</button>
 							<div class="select">
@@ -251,62 +243,212 @@
 						</div>
 					</div>
 	
-					<div class="table-wrap">
-						<table class="grid">
-							<caption>그리드 정보</caption>
-							<colgroup>
-								<col style="width:10%;">
-								<col style="width:10%;">
-								<col style="width:10%;">
-								<col style="width:8%;">
-								<col style="width:10%;">
-								<col style="width:8%;">
-								<col style="width:10%;">
-								<col style="width:8%;">
-								<col style="width:10%;">
-								<col>
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">Timestamp</th>
-									<th scope="col">Session ID</th>
-									<th scope="col">IP</th>
-									<th scope="col">Port No</th>
-									<th scope="col">로그인ID</th>
-									<th scope="col">사용자명</th>
-									<th scope="col">인증구분</th>
-									<th scope="col">상태</th>
-									<th scope="col">모바일접속</th>
-									<th scope="col">메시지</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>텍스트</td>
-									<td>텍스트</td>
-									<td>127.0.0.1</td>
-									<td>8800</td>
-									<td>idid1234</td>
-									<td>홍길동</td>
-									<td>텍스트</td>
-									<td>Success</td>
-									<td>123</td>
-									<td>메시지 메시지</td>
-								</tr>
-								<tr>
-									<td>텍스트</td>
-									<td>텍스트</td>
-									<td>127.0.0.1</td>
-									<td>8800</td>
-									<td>idid1234</td>
-									<td>홍길동</td>
-									<td>텍스트</td>
-									<td>Success</td>
-									<td>123</td>
-									<td>메시지 메시지</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="indv-graph mgt8">
+						<div class="graphBox active">
+							<table class="grid">
+								<caption>그리드 정보</caption>
+								<colgroup>
+									<col>
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:3.2%;">
+									<col style="width:100px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">보고서</th>
+										<th scope="col">00시</th>
+										<th scope="col">01시</th>
+										<th scope="col">02시</th>
+										<th scope="col">03시</th>
+										<th scope="col">04시</th>
+										<th scope="col">05시</th>
+										<th scope="col">06시</th>
+										<th scope="col">07시</th>
+										<th scope="col">08시</th>
+										<th scope="col">09시</th>
+										<th scope="col">10시</th>
+										<th scope="col">11시</th>
+										<th scope="col">12시</th>
+										<th scope="col">13시</th>
+										<th scope="col">14시</th>
+										<th scope="col">15시</th>
+										<th scope="col">16시</th>
+										<th scope="col">17시</th>
+										<th scope="col">18시</th>
+										<th scope="col">19시</th>
+										<th scope="col">20시</th>
+										<th scope="col">21시</th>
+										<th scope="col">22시</th>
+										<th scope="col">23시</th>
+										<th scope="col">합계</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="total">
+										<td><span>총계</span></td>
+										<td>11</td>
+										<td>123</td>
+										<td>321</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>67664</td>
+									</tr>
+									<tr class="depth row1">
+										<td><span>영업본부</span></td>
+										<td>11</td>
+										<td>123</td>
+										<td>321</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>67664</td>
+									</tr>
+									<tr class="depth row2">
+										<td><span>영업팀</span></td>
+										<td>11</td>
+										<td>123</td>
+										<td>321</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>67664</td>
+									</tr>
+									<tr class="depth row3 last">
+										<td><span>영업1팀</span></td>
+										<td>11</td>
+										<td>123</td>
+										<td>321</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>67664</td>
+									</tr>
+									<tr class="depth row2 last">
+										<td><span>영업</span></td>
+										<td>11</td>
+										<td>123</td>
+										<td>321</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>67664</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<div class="paging">
 						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->

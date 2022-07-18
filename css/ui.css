@@ -265,3 +265,11 @@
 .portlet-size .select {margin-left:0;width: 100px;}
 .grid .bg-highlight {background:#eff0f6;}
 .grid.server-set td {padding:0 5px; height:40px;}
+
+.ci-img-wrap {height:160px; background: #f6f6f6; overflow: hidden;}
+.ci-img-wrap .img-box {float: left;width:200px;height: 160px;padding-top: 32px;background: #242424;text-align: center;}
+.ci-img-wrap .cont-head {float:left;width: calc(100% - 200px);}
+.ci-img-wrap .img-box img {width:40px;}
+.ci-img-wrap .img-box h1 {margin-top: 6px; padding-bottom: 32px; color: #fff; font-size: var(--font-size-20); font-weight: 500; text-align: center; border-bottom: 1px solid #3B3B3B;}
+.ci-img-wrap button,
+.ci-img-wrap a {pointer-events: none;}

@@ -173,7 +173,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">사용자 접속 상세</h3>
+				<h3 class="page-title">시스템 Action 로그 조회</h3>
 
 				<div class="inner-cont">
 					<h3 class="h3-title">조회</h3>
@@ -199,15 +199,29 @@
 								<li>
 									<label>상태</label>
 									<div class="list-item">
-										<div class="flex-group gap8">
-											<div class="select">
-												<select>
-													<option>선택</option>
-													<option>Success</option>
-													<option>Failure</option>
-												</select>
-											</div>
-											<div class="chk"><label><input type="checkbox"><span>모바일접속</span></label></div>
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>Success</option>
+												<option>Failure</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>타겟</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>보고서메뉴</option>
+												<option>My Home</option>
+												<option>북마크</option>
+												<option>EXCEL관리</option>
+												<option>보고서COMMENT</option>
+												<option>비밀번호변경</option>
+												<option>사용자</option>
+											</select>
 										</div>
 									</div>
 								</li>
@@ -261,7 +275,8 @@
 								<col style="width:8%;">
 								<col style="width:10%;">
 								<col style="width:8%;">
-								<col style="width:10%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
 								<col style="width:8%;">
 								<col style="width:10%;">
 								<col>
@@ -274,9 +289,10 @@
 									<th scope="col">Port No</th>
 									<th scope="col">로그인ID</th>
 									<th scope="col">사용자명</th>
-									<th scope="col">인증구분</th>
+									<th scope="col">활동구분</th>
+									<th scope="col">타겟</th>
+									<th scope="col">타겟 경로</th>
 									<th scope="col">상태</th>
-									<th scope="col">모바일접속</th>
 									<th scope="col">메시지</th>
 								</tr>
 							</thead>
@@ -289,8 +305,9 @@
 									<td>idid1234</td>
 									<td>홍길동</td>
 									<td>텍스트</td>
+									<td>컨텐츠</td>
+									<td>메뉴 경로</td>
 									<td>Success</td>
-									<td>123</td>
 									<td>메시지 메시지</td>
 								</tr>
 								<tr>
@@ -301,8 +318,9 @@
 									<td>idid1234</td>
 									<td>홍길동</td>
 									<td>텍스트</td>
+									<td>보고서</td>
+									<td>메뉴 경로</td>
 									<td>Success</td>
-									<td>123</td>
 									<td>메시지 메시지</td>
 								</tr>
 							</tbody>
