@@ -61,7 +61,7 @@ em {font-weight: normal;}
 /* form */
 input,select,label,button,textarea{border-radius:0;-webkit-border-radius:0;background-color:transparent;color:#111;font-size:var(--font-size-12);line-height:normal;font-family:"NotoSansKR", sans-serif, Malgungothic, "맑은고딕", Dotum, "돋움";vertical-align:middle;}
 /* table */
-table{width:100%;border-collapse:collapse;border-spacing:0;table-layout: fixed;}
+table{width:100%;/* border-collapse:collapse; */border-spacing: 0px;table-layout: fixed;}
 th, td{word-break:keep-all;word-wrap:break-word;}
 /* alink */
 a{border:0;color:#444;text-decoration:none;}

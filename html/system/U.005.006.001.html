@@ -261,28 +261,32 @@
 							<!-- 메뉴정보 -->
 							<div class="gray-hor-tb">
 								<table class="layout-fixed">
-									<colgroup>
+									<colgroup class="basic-only medium-only">
 										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<colgroup class="large-only">
+										<col style="width:120px;">
 										<col>
 									</colgroup>
 									<tbody>
 										<tr>
 											<th scope="row"><span class="required">메뉴 ID</span></th>
 											<td>
-												<input type="text" placeholder="메뉴 ID는 자동 발행됩니다." title="부서 ID" style="width: 50%" readonly>
+												<input type="text" placeholder="메뉴 ID는 자동 발행됩니다." title="부서 ID" style="width: 330px;" readonly>
 											</td>
 										</tr>
 										<tr>
 											<th scope="row"><span class="required">메뉴명</span></th>
 											<td>
-												<input type="text" placeholder="일반 조회" title="메뉴명" style="width: 50%">
+												<input type="text" placeholder="일반 조회" title="메뉴명" style="width: 330px;">
 											</td>
 										</tr>
 										<tr>
 											<th scope="row">상위메뉴</th>
 											<td>
 												<div class="flex-group gap8">
-													<input type="text" placeholder="상위메뉴" title="상위메뉴" style="width: 50%" value="ROOT" readonly>
+													<input type="text" placeholder="상위메뉴" title="상위메뉴" style="width: 330px;" value="ROOT" readonly>
 													<button type="button" class="btn small" onclick="fn.popupOpen('#popFolderMenu');">선택</button>
 												</div>
 											</td>
@@ -291,7 +295,7 @@
 											<th scope="row">보고서 등록</th>
 											<td>
 												<div class="flex-group gap8">
-													<input type="text" placeholder="보고서 등록" title="보고서 등록" style="width: 50%" value="보고서가 등록되지 않습니다." readonly>
+													<input type="text" placeholder="보고서 등록" title="보고서 등록" style="width: 330px;" value="보고서가 등록되지 않습니다." readonly>
 													<button type="button" class="btn small" onclick="fn.popupOpen('#popRepoAdd');">선택</button>
 												</div>
 											</td>
@@ -300,7 +304,7 @@
 											<th scope="row">사용자 매핑</th>
 											<td>
 												<div class="flex-group gap8">
-													<input type="text" placeholder="사용자 매핑" title="사용자 매핑" style="width: 50%" value="사용자가 매핑되지 않습니다." readonly>
+													<input type="text" placeholder="사용자 매핑" title="사용자 매핑" style="width: 330px;" value="사용자가 매핑되지 않습니다." readonly>
 													<button type="button" class="btn small" onclick="fn.popupOpen('#popReceiver');">선택</button>
 												</div>
 											</td>
@@ -309,7 +313,7 @@
 											<th scope="row">역할 매핑</th>
 											<td>
 												<div class="flex-group gap8">
-													<input type="text" placeholder="역할 매핑" title="역할 매핑" style="width: 50%" value="일반사용자 외 3건" readonly>
+													<input type="text" placeholder="역할 매핑" title="역할 매핑" style="width: 330px;" value="일반사용자 외 3건" readonly>
 													<button type="button" class="btn small" onclick="fn.popupOpen('#popRoleMapping');">선택</button>
 												</div>
 											</td>
@@ -317,7 +321,7 @@
 										<tr>
 											<th scope="row">메뉴 설명</th>
 											<td>
-												<div class="tb-pd8"><textarea placeholder="메뉴 정보 설명 입력" style="width:50%;"></textarea></div>
+												<div class="tb-pd8"><textarea placeholder="메뉴 정보 설명 입력" style="width:330px;"></textarea></div>
 											</td>
 										</tr>
 										<tr>
@@ -476,8 +480,8 @@
 									<colgroup>
 										<col style="width:30%;">
 										<col style="width:30%;">
-										<col style="width:20%;">
-										<col style="width:20%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
 									</colgroup>
 									<thead>
 										<tr>
@@ -494,8 +498,8 @@
 													<colgroup>
 														<col style="width:30%;">
 														<col style="width:30%;">
-														<col style="width:20%;">
-														<col style="width:20%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
 													</colgroup>
 													<tbody>
 														<tr>
@@ -580,8 +584,8 @@
 									<colgroup>
 										<col style="width:30%;">
 										<col style="width:30%;">
-										<col style="width:20%;">
-										<col style="width:20%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
 									</colgroup>
 									<thead>
 										<tr>
@@ -598,8 +602,8 @@
 													<colgroup>
 														<col style="width:30%;">
 														<col style="width:30%;">
-														<col style="width:20%;">
-														<col style="width:20%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
 													</colgroup>
 													<tbody>
 														<tr>
@@ -895,10 +899,10 @@
 							<div class="user-list" style="height: 440px;">
 								<table class="grid">
 									<colgroup>
-										<col style="width:20%;">
-										<col style="width:40%;">
-										<col style="width:20%;">
-										<col style="width:20%;">
+										<col style="width:24%;">
+										<col style="width:36%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
 									</colgroup>
 									<thead>
 										<tr>
@@ -913,10 +917,10 @@
 											<div class="inner-table" style="height: 400px;">
 												<table class="grid">
 													<colgroup>
-														<col style="width:20%;">
-														<col style="width:40%;">
-														<col style="width:20%;">
-														<col style="width:20%;">
+														<col style="width:24%;">
+														<col style="width:36%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
 													</colgroup>
 													<tbody>
 														<tr>
@@ -1118,8 +1122,8 @@
 									<colgroup>
 										<col style="width:40%;">
 										<col style="width:20%;">
-										<col style="width:20%;">
-										<col style="width:20%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
 									</colgroup>
 									<thead>
 										<tr>
@@ -1136,8 +1140,8 @@
 													<colgroup>
 														<col style="width:40%;">
 														<col style="width:20%;">
-														<col style="width:20%;">
-														<col style="width:20%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
 													</colgroup>
 													<tbody>
 														<tr>
