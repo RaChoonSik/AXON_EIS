@@ -230,6 +230,7 @@
 
 .team-tree-items li {font-size:0;}
 .team-tree-items li > div {display:inline-block;font-size: var(--font-size-12);text-align: center;padding-top: 10px;height: 40px;border-bottom: 1px solid #e1e1e1;vertical-align: middle;}
+.font-large .team-tree-items li > div {padding-top: 7px; line-height: 20px;}
 .team-tree-items .check {width:10%;}
 .team-tree-items .team {width:29%;text-align: left;}
 .team-tree-items .team .tit {position:relative;}
@@ -267,7 +268,7 @@
 .popRepoAdd .btn-area {left: 335px;}
 .sort-tb tr.ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
 .grid .scroll-area {height: auto !important;padding: 0 !important;border-bottom: 0 !important;}
-.inner-table {height: 354px;overflow-y: auto;}
+.inner-table {height: 356px;overflow-y: auto;}
 .inner-table table tr:first-child td {border-top:0;}
 .inner-table table tr:last-child td {border-bottom: 1px solid #e1e1e1;}
 .sauce-type,
@@ -295,6 +296,7 @@
 .portlet-size .select {margin-left:0;width: 100px;}
 .grid .bg-highlight {background:#eff0f6;}
 .grid.server-set td {padding:0 5px; height:40px;}
+.popsendenroll .grid.tree tbody td {height:auto;}
 
 .ci-img-wrap {height:160px;/* width: 100%; *//* min-width: 1110px; */background: #f6f6f6;overflow-x: auto;overflow-y: hidden;font-size: 0;white-space: nowrap;}
 .ci-img-wrap .img-box {float: left;width:200px;height: 160px;padding-top: 32px;background: #242424;text-align: center;}
