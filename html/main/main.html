@@ -25,12 +25,18 @@
 		$(document).ready(function(){
 			$('#popMyFolder .folder-tree .toggle').sortable({
 				connectWith: '#popMyFolder .folder-tree .toggle ul',
-				tolerance: "pointer"
+				tolerance: "pointer",
+				placeholder: "sortable-placeholder",
+				forcePlaceholderSize: true,
+				revert: 200
 			});
 			$('#popMyFolder .folder-tree .toggle ul').sortable({
 				items: $('#popMyFolder .folder-tree .toggle ul li'),
 				connectWith: '#popMyFolder .folder-tree .toggle ul',
-				tolerance: "pointer"
+				tolerance: "pointer",
+				placeholder: "sortable-placeholder",
+				forcePlaceholderSize: true,
+				revert: 200
 			});
 		});
 		function tabLast(){
