@@ -169,66 +169,204 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">엑셀 업로드 목록</h3>
+				<h3 class="page-title">엑셀 업로드 실행</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">조회</h3>
-					<div class="bg-box">
-						<div class="list-area">
-							<ul>
-								<li>
-									<label>데이터명</label>
-									<div class="list-item">
-										<input type="text" placeholder="데이터명을 입력하세요.">
+
+					<div class="popsendenroll">
+						<div class="data-table">
+							<!-- 타겟테이블 -->
+							<div class="tg-table">
+								<div class="title-area">
+									<h3 class="h3-title">타겟 테이블</h3>
+									<div class="btn-wrap">
+										<a href="#" class="btn small fullblue plus">신규등록</a>
+										<button type="button" class="btn small">삭제</button>
+										<div class="select">
+											<select>
+												<option>10</option>
+												<option>25</option>
+												<option>50</option>
+												<option>100</option>
+												<option>200</option>
+											</select>
+										</div>
 									</div>
-								</li>
-								<li>
-									<label>테이블</label>
-									<div class="select">
-										<select>
-											<option>선택</option>
-											<option>선택22</option>
-											<option>선택212</option>
-										</select>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue">검색</button>
-					</div>
-	
-					<div class="title-area">
-						<h3 class="h3-title">목록</h3>
-						<div class="btn-wrap">
-							<div class="select">
-								<select>
-									<option>10</option>
-									<option>25</option>
-									<option>50</option>
-									<option>100</option>
-									<option>200</option>
-								</select>
+								</div>
+								<div class="user-list" style="height: 300px;">
+									<table class="grid">
+										<colgroup>
+											<col style="width:17%;">
+											<col style="width:25%;">
+											<col style="width:18%;">
+											<col style="width:10%;">
+											<col style="width:30%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">컬럼</th>
+												<th scope="col">컬럼명</th>
+												<th scope="col">데이터 타입</th>
+												<th scope="col">길이</th>
+												<th scope="col">매핑 규칙</th>
+											</tr>
+										</thead>
+										<tbody><tr>
+											<td colspan="5" class="scroll-area">
+												<div class="inner-table" style="height: 259px;">
+													<table class="grid">
+														<colgroup>
+															<col style="width:17%;">
+															<col style="width:25%;">
+															<col style="width:18%;">
+															<col style="width:10%;">
+															<col style="width:30%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>VARCHAR2</td>
+																<td>100</td>
+																<td><input type="text" placeholder="매핑 규칙 입력" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>DATE</td>
+																<td>100</td>
+																<td><input type="text" placeholder="TO_DATE(? , ‘YYYYMMDD’)" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>NUMERIC</td>
+																<td>100</td>
+																<td><input type="text" placeholder="NVL( ? , 0 )" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>NUMERIC</td>
+																<td>100</td>
+																<td><input type="text" placeholder="NVL( ? , 0 )" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>NUMERIC</td>
+																<td>100</td>
+																<td><input type="text" placeholder="NVL( ? , 0 )" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>NUMERIC</td>
+																<td>100</td>
+																<td><input type="text" placeholder="NVL( ? , 0 )" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>NUMERIC</td>
+																<td>100</td>
+																<td><input type="text" placeholder="NVL( ? , 0 )" title="매핑 규칙"></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody></table>
+								</div>
+							</div>
+		
+							<!-- 엑셀 데이터 -->
+							<div class="excel-data">
+								<div class="title-area">
+									<h3 class="h3-title">엑셀 데이터</h3>
+								</div>
+								<div class="user-list" style="height: 300px;">
+									<table class="grid">
+										<colgroup>
+											<col style="width:35%;">
+											<col style="width:65%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">엑셀컬럼</th>
+												<th scope="col">엑셀 데이터</th>
+											</tr>
+										</thead>
+										<tbody><tr>
+											<td colspan="3" class="scroll-area">
+												<div class="inner-table" style="height: 259px;">
+													<table class="grid">
+														<colgroup>
+															<col style="width:35%;">
+															<col style="width:65%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<td>
+																	<span>기준년월</span>
+																	<button type="button" class="del">삭제</button>
+																</td>
+																<td>1213231</td>
+															</tr>
+															<tr>
+																<td>
+																	<span>마감일자</span>
+																	<button type="button" class="del">삭제</button>
+																</td>
+																<td>20200131</td>
+															</tr>
+															<tr>
+																<td>
+																	<span>기준년월</span>
+																	<button type="button" class="del">삭제</button>
+																</td>
+																<td>1213231</td>
+															</tr>
+															<tr>
+																<td>
+																	<span>조직명</span>
+																	<button type="button" class="del">삭제</button>
+																</td>
+																<td>영업본부</td>
+															</tr>
+															
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody></table>
+								</div>
 							</div>
 						</div>
 					</div>
 	
+					<div class="file-add">
+						<input type="text" placeholder="엑셀파일을 선택하세요." title="엑셀파일">
+						<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
+					</div>
 					<div class="table-wrap">
 						<table class="grid">
 							<caption>그리드 정보</caption>
 							<colgroup>
 								<col style="width:50px;">
-								<col>
-								<col style="width:15%;">
+								<col style="width:13%;">
 								<col style="width:13%;">
 								<col style="width:12%;">
-								<col style="width:11%;">
-								<col style="width:15%;">
+								<col>
+								<col style="width:12%;">
+								<col style="width:12%;">
+								<col style="width:12%;">
 							</colgroup>
 							<thead>
 								<tr>
-									<th scope="col">선택</th>
+									<th scope="col">No</th>
 									<th scope="col">데이터명</th>
 									<th scope="col">데이터베이스</th>
 									<th scope="col">스키마명</th>
@@ -240,7 +378,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td>1</td>
 									<td><a href="#">테이터명</a></td>
 									<td>SYSDB</td>
 									<td>ADMIN</td>
@@ -250,7 +388,7 @@
 									<td>Y</td>
 								</tr>
 								<tr>
-									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td>2</td>
 									<td><a href="#">테이터명</a></td>
 									<td>SYSDB</td>
 									<td>ADMIN</td>
@@ -260,7 +398,7 @@
 									<td></td>
 								</tr>
 								<tr>
-									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td>3</td>
 									<td><a href="#">테이터명</a></td>
 									<td>SYSDB</td>
 									<td>ADMIN</td>
@@ -271,15 +409,6 @@
 								</tr>
 							</tbody>
 						</table>
-					</div>
-					<div class="paging">
-						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
-						<button type="button" class="active">1</button>
-						<button type="button">2</button>
-						<button type="button">3</button>
-						<button type="button">4</button>
-						<button type="button">5</button>
-						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 					</div>
 				</div>
 				

@@ -413,6 +413,11 @@ var fn = (function() {
 				$("#lnb nav > ul > li").removeClass("active");
 				$(".my-menu button, .btm-option .menu").removeClass("on");
 				$('.cont-head .drop-tg').removeClass("open").find(".info").removeClass("on");
+				if(!$(".btm-option .fix").hasClass("on")) {
+					setTimeout(() => {
+						$("#lnb").removeClass("on");
+					}, 100);
+				}
 			});
 			$(window).scroll(function(){
 				var offTop = $(document).scrollTop();

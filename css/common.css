@@ -289,7 +289,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /* layout */
 #wrap {position:relative;width:100%;min-width:1180px;/* max-width:1920px; */height:100%;/* overflow: hidden; */}
 #wrap:after {content:"";display:block;clear:both;}
-#content {float: right;position:relative;padding-left: 60px;width: 100%;/* width: calc(100% - 60px); */}
+#content {float: right;position:relative;padding-left: 60px;width: 100%;/* width: calc(100% - 60px); */overflow: hidden;}
 #lnb.on + #content {position:relative;padding-left: 240px;width:100%;/* z-index: 1; */}
 .cont-head {position: relative;display: flex;justify-content: space-between;align-items: center;height: 58px;padding: 6px 40px 6px;background: #f6f6f6;border-bottom: 1px solid #e1e1e1;}
 .cont-head:after {/* content:""; */display:block;clear:both;}
@@ -326,8 +326,10 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .service.open {display:block;}
 .cont-head .util .service a {display:block;height:30px;line-height:28px;padding-left:15px;color:#090808;font-size:14px;}
 .cont-head .util .service a:hover {background:#F2F2F2;}
+.main-tabs-wrap + .cont-body {/* margin-top:-16px; */}
 .cont-body {overflow: hidden;}
 .cont-body > .inner-cont {padding: 24px 40px;}
+.main .cont-body > .inner-cont {padding: 0;}
 .main-tabs-wrap + .inner-cont {padding-top:0;}
 .main-tabs-wrap + .inner-cont .report-control.ui-widget {margin-top:8px;}
 
@@ -1109,11 +1111,11 @@ tbody.sortable td {background-color:transparent;}
 .main-tabs-swiper li.on p {background: #5668f0;color: #fff;}
 .main-tabs-swiper li.on + li p:before, 
 .main-tabs-swiper li.on p:before {display:none;}
-.main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 44px 0;}
+.main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 44px 8px;}
 .main-tabs-wrap .swiper-button-prev:after,
 .main-tabs-wrap .swiper-button-next:after {display:none;}
 .main-tabs-wrap .swiper-button-prev,
-.main-tabs-wrap .swiper-button-next {width:26px; height:26px;margin-top: -10px;border-radius: 50%;box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2); border:1px solid #e1e1e1;}
+.main-tabs-wrap .swiper-button-next {width:26px; height:26px;margin-top: -13px;border-radius: 50%;box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.2); border:1px solid #e1e1e1;}
 .main-tabs-wrap .swiper-button-prev {left: 40px;background: url('../img/common/ico_arrow_left_on.png') #fff no-repeat 7px center;}
 .main-tabs-wrap .swiper-button-next {right: 40px;background: url('../img/common/ico_arrow_right_on.png') #fff no-repeat 9px center;}
 .main-tabs-wrap .swiper-button-prev.swiper-button-disabled, 
@@ -1121,9 +1123,9 @@ tbody.sortable td {background-color:transparent;}
 .main-tabs-wrap .swiper-button-prev.swiper-button-disabled {display: none;background-image: url('../img/common/ico_arrow_left.png');background-position: center center;}
 .main-tabs-wrap .swiper-button-next.swiper-button-disabled {display: none;background-image: url('../img/common/ico_arrow_right.png');background-position: center center;}
 .main-visual {width: calc(100% - 80px);height: 306px;margin: 8px auto 0;background: url("../img/common/banner_img.png") center center;border-radius: 5px;}
-.main-visual:first-child {margin-top:0;}
+.main-tabs-wrap + .cont-body .main-visual {margin-top:0px;}
+.main-tabs-wrap[style*="display: none"] + .cont-body .main-visual {margin-top: 8px;}
 .main-visual .img-box {position:relative;margin: 0 auto;max-width: 1040px;height: 100%;/* background: url('../img/common/main_bg.png') no-repeat right 90px center; */}
-.main-visual.ban-off .img-box {/* margin: 0 0 0 20px; */}
 .main-visual .logo {position: absolute; top:24px; left:32px;width: 58px;}
 .main-visual.ban-off {height:64px;/* background-image: none; */}
 .main-visual .img-off {display:none;}
@@ -1221,8 +1223,8 @@ tbody.sortable td {background-color:transparent;}
 
 /* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
 
-.accordion li {background: url('../img/common/ico_arrow_down.png') no-repeat top 10px right 20px;}
-.accordion li.on {background-image: url('../img/common/ico_arrow_up.png');}
+.accordion li .head {background: url('../img/common/ico_arrow_down.png') no-repeat center right 20px;}
+.accordion li.on .head {background-image: url('../img/common/ico_arrow_up.png');}
 .chk + .chk {margin-left: 24px;}
 .chk-input .chk {display:inline-block;}
 .chk-input .chk + input {width: calc(100% - 30px);}

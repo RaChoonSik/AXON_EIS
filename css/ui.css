@@ -36,6 +36,7 @@
 .doc-acc-list .cont {display:none; padding:16px 0 16px 68px;background: #f5f7ff;border-top: 1px solid #e1e1e1;font-size:var(--font-size-12);line-height: 20px;}
 .doc-acc-list.memo li {position: relative;}
 .doc-acc-list.memo .title {width: 410px;/* margin-left: 20px; */background: url('../img/common/ico_doc_b.png') no-repeat left center;}
+.font-large .doc-acc-list .title {width: 390px;}
 .doc-acc-list.memo .on .title {background-image: url('../img/common/ico_doc_on.png');}
 .doc-acc-list.memo .chk {position:absolute; left:20px;top: 10px;}
 .doc-acc-list.memo .head {padding-left: 58px;}
@@ -61,7 +62,8 @@
 .popMyHomeMod .report-wrap .cont {height: 380px;}
 .popMyHomeMod .report-wrap.url-page .cont {margin-top:24px; border-top:1px solid #d8d8d8; border-radius: 5px;}
 .popMyHomeMod .add-tab {margin-left:20px;}
-.page-title {height: 46px;margin: 0;padding-bottom: 11px;padding-left: 40px;padding:8px 0 11px 40px; border-bottom:1px solid #e1e1e1;background-color: #fff;font-size: var(--font-size-17);font-weight: 500;line-height: 28px;}
+.page-title {height: 56px;margin: 0; padding:12px 0 11px 40px; border-bottom:1px solid #e1e1e1;background-color: #fff;font-size: var(--font-size-17);font-weight: 500;line-height: 28px;}
+.main-tabs-wrap + .page-title {margin-top:8px;}
 .page-title + .gray-hor-tb {margin-top:24px;}
 .page-title + .h3-title {margin-top:24px;}
 .board-cont {padding: 12px 20px;min-height: 350px; border:1px solid #e1e1e1;background-color: #fff;}
@@ -319,3 +321,8 @@
 .excel-step .step-option {margin-top: 12px;overflow: hidden;}
 .excel-step .step-option .chk {position: static;float:left;padding-top: 5px;}
 .excel-step .step-option .btn-wrap {float:right;margin-top: 0;}
+
+.data-table {display:flex; gap:40px;}
+.data-table .tg-table {flex: 1;}
+.data-table .excel-data {width: 320px; flex-grow: 0;}
+.data-table .excel-data .del {float:right;  width:16px; height:16px; background:url('../img/common/btn_del.png') no-repeat 0 0; background-size: 16px 16px; font-size:0;}
