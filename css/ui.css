@@ -107,8 +107,8 @@
 .bar-chartwrap > div {position:absolute;width:100%;height:100%;}
 .indv-graph {margin-top:24px;}
 .indv-graph .graphBox {display:none;}
-.indv-graph .graph-tabs .table-wrap {overflow-x: scroll;}
-.indv-graph .graph-tabs .table-wrap .grid {/* min-width: 1800px; */}
+.indv-graph .table-wrap {overflow-x: scroll;}
+.indv-graph .table-wrap .grid {/* min-width: 1800px; */}
 .indv-graph .graphBox.active {display:block;}
 .indv-graph .graphBox .grid tr.total td {font-weight: bold; color:#111;}
 .indv-graph .graphBox .grid tr.depth td:first-child {text-align: left;}

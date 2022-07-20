@@ -541,6 +541,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid .reply {background: url('../img/common/row.png') no-repeat 20px -2px;padding-left: 50px;}
 .grid .title {text-align: left;}
 .grid .title > div {display: flex;}
+.grid .title > div.tac {justify-content: center;}
 .grid .title a {display: -webkit-box;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 1;-webkit-box-orient: vertical;}
 
 /* gridtoggle-area */
