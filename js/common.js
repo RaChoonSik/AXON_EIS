@@ -462,6 +462,17 @@ var fn = (function() {
 			});
 		},
 
+		progress : function(){
+			let t = 0
+			let barWidth = 0
+			
+			const barAnimation = setInterval(() => {
+				barWidth =  t + '%'
+				$(".progress-bar .progress").width(barWidth);
+				t++ >= 100 && clearInterval(barAnimation)
+			}, 10)
+		},
+
 		//popupOpen
 		popupOpen : function(obj){
 			$(obj).addClass("open");

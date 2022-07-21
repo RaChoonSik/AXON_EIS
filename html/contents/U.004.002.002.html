@@ -23,7 +23,9 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-
+			$('.excel-data .data-items').sortable({
+				
+			});
 		});
 	</script>
 </head>
@@ -193,7 +195,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="user-list" style="height: 300px;">
+								<div class="user-list">
 									<table class="grid">
 										<colgroup>
 											<col style="width:17%;">
@@ -213,7 +215,7 @@
 										</thead>
 										<tbody><tr>
 											<td colspan="5" class="scroll-area">
-												<div class="inner-table" style="height: 259px;">
+												<div class="inner-table">
 													<table class="grid">
 														<colgroup>
 															<col style="width:17%;">
@@ -229,6 +231,13 @@
 																<td>VARCHAR2</td>
 																<td>100</td>
 																<td><input type="text" placeholder="매핑 규칙 입력" title="매핑 규칙"></td>
+															</tr>
+															<tr>
+																<td>Column1</td>
+																<td>컬럼명 1234</td>
+																<td>DATE</td>
+																<td>100</td>
+																<td><input type="text" placeholder="TO_DATE(? , ‘YYYYMMDD’)" title="매핑 규칙"></td>
 															</tr>
 															<tr>
 																<td>Column1</td>
@@ -286,7 +295,7 @@
 								<div class="title-area">
 									<h3 class="h3-title">엑셀 데이터</h3>
 								</div>
-								<div class="user-list" style="height: 300px;">
+								<div class="user-list">
 									<table class="grid">
 										<colgroup>
 											<col style="width:35%;">
@@ -298,117 +307,137 @@
 												<th scope="col">엑셀 데이터</th>
 											</tr>
 										</thead>
-										<tbody><tr>
-											<td colspan="3" class="scroll-area">
-												<div class="inner-table" style="height: 259px;">
-													<table class="grid">
-														<colgroup>
-															<col style="width:35%;">
-															<col style="width:65%;">
-														</colgroup>
-														<tbody>
-															<tr>
-																<td>
-																	<span>기준년월</span>
-																	<button type="button" class="del">삭제</button>
-																</td>
-																<td>1213231</td>
-															</tr>
-															<tr>
-																<td>
-																	<span>마감일자</span>
-																	<button type="button" class="del">삭제</button>
-																</td>
-																<td>20200131</td>
-															</tr>
-															<tr>
-																<td>
-																	<span>기준년월</span>
-																	<button type="button" class="del">삭제</button>
-																</td>
-																<td>1213231</td>
-															</tr>
-															<tr>
-																<td>
-																	<span>조직명</span>
-																	<button type="button" class="del">삭제</button>
-																</td>
-																<td>영업본부</td>
-															</tr>
-															
-														</tbody>
-													</table>
-												</div>
-											</td>
-										</tr>
-									</tbody></table>
+										<tbody>
+											<tr>
+												<td colspan="3" class="scroll-area">
+													<ul class="data-items">
+														<li>
+															<div class="left">
+																<span>기준년월</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>마감일자</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>목표금액</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>기준년월</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>기준년월</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>기준년월</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>기준년월</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+														<li>
+															<div class="left">
+																<span>기준년월</span>
+																<button type="button" class="del">삭제</button>
+															</div>
+															<div class="right">123231</div>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+								</table>
 								</div>
 							</div>
 						</div>
 					</div>
 	
 					<div class="file-add">
-						<input type="text" placeholder="엑셀파일을 선택하세요." title="엑셀파일">
+						<input type="text" placeholder="엑셀파일을 선택하세요." title="엑셀파일" readonly>
 						<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
+
+						<div class="chk"><label><input type="checkbox"><span>헤더없음</span></label></div>
 					</div>
 					<div class="table-wrap">
 						<table class="grid">
 							<caption>그리드 정보</caption>
 							<colgroup>
-								<col style="width:50px;">
-								<col style="width:13%;">
-								<col style="width:13%;">
-								<col style="width:12%;">
-								<col>
-								<col style="width:12%;">
-								<col style="width:12%;">
-								<col style="width:12%;">
+								<col style="width:20%;">
+								<col style="width:20%;">
+								<col style="width:20%;">
+								<col style="width:20%;">
+								<col style="width:20%;">
 							</colgroup>
 							<thead>
 								<tr>
-									<th scope="col">No</th>
-									<th scope="col">데이터명</th>
-									<th scope="col">데이터베이스</th>
-									<th scope="col">스키마명</th>
-									<th scope="col">테이블</th>
-									<th scope="col">테이블명</th>
-									<th scope="col">등록일자</th>
-									<th scope="col">시스템정보</th>
+									<th scope="col">기준년월</th>
+									<th scope="col">마감일자</th>
+									<th scope="col">조직코드</th>
+									<th scope="col">목표금액</th>
+									<th scope="col">조직명</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td><a href="#">테이터명</a></td>
-									<td>SYSDB</td>
-									<td>ADMIN</td>
-									<td>TB_TABLE_NAME</td>
-									<td>테이블명1</td>
-									<td>2020.01.01</td>
-									<td>Y</td>
+									<td>202001</td>
+									<td>20200131</td>
+									<td>000001</td>
+									<td>2,000,000,000</td>
+									<td>영업본부</td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td><a href="#">테이터명</a></td>
-									<td>SYSDB</td>
-									<td>ADMIN</td>
-									<td>TB_TABLE_NAME</td>
-									<td>테이블명1</td>
-									<td>2020.01.01</td>
-									<td></td>
+									<td>202001</td>
+									<td>20200131</td>
+									<td>000001</td>
+									<td>2,000,000,000</td>
+									<td>영업본부</td>
 								</tr>
 								<tr>
-									<td>3</td>
-									<td><a href="#">테이터명</a></td>
-									<td>SYSDB</td>
-									<td>ADMIN</td>
-									<td>TB_TABLE_NAME</td>
-									<td>테이블명1</td>
-									<td>2020.01.01</td>
-									<td>Y</td>
+									<td>202001</td>
+									<td>20200131</td>
+									<td>000001</td>
+									<td>2,000,000,000</td>
+									<td>영업본부</td>
+								</tr>
+								<tr>
+									<td>202001</td>
+									<td>20200131</td>
+									<td>000001</td>
+									<td>2,000,000,000</td>
+									<td>영업본부</td>
 								</tr>
 							</tbody>
 						</table>
+					</div>
+
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40" onclick="fn.popupOpen('#popUpload'); fn.progress();">실행</button>
+						<button type="button" class="btn big h40">목록</button>
 					</div>
 				</div>
 				
@@ -419,6 +448,73 @@
 		<!-- // content -->
 	</div>
 
+	<!-- 팝업// -->
+	<div id="popup_fileenroll" class="poplayer popfileenroll"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>엑셀 파일 등록</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<form>
+						<fieldset>
+							<legend>엑셀 파일 등록</legend>
+
+							<div class="fileupload">
+								<div class="inputfile">
+									<input type="file" id="file1" name="file1" class="hide" onchange="fn.fileCheck(this)">
+									<input type="text" class="upload-name ellipsis" placeholder="엑셀 파일 선택" readonly>
+								</div>
+								<label for="file1" class="btn fullblue small">첨부</label>
+								<button type="button" class="btn file-del hide" onclick="fn.fileReset(this);">삭제</button>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">등록</button>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll');"></span>
+	</div>
+	<!-- //팝업 -->
+
+	<!-- 업로드 -->
+	<div id="popUpload" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>엑셀 업로드</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<p class="progress-txt">Uploading your file…</p>
+					<div class="progress-bar">
+						<div class="progress"></div>
+					</div>
+					
+					<div class="upload-step">
+						<p>2020-01-01 18:01:53] “C:/aaaa.xls“ 업로드 성공</p>
+						<p>[2020-01-01 18:01:53] TBL_TABLE 타겟 적재 시작</p>
+						<p>[2020-01-01 18:01:53] TBL_TABLE 타겟 적재 완료 , 18,000 건</p>
+						<p>[2020-01-01 18:01:53] Step 1. 초기데이터 처리 시작</p>
+						<p>[2020-01-01 18:01:53] Step 1. 초기데이터 처리 오류 발생 : ORA-00001. 형식 오류</p>
+						<p>[2020-01-01 18:01:53] Step 1. 초기데이터 처리 오류 발생 : ORA-00001. 형식 오류</p>
+						<p>[2020-01-01 18:01:53] Step 1. 초기데이터 처리 오류 발생 : ORA-00001. 형식 오류</p>
+						<p>[2020-01-01 18:01:53] Step 1. 초기데이터 처리 오류 발생 : ORA-00001. 형식 오류</p>
+						<p>[2020-01-01 18:01:53] Step 1. 초기데이터 처리 오류 발생 : ORA-00001. 형식 오류</p>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">확인</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.fileReset(this);fn.popupClose('#popUpload');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.fileReset(this);fn.popupClose('#popUpload');"></span>
+	</div>
 	
 
 </body>

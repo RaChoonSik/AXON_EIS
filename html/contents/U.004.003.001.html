@@ -21,6 +21,15 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+			//등록일시 : datePicker
+			var date = new Date();
+			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
+			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -164,111 +173,160 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">엑셀 데이터 기준 정보 수정</h3>
+				<h3 class="page-title">엑셀 로그 조회</h3>
 
 				<div class="inner-cont">
-					<h3 class="h3-title">기준 정보</h3>
-					<div class="gray-hor-tb">
-						<table class="layout-fixed">
-							<colgroup class="basic-only medium-only">
-								<col style="width:110px;">
-								<col>
-								<col style="width:110px;">
+					<h3 class="h3-title">조회</h3>
+					<div class="bg-box">
+						<div class="list-area">
+							<ul>
+								<li>
+									<label>기준일자</label>
+									<div class="list-item">
+										<div class="datepickerrange fromDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+										<span class="hyppen date"></span>
+										<div class="datepickerrange toDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>상태</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>분류2</option>
+												<option>분류3</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>액셀 데이터</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>분류2</option>
+												<option>분류3</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>테이블</label>
+									<div class="list-item">
+										<div class="select">
+											<select>
+												<option>선택</option>
+												<option>분류2</option>
+												<option>분류3</option>
+											</select>
+										</div>
+									</div>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">검색</button>
+					</div>
+	
+					<div class="title-area">
+						<h3 class="h3-title">목록</h3>
+						<div class="btn-wrap">
+							<div class="select">
+								<select>
+									<option>10</option>
+									<option>25</option>
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+								</select>
+							</div>
+						</div>
+					</div>
+	
+					<div class="table-wrap">
+						<table class="grid">
+							<caption>그리드 정보</caption>
+							<colgroup>
+								<col style="width:5%;">
+								<col style="width:18%;">
+								<col style="width:15%;">
+								<col style="width:10%;">
+								<col style="width:10%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
+								<col style="width:8%;">
 								<col>
 							</colgroup>
-							<colgroup class="large-only">
-								<col style="width:120px;">
-								<col>
-								<col style="width:120px;">
-								<col>
-							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">No</th>
+									<th scope="col">실행일시</th>
+									<th scope="col">데이터명</th>
+									<th scope="col">소요시간 (Sec)</th>
+									<th scope="col">처리건수</th>
+									<th scope="col">작업자</th>
+									<th scope="col">시스템 정보</th>
+									<th scope="col">결과</th>
+									<th scope="col">상세 결과</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">데이터명</span></th>
-									<td>
-										<input type="text" placeholder="데이터명을 입력하세요." title="데이터명">
-									</td>
-									<th scope="row">옵션</th>
-									<td>
-										<div class="chk"><label><input type="checkbox"><span>시스템 정보</span></label></div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">데이터베이스</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>11</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row"><span class="required">테이블</span></th>
-									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="테이블을 선택하세요." title="테이블" readonly value="TBL_TABLE(한글명)">
-											<button type="button" class="btn small" onclick="fn.popupOpen('#');">선택</button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">기준 컬럼</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>11</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row"><div class="required">데이터주기</div></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>11</option>
-											</select>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">처리SCRIPT</th>
-									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="테이터 처리 로직을 등록하세요." title="처리SCRIPT" readonly value="">
-											<button type="button" class="btn small" onclick="fn.popupOpen('#');">등록</button>
-										</div>
-									</td>
-									<th scope="row">권한 매핑</th>
-									<td>
-										<div class="flex-group gap8">
-											<input type="text" placeholder="담당자를 등록하세요." title="권한 매핑" readonly value="홍길동 외 3명 등록">
-											<button type="button" class="btn small" onclick="fn.popupOpen('#');">선택</button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">설명</th>
-									<td colspan="3">
-										<div class="tb-pd8">
-											<textarea placeholder="설명을 입력하세요."></textarea>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">최종 수정자</th>
+									<td>1</td>
+									<td>2020-01-31 18:00</td>
+									<td>엑셀데이터1</td>
+									<td>100</td>
+									<td>21,134</td>
 									<td>홍길동</td>
-									<th scope="row">최종 수정일시</th>
-									<td>2020-01-01 15:00</td>
+									<td>Y</td>
+									<td><span class="icon-result fail">실패</span></td>
+									<td class="tal"><span class="ellipsis">ORA-0001 형식이 맞지않아 다시 형식의 오류로 내용이 길어지면 말줄임이 가능하다</span></td>
+								</tr>
+								<tr>
+								<td>2</td>
+									<td>2020-01-31 18:00</td>
+									<td>엑셀데이터1</td>
+									<td>100</td>
+									<td>21,134</td>
+									<td>홍길동</td>
+									<td>Y</td>
+									<td><span class="icon-result fail">실패</span></td>
+									<td class="tal"><span class="ellipsis">내용 오류</span></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>2020-01-31 18:00</td>
+									<td>엑셀데이터1</td>
+									<td>100</td>
+									<td>21,134</td>
+									<td>홍길동</td>
+									<td>Y</td>
+									<td><span class="icon-result scs">성공</span></td>
+									<td class="tal"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-	
-
-					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">수정</button>
-						<button type="button" class="btn big h40">목록</button>
+					<div class="paging">
+						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+						<button type="button" class="active">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 					</div>
 				</div>
 				
@@ -279,6 +337,7 @@
 		<!-- // content -->
 	</div>
 
+	
 
 </body>
 </html>
