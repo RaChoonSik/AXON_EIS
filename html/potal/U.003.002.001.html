@@ -32,12 +32,18 @@
 
 			$('.folder-tree .toggle').sortable({
 				connectWith: '.folder-tree .toggle ul',
-				tolerance: "pointer"
+				tolerance: "pointer",
+				placeholder: "sortable-placeholder",
+				forcePlaceholderSize: true,
+				revert: 200
 			});
 			$('.folder-tree .toggle ul').sortable({
 				items: $('.folder-tree .toggle ul li'),
 				connectWith: '.folder-tree .toggle ul',
-				tolerance: "pointer"
+				tolerance: "pointer",
+				placeholder: "sortable-placeholder",
+				forcePlaceholderSize: true,
+				revert: 200
 			});
 		});
 	</script>

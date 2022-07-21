@@ -26,12 +26,18 @@
 
 			$('.report-menu .folder-tree .toggle').sortable({
 				connectWith: '.report-menu .folder-tree .toggle ul',
-				tolerance: "pointer"
+				tolerance: "pointer",
+				placeholder: "sortable-placeholder",
+				forcePlaceholderSize: true,
+				revert: 200
 			});
 			$('.report-menu .folder-tree .toggle ul').sortable({
 				items: $('.report-menu .folder-tree .toggle ul li'),
 				connectWith: '.report-menu .folder-tree .toggle ul',
-				tolerance: "pointer"
+				tolerance: "pointer",
+				placeholder: "sortable-placeholder",
+				forcePlaceholderSize: true,
+				revert: 200
 			});
 		});
 	</script>
