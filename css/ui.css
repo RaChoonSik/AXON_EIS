@@ -358,7 +358,7 @@
 /* 모바일 */
 @media (max-width:740px) {
     .m-head {position: relative;}
-    .m-inner {padding: 0 8px;}
+    .m-inner {padding: 0 8px;padding-bottom: 52px;}
     .m-inner .login-wrap {padding: 0 16px;}
     .m-inner .login-txt {margin-top:100px; font-weight: normal; font-size: 20px;}
     .m-inner .login-box {margin-top:16px;}
@@ -370,6 +370,7 @@
     .mobile .btn {width:100%; height:40px;}
     .mobile .btn.big {height:50px; font-size: 16px;}
     .m-head .logout {position: absolute;right: 8px;top: 12px;width:30px; height:30px;background: url('../img/common/ico_logout.svg') no-repeat center center;font-size: 0;}
+    .m-head .depth-menu {position:absolute;top: 12px;left: 8px;width: 30px;height: 30px; font-size:0;background: url('../img/common/ham_menu.svg') no-repeat center center;}
     
     .chart-list {padding:12px 0}
     .chart-list li + li{margin-top:12px;}
@@ -384,6 +385,6 @@
     .chart-list .chart-box .del {width:24px; height:24px; background: url('../img/common/btn_popclose.svg') no-repeat 0 0; font-size: 0;}
     .chart-list .chart-box.empty {width: 100%;background: url('../img/common/chart_add.svg') no-repeat #f6f6f6 center center; border:1px dashed #ccc;}
     .btm-menu-list {position: fixed;bottom: 0;display: flex;width: 100%;margin: 0 -8px;border-top: 1px solid #ccc;}
-    .btm-menu-list .menu {display: flex;width:20%; height:52px;flex-shrink: 0;background: #f6f6f6;justify-content: center;align-items: center;}
-    .btm-menu-list .menu span {padding-right: 22px;background: url('../img/common/ico_plus.svg') no-repeat center right;font-size: 12px;}
+    .btm-menu-list .menu {display: flex;width:20%;height: 51px;flex-shrink: 0;background: #f6f6f6;justify-content: center;align-items: center;flex-direction: column;}
+    .btm-menu-list .menu .blank {padding-right: 22px;background: url('../img/common/ico_plus.svg') no-repeat center right;font-size: 12px;}
 }

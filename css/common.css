@@ -1072,7 +1072,7 @@ tbody.sortable td {background-color:transparent;}
 .nav-menu .toggle ul > li > a.error {max-width: 95%;}
 .nav-menu .cont {padding: 0 20px;}
 .folder-tree .toggle > li > a span,
-.nav-menu .toggle li > a span {display: inline-block;width: 100%;font-size: var(--font-size-14);line-height: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #666;}
+.nav-menu .toggle li > a span {display: inline-block;width: 100%;font-size: var(--font-size-14);line-height: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .folder-tree .toggle > li > a span.cnt {display:inline;}
 .nav-menu .doc:before {width: 24px;height: 24px;background-image: url('../img/common/ico_doc_w.png');background-position: center center;}
 .nav-menu ul > li .error span:after {position:absolute; width:16px; height:16px;right: -24px;top: 8px; background:url('../img/common/ico_error.png') no-repeat 0 0; content:'';}
