@@ -363,7 +363,7 @@
 /* 모바일 */
 @media (max-width:740px) {
     .m-head {position: fixed;width: 100%;z-index: 10;}
-    .m-inner {/* height: 100%; */padding: 56px 8px 52px 8px;}
+    .m-inner {height: 100%;padding: 56px 8px 52px 8px;overflow-y: auto;overflow-x: hidden;}
     .m-inner .login-wrap {padding: 0 16px;}
     .m-inner .login-txt {margin-top:100px; font-weight: normal; font-size: 20px;}
     .m-inner .login-box {margin-top:16px;}
@@ -377,7 +377,7 @@
     .m-head .logout {position: absolute;right: 8px;top: 12px;width:30px; height:30px;background: url('../img/common/ico_logout.svg') no-repeat center center;font-size: 0;}
     .m-head .depth-menu {position:absolute;top: 0;left: 0;width: 48px;height: 56px; font-size:0;background: url('../img/common/ham_menu.svg') no-repeat center center;}
     
-    .chart-list {/* height: 100%; */padding:12px 0}
+    .chart-list {/* height: 100%; */padding:12px 0;/* overflow: auto; */}
     .chart-list li + li{margin-top:12px;}
     .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;min-height: 200px;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);overflow: hidden;}
     .chart-list .chart-box .head {display:flex;height: 40px;padding:0 20px;background:#f2f2f2;align-items: center;justify-content: space-between;}
