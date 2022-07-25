@@ -1268,6 +1268,7 @@ tbody.sortable td {background-color:transparent;}
 /* 모바일 */
 @media (max-width:740px) {
     #wrap.mobile {width:100%;min-width: auto;max-width: 100%;}
+    .mobile .cont-body {overflow-y: auto; overflow-x: hidden;}
     .mobile #content {height: 100%;float:none; padding:0;}
     .m-head .logo {display:flex; justify-content: center; align-items: center; background:#242424; height:56px;}
     .m-head .logo .tit {margin-left:8px; color:#fff; font-weight: normal;}
