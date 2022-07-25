@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:none" d="M0 0h24v24H0z"/>
+    <g data-name="다각형 6" style="fill:none">
+        <path d="M13.823 0a2 2 0 0 1 1.748 1.029l3.889 7a2 2 0 0 1 0 1.943l-3.889 7A2 2 0 0 1 13.823 18H6.177a2 2 0 0 1-1.748-1.029l-3.889-7a2 2 0 0 1 0-1.943l3.889-7A2 2 0 0 1 6.177 0z" style="stroke:none" transform="rotate(90 9.5 11.5)"/>
+        <path d="M6.177 1.5a.5.5 0 0 0-.437.257l-3.89 7a.497.497 0 0 0 0 .486l3.89 7a.5.5 0 0 0 .437.257h7.646a.5.5 0 0 0 .437-.257l3.89-7a.497.497 0 0 0 0-.486l-3.89-7a.5.5 0 0 0-.437-.257H6.177m0-1.5h7.646a2 2 0 0 1 1.749 1.029l3.888 7a2 2 0 0 1 0 1.942l-3.888 7A2 2 0 0 1 13.823 18H6.177a2 2 0 0 1-1.749-1.029l-3.888-7a2 2 0 0 1 0-1.942l3.888-7A2 2 0 0 1 6.177 0z" style="fill:#3f3f46;stroke:none" transform="rotate(90 9.5 11.5)"/>
+    </g>
+    <circle data-name="타원 1266" cx="1" cy="1" r="1" transform="translate(11 6)" style="fill:#3f3f46"/>
+    <circle data-name="타원 1267" cx="1" cy="1" r="1" transform="translate(6 13)" style="fill:#3f3f46"/>
+    <circle data-name="타원 1270" cx="1" cy="1" r="1" transform="translate(10 11)" style="fill:#3f3f46"/>
+    <circle data-name="타원 1268" cx="1" cy="1" r="1" transform="translate(15 14)" style="fill:#3f3f46"/>
+    <circle data-name="타원 1271" cx="1" cy="1" r="1" transform="translate(11 16)" style="fill:#3f3f46"/>
+    <circle data-name="타원 1269" cx="1" cy="1" r="1" transform="translate(16 9)" style="fill:#3f3f46"/>
+    <path data-name="패스 42459" d="m-7118.011-4255.96-5.138-3.019-.819 5.193-4.4 2.165 5.446 2.717 4.155-2z" transform="translate(7135 4266)" style="stroke:#3f3f46;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+</svg>

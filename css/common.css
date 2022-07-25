@@ -330,6 +330,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-body {overflow: hidden;}
 .cont-body > .inner-cont {padding: 24px 40px;}
 .main .cont-body > .inner-cont {padding: 0;}
+.main .cont-body > #reportViewArea {padding: 24px 40px;}
 .main-tabs-wrap + .inner-cont {padding-top:0;}
 .main-tabs-wrap + .inner-cont .report-control.ui-widget {margin-top:8px;}
 
@@ -1266,7 +1267,7 @@ tbody.sortable td {background-color:transparent;}
 
 /* 모바일 */
 @media (max-width:740px) {
-    #wrap {width:100%;min-width: auto;}
+    #wrap {width:100%;min-width: auto;max-width: 100%;}
     #content {float:none; padding:0;}
     .m-head .logo {display:flex; justify-content: center; align-items: center; background:#242424; height:56px;}
     .m-head .logo .tit {margin-left:8px; color:#fff; font-weight: normal;}

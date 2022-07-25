@@ -9,10 +9,56 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AXon EIS</title>
 	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
 	<link rel="stylesheet" href="../../css/common.css">
 	<link rel="stylesheet" href="../../css/ui.css">
 	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
 	<script src="../../js/common.js"></script>
+	<script>
+		$(document).ready(function(){
+			var chart1  = echarts.init(document.querySelector('#chart1'), null);
+			var chart1option = {
+				xAxis: {},
+				yAxis: {},
+				series: [
+					{
+					symbolSize: 10,
+					data: [
+						[10.0, 8.04],
+						[8.07, 6.95],
+						[13.0, 7.58],
+						[9.05, 8.81],
+						[11.0, 8.33],
+						[14.0, 7.66],
+						[13.4, 6.81],
+						[10.0, 6.33],
+						[14.0, 8.96],
+						[12.5, 6.82],
+						[9.15, 7.2],
+						[11.5, 7.2],
+						[3.03, 4.23],
+						[12.2, 7.83],
+						[2.02, 4.47],
+						[1.05, 3.33],
+						[4.05, 4.96],
+						[6.03, 7.24],
+						[12.0, 6.26],
+						[12.0, 8.84],
+						[7.08, 5.82],
+						[5.02, 5.68]
+					],
+					type: 'scatter'
+					}
+				]
+			};
+			chart1.setOption(chart1option);
+		
+			window.addEventListener('resize',function(){
+				chart1.resize();
+			});
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -27,8 +73,106 @@
 				</h1>
 				<button type="button" class="logout">로그아웃</button>
 			</section>
+			<section class="menu-sec">
+				<div class="top-box">
+					<span class="tit">KPI 대시보드</span>
+					<button type="button" class="menu-close">닫기</button>
+				</div>
+				<div class="menu-list">
+					<div class="folder-tree system">
+						<ul class="toggle">
+							<li class="active"><!-- 활성화 : li class="open" 추가 -->
+								<button type="button" class="btn-toggle folder">폴더명 1</button>
+								<ul class="depth3">
+									<li class="sort-item">
+										<button type="button" class="btn-toggle folder">세번째 폴더</button>
+										<ul class="depth4">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last doc">경영12313 1KPI</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+								</ul>
+								<ul class="depth2">
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">보고서명_KPI보고서 보고서명_KPI보고서</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">내용이 길고 내용이 길고</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">내용</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<button type="button" class="btn-toggle folder">접힌 폴더명 2</button>
+								<ul class="depth2">
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+									<li class="sort-item">
+										<a href="#">
+											<span class="last doc">경영정보 종합_KPI</span>
+											<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="btn-wrap">
+							<button type="button" class="btn fullblue h40">적용</button>
+						</div>
+					</div>
+				</div>
+			</section>
 
-
+			<div class="dimm"></div>
 			<!-- cont-body// -->
 			<section class="cont-body">
 				<div class="m-inner">
@@ -46,10 +190,9 @@
 											<button type="button" class="del">삭제</button>
 										</div>
 									</div>
-									<div class="chart-view">
+									<div class="chart-view" id="chart1">
 
 									</div>
-									<a href="#" class="report-link">상세보고서 바로가기</a>
 								</div>
 							</li>
 							<li>
@@ -65,11 +208,18 @@
 					
 					<footer>
 						<div class="btm-menu-list">
-							<div class="menu"><span>메뉴</span></div>
-							<div class="menu"><span>메뉴</span></div>
-							<div class="menu"><span>메뉴</span></div>
-							<div class="menu"><span>메뉴</span></div>
-							<div class="menu"><span>메뉴</span></div>
+							<!-- 내용 있는 경우 full 추가 -->
+							<a href="javascript:;" class="menu full">
+								<img src="../../img/common/menu_chart01.svg" alt="차트아이콘">
+								<span class="tit ellipsis">영업</span>
+							</a>
+							<a href="javascript:;" class="menu full">
+								<img src="../../img/common/menu_chart02.svg" alt="차트아이콘">
+								<span class="tit ellipsis">마케팅 마케팅 마케팅</span>
+							</a>
+							<a href="javascript;" class="menu"><span class="blank">메뉴</span></a>
+							<a href="javascript;" class="menu"><span class="blank">메뉴</span></a>
+							<a href="javascript;" class="menu"><span class="blank">메뉴</span></a>
 						</div>
 					</footer>
 				</div>

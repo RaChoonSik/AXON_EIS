@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:none" d="M0 0h24v24H0z"/>
+    <g data-name="그룹 3360" transform="translate(-152.82 -407.967)">
+        <g data-name="다각형 5" style="fill:none">
+            <path d="M9.293 2.793a2 2 0 0 1 3.413 0l7.434 12.164A2 2 0 0 1 18.434 18H3.566a2 2 0 0 1-1.706-3.043z" style="stroke:none" transform="translate(153.82 409.967)"/>
+            <path d="M11 3.335c-.105 0-.3.032-.427.24L3.14 15.739a.483.483 0 0 0-.009.506.483.483 0 0 0 .436.255h14.868c.255 0 .382-.16.436-.255a.483.483 0 0 0-.01-.506L11.428 3.575a.486.486 0 0 0-.427-.24m0-1.5c.658 0 1.317.32 1.707.958l7.433 12.164C20.955 16.29 19.996 18 18.434 18H3.566c-1.562 0-2.52-1.71-1.706-3.043L9.293 2.793A1.983 1.983 0 0 1 11 1.835z" style="fill:#3f3f46;stroke:none" transform="translate(153.82 409.967)"/>
+        </g>
+        <path data-name="사각형 2044" d="M1 0h5.213a1 1 0 0 1 1 1v.352H0V1a1 1 0 0 1 1-1z" transform="translate(161.213 416.016)" style="fill:#3f3f46"/>
+        <rect data-name="사각형 2045" width="14.426" height="1.352" rx=".676" transform="translate(157.607 421.173)" style="fill:#3f3f46"/>
+    </g>
+</svg>

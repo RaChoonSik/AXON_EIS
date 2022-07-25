@@ -42,6 +42,8 @@ var fn = (function() {
 			fn.ui();
 
 			fn.accodion();
+
+			fn.mobile();
 			
 		},
 
@@ -487,6 +489,20 @@ var fn = (function() {
 		ovHidden : function(){
 			$("body").addClass("ov-hidden");	
 		},
+
+		//모바일
+		mobile : function(){
+			$(document).on("click",".m-head .depth-menu, .menu-sec .menu-close", function(){
+				$('.menu-sec').toggleClass('on');
+				$('.dimm').toggleClass('on');
+				$("body").toggleClass("ov-hidden");
+			});
+			$(document).on("click",".dimm", function(){
+				$('.menu-sec').removeClass('on');
+				$('.dimm').removeClass('on');
+				$("body").removeClass("ov-hidden");
+			});
+		}
 	}
 })();
 
