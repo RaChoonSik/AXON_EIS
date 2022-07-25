@@ -502,6 +502,17 @@ var fn = (function() {
 				$('.dimm').removeClass('on');
 				$("body").removeClass("ov-hidden");
 			});
+		},
+		
+		mobileHeight : function(){
+			function fnSize(){
+				var winHeight = $(window).height();
+				var boxHeight = winHeight - 162;
+				$('.chart-list .chart-box').height(boxHeight / 3);
+				$('.mobile .cont-body').height(winHeight);
+			}
+			fnSize();
+			$( window ).resize(function() { fnSize(); });
 		}
 	}
 })();

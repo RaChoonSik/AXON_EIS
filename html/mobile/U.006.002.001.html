@@ -17,6 +17,9 @@
 	<script src="../../js/common.js"></script>
 	<script>
 		$(document).ready(function(){
+			fn.mobileHeight();
+			
+			//차트
 			var chart1  = echarts.init(document.querySelector('#chart1'), null);
 			var chart1option = {
 				xAxis: {},

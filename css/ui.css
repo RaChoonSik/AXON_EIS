@@ -354,11 +354,16 @@
 .icon-result.scs:before {background-color: #24931a;}
 .icon-result.fail:before {background-color: #d4373c;}
 
+/* 차트 pop */
+.chart-add .thumb {display:flex; height: 126px; justify-content: center; align-items: center;}
+.chart-add .thumb img + img {margin-left:30px;}
+.chart-add .flex-group .select + .select {width:100px;}
+
 
 /* 모바일 */
 @media (max-width:740px) {
-    .m-head {position: relative;z-index: 10;}
-    .m-inner {padding: 0 8px;padding-bottom: 52px;}
+    .m-head {position: fixed;width: 100%;z-index: 10;}
+    .m-inner {height: 100%;padding: 56px 8px 52px 8px;}
     .m-inner .login-wrap {padding: 0 16px;}
     .m-inner .login-txt {margin-top:100px; font-weight: normal; font-size: 20px;}
     .m-inner .login-box {margin-top:16px;}
@@ -372,9 +377,9 @@
     .m-head .logout {position: absolute;right: 8px;top: 12px;width:30px; height:30px;background: url('../img/common/ico_logout.svg') no-repeat center center;font-size: 0;}
     .m-head .depth-menu {position:absolute;top: 0;left: 0;width: 48px;height: 56px; font-size:0;background: url('../img/common/ham_menu.svg') no-repeat center center;}
     
-    .chart-list {padding:12px 0}
+    .chart-list {/* height: 100%; */padding:12px 0}
     .chart-list li + li{margin-top:12px;}
-    .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12); height:236px;overflow: hidden;}
+    .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12); overflow: hidden;}
     .chart-list .chart-box .head {display:flex;height: 40px;padding:0 20px;background:#f2f2f2;align-items: center;justify-content: space-between;}
     .chart-list .chart-box .head .left,
     .chart-list .chart-box .head .right {display: flex; align-items: center;}
@@ -382,7 +387,7 @@
     .chart-list .chart-box .title {margin-left: 12px;font-size:14px;}
     .chart-list .chart-box .date {margin-right: 12px;color:#666;font-size: 11px;}
     .chart-list .chart-box .del {width:24px; height:24px; background: url('../img/common/btn_popclose.svg') no-repeat 0 0; font-size: 0;}
-    .chart-list .chart-box .chart-view {height: 194px;}
+    .chart-list .chart-box .chart-view {height: 194px;height: calc(100% - 40px);}
     .chart-list .chart-box.empty {width: 100%;background: url('../img/common/chart_add.svg') no-repeat #f6f6f6 center center; border:1px dashed #ccc;}
     .btm-menu-list {position: fixed;bottom: 0;display: flex;width: 100%;height: 52px;margin: 0 -8px;border-top: 1px solid #ccc;z-index: 1;}
     .btm-menu-list .menu {display: flex;width:20%;height: 51px;padding: 0 5px;flex-shrink: 0;background: #f6f6f6;justify-content: center;align-items: center;flex-direction: column;}
@@ -399,6 +404,6 @@
     .menu-list .folder-tree .toggle {width:auto;}
     .menu-list .folder-tree .toggle ul > li > a {padding-right:30px;}
     .menu-list .folder-tree.system .sort-item .chk {top:50%; transform:translateY(-50%); -ms-transform:translateY(-50%); -moz-transform:translateY(-50%); -webkit-transform:translateY(-50%);}
-    .dimm {display: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(36,36,36,0.8);z-index: 9;}
+    .dimm {display: none;position: absolute;top: 0;right: 0;left: 0;bottom: 0;background: rgba(36,36,36,0.8);z-index: 9;}
     .dimm.on {display: block;}
 }
