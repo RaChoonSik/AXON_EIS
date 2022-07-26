@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			fn.popupOpen('#popChartList');
+		});
+	</script>
+</head>
+
+<body class="font-basic">
+	<div id="wrap" class="">
+		<div style="padding:30px;">
+
+			<!-- 팝업 확인용 버튼// -->
+			<button type="button" class="btn big fullblue" onclick="fn.popupOpen('#popChartList');">팝업 열기</button>
+			<!-- //팝업 확인용 버튼 -->
+
+		</div>
+	</div>
+
+	<!-- 팝업// -->
+	<div id="popChartList" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>파이 차트</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="chart-add">
+						<div class="thumb">
+							<img src="../../img/common/chart_type5.png" alt="파이 차트">
+						</div>
+						<div class="gray-hor-tb">
+							<table class="layout-fixed">
+								<colgroup>
+									<col style="width:110px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">범례</th>
+										<td>
+											<input type="text" placeholder="%, EA" title="범례">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="required">KPI 데이터</span></th>
+										<td>
+											<div class="select">
+												<select>
+													<option>선택</option>
+													<option>옵션1</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="required">기준</span></th>
+										<td>
+											<div class="select">
+												<select>
+													<option>선택</option>
+													<option>옵션1</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row"><span class="required">실적</span></th>
+										<td>
+											<div class="select">
+												<select>
+													<option>선택</option>
+													<option>옵션1</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">조건</th>
+										<td>
+											<div class="tb-pd8">
+												<div class="flex-group">
+													<div class="select">
+														<select>
+															<option>선택</option>
+															<option>옵션1</option>
+														</select>
+													</div>
+													<div class="select">
+														<select>
+															<option>=</option>
+															<option>&lt;&gt;</option>
+															<option>&lt;</option>
+															<option>&gt;</option>
+															<option>&lt;=</option>
+															<option>&gt;=</option>
+															<option>like</option>
+														</select>
+													</div>
+												</div>
+												<div class="mgt8"><input type="text" placeholder="‘Y’" title="조건"></div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+	
+					
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+						<button type="button" class="btn big h40">검증</button>
+					</div>
+					<!-- //btn-wrap -->
+					
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popChartList');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popChartList');"></span>
+	</div>
+	<!-- //팝업 -->
+</body>
+</html>
