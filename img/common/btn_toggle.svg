@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="64" viewBox="0 0 20 64">
+    <path data-name="사각형 1569" style="fill:none" d="M0 0h20v32H0z"/>
+    <path data-name="패스 42418" d="M8.771 0v8.771H0z" transform="rotate(-45 20.314 5.586)" style="fill:#888"/>
+    <g>
+        <g data-name="arrow-filled">
+            <path data-name="사각형 1569" style="fill:none" d="M0 0h20v32H0z" transform="translate(0 32)"/>
+            <path data-name="패스 42418" d="M8.771 0v8.771H0z" transform="rotate(45 -43.04 31.97)" style="fill:#5668f0"/>
+        </g>
+    </g>
+</svg>

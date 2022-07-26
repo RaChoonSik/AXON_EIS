@@ -18,8 +18,8 @@
 .font-large .hyppen {margin:0 5px;}
 .font-large .indv-graph .table-wrap {width:100%; overflow-x: scroll;}
 .font-large .indv-graph .graphBox .grid {min-width: 1760px;}
-.font-large .title-area {display: flex;height:auto;align-items: center;justify-content: space-between;}
-.font-large .title-area .btn-wrap {flex-shrink: 0;}
+.title-area {/* display: flex; *//* height:auto; *//* align-items: center; *//* justify-content: space-between; */}
+.title-area .btn-wrap {flex-shrink: 0;}
 .font-large input[type="checkbox"] + span {line-height: 20px;}
 .font-large input[type="radio"] + span {line-height: 20px;}
 .font-medium .ipt-btn-del {width: calc(100% - 54px);}
@@ -272,7 +272,8 @@
 .popsendenroll .mapping-group .graybox {width: 45%;}
 .report-menu {display: flex;gap: 20px;}
 .report-menu .left {min-width: 320px;width: 30%; flex-shrink: 0;}
-.report-menu .folder-tree {height: 458px;margin-top: 0;}
+.report-menu .folder-tree {height: 458px;height: calc(100% - 42px);margin-top: 0;}
+.report-menu .folder-tree.comment {height: 459px;}
 .popRepoAdd .btn-area {left: 335px;}
 .sort-tb tr.ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
 .grid .scroll-area {height: auto !important;padding: 0 !important;border-bottom: 0 !important;}
@@ -407,10 +408,14 @@
     .menu-sec .top-box {display: flex;padding: 0 16px;justify-content: space-between;align-items: center;height: 46px;border-bottom: 1px solid #e1e1e1;}
     .menu-sec .top-box .tit {font-size: 14px;}
     .menu-sec .top-box .menu-close {width: 24px; height: 24px; background: url('../img/common/btn_popclose.svg') no-repeat 0 0; font-size: 0;}
-    .menu-list .folder-tree {background: transparent; border:0;margin-top: 12px;height:auto;padding-right: 16px;overflow: initial;}
+    .menu-list .folder-tree {background: transparent; border:0;margin-top: 12px;height:auto;padding-right: 16px;padding-left: 16px;overflow: initial;}
     .menu-list .folder-tree .toggle {width:auto;}
     .menu-list .folder-tree .toggle ul > li > a {padding-right:30px;}
     .menu-list .folder-tree.system .sort-item .chk {top:50%; transform:translateY(-50%); -ms-transform:translateY(-50%); -moz-transform:translateY(-50%); -webkit-transform:translateY(-50%);}
+
+    .menu-list .folder-tree .toggle li > a,
+    .menu-list .folder-tree .toggle li > .folder {padding-top: 8px;padding-bottom: 8px;}
+
     .dimm {display: none;position: absolute;top: 0;right: 0;left: 0;bottom: 0;background: rgba(36,36,36,0.8);z-index: 9;}
     .dimm.on {display: block;}
 }

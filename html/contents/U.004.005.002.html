@@ -23,11 +23,7 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			//등록일시 : datePicker
-			var date = new Date();
-			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
-			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
-			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+
 		});
 	</script>
 </head>
@@ -173,7 +169,7 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">게시판 신규 등록</h3>
+				<h3 class="page-title">보고서 Comment 신규</h3>
 
 				<div class="inner-cont">
 					<div class="gray-hor-tb">
@@ -186,66 +182,30 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row">제목</th>
-									<td colspan="3">
-										<!-- 220726 -->
-										<input type="text" placeholder="제목을 입력하세요." title="제목">
+									<th scope="row">보고서</th>
+									<td>대분류 &gt; 중분류 &gt; 보고서명</td>
+									<th scope="row">게시일자</th>
+									<td>
+										<div class="datepicker">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row">게시기간</th>
-									<td>
-										<div class="list-item">
-											<div class="datepickerrange fromDate">
-												<label>
-													<input type="text" readonly>
-												</label>
-											</div>
-											<span class="hyppen date"></span>
-											<div class="datepickerrange toDate">
-												<label>
-													<input type="text" readonly>
-												</label>
-											</div>
-										</div>
-									</td>
-									<th scope="row">팝업여부</th>
-									<td><div class="chk"><label><input type="checkbox"><span>팝업</span></label></div></td>
+									<th scope="row">제목</th>
+									<td colspan="3"><input type="text" placeholder="제목을 입력하세요." title="제목"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 	
 					<div class="title-area">
-						<h3 class="h3-title">본문</h3>
+						<h3 class="h3-title">보고서 Comment</h3>
 					</div>
 	
-					<textarea placeholder="본문을 입력하세요." class="board-input"></textarea>
-	
-					<div class="gray-hor-tb mgt8">
-						<table class="layout-fixed">
-							<colgroup>
-								<col style="width:110px;">
-								<col>
-							</colgroup>
-							<tbody>
-								<tr>
-									<th scope="row">첨부파일</th>
-									<td>
-										<div class="list-item">
-											<div class="file-view">
-												<button class="btn plusgray btn-file" onclick="fn.popupOpen('#popup_fileenroll');">파일등록</button>
-		
-												<ul class="file-list">
-													<li><span class="file">filename.ppt</span><span class="kb">(3KB)</span><button class="del">삭제</button></li>
-												</ul>
-											</div>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					<textarea placeholder="Comment를 입력하세요." class="board-input"></textarea>
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue h40">저장</button>
 						<button type="button" class="btn big h40">목록</button>
@@ -280,7 +240,7 @@
 								<button type="button" class="btn file-del hide" onclick="fn.fileReset(this);">삭제</button>
 							</div>
 							<div class="btn-wrap">
-								<button type="button" class="btn big fullblue h40">등록</button>
+								<button type="button" class="btn big fullblue">등록</button>
 							</div>
 	
 						</fieldset>
