@@ -408,6 +408,40 @@ var fn = (function() {
 				}
 			});
 			
+			//report page
+			function repoViewSize() {
+
+				if($('.main-tabs-wrap').css('display') == 'block'){
+					var menuTabHeight = $('.main-tabs-wrap').height() + 16; //상하 마진
+				} else {
+					var menuTabHeight = 0;
+				}
+				if($('.report-page .repo-tabs').css('display') == 'block'){
+					var repoTabHeight = $('.report-page .repo-tabs').height();
+				} else {
+					var repoTabHeight = 0;
+				}
+				if(menuTabHeight==0 && repoTabHeight==0){
+					var gap = 17;
+				} else {
+					var gap = 9;
+				}
+
+				
+
+				var winHeight = $(window).height();
+				var tooltipHeight = $('.report-wrap .top').outerHeight();//툴팁
+				var headerHeight = $('.cont-head').outerHeight(); //헤더
+				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - gap;
+				$('.report-page .cont').height(repoView);
+				console.log(tooltipHeight);
+				console.log(headerHeight);
+			}
+			repoViewSize();
+			$(window).resize(function(){
+				repoViewSize();
+			});
+			
 			//lnb 닫기 공통
 			$(document).on("click", ".cont-body", function(){
 				$("#lnb").removeAttr("data-open");
