@@ -427,9 +427,6 @@ var fn = (function() {
 				var headerHeight = $('.cont-head').outerHeight(); //헤더
 				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - pageMg - 9; //차이
 				$('.report-page .cont').height(repoView);
-				console.log(pageMg);
-				//console.log(tooltipHeight);
-				//console.log(headerHeight);
 			}
 			repoViewSize();
 			$(window).resize(function(){

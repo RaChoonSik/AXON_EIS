@@ -404,12 +404,12 @@
     .btm-menu-list .menu .tit {width:100%;text-align: center;}
     .btm-menu-list .menu.full {background-color: #fff;}
 
-    .menu-sec {visibility: hidden; position: absolute; top:56px;bottom:0; left:-70%; background: #f6f6f6;width: 70%;z-index: 10; transition: all 0.1s;}
+    .menu-sec {visibility: hidden;position: absolute; top:56px;bottom:0; left:-70%;background: #f6f6f6;width: 70%;z-index: 10;transition: all 0.1s;overflow: auto;}
     .menu-sec.on {visibility: visible; left:0; transition: all 0.1s;}
-    .menu-sec .top-box {display: flex;padding: 0 16px;justify-content: space-between;align-items: center;height: 46px;border-bottom: 1px solid #e1e1e1;}
+    .menu-sec .top-box {position: fixed;width: 70%;display: flex;padding: 0 16px;justify-content: space-between;align-items: center;height: 46px;border-bottom: 1px solid #e1e1e1;background: #f6f6f6;z-index: 1;}
     .menu-sec .top-box .tit {font-size: 14px;}
     .menu-sec .top-box .menu-close {width: 24px; height: 24px; background: url('../img/common/btn_popclose.svg') no-repeat 0 0; font-size: 0;}
-    .menu-list .folder-tree {background: transparent; border:0;margin-top: 12px;height:auto;padding-right: 16px;padding-left: 16px;overflow: initial;}
+    .menu-list .folder-tree {background: transparent; border:0;margin-top: 58px;height: 100%;padding-right: 16px;padding-left: 16px;overflow-y: auto;}
     .menu-list .folder-tree .toggle {width:auto;}
     .menu-list .folder-tree .toggle ul > li > a {padding-right:30px;}
     .menu-list .folder-tree.system .sort-item .chk {top:50%; transform:translateY(-50%); -ms-transform:translateY(-50%); -moz-transform:translateY(-50%); -webkit-transform:translateY(-50%);}
