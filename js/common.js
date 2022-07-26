@@ -412,25 +412,22 @@ var fn = (function() {
 			function repoViewSize() {
 
 				if($('.main-tabs-wrap').css('display') == 'block'){
-					var menuTabHeight = $('.main-tabs-wrap').height() + 16; //상하 마진
+					var menuTabHeight = $('.main-tabs-wrap').outerHeight();
 				} else {
 					var menuTabHeight = 0;
 				}
 				if($('.report-page .repo-tabs').css('display') == 'block'){
-					var repoTabHeight = $('.report-page .repo-tabs').height();
+					var repoTabHeight = $('.report-page .repo-tabs').outerHeight();
 				} else {
 					var repoTabHeight = 0;
 				}
-				if(menuTabHeight==0 && repoTabHeight==0){
-					var gap = 17;
-				} else {
-					var gap = 9;
-				}
+				var pageMg = parseInt($('.report-page').css('margin-top'));
 				var winHeight = $(window).height();
 				var tooltipHeight = $('.report-wrap .top').outerHeight();//툴팁
 				var headerHeight = $('.cont-head').outerHeight(); //헤더
-				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - gap;
+				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - pageMg - 9; //차이
 				$('.report-page .cont').height(repoView);
+				console.log(pageMg);
 				//console.log(tooltipHeight);
 				//console.log(headerHeight);
 			}
