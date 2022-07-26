@@ -426,16 +426,13 @@ var fn = (function() {
 				} else {
 					var gap = 9;
 				}
-
-				
-
 				var winHeight = $(window).height();
 				var tooltipHeight = $('.report-wrap .top').outerHeight();//툴팁
 				var headerHeight = $('.cont-head').outerHeight(); //헤더
 				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - gap;
 				$('.report-page .cont').height(repoView);
-				console.log(tooltipHeight);
-				console.log(headerHeight);
+				//console.log(tooltipHeight);
+				//console.log(headerHeight);
 			}
 			repoViewSize();
 			$(window).resize(function(){
