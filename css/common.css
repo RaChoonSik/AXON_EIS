@@ -440,6 +440,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 
 .flex-group {display:flex;align-items: center;}
 .flex-sh0 {flex-shrink: 0;}
+.gap4 {gap:4px;}
 .gap8 {gap:8px;}
 .gap12 {gap:12px;}
 

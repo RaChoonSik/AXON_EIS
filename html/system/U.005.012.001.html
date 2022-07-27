@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+			var date = new Date();
+			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			$(".monthpicker input").datepicker('setDate', new Date());
+		});
+	</script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-medium, font-large -->
+	<div id="wrap">
+
+		<div id="lnb" class="on">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+					
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
+								<img src="../../img/common/menu_chart01.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다" data-target="menu">
+								<img src="../../img/common/menu_chart02.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart03.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart04.png" alt="메뉴">
+								<span>메뉴123</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart05.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart06.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart07.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart08.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart09.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart10.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">시스템 설정</a>
+					<a href="javascript:;" class="fix on">고정</a>
+				</div>
+			</div>
+			<!-- lnb 메뉴 추가 -->
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>고객사 시스템명</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">개인정보 수정</a>
+							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;">개인 통계</a>
+							<a href="javascript:;">스케줄</a>
+							<a href="javascript:;">시스템 정보</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+				<!-- 게시판 추가 -->
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<h3 class="page-title">캘린더 관리</h3>
+
+				<div class="inner-cont">
+					<div class="bg-box">
+						<div class="list-area">
+							<ul>
+								<li>
+									<label>기준년월</label>
+									<div class="list-item">
+										<div class="monthpicker" style="width:300px;">
+											<label><input type="text" readonly></label>
+											<button type="button" class="btn fullblue small">등록</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="title-area">
+						<h3 class="h3-title">기준년월 : 2022년 8월</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small fullblue plus" onclick="fn.popupOpen('#popMonthAdd');">캘린더 생성</button>
+						</div>
+					</div>
+	
+					<div class="calendar-month">
+						<table>
+							<caption>캘린더</caption>
+							<colgroup>
+								<col style="width:14.2%;">
+								<col style="width:14.2%;">
+								<col style="width:14.2%;">
+								<col style="width:14.2%;">
+								<col style="width:14.2%;">
+								<col style="width:14.2%;">
+								<col style="width:14.2%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">일요일</th>
+									<th scope="col">월요일</th>
+									<th scope="col">화요일</th>
+									<th scope="col">수요일</th>
+									<th scope="col">목요일</th>
+									<th scope="col">금요일</th>
+									<th scope="col">토요일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span class="conn">7.31</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>1</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>2</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>3</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>4</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>5</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>6</span></button></td>
+								</tr>
+								<tr>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>7</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>8</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>9</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>10</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>11</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>12</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>13</span></button></td>
+								</tr>
+								<tr>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>14</span></button></td>
+									<td>
+										<button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span class="holiday">15</span></button>
+										<div class="days">
+											<!-- 빨간날일때 -->
+											<p class="holiday">광복절</p>
+										</div>
+									</td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>16</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>17</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>18</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>19</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>20</span></button></td>
+								</tr>
+								<tr>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>21</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>22</span></button></td>
+									<td>
+										<button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>23</span></button>
+										<div class="days">
+											<!-- 까만글씨 -->
+											<p>처서</p>
+											<p>처서2</p>
+										</div>
+									</td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>24</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>25</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>26</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>27</span></button></td>
+								</tr>
+								<tr>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>28</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span class="today">29</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>30</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span>31</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span class="conn">8.1</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span class="conn">8.2</span></button></td>
+									<td><button type="button" ondblclick="fn.popupOpen('#popHoliday');"><span class="conn">8.3</span></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+	<!-- 캘린더 생성 팝업// -->
+	<div id="popMonthAdd" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>캘린더 생성</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="gray-hor-tb">
+						<table class="editpw layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">시작년월</th>
+									<td>
+										<div class="monthpicker">
+											<label><input type="text" readonly></label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">종료년월</th>
+									<td>
+										<div class="monthpicker">
+											<label><input type="text" readonly></label>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+	
+					
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">생성</button>
+					</div>
+					<!-- //btn-wrap -->
+					
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popMonthAdd');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popMonthAdd');"></span>
+	</div>
+	<!-- //캘린더 생성 팝업 -->
+
+	<!-- 휴일 지정 팝업 -->
+	<div id="popHoliday" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>휴일 지정 (8월 1일)</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="gray-hor-tb">
+						<table class="editpw layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">휴일 종별</th>
+									<td>
+										<div class="select">
+											<select>
+												<option>법정</option>
+												<option>임시</option>
+												<option>회사휴일</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">휴일명</th>
+									<td>
+										<input type="text" placeholder="휴일명 입력" title="휴일명">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+	
+					
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+					<!-- //btn-wrap -->
+					
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popHoliday');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popHoliday');"></span>
+	</div>
+
+</body>
+</html>

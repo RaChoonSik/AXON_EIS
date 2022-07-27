@@ -21,6 +21,10 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -164,146 +168,188 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">데이터베이스 정보 수정</h3>
+				<h3 class="page-title">휴일 관리</h3>
 
 				<div class="inner-cont">
 					<div class="title-area">
-						<h3 class="h3-title">데이터베이스 정보</h3>
+						<h3 class="h3-title">휴일 목록</h3>
 						<div class="btn-wrap">
-							<button type="button" class="btn small">연결 테스트</button>
+							<button type="button" class="btn small fullblue plus">신규등록</button>
+							<button type="button" class="btn small">삭제</button>
 						</div>
 					</div>
-					<div class="gray-hor-tb">
-						<table class="layout-fixed">
-							<colgroup class="basic-only">
-								<col style="width:120px;">
+	
+					<div class="table-wrap">
+						<table class="grid server-set">
+							<caption>그리드 정보</caption>
+							<colgroup>
+								<col style="width:50px;">
+								<col style="width:12%;">
 								<col>
-								<col style="width:120px;">
-								<col>
-							</colgroup>
-							<colgroup class="medium-only large-only">
+								<col style="width:15%;">
+								<col style="width:10%;;">
 								<col style="width:150px;">
-								<col>
 								<col style="width:150px;">
-								<col>
+								<col style="width:10%;">
+								<col style="width:10%;">
 							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">휴일코드</th>
+									<th scope="col"><span class="required">휴일명</span></th>
+									<th scope="col"><span class="required">휴일날짜</span></th>
+									<th scope="col"><span class="required">양/음력</span></th>
+									<th scope="col"><span class="required">게시일자</span></th>
+									<th scope="col"><span class="required">종료일자</span></th>
+									<th scope="col"><span class="required">휴일 종별</span></th>
+									<th scope="col">등록일자</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">데이터베이스 ID</span></th>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td class="bg-highlight">SV00000001</td>
+									<td><input type="text" placeholder="휴일명 입력" title="휴일명"></td>
 									<td>
-										<input type="text" placeholder="데이터베이스ID는 자동 발행 됩니다." title="데이터베이스 ID" value="DB000001" disabled>
-									</td>
-									<th scope="row"><span class="required">데이터베이스명</span></th>
-									<td>
-										<input type="text" placeholder="데이터베이스명을 입력하세요." title="데이터베이스명" value="테스트 서버">
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">서버</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>AXONEIS_SERVER</option>
-												<option>서버</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row"><span class="required">DB종류</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>Oracle</option>
-												<option>MSSQL</option>
-												<option>MYSQL</option>
-											</select>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">서비스 ID</span></th>
-									<td>
-										<input type="text" placeholder="서비스ID를 입력하세요." title="서비스 ID" value="UMS_DB">
-									</td>
-									<th scope="row"><span class="required">포트번호</span></th>
-									<td>
-										<input type="text" placeholder="포트번호를 입력하세요." title="포트번호" value="3306">
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">DB USER</span></th>
-									<td>
-										<input type="text" placeholder="DB USER ID 를 입력하세요." title="DB USER" value="UMS">
-									</td>
-									<th scope="row"><span class="required">DB 비밀번호</span></th>
-									<td class="editpw">
-										<div class="pw-area">
-											<input type="password" placeholder="DB 비밀번호를 입력하세요." title="DB 비밀번호" value="1234">
-											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">접속 유형</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>Java(Thin)</option>
-												<option>Java(OCI)</option>
-												<option>Java(WAS)</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row"><span class="required">JNDI 문자열</span></th>
-									<td><input type="text" placeholder="" title="JNDI 문자열" value="jdbc:MYSQL:thin:@10.176.192.197:3306:SMINF"></td>
-								</tr>
-								<tr>
-									<th scope="row">DB 세션 범위</th>
-									<td>
-										<div class="flex-group portlet-size">
+										<div class="flex-group gap4">
 											<div class="select">
 												<select>
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
 												</select>
 											</div>
-											<span class="hyppen">~</span>
+											<span>월</span>
 											<div class="select">
 												<select>
-													<option>10</option>
-													<option>11</option>
-													<option>12</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
 												</select>
 											</div>
+											<span>일</span>
 										</div>
 									</td>
-									<th scope="row"><span class="required">DB 문자열 셋</span></th>
-									<td><input type="text" placeholder="" title="DB 문자열 셋" value="UTF-8"></td>
-								</tr>
-								<tr>
-									<th scope="row">설명</th>
-									<td colspan="3">
-										<div class="tb-pd8"><textarea placeholder="설명을 입력하세요.">이 서버는 테스트 서버입니다.</textarea></div>
+									<td>
+										<div class="select">
+											<select>
+												<option>양력</option>
+												<option>음력</option>
+											</select>
+										</div>
 									</td>
+									<td>
+										<div class="datepicker">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="datepicker">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="select">
+											<select>
+												<option>법정</option>
+												<option>임시</option>
+												<option>회사</option>
+												<option>휴일</option>
+											</select>
+										</div>
+									</td>
+									<td>2022.01.01 18:00</td>
 								</tr>
 								<tr>
-									<th scope="row">최종 수정자</th>
-									<td>홍길동</td>
-									<th scope="row">최종 수정일시</th>
-									<td>2020-01-01 18:00:00</td>
+									<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+									<td class="bg-highlight">SV00000001</td>
+									<td><input type="text" placeholder="휴일명 입력" title="휴일명"></td>
+									<td>
+										<div class="flex-group gap4">
+											<div class="select">
+												<select>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+												</select>
+											</div>
+											<span>월</span>
+											<div class="select">
+												<select>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+												</select>
+											</div>
+											<span>일</span>
+										</div>
+									</td>
+									<td>
+										<div class="select">
+											<select>
+												<option>양력</option>
+												<option>음력</option>
+											</select>
+										</div>
+									</td>
+									<td>
+										<div class="datepicker">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="datepicker">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</td>
+									<td>
+										<div class="select">
+											<select>
+												<option>법정</option>
+												<option>임시</option>
+												<option>회사휴일</option>
+											</select>
+										</div>
+									</td>
+									<td>2022.01.01 18:00</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-	
-
 					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">수정</button>
-						<button type="button" class="btn big h40">목록</button>
+						<button type="button" class="btn big fullblue h40">저장</button>
 					</div>
 				</div>
+
 				
 			</section>
 			<!-- //cont-body -->

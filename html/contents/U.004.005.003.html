@@ -21,6 +21,11 @@
     <script src="../../js/hammer.min.js"></script>
 	<script src="../../js/ResizeSensor.js"></script>
 	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+
+		});
+	</script>
 </head>
 
 <body class="font-basic">
@@ -164,143 +169,64 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">데이터베이스 정보 수정</h3>
+				<h3 class="page-title">보고서 Comment 신규</h3>
 
 				<div class="inner-cont">
-					<div class="title-area">
-						<h3 class="h3-title">데이터베이스 정보</h3>
-						<div class="btn-wrap">
-							<button type="button" class="btn small">연결 테스트</button>
-						</div>
-					</div>
 					<div class="gray-hor-tb">
 						<table class="layout-fixed">
-							<colgroup class="basic-only">
-								<col style="width:120px;">
+							<colgroup>
+								<col style="width:110px;">
 								<col>
-								<col style="width:120px;">
-								<col>
-							</colgroup>
-							<colgroup class="medium-only large-only">
-								<col style="width:150px;">
-								<col>
-								<col style="width:150px;">
+								<col style="width:110px;">
 								<col>
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">데이터베이스 ID</span></th>
+									<th scope="row">보고서</th>
+									<td>대분류 &gt; 중분류 &gt; 보고서명</td>
+									<th scope="row">게시일자</th>
 									<td>
-										<input type="text" placeholder="데이터베이스ID는 자동 발행 됩니다." title="데이터베이스 ID" value="DB000001" disabled>
-									</td>
-									<th scope="row"><span class="required">데이터베이스명</span></th>
-									<td>
-										<input type="text" placeholder="데이터베이스명을 입력하세요." title="데이터베이스명" value="테스트 서버">
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">서버</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>AXONEIS_SERVER</option>
-												<option>서버</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row"><span class="required">DB종류</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>Oracle</option>
-												<option>MSSQL</option>
-												<option>MYSQL</option>
-											</select>
+										<div class="datepicker" style="width:300px;">
+											<label>
+												<input type="text" readonly>
+											</label>
 										</div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">서비스 ID</span></th>
-									<td>
-										<input type="text" placeholder="서비스ID를 입력하세요." title="서비스 ID" value="UMS_DB">
-									</td>
-									<th scope="row"><span class="required">포트번호</span></th>
-									<td>
-										<input type="text" placeholder="포트번호를 입력하세요." title="포트번호" value="3306">
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">DB USER</span></th>
-									<td>
-										<input type="text" placeholder="DB USER ID 를 입력하세요." title="DB USER" value="UMS">
-									</td>
-									<th scope="row"><span class="required">DB 비밀번호</span></th>
-									<td class="editpw">
-										<div class="pw-area">
-											<input type="password" placeholder="DB 비밀번호를 입력하세요." title="DB 비밀번호" value="1234">
-											<button type="button" class="btn-pwshow"><span class="hidden">비밀번호 보이기버튼</span></button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row"><span class="required">접속 유형</span></th>
-									<td>
-										<div class="select">
-											<select>
-												<option>선택</option>
-												<option>Java(Thin)</option>
-												<option>Java(OCI)</option>
-												<option>Java(WAS)</option>
-											</select>
-										</div>
-									</td>
-									<th scope="row"><span class="required">JNDI 문자열</span></th>
-									<td><input type="text" placeholder="" title="JNDI 문자열" value="jdbc:MYSQL:thin:@10.176.192.197:3306:SMINF"></td>
-								</tr>
-								<tr>
-									<th scope="row">DB 세션 범위</th>
-									<td>
-										<div class="flex-group portlet-size">
-											<div class="select">
-												<select>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-												</select>
-											</div>
-											<span class="hyppen">~</span>
-											<div class="select">
-												<select>
-													<option>10</option>
-													<option>11</option>
-													<option>12</option>
-												</select>
-											</div>
-										</div>
-									</td>
-									<th scope="row"><span class="required">DB 문자열 셋</span></th>
-									<td><input type="text" placeholder="" title="DB 문자열 셋" value="UTF-8"></td>
-								</tr>
-								<tr>
-									<th scope="row">설명</th>
-									<td colspan="3">
-										<div class="tb-pd8"><textarea placeholder="설명을 입력하세요.">이 서버는 테스트 서버입니다.</textarea></div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">최종 수정자</th>
-									<td>홍길동</td>
-									<th scope="row">최종 수정일시</th>
-									<td>2020-01-01 18:00:00</td>
+									<th scope="row">제목</th>
+									<td colspan="3"><input type="text" placeholder="제목을 입력하세요." title="제목" value="영업실적 200201"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 	
+					<div class="title-area">
+						<h3 class="h3-title">보고서 Comment</h3>
+					</div>
+	
+					<textarea placeholder="Comment를 입력하세요." class="board-input">영업 실적 보고: 2020년 01월</textarea>
 
+					<div class="gray-hor-tb mgt8">
+						<table class="layout-fixed">
+							<colgroup>
+								<col style="width:110px;">
+								<col>
+								<col style="width:110px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">최종 수정자</th>
+									<td>홍길동</td>
+									<th scope="row">최종 수정일시</th>
+									<td>2020-01-01 15:00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<div class="btn-wrap">
-						<button type="button" class="btn big fullblue h40">수정</button>
+						<button type="button" class="btn big fullblue h40">저장</button>
 						<button type="button" class="btn big h40">목록</button>
 					</div>
 				</div>
@@ -311,6 +237,8 @@
 		</div>
 		<!-- // content -->
 	</div>
+
+
 
 </body>
 </html>
