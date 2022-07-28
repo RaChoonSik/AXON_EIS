@@ -368,7 +368,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 #popMyHomeSet .report-wrap .cont {height: 314px;} /* 마이홈설정팝업 */
 .repo-tabs {margin: 0 -4px;}
 #popMyHomeSet .repo-tabs li a {pointer-events: none;}
-#popMyHomeSet .repo-tabs li:last-child a {pointer-events: initial;}
+#popMyHomeSet .repo-tabs li.ui-tabs-active a {pointer-events: initial;}
 
 /* 달력 */
 .calendar-month {border:1px solid #E1E1E1;overflow:hidden;}
