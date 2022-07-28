@@ -304,6 +304,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .btn-util.item01 {background: url('../img/common/gnb_kpi.png') no-repeat left center;}
 .cont-head .util .btn-util.item02 {padding-right: 30px;background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
 .cont-head .util .btn-util.item03 {background: url('../img/common/gnb_full_sc.png') no-repeat left center;}
+.cont-head .util .btn-util.item03.on {background-image: url('../img/common/gnb_min_sc.png');}
 .cont-head .util .btn-util.item04 {padding-right: 30px;background: url('../img/common/gnb_board.png') no-repeat 4px center;}
 /* .cont-head .util .btn-util.item01:hover {background-position:22px -80px;}
 .cont-head .util .btn-util.item02:hover {background-position:-43px -80px;}

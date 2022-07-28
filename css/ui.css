@@ -366,7 +366,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 /* report  */
 .cont-body > .report-page {padding:0 8px 8px;}
 #popMyHomeSet .report-wrap .cont {height: 314px;} /* 마이홈설정팝업 */
-#popMyHomeSet .repo-tabs {margin: 0 -4px;}
+.repo-tabs {margin: 0 -4px;}
 #popMyHomeSet .repo-tabs li a {pointer-events: none;}
 #popMyHomeSet .repo-tabs li:last-child a {pointer-events: initial;}
 

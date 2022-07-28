@@ -221,7 +221,7 @@ var fn = (function() {
 				var tabs = $(".report-control").tabs();
 				var previouslyFocused = false;
 
-				tabs.find(".ui-tabs-nav").sortable({
+				$(".poplayer").find(tabs).find(".ui-tabs-nav").sortable({
 					axis: "x",
 					scroll: false,
 					start: function(event, ui) {
