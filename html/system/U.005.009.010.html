@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+
+		});
+	</script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-medium, font-large -->
+	<div id="wrap">
+
+		<div id="lnb" class="on">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+					
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
+								<img src="../../img/common/menu_chart01.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다" data-target="menu">
+								<img src="../../img/common/menu_chart02.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart03.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart04.png" alt="메뉴">
+								<span>메뉴123</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart05.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart06.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart07.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart08.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart09.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart10.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">시스템 설정</a>
+					<a href="javascript:;" class="fix on">고정</a>
+				</div>
+			</div>
+			<!-- lnb 메뉴 추가 -->
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>고객사 시스템명</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">개인정보 수정</a>
+							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;">개인 통계</a>
+							<a href="javascript:;">스케줄</a>
+							<a href="javascript:;">시스템 정보</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+				<!-- 게시판 추가 -->
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<h3 class="page-title">KPI 데이터</h3>
+				<div class="inner-cont">
+					<div class="kpi-data">
+						<div class="left">
+							<div class="title-area">
+								<h3 class="h3-title">KPI 데이터</h3>
+								<div class="btn-wrap">
+									<button type="button" class="btn small fullblue">삭제</button>
+								</div>
+							</div>
+							<div class="table-wrap">
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<colgroup>
+										<col style="width:15%">
+										<col style="width:30%;">
+										<col style="width:30%;">
+										<col style="width:25%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">선택</th>
+											<th scope="col">KPI코드</th>
+											<th scope="col">KPI명</th>
+											<th scope="col">사용여부</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="4" class="scroll-area">
+												<div class="inner-table">
+													<table class="grid">
+														<colgroup>
+															<col style="width:15%">
+															<col style="width:30%;">
+															<col style="width:30%;">
+															<col style="width:25%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>아니오</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>아니오</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01</a></td>
+																<td>예</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+	
+						<div class="right">
+							<div class="title-area">
+								<h3 class="h3-title">KPI 데이터 정보</h3>
+								<div class="btn-wrap">
+									<button type="button" class="btn small fullblue plus">신규</button>
+									<button type="button" class="btn small">저장</button>
+								</div>
+							</div>
+							<!-- 메뉴정보 -->
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup class="basic-only medium-only">
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<colgroup class="large-only">
+										<col style="width:120px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><span class="required">KPI 코드</span></th>
+											<td>
+												<input type="text" placeholder="KPI코드는 자동 발행 됩니다." title="부서 ID" readonly>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><span class="required">KPI명</span></th>
+											<td>
+												<input type="text" placeholder="KPI명을 입력하세요." title="메뉴명">
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><span class="required">사용여부</span></th>
+											<td>
+												<div class="select">
+													<select>
+														<option>예</option>
+														<option>아니오</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">설명</th>
+											<td>
+												<div class="tb-pd8"><textarea placeholder="설명을 입력하세요."></textarea></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="table-wrap mgt4">
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<colgroup>
+										<col style="width:7%">
+										<col style="width:20%;">
+										<col style="width:10%;">
+										<col style="width:15%;">
+										<col style="width:15%;">
+										<col style="width:7%;">
+										<col style="width:26%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">선택</th>
+											<th scope="col">컬럼명</th>
+											<th scope="col">실적여부</th>
+											<th scope="col">요약 기준</th>
+											<th scope="col">별칭</th>
+											<th scope="col">숨김</th>
+											<th scope="col">정렬 기준</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="7" class="scroll-area">
+												<div class="inner-table">
+													<table class="grid">
+														<colgroup>
+															<col style="width:7%">
+															<col style="width:20%;">
+															<col style="width:10%;">
+															<col style="width:15%;">
+															<col style="width:15%;">
+															<col style="width:7%;">
+															<col style="width:26%;">
+														</colgroup>
+														<tbody>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox" disabled><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select disabled>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭" disabled></td>
+																<td><div class="chk"><label><input type="checkbox" disabled><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select disabled>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select disabled>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox" checked><span class="blank"></span></label></div></td>
+																<td>STD_YM</td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="select">
+																		<select>
+																			<option>SUM</option>
+																			<option>AVG</option>
+																			<option>COUNT</option>
+																			<option>DISTINCT COUNT</option>
+																			<option>MIN</option>
+																			<option>MAX</option>
+																		</select>
+																	</div>
+																</td>
+																<td><input type="text" placeholder="별칭을 입력하세요." title="별칭"></td>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td>
+																	<div class="flex-group">
+																		<div class="select">
+																			<select>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="select">
+																			<select>
+																				<option>오름차순</option>
+																				<option>내림차순</option>
+																			</select>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="gray-hor-tb mgt4">
+								<table class="layout-fixed">
+									<colgroup class="basic-only medium-only">
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<colgroup class="large-only">
+										<col style="width:120px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">최종 수정자</th>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<th scope="row">최종 수정일시</th>
+											<td>2020-01-01 14:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+	<!-- 상위메뉴 설정// -->
+	<div id="popFolderMenu" class="poplayer">
+		<div class="inner small">
+			<header>
+				<h2>상위메뉴 설정</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="folder-tree">
+						<div class="root">ROOT</div>
+						<ul class="toggle">
+							<li class="active"><!-- 활성화 : li class="open" 추가 -->
+								<a class="btn-toggle folder sort-item">폴더명 1 sort </a>
+								<ul class="depth2">
+									<li class="sort-item">
+										<a href="#">
+											<span class="last">SUB 폴더</span>
+										</a>
+									</li>
+									<li class="active">
+										<a class="btn-toggle folder sort-item">폴더 안 폴더</a>
+										<ul class="depth3">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUㄴㅁㄹㅇㄻ</span>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUㄴㅁㄹㅇㄻ</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<a class="btn-toggle folder sort-item">폴더명 2</a>
+								<ul class="depth2">
+									<li class="sort-item">
+										<a href="#">
+											<span class="last">SUB 폴더 44 </span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<a class="btn-toggle folder sort-item">폴더명 3</a>
+								<ul class="depth2">
+									<li class="sort-item">
+										<a href="#">
+											<span class="last">SUB 폴더 13</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<a class="btn-toggle folder sort-item">폴더명 4</a>
+								<ul class="depth2">
+									<li class="sort-item">
+										<a href="#">
+											<span class="last">SUB 폴더 sub</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popFolderMenu');"><span class="hidden">팝업닫기</span></button><!-- onclick에 팝업 id값 통일해주세요 -->
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popFolderMenu');"></span><!-- onclick에 팝업 id값 통일해주세요 -->
+	</div>
+	<!-- //상위메뉴 설정 -->
+
+	<!-- 보고서 등록// -->
+	<div id="popRepoAdd" class="poplayer popsendenroll popRepoAdd"><!-- id값 수정 가능 -->
+		<div class="inner">
+			<header>
+				<h2>보고서 등록</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+	
+						<!-- 수신자// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">보고서 목록</h3>
+							</div>
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">보고서명</th>
+											<td>
+												<input type="text" placeholder="보고서명을 입력하세요" title="보고서명">
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">업무분류</th>
+											<td>
+												<div class="select">
+													<select>
+														<option>영업</option>
+														<option>재무</option>
+														<option>기타</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btn-wrap tar">
+								<button type="button" class="btn fullblue">검색</button>
+							</div>
+							<div class="user-list" style="height:279px; margin-top:32px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:30%;">
+										<col style="width:30%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">보고서명</th>
+											<th scope="col">유형</th>
+											<th scope="col">업무분류</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="4" class="scroll-area">
+											<div class="inner-table" style="height:239px;">
+												<table class="grid">
+													<colgroup>
+														<col style="width:30%;">
+														<col style="width:30%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>항목</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>항목</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //수신자 -->
+	
+						<!-- btn-area// -->
+						<div class="btn-area">
+							<button type="button" class="btn-add"><span class="hide">추가</span></button>
+							<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
+						</div>
+						<!-- //btn-area -->
+	
+						<!-- 사용자 매핑 목록// -->
+						<div class="graybox fr">
+							<div class="title-area">
+								<h3 class="h3-title">보고서 등록 목록</h3>
+							</div>
+							
+							<div class="user-list" style="height: 435px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:30%;">
+										<col style="width:30%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">보고서명</th>
+											<th scope="col">유형</th>
+											<th scope="col">업무분류</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="4" class="scroll-area">
+											<div class="inner-table" style="height: 394px;">
+												<table class="grid sort-tb">
+													<colgroup>
+														<col style="width:30%;">
+														<col style="width:30%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>기타</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>영업</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>영업</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>손익계산서</td>
+															<td>REPORT</td>
+															<td>재무</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>월간영업</td>
+															<td>REPORT</td>
+															<td>영업</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>대차대조</td>
+															<td>REPORT</td>
+															<td>영업</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>그룹웨어 공지</td>
+															<td>URL</td>
+															<td>기타</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>그룹웨어 공지</td>
+															<td>URL</td>
+															<td>기타</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>그룹웨어 공지</td>
+															<td>URL</td>
+															<td>기타</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>그룹웨어 공지</td>
+															<td>URL</td>
+															<td>기타</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>그룹웨어 공지</td>
+															<td>URL</td>
+															<td>기타</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //사용자 매핑 목록 -->
+					</div>
+	
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+					<!-- //btn-wrap -->
+	
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popRepoAdd');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popRepoAdd');"></span>
+	</div>
+	<!-- //보고서 등록 -->
+
+	
+	<!-- 메뉴 사용자 매핑// -->
+	<div id="popReceiver" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
+		<div class="inner large">
+			<header>
+				<h2>메뉴 사용자 매핑</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<!-- 조직도// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">조직도</h3>
+							</div>
+							
+							<div class="content-area" style="height:440px; overflow:auto;">
+								<h4>그룹목록</h4>
+								<ul class="toggle">
+									<li><!-- 활성화 : li class="open" -->
+										<button type="button" class="btn-toggle">임원</button>
+										<ul class="depth2">
+											<li><!-- 활성화 : li class="active" -->
+												<button type="button" class="btn-toggle">지원전략본부</button>
+												<ul class="depth3">
+													<li>
+														<button type="button" class="btn-toggle">영업관리부</button>
+														<ul class="depth4">
+															<li>
+																<button type="button" class="last">영업1팀</button>
+															</li>
+															<li><button type="button" class="last">영업2팀</button></li>
+														</ul>
+													</li>
+													<li><button type="button" class="last">영업관리부 22</button></li>
+												</ul>
+											</li>
+											<li>
+												<button type="button" class="btn-toggle">지원전략본부 22</button>
+												<ul class="depth3">
+													<li>
+														<button type="button" class="btn-toggle">영업관리부 22</button>
+														<ul class="depth4">
+															<li>
+																<button type="button" class="last">영업1팀 22</button>
+															</li>
+															<li><button type="button" class="last">영업2팀 22 </button></li>
+														</ul>
+													</li>
+													<li><button type="button" class="last">영업관리부 22222</button></li>
+												</ul>
+											</li>
+											<li><button type="button" class="last">지원전략본부 33</button></li>
+											<li><button type="button" class="last">지원전략본부 44</button></li>
+										</ul>
+									</li>
+									<li>
+										<button type="button" class="btn-toggle">영업관리부</button>
+										<ul class="depth2">
+											<li><button type="button" class="last">영업팀</button></li>
+											<li><button type="button" class="last">사업관리팀</button></li>
+										</ul>
+									</li>
+									<li>
+										<button type="button" class="btn-toggle">마케팅부</button>
+										<ul class="depth2">
+											<li><button type="button" class="last">마케팅부 1</button></li>
+											<li><button type="button" class="last">마케팅부 2</button></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //조직도 -->
+	
+						<!-- 사용자// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">사용자 검색</h3>
+							</div>
+							<div class="item">
+								<div class="ipt-btn-del">
+									<input type="text" placeholder="사용자명 검색">
+									<button type="button" class="del">삭제</button>
+								</div>
+								<button type="button" class="btn fullblue">검색</button>
+							</div>
+							<div class="user-list">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:40%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">사용자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3" class="scroll-area">
+											<div class="inner-table">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:40%;">
+														<col style="width:20%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>이름1</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //사용자 -->
+	
+						<!-- btn-area// -->
+						<div class="btn-area">
+							<button type="button" class="btn-add"><span class="hide">추가</span></button>
+							<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
+						</div>
+						<!-- //btn-area -->
+	
+						<!-- 사용자 매핑 목록// -->
+						<div class="graybox fr">
+							<div class="title-area">
+								<h3 class="h3-title">사용자 매핑 목록</h3>
+							</div>
+							
+							<div class="user-list" style="height: 440px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:24%;">
+										<col style="width:36%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">사용자명</th>
+											<th scope="col">부서</th>
+											<th scope="col">접근여부</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="4" class="scroll-area">
+											<div class="inner-table" style="height: 399px;">
+												<table class="grid">
+													<colgroup>
+														<col style="width:24%;">
+														<col style="width:36%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>가나다</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>아무개</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>홍길동</td>
+															<td>영업관리/과장</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //사용자 매핑 목록 -->
+					</div>
+	
+					<div class="tar mgt4">
+						<div class="chk"><label><input type="checkbox"><span>하위 객체 권한 상속</span></label></div>
+					</div>
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+					<!-- //btn-wrap -->
+	
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popReceiver');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popReceiver');"></span>
+	</div>
+	<!-- //메뉴 사용자 매핑 -->
+
+	<!-- 사용자 역할 매핑 팝업// -->
+	<div id="popRoleMapping" class="poplayer popsendenroll"><!-- id값 수정 가능 -->
+		<div class="inner">
+			<header>
+				<h2>메뉴 역할 매핑</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<!-- 사용자 그룹// -->
+						<div class="graybox">
+							<div class="title-area">
+								<h3 class="h3-title">사용자 역할</h3>
+							</div>
+							<div class="gray-hor-tb">
+								<table class="layout-fixed">
+									<colgroup>
+										<col style="width:110px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">종별</th>
+											<td>
+												<div class="select">
+													<select>
+														<option>선택</option>
+														<option>검색1</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">역할명</th>
+											<td>
+												<div class="ipt-btn-del full">
+													<input type="text" placeholder="사용자 역할 검색">
+													<button type="button" class="del">삭제</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btn-wrap tar">
+								<button type="button" class="btn fullblue">검색</button>
+							</div>
+							<div class="folder-tree system">
+								<ul class="toggle">
+									<li class="active open"><!-- 활성화 : li class="open" 추가 -->
+										<button type="button" class="btn-toggle folder sort-item">일반 역할</button>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="active open">
+										<button type="button" class="btn-toggle folder sort-item">시스템 역할</button>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_ADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SYS_EXCELADMIN</span>
+													<div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- btn-area// -->
+						<div class="btn-area" style="left:333px;">
+							<button type="button" class="btn-add"><span class="hide">추가</span></button>
+							<button type="button" class="btn-remove"><span class="hide">삭제</span></button>
+						</div>
+						<!-- //btn-area -->
+	
+						<!-- 역할 매핑 목록// -->
+						<div class="graybox fr">
+							<div class="title-area">
+								<h3 class="h3-title">역할 매핑 목록</h3>
+							</div>
+							
+							<div class="user-list" style="height: 364px;">
+								<table class="grid">
+									<colgroup>
+										<col style="width:40%;">
+										<col style="width:20%;">
+										<col style="width:25%;">
+										<col style="width:15%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">역할</th>
+											<th scope="col">종별</th>
+											<th scope="col">접근여부</th>
+											<th scope="col">선택</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="4" class="scroll-area">
+											<div class="inner-table" style="height: 323px;">
+												<table class="grid">
+													<colgroup>
+														<col style="width:40%;">
+														<col style="width:20%;">
+														<col style="width:25%;">
+														<col style="width:15%;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<td>SYS_ADMIN</td>
+															<td>시스템</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>SYS_EXCELADMIN</td>
+															<td>시스템</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>가나다</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+														<tr>
+															<td>사용자 역할</td>
+															<td>일반</td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+															<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- //역할 매핑 목록 -->
+
+					</div>
+	
+					<div class="tar mgt4">
+						<div class="chk"><label><input type="checkbox" checked><span>하위 객체 권한 상속</span></label></div>
+					</div>
+					<!-- btn-wrap// -->
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue h40">저장</button>
+					</div>
+					<!-- //btn-wrap -->
+	
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popRoleMapping');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popRoleMapping');"></span>
+	</div>
+	<!-- //사용자 역할 매핑 팝업 -->
+
+</body>
+</html>

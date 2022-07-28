@@ -395,6 +395,14 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .comm-code-list .inner-table .ui-sortable-handle.ui-sortable-helper {background-position: 60px center;}
 .comm-code-list .right textarea {height:204px;}
 
+.kpi-data {display: flex; gap: 20px;}
+.kpi-data .left {width: 320px;flex-shrink: 0;}
+.kpi-data .right .gray-hor-tb td > * {width:70%; min-width: 394px;}
+.kpi-data .right .inner-table {max-height: 287px;height: auto;}
+.kpi-data .right .inner-table td {padding:4px 10px;}
+.kpi-data .left .grid .inner-table {height: 100%;}
+.kpi-data .left .table-wrap {height: calc(100% - 40px);}
+.kpi-data .left .table-wrap > .grid {height:100%;}
 
 /* 모바일 */
 @media (max-width:740px) {
