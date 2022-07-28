@@ -223,7 +223,7 @@ var fn = (function() {
 
 				tabs.find(".ui-tabs-nav").sortable({
 					axis: "x",
-
+					scroll: false,
 					start: function(event, ui) {
 						previouslyFocused = document.activeElement === ui.item[ 0 ];
 					},

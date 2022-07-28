@@ -1191,7 +1191,7 @@ tbody.sortable td {background-color:transparent;}
 .report-wrap {display:none;/* height:600px; */padding: 0 !important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;overflow: hidden;}
 .repo-tabs + .report-wrap {border-radius: 0 0 5px 5px;}
 .report-wrap .top {display:flex;justify-content: space-between;align-items: center; padding:0 20px; height:46px;border: 1px solid #d8d8d8;border-bottom: 0;background: #f2f2f2; border-radius: 5px 5px 0 0;}
-.repo-tabs + .report-wrap .top {border-radius: 0;}
+/* .repo-tabs + .report-wrap .top {border-radius: 0;} */
 .report-wrap .top .tit {font-size:var(--font-size-14);font-weight: 500;}
 .report-wrap .tool {display:flex;gap: 16px;}
 .report-wrap .tool > div > button {font-size:0; width:24px; height:24px;}
@@ -1215,9 +1215,9 @@ tbody.sortable td {background-color:transparent;}
 .report-desc {display: flex;border:1px solid #e1e1e1;}
 .report-desc p {width:120px;height: 110px;padding-top: 44px;background: #f2f2f2;flex-shrink: 0;border-right: 1px solid #e1e1e1;text-align: center;vertical-align: middle;}
 .report-desc textarea {border-radius: 0;height: 110px;padding: 16px 20px;border: 0;}
-.ui-tabs .ui-tabs-nav {background: transparent;padding: 0;border-radius: 0;border: 0;}
+.ui-tabs .ui-tabs-nav {display: flex;gap: 4px;background: transparent;padding: 0;border-radius: 0;border: 0;}
 .ui-widget.ui-widget-content {border:0;}
-.report-control.ui-tabs .ui-tabs-nav li {margin: 1px 0 0 4px;margin-top: 0;}
+.report-control.ui-tabs .ui-tabs-nav li {float: none;margin: 0;padding-bottom: 1px;}
 .report-control.ui-tabs .ui-tabs-nav li:first-child {margin-left:0;}
 .repo-tabs > ul {border-bottom: 2px solid #888 !important;}
 .repo-tabs li {position: relative;display:inline-block; border:0 !important;width: calc((100% - 16px) / 5 );color: #888 !important;background: none !important;}
@@ -1227,8 +1227,8 @@ tbody.sortable td {background-color:transparent;}
 .repo-tabs li .close:hover {background-color:#e1e1e1;}
 .repo-tabs li.ui-state-active .close {background-image: url('../img/common/ico_x_input_white.png');}
 .repo-tabs li.ui-state-active {border:0;background: 0;}
-.repo-tabs li.ui-state-active a {background: #888;border-color: #888;}
-.report-control.ui-widget {padding:0;background: 0;}
+.repo-tabs li.ui-state-active a {float: none !important;width: 100%;background: #888;border-color: #888;height: 32px;}
+.report-control.ui-widget {padding:0;background: 0;overflow: hidden;}
 
 /* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
 

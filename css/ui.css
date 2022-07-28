@@ -344,8 +344,6 @@
 .file-add {margin-top:24px;margin-bottom: 8px;}
 .file-add input[type="text"] {width:260px;}
 .file-add .chk {float:right;margin-top: 6px;}
-/* .main-tabs-wrap + .cont-body > .report-page .cont {height: 777px;} */
-/* .main-tabs-wrap + .cont-body > .report-page .repo-tabs[style*="display: none"] + .report-wrap .cont {height: 811px;} */
 .main-tabs-wrap[style *="display: none"] + .cont-body > .report-page {margin-top:8px;}
 .cont-head + .cont-body > .report-page {margin-top:8px;}
 /* 프로그레스 */
@@ -358,7 +356,7 @@
 .icon-result:before {position:absolute; left:0; top:50%; width:9px; height:9px; border-radius: 50%; content: ''; transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%);}
 .icon-result.scs:before {background-color: #24931a;}
 .icon-result.fail:before {background-color: #d4373c;}
-
+tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 /* 차트 pop */
 .chart-add .thumb {display:flex; height: 126px; justify-content: center; align-items: center;}
 .chart-add .thumb img + img {margin-left:30px;}
@@ -367,7 +365,10 @@
 
 /* report  */
 .cont-body > .report-page {padding:0 8px 8px;}
-#popMyHomeSet .report-wrap .cont {height:344px;} /* 마이홈설정팝업 */
+#popMyHomeSet .report-wrap .cont {height: 314px;} /* 마이홈설정팝업 */
+#popMyHomeSet .repo-tabs {margin:0 auto;}
+#popMyHomeSet .repo-tabs li a {pointer-events: none;}
+#popMyHomeSet .repo-tabs li:last-child a {pointer-events: initial;}
 
 /* 달력 */
 .calendar-month {border:1px solid #E1E1E1;overflow:hidden;}
@@ -386,6 +387,13 @@
 .calendar-month table .btn-popopen .mark {margin-top:0;padding-left:0;}
 .calendar-month table .calendar-state {margin-top:1px;margin-left:24px;text-align:left;}
 .calendar-month table .calendar-state li {display:block;margin-top:5px;margin-left:0;}
+
+.comm-code-list {display:flex; gap:24px; margin-top:24px;}
+.comm-code-list .inner-table {height:417px;}
+/* .comm-code-list .inner-table tbody td {background: #fff;} */
+.comm-code-list .inner-table .ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
+.comm-code-list .inner-table .ui-sortable-handle.ui-sortable-helper {background-position: 60px center;}
+.comm-code-list .right textarea {height:204px;}
 
 
 /* 모바일 */
