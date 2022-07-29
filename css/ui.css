@@ -359,7 +359,8 @@
 .icon-result.fail:before {background-color: #d4373c;}
 tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 /* 차트 pop */
-.chart-add .thumb {display:flex; height: 126px; justify-content: center; align-items: center;}
+.chart-add .thumb {display:flex;height: 126px;margin-top: -20px;justify-content: center;align-items: center;}
+.chart-add .thumb.type03 img {width:166px;}
 .chart-add .thumb img + img {margin-left:30px;}
 .chart-add .flex-group .select + .select {width:100px;}
 
@@ -412,7 +413,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 
 
 /* kpi */
-.kpi-head {display: flex;justify-content: space-between;}
+.kpi-head {position: relative;display: flex;justify-content: space-between;}
 .kpi-page .report-wrap .cont { height:auto;border: 0;}
 .kpi-page .report-wrap {background: transparent !important;}
 .kpi-page .repo-tabs {width: calc(100% - 168px);}
@@ -424,8 +425,11 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-page .kpi-options .btns button.drag-menu {background:url('../img/common/kpi_menu.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.play.on {background: url('../img/common/kpi_play_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add.on {background:url('../img/common/kpi_add_on.png')  no-repeat center center ;}
+.kpi-page .kpi-options .btns button.stop {background: url('../img/common/kpi_stop.png')  no-repeat center center;}
+.kpi-page .kpi-options .btns button.stop.on {background: url('../img/common/kpi_stop_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.drag-menu.on {background:url('../img/common/kpi_menu_on.png')  no-repeat center center ;}
 .kpi-page .kpi-options .opt button.on + .pops {display:block;}
+.kpi-page .kpi-options .opt button.stop.on + .pops {display:none;}
 
 .kpi-options .pops {display: none;position: absolute;bottom: -50px;left: -120px;background: #fff;border-radius: 10px; padding:10px 16px;z-index: 1;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);white-space: nowrap;}
 .kpi-options .pops .select {width: 90px;}
@@ -447,6 +451,12 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .chart-wrap .chart-box.remove .chart-view .txt {position:absolute;width: 100%;bottom: 50px;text-align: center;}
 .chart-wrap .chart-box.remove .chart-view .txt p {display: inline-block;padding-left: 26px;background: url('../img/common/ico_mark.png') no-repeat center left;background-size: 20px 20px; font-size:var(--font-size-14); color:#666;}
 .chart-wrap .chart-box.empty {height: 240px;background: url('../img/common/chart_add.svg') no-repeat #f6f6f6 center center;border: 1px dashed #ccc;box-shadow: none;}
+
+/* 대시보드 */
+.dashboard-menu {position: absolute;right: 0;z-index: 1;}
+.dashboard-menu .chart-type {display:grid; grid-template-columns: 1fr 1fr; grid-gap: 8px;}
+.dashboard-menu .chart-type li {width:200px; border:1px solid #e1e1e1; border-radius: 5px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);}
+.dashboard-menu .head .title {font-size: var(--font-size-13);line-height: 40px;height: 40px;}
 
 /* 모바일 */
 @media (max-width:740px) {

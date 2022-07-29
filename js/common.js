@@ -473,7 +473,13 @@ var fn = (function() {
 
 			$(document).on("click", ".kpi-options .btns button", function(){
 				$(this).closest('.opt').siblings('.opt').find('> button').removeClass('on');
-				$(this).toggleClass('on')
+				$(this).toggleClass('on');
+				if($(this).hasClass('stop')){
+					$(this).removeClass('stop on');
+				}
+			});
+			$(document).on("click", ".kpi-options .pops.play .btn", function(){
+				$(this).closest('.play').siblings('button').addClass('stop');
 			});
 
 		},

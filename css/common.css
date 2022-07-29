@@ -1234,7 +1234,7 @@ tbody.sortable td {background-color:transparent;}
 
 /* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
 
-.accordion li .head {background: url('../img/common/ico_arrow_down.png') no-repeat center right 20px;}
+.accordion li .head {background: url('../img/common/ico_arrow_down.png') #fff no-repeat center right 20px;}
 .accordion li.on .head {background-image: url('../img/common/ico_arrow_up.png');}
 .chk + .chk {margin-left: 24px;}
 .chk-input .chk {display:inline-block;}
