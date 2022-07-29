@@ -481,6 +481,22 @@ var fn = (function() {
 			$(document).on("click", ".kpi-options .pops.play .btn", function(){
 				$(this).closest('.play').siblings('button').addClass('stop');
 			});
+			$(document).on("click", ".kpi-options .btns .drag-menu", function(){
+				if ($(this).hasClass('on')) {
+					$('.dashboard-menu').show();
+				} else {
+					$('.dashboard-menu').hide();
+				}
+			});
+
+			$(".chart-wrap .chart-box.empty").on({
+				dragover: function () {
+					$(this).addClass('drag');
+				},
+				dragleave: function () {
+					$(this).removeClass('drag');
+				}
+			});
 
 		},
 		accodion : function(){
