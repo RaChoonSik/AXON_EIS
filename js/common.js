@@ -470,6 +470,12 @@ var fn = (function() {
 				$('.cont-head .drop-tg').removeClass("open").find(".info").removeClass("on");
 			});
 
+
+			$(document).on("click", ".kpi-options .btns button", function(){
+				$(this).closest('.opt').siblings('.opt').find('> button').removeClass('on');
+				$(this).toggleClass('on')
+			});
+
 		},
 		accodion : function(){
 			$(document).on("click",".folder-tree a, .folder-tree button", function(){
