@@ -18,8 +18,9 @@
 .font-large .hyppen {margin:0 5px;}
 .font-large .indv-graph .table-wrap {width:100%; overflow-x: scroll;}
 .font-large .indv-graph .graphBox .grid {min-width: 1760px;}
-.title-area {/* display: flex; *//* height:auto; *//* align-items: center; *//* justify-content: space-between; */}
+.font-large .large .list-area > ul > li > label {width: 130px;}
 .title-area .btn-wrap {flex-shrink: 0;}
+.btn-wrap .btn-clear {background: url('../img/common/btn_reset.png') #fff no-repeat center center; width:24px; height:24px;font-size: 0;background-size: 18px;border: 1px solid #e1e1e1;border-radius: 5px;}
 .font-large input[type="checkbox"] + span {line-height: 20px;}
 .font-large input[type="radio"] + span {line-height: 20px;}
 .font-medium .ipt-btn-del {width: calc(100% - 54px);}
