@@ -498,6 +498,14 @@ var fn = (function() {
 				}
 			});
 
+			//var index = $("#셀렉트박스ID option").index($("#셀렉트박스ID option:selected"));
+
+			$(".chart-add .chart-type select").change(function(){
+				var selIdx = $(this).find('option').index('.chart-add .chart-type select option:selected');
+				console.log(selIdx);
+				$('.chart-add .thumb img:eq('+selIdx+')').show().siblings().hide();
+			});
+
 		},
 		accodion : function(){
 			$(document).on("click",".folder-tree a, .folder-tree button", function(){

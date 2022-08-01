@@ -357,10 +357,23 @@
 						<div class="title-area">
 							<h3 class="h3-title">요약 현황 :  <span>2021.04.01 ~ 2021.04.30</span> / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
 							<div class="btn-wrap">
-								<div class="radiobox">
-									<label for="rdo_01"><input type="radio" id="rdo_01" name="indivChart" checked><span>시간대별</span></label>
-									<label for="rdo_02"><input type="radio" id="rdo_02" name="indivChart"><span>일별</span></label>
+								<!-- 220801 수정 -->
+								<div class="flex-group">
+									<div class="radiobox">
+										<label for="rdo_01"><input type="radio" id="rdo_01" name="indivChart" checked><span>시간대별</span></label>
+										<label for="rdo_02"><input type="radio" id="rdo_02" name="indivChart"><span>일별</span></label>
+									</div>
+									<div class="select">
+										<select>
+											<option>10</option>
+											<option>25</option>
+											<option>50</option>
+											<option>100</option>
+											<option>200</option>
+										</select>
+									</div>
 								</div>
+								<!-- // 220801 수정 -->
 							</div>
 						</div>
 						<div class="graph-tabs">
@@ -629,6 +642,16 @@
 										</tbody>
 									</table>
 								</div>
+								<!-- 220801 페이징 추가 -->
+								<div class="paging">
+									<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+									<button type="button" class="active">1</button>
+									<button type="button">2</button>
+									<button type="button">3</button>
+									<button type="button">4</button>
+									<button type="button">5</button>
+									<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+								</div>
 							</div>
 							<!-- 일별 -->
 							<div class="graphBox">
@@ -888,6 +911,16 @@
 											</tr>
 										</tbody>
 									</table>
+								</div>
+								<!-- 220801 페이징 추가 -->
+								<div class="paging">
+									<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+									<button type="button" class="active">1</button>
+									<button type="button">2</button>
+									<button type="button">3</button>
+									<button type="button">4</button>
+									<button type="button">5</button>
+									<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
 								</div>
 							</div>
 						</div>

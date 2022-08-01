@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+	<meta name="Author" content="enders">
+	<meta name="keywords" content="AXon EIS">
+	<meta name="description" content="AXon EIS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AXon EIS</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery_library.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/ui.css">
+	<script src="../../js/jquery_2.1.1.min.js"></script>
+	<script src="../../js/jquery_library.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/angular.min.js"></script>
+    <script src="../../js/hammer.min.js"></script>
+	<script src="../../js/ResizeSensor.js"></script>
+	<script src="../../js/ElementQueries.js"></script>
+	<script>
+		$(document).ready(function(){
+			//등록일시 : datePicker
+			var date = new Date();
+			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
+			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+		});
+	</script>
+</head>
+
+<body class="font-basic">
+	<!-- font size : font-basic, font-medium, font-large -->
+	<div id="wrap">
+
+		<div id="lnb" class="on">
+			<div class="lnb-wrap">
+				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
+				<h1>AXon EIS</h1>
+					
+				<div class="my-menu">
+					<button type="button" class="folder">내폴더</button>
+					<button type="button" class="search">검색</button>
+				</div>
+				<!-- 메뉴// -->
+				<nav> 
+					<ul>
+						<li><!-- 현재페이지 : li class="active" 추가 -->
+							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
+								<img src="../../img/common/menu_chart01.png" alt="메뉴">
+								<span>메뉴명</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴명123 메뉴명이 길게 표시된다" data-target="menu">
+								<img src="../../img/common/menu_chart02.png" alt="메뉴">
+								<span>메뉴명123 메뉴명이 길게 표시된다</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart03.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart04.png" alt="메뉴">
+								<span>메뉴123</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart05.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart06.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart07.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart08.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart09.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="depth1" title="메뉴" data-target="menu">
+								<img src="../../img/common/menu_chart10.png" alt="메뉴">
+								<span>메뉴</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- //메뉴 -->
+				<div class="btm-option">
+					<a href="#" class="cont">컨텐츠 관리</a>
+					<a href="#" class="set">시스템 설정</a>
+					<a href="javascript:;" class="fix on">고정</a>
+				</div>
+			</div>
+			<!-- lnb 메뉴 추가 -->
+		</div>
+		
+
+		<!-- content// -->
+		<div id="content">
+
+			<!-- cont-head// -->
+			<section class="cont-head">
+				<div class="title">
+					<h2>고객사 시스템명</h2>
+				</div>
+
+				<div class="util">
+					<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item02">홈설정</a>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">My Home 설정</a>
+							<a href="javascript:;">My Home 수정</a>
+							<a href="javascript:;">My Home 실행</a>
+						</div>
+					</div>
+					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
+					<div class="drop-tg">
+						<div class="info">
+							<a href="javascript:;" class="btn-util item04">게시판</a>
+							<button type="button" class="btn-board btn-fold">열기</button>
+						</div>
+					</div>
+					
+					<div class="user drop-tg">
+						<div class="info">
+							<em>박명수</em>
+							<span>영업관리부</span>
+							<button type="button" class="btn-fold">열기</button>
+						</div>
+						<div class="link">
+							<a href="javascript:;">개인정보 수정</a>
+							<a href="javascript:;">비밀번호 변경</a>
+							<a href="javascript:;">개인 통계</a>
+							<a href="javascript:;">스케줄</a>
+							<a href="javascript:;">시스템 정보</a>
+							<a href="javascript:;">로그아웃</a>
+						</div>
+					</div>
+				</div>
+				<!-- 게시판 추가 -->
+			</section>
+			<!-- //cont-head -->
+
+			<!-- cont-body// -->
+			<section class="cont-body">
+				<h3 class="page-title">보고서 조회 상세</h3>
+
+				<div class="inner-cont">
+					<h3 class="h3-title">조회</h3>
+					<div class="bg-box">
+						<div class="list-area">
+							<ul>
+								<li>
+									<label class="required">기준일자</label>
+									<div class="list-item">
+										<div class="datepickerrange fromDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+										<span class="hyppen date"></span>
+										<div class="datepickerrange toDate">
+											<label>
+												<input type="text" readonly>
+											</label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>종별</label>
+									<div class="list-item">
+										<div class="flex-group gap8">
+											<div class="select">
+												<select>
+													<option>선택</option>
+													<option>보고서</option>
+													<option>KPI</option>
+												</select>
+											</div>
+											<div class="chk"><label><input type="checkbox"><span>모바일접속</span></label></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<label>부서</label>
+									<div class="list-item">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="부서가 선택되지 않았습니다." title="상세보고서" readonly="">
+											<button type="button" class="btn small">선택</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn big fullblue">검색</button>
+					</div>
+	
+					<div class="title-area">
+						<h3 class="h3-title">요약 현황 :  <span>2021.04.01 ~ 2021.04.30</span> / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
+						<div class="btn-wrap">
+							<button type="button" class="btn small fullblue download">다운로드</button>
+							<div class="select">
+								<select>
+									<option>10</option>
+									<option>25</option>
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+								</select>
+							</div>
+						</div>
+					</div>
+	
+					<div class="indv-graph mgt8">
+						<div class="graphBox active">
+							<div class="table-wrap">
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<caption>그리드 정보</caption>
+										<colgroup class="basic-only">
+											<col style="min-width:200px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:50px;">
+											<col style="width:120px;">
+										</colgroup>
+										<colgroup class="medium-only">
+											<col style="min-width:200px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:120px;">
+										</colgroup>
+										<colgroup class="large-only">
+											<col style="min-width:200px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:120px;">
+										</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">보고서</th>
+											<th scope="col">00시</th>
+											<th scope="col">01시</th>
+											<th scope="col">02시</th>
+											<th scope="col">03시</th>
+											<th scope="col">04시</th>
+											<th scope="col">05시</th>
+											<th scope="col">06시</th>
+											<th scope="col">07시</th>
+											<th scope="col">08시</th>
+											<th scope="col">09시</th>
+											<th scope="col">10시</th>
+											<th scope="col">11시</th>
+											<th scope="col">12시</th>
+											<th scope="col">13시</th>
+											<th scope="col">14시</th>
+											<th scope="col">15시</th>
+											<th scope="col">16시</th>
+											<th scope="col">17시</th>
+											<th scope="col">18시</th>
+											<th scope="col">19시</th>
+											<th scope="col">20시</th>
+											<th scope="col">21시</th>
+											<th scope="col">22시</th>
+											<th scope="col">23시</th>
+											<th scope="col">합계</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="total">
+											<td><span>총계</span></td>
+											<td>11</td>
+											<td>123</td>
+											<td>321</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>67664</td>
+										</tr>
+										<tr class="depth row1">
+											<td><span>영업본부</span></td>
+											<td>11</td>
+											<td>123</td>
+											<td>321</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>67664</td>
+										</tr>
+										<tr class="depth row2">
+											<td><span>영업팀</span></td>
+											<td>11</td>
+											<td>123</td>
+											<td>321</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>67664</td>
+										</tr>
+										<tr class="depth row3 last">
+											<td><span>영업1팀</span></td>
+											<td>11</td>
+											<td>123</td>
+											<td>321</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>67664</td>
+										</tr>
+										<tr class="depth row2 last">
+											<td><span>영업</span></td>
+											<td>11</td>
+											<td>123</td>
+											<td>321</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>123</td>
+											<td>67664</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="paging">
+						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+						<button type="button" class="active">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+					</div>
+				</div>
+
+				
+			</section>
+			<!-- //cont-body -->
+			
+		</div>
+		<!-- // content -->
+	</div>
+
+</body>
+</html>

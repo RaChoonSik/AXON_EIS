@@ -23,11 +23,130 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			//등록일시 : datePicker
+			
 			var date = new Date();
 			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
 			$(".datepickerrange.fromDate input").datepicker('setDate', firstday);
 			$(".datepickerrange.toDate input").datepicker('setDate', new Date());
+
+			$(document).on("change", ".indv-graph .radiobox label", function() {
+				var index = $(this).index();
+				$(".graph-tabs > .graphBox").eq(index).addClass("active").siblings().removeClass("active");
+				barChart.resize();
+				barChart2.resize();
+			});
+
+			$(document).on("click", ".indv-graph .graphBox .grid tbody td:first-child span", function() {
+				var depIdx = $(this).closest('.depth').attr('class');
+				console.log(depIdx);
+			});
+	
+	
+			/* 시간대 막대그래프 */
+			var barChart  = echarts.init(document.querySelector('#barChart'), null);
+			var barChartoption = {
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+					left: '20px',
+					right: '20px',
+					bottom: '20px',
+					y: '30px',
+					containLabel: true,
+				},
+				xAxis: {
+					type: 'category',
+					axisLabel:{
+						color: '#666',
+						fontFamily: 'NotoSansKR',
+						fontSize: '11'
+					},
+					axisTick: {
+						show: false
+					},
+					data: ['00시', '01시', '02시', '03시', '04시', '05시', '06시', '07시', '08시', '09시', '10시', '11시', '12시', '13시', '14시', '15시', '16시', '17시', '18시', '19시', '20시', '21시', '22시', '23시']
+				},
+				yAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01],
+					axisLabel:{
+						color: '#666',
+						fontFamily: 'NotoSansKR',
+						fontSize: '11'
+					}
+				},
+				series: [
+					{
+						name: '시간대 개인통계',
+						type: 'bar',
+						itemStyle:{
+							color: '#5668F0',
+						},
+						data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+					}
+				]
+			};
+			barChart.setOption(barChartoption);
+
+			/* 일별 막대그래프 */
+			var barChart2  = echarts.init(document.querySelector('#barChart2'), null);
+			var barChartoption2 = {
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+					left: '20px',
+					right: '20px',
+					bottom: '20px',
+					y: '30px',
+					containLabel: true,
+				},
+				xAxis: {
+					type: 'category',
+					axisLabel:{
+						color: '#666',
+						fontFamily: 'NotoSansKR',
+						fontSize: '11'
+					},
+					axisTick: {
+						show: false
+					},
+					data: ['1일', '2일', '3일', '4일', '5일', '6일', '7일', '8일', '9일', '10일', '11일', '12일', '13일', '14일', '15일', '16일', '17일', '18일', '19일', '20일', '21일', '22일', '23일', '24일','25일','26일','27일','28일','29일','30일','31일',]
+				},
+				yAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01],
+					axisLabel:{
+						color: '#666',
+						fontFamily: 'NotoSansKR',
+						fontSize: '11'
+					}
+				},
+				series: [
+					{
+						name: '일별 개인통계',
+						type: 'bar',
+						itemStyle:{
+							color: '#5668F0',
+						},
+						data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 30, 30, 30, 30, 30, 30, 40]
+					}
+				]
+			};
+			barChart2.setOption(barChartoption2);
+	
+		
+			window.addEventListener('resize',function(){
+				barChart.resize();
+				barChart2.resize();
+			});
 		});
 	</script>
 </head>
@@ -173,10 +292,8 @@
 
 			<!-- cont-body// -->
 			<section class="cont-body">
-				<h3 class="page-title">보고서 조회 상세</h3>
-
+				<h3 class="page-title">사용자 접속 요약</h3>
 				<div class="inner-cont">
-					<h3 class="h3-title">조회</h3>
 					<div class="bg-box">
 						<div class="list-area">
 							<ul>
@@ -215,8 +332,8 @@
 									<label>부서</label>
 									<div class="list-item">
 										<div class="flex-group gap8">
-											<input type="text" placeholder="부서가 선택되지 않았습니다." title="상세보고서" readonly="">
-											<button type="button" class="btn small">선택</button>
+											<input type="text" placeholder="부서가 선택되지 않았습니다." title="상세보고서" readonly>
+											<button type="button" class="btn small" onclick="fn.popupOpen('#popUserTeam');">선택</button>
 										</div>
 									</div>
 								</li>
@@ -226,55 +343,64 @@
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue">검색</button>
 					</div>
-	
-					<div class="title-area">
-						<h3 class="h3-title">요약 현황 :  <span>2021.04.01 ~ 2021.04.30</span> / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
-						<div class="btn-wrap">
-							<button type="button" class="btn small fullblue download">다운로드</button>
-							<div class="select">
-								<select>
-									<option>10</option>
-									<option>25</option>
-									<option>50</option>
-									<option>100</option>
-									<option>200</option>
-								</select>
+
+					<div class="indv-graph">
+						<div class="title-area">
+							<h3 class="h3-title">요약 현황 :  <span>2021.04.01 ~ 2021.04.30</span> / 상태(All) / 모바일속(Y) / 영업본부 / 발생건수</h3>
+							<div class="btn-wrap">
+								<!-- 220801 수정 -->
+								<div class="flex-group">
+									<div class="radiobox">
+										<label for="rdo_01"><input type="radio" id="rdo_01" name="indivChart" checked><span>시간대별</span></label>
+										<label for="rdo_02"><input type="radio" id="rdo_02" name="indivChart"><span>일별</span></label>
+									</div>
+									<div class="select">
+										<select>
+											<option>10</option>
+											<option>25</option>
+											<option>50</option>
+											<option>100</option>
+											<option>200</option>
+										</select>
+									</div>
+								</div>
+								<!-- // 220801 수정 -->
 							</div>
 						</div>
-					</div>
-	
-					<div class="indv-graph mgt8">
-						<div class="graphBox active">
-							<div class="table-wrap">
-								<table class="grid">
-									<caption>그리드 정보</caption>
-									<caption>그리드 정보</caption>
+						<div class="graph-tabs">
+							<div class="graphBox active">
+								<div class="bar-chartwrap" style="height:370px;"><!-- 그래프 영역 높이 잡아줘야함 -->
+									<div id="barChart"></div>
+								</div>
+								<div class="table-wrap">
+									<table class="grid">
+										<caption>그리드 정보</caption>
 										<colgroup class="basic-only">
-											<col style="min-width:200px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
-											<col style="width:50px;">
+											<col style="min-width:150px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
+											<col style="width:55px;">
 											<col style="width:120px;">
 										</colgroup>
 										<colgroup class="medium-only">
@@ -333,200 +459,603 @@
 											<col style="width:60px;">
 											<col style="width:120px;">
 										</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">보고서</th>
-											<th scope="col">00시</th>
-											<th scope="col">01시</th>
-											<th scope="col">02시</th>
-											<th scope="col">03시</th>
-											<th scope="col">04시</th>
-											<th scope="col">05시</th>
-											<th scope="col">06시</th>
-											<th scope="col">07시</th>
-											<th scope="col">08시</th>
-											<th scope="col">09시</th>
-											<th scope="col">10시</th>
-											<th scope="col">11시</th>
-											<th scope="col">12시</th>
-											<th scope="col">13시</th>
-											<th scope="col">14시</th>
-											<th scope="col">15시</th>
-											<th scope="col">16시</th>
-											<th scope="col">17시</th>
-											<th scope="col">18시</th>
-											<th scope="col">19시</th>
-											<th scope="col">20시</th>
-											<th scope="col">21시</th>
-											<th scope="col">22시</th>
-											<th scope="col">23시</th>
-											<th scope="col">합계</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="total">
-											<td><span>총계</span></td>
-											<td>11</td>
-											<td>123</td>
-											<td>321</td>
-											<td>2</td>
-											<td>0</td>
-											<td>0</td>
-											<td>0</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>67664</td>
-										</tr>
-										<tr class="depth row1">
-											<td><span>영업본부</span></td>
-											<td>11</td>
-											<td>123</td>
-											<td>321</td>
-											<td>2</td>
-											<td>0</td>
-											<td>0</td>
-											<td>0</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>67664</td>
-										</tr>
-										<tr class="depth row2">
-											<td><span>영업팀</span></td>
-											<td>11</td>
-											<td>123</td>
-											<td>321</td>
-											<td>2</td>
-											<td>0</td>
-											<td>0</td>
-											<td>0</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>67664</td>
-										</tr>
-										<tr class="depth row3 last">
-											<td><span>영업1팀</span></td>
-											<td>11</td>
-											<td>123</td>
-											<td>321</td>
-											<td>2</td>
-											<td>0</td>
-											<td>0</td>
-											<td>0</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>67664</td>
-										</tr>
-										<tr class="depth row2 last">
-											<td><span>영업</span></td>
-											<td>11</td>
-											<td>123</td>
-											<td>321</td>
-											<td>2</td>
-											<td>0</td>
-											<td>0</td>
-											<td>0</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>123</td>
-											<td>67664</td>
-										</tr>
-									</tbody>
-								</table>
+										<thead>
+											<tr>
+												<th scope="col">보고서</th>
+												<th scope="col">00시</th>
+												<th scope="col">01시</th>
+												<th scope="col">02시</th>
+												<th scope="col">03시</th>
+												<th scope="col">04시</th>
+												<th scope="col">05시</th>
+												<th scope="col">06시</th>
+												<th scope="col">07시</th>
+												<th scope="col">08시</th>
+												<th scope="col">09시</th>
+												<th scope="col">10시</th>
+												<th scope="col">11시</th>
+												<th scope="col">12시</th>
+												<th scope="col">13시</th>
+												<th scope="col">14시</th>
+												<th scope="col">15시</th>
+												<th scope="col">16시</th>
+												<th scope="col">17시</th>
+												<th scope="col">18시</th>
+												<th scope="col">19시</th>
+												<th scope="col">20시</th>
+												<th scope="col">21시</th>
+												<th scope="col">22시</th>
+												<th scope="col">23시</th>
+												<th scope="col">합계</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="total">
+												<td><span>총계</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+											<tr class="depth row1">
+												<td><span>영업본부</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+											<tr class="depth row2">
+												<td><span>영업팀</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+											<tr class="depth row3 last">
+												<td><span>영업1팀</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+											<tr class="depth row2 last">
+												<td><span>영업</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- 220801 페이징 추가 -->
+								<div class="paging">
+									<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+									<button type="button" class="active">1</button>
+									<button type="button">2</button>
+									<button type="button">3</button>
+									<button type="button">4</button>
+									<button type="button">5</button>
+									<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+								</div>
+							</div>
+							<!-- 일별 -->
+							<div class="graphBox">
+								<div class="bar-chartwrap" style="height:370px;"><!-- 그래프 영역 높이 잡아줘야함 -->
+									<div id="barChart2"></div>
+								</div>
+								<div class="table-wrap">
+									<table class="grid">
+										<caption>그리드 정보</caption>
+										<colgroup class="basic-only">
+											<col style="min-width: 120px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:45px;">
+											<col style="width:80px;">
+										</colgroup>
+										<colgroup class="medium-only">
+											<col style="min-width:200px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:120px;">
+										</colgroup>
+										<colgroup class="large-only">
+											<col style="min-width:200px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:60px;">
+											<col style="width:120px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">보고서</th>
+												<th scope="col">1일</th>
+												<th scope="col">2일</th>
+												<th scope="col">3일</th>
+												<th scope="col">4일</th>
+												<th scope="col">5일</th>
+												<th scope="col">6일</th>
+												<th scope="col">7일</th>
+												<th scope="col">8일</th>
+												<th scope="col">9일</th>
+												<th scope="col">10일</th>
+												<th scope="col">11일</th>
+												<th scope="col">12일</th>
+												<th scope="col">13일</th>
+												<th scope="col">14일</th>
+												<th scope="col">15일</th>
+												<th scope="col">16일</th>
+												<th scope="col">17일</th>
+												<th scope="col">18일</th>
+												<th scope="col">19일</th>
+												<th scope="col">20일</th>
+												<th scope="col">21일</th>
+												<th scope="col">22일</th>
+												<th scope="col">23일</th>
+												<th scope="col">24일</th>
+												<th scope="col">25일</th>
+												<th scope="col">26일</th>
+												<th scope="col">27일</th>
+												<th scope="col">28일</th>
+												<th scope="col">29일</th>
+												<th scope="col">30일</th>
+												<th scope="col">31일</th>
+												<th scope="col">합계</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="total">
+												<td><span>총계</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+											<tr class="depth row1">
+												<td><span>영업본부</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+											<tr class="depth row2 last">
+												<td><span>영업11</span></td>
+												<td>11</td>
+												<td>123</td>
+												<td>321</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>67664</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- 220801 페이징 추가 -->
+								<div class="paging">
+									<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
+									<button type="button" class="active">1</button>
+									<button type="button">2</button>
+									<button type="button">3</button>
+									<button type="button">4</button>
+									<button type="button">5</button>
+									<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="paging">
-						<button type="button" class="prev" disabled="">이전</button><!-- 비활성시 disabled 속성 추가 -->
-						<button type="button" class="active">1</button>
-						<button type="button">2</button>
-						<button type="button">3</button>
-						<button type="button">4</button>
-						<button type="button">5</button>
-						<button type="button" class="next">다음</button><!-- 비활성시 disabled 속성 추가 -->
-					</div>
 				</div>
-
-				
 			</section>
 			<!-- //cont-body -->
 			
 		</div>
 		<!-- // content -->
 	</div>
+
+	<!-- 사용자 부서 선택// -->
+	<div id="popUserTeam" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>부서 검색</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<div class="gray-hor-tb">
+							<table class="layout-fixed">
+								<colgroup>
+									<col style="width:110px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">부서명</th>
+										<td>
+											<input type="text" placeholder="부서명을 입력하세요." title="부서명">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btn-wrap mgt12">
+							<button type="button" class="btn fullblue big">검색</button>
+						</div>
+						<div class="user-list team-tree">
+							<table class="grid">
+								<colgroup>
+									<col>
+									<col style="width:100px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">부서명</th>
+										<th scope="col">부서ID</th>
+									</tr>
+								</thead>
+							</table>
+							<div class="inner-table">
+								<ul class="user-team-list toggle">
+									<li class="active"><!-- 활성화 : li class="open" 추가 -->
+										<button type="button" class="btn-toggle folder sort-item">ROOT</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더</span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+											<li class="active">
+												<button type="button" class="btn-toggle folder sort-item">3뎁스</button>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+												<ul class="depth3">
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">영업본부</span>
+														</a>
+														<div class="code"><a href="javascript:;">ORG1232</a></div>
+													</li>
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">SUB 폴더3</span>
+														</a>
+														<div class="code"><a href="javascript:;">ORG1232</a></div>
+													</li>
+													<li class="active">
+														<button type="button" class="btn-toggle folder sort-item">4뎁스</button>
+														<div class="code"><a href="javascript:;">ORG1232</a></div>
+														<ul class="depth4">
+															<li class="sort-item">
+																<a href="#">
+																	<span class="last">영업</span>
+																</a>
+																<div class="code"><a href="javascript:;">ORG1232</a></div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<button type="button" class="btn-toggle folder sort-item">인사본부</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">영업1팀 </span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<button type="button" class="btn-toggle folder sort-item">폴더명 3</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">영업 2팀</span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<button type="button" class="btn-toggle folder sort-item">폴더명 4</button>
+										<div class="code"><a href="javascript:;">ORG1232</a></div>
+										<ul class="depth2">
+											<li class="sort-item">
+												<a href="#">
+													<span class="last">SUB 폴더 sub</span>
+												</a>
+												<div class="code"><a href="javascript:;">ORG1232</a></div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popUserTeam');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popUserTeam');"></span>
+	</div>
+	<!-- //사용자 부서 선택 -->
 
 </body>
 </html>

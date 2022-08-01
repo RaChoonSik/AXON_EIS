@@ -359,9 +359,10 @@
 .icon-result.fail:before {background-color: #d4373c;}
 tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 /* 차트 pop */
-.chart-add .thumb {display:flex;height: 126px;margin-top: -20px;justify-content: center;align-items: center;}
-.chart-add .thumb.type03 img {width:166px;}
-.chart-add .thumb img + img {margin-left:30px;}
+.chart-add .thumb {display:flex;height: 140px;margin-top: -20px;justify-content: center;align-items: center;}
+.chart-add .thumb img {display:none;height: 115px;}
+.chart-add .thumb img:first-child {display:inline-block;}
+.chart-add .thumb img + img {/* margin-left:30px; */}
 .chart-add .flex-group .select + .select {width:100px;}
 
 
