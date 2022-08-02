@@ -474,6 +474,7 @@ var fn = (function() {
 			$(document).on("click", ".kpi-options .btns button", function(){
 				$(this).closest('.opt').siblings('.opt').find('> button').removeClass('on');
 				$(this).toggleClass('on');
+				$('.dashboard-menu').hide();
 				if($(this).hasClass('stop')){
 					$(this).removeClass('stop on');
 				}
@@ -489,16 +490,41 @@ var fn = (function() {
 				}
 			});
 
+			//대시보드 드래그드랍 이벤트
+
 			$(".chart-wrap .chart-box.empty").on({
-				dragover: function () {
+
+				drag: function(e) {
+					e.preventDefault();
+					$('.dashboard-menu').addClass('hide');
+				},
+				dragover: function (e) {
+					e.preventDefault();
 					$(this).addClass('drag');
 				},
-				dragleave: function () {
+				dragleave: function (e) {
+					e.preventDefault();
 					$(this).removeClass('drag');
+				},
+				drop: function(e) {
+					e.preventDefault();
+					$(this).removeClass('empty drag').addClass('show');
+					$('.dashboard-menu').removeClass('hide');
+					$(this).append('<div class="head"><div class="left"><span class="ico">M</span><p class="title">영업현황</p></div><div class="right"><span class="date">2020.01</span><button type="button" class="del">삭제</button></div></div><div class="chart-view"><div class="board" id="chart4"></div><a href="#" class="link">상세보고서 바로가기</a></div>');
 				}
 			});
 
-			//var index = $("#셀렉트박스ID option").index($("#셀렉트박스ID option:selected"));
+			$(".dashboard-menu .chart-type li").on({
+				drag: function(e) {
+					e.preventDefault();
+					$(this).closest('.dashboard-menu').addClass('hide');
+				},
+				dragend: function(e) {
+					e.preventDefault();
+					$(this).closest('.dashboard-menu').removeClass('hide');
+				}
+			});
+
 
 			$(".chart-add .chart-type select").change(function(){
 				var selIdx = $(this).find('option').index('.chart-add .chart-type select option:selected');

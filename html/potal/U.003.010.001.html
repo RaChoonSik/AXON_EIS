@@ -24,6 +24,120 @@
 
 	<script>
 		$(document).ready(function(){
+			$('.chart-wrap .chart-box .chart-view').on({
+				drop: function(e) {
+					e.preventDefault(); 
+				}
+			});
+
+
+			//차트
+			var chart1  = echarts.init(document.querySelector('#chart1'), null);
+			var chart1option = {
+			tooltip: {
+				trigger: 'item'
+			},
+			grid: {
+					width:'100%'
+				},
+			series: [
+				{
+				name: 'Access From',
+				type: 'pie',
+				radius: '50%',
+				data: [
+					{ value: 1048, name: 'Search Engine' },
+					{ value: 735, name: 'Direct' },
+					{ value: 580, name: 'Email' },
+					{ value: 484, name: 'Union Ads' },
+					{ value: 300, name: 'Video Ads' }
+				],
+				emphasis: {
+					itemStyle: {
+					shadowBlur: 10,
+					shadowOffsetX: 0,
+					shadowColor: 'rgba(0, 0, 0, 0.5)'
+					}
+				}
+				}
+			]
+			};			
+			
+
+
+			function showChartRootDom(chart, visible) {
+				chart1.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chart3.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+			}
+
+			window.addEventListener('resize',function(){
+				showChartRootDom(chart1, false);
+				showChartRootDom(chart3, false);
+				chart1.resize();
+				chart3.resize();
+				showChartRootDom(chart1, true);
+				showChartRootDom(chart3, true);
+			});
+
+			
+			window. addEventListener ("load",function(){ 
+				chart1.resize();
+				chart1.setOption(chart1option);
+				chart3.resize();
+				chart3.setOption(chart3option);
+			}); 
+			
+
+
+
+
+			//////차트3 /////////////////
+			var chart3  = echarts.init(document.querySelector('#chart3'), null);
+			var chart3option = {
+			tooltip: {
+				trigger: 'item',
+				formatter: '{a} <br/>{b} : {c}%'
+			},
+			series: [
+				{
+				name: 'Funnel',
+				type: 'funnel',
+				left: '10%',
+				top: '10%',
+				bottom: '10%',
+				width: '80%',
+				min: 0,
+				max: 100,
+				minSize: '0%',
+				maxSize: '100%',
+				sort: 'descending',
+				gap: 0,
+				label: {
+					show: true,
+					position: 'inside'
+				},
+				labelLine: {
+					length: 10,
+					lineStyle: {
+					width: 1,
+					type: 'solid'
+					}
+				},
+				itemStyle: {
+					borderColor: '#fff',
+					borderWidth: 1
+				},
+				data: [
+					{ value: 100, name: 'Show' },
+					{ value: 80, name: 'Click' },
+					{ value: 60, name: 'Visit' },
+					{ value: 40, name: 'Inquiry' },
+					{ value: 20, name: 'data' }
+				]
+				}
+			]
+			};			
+		
 			
 		});
 	</script>
@@ -249,44 +363,44 @@
 										<div class="head"><div class="title">메뉴1</div></div>
 										<div class="cont">
 											<ul class="chart-type">
-												<li draggable="true">
-													<div class="img"><img src="../../img/common/chart_type1_1.png" alt="묶음 막대 차트 세로"></div>
+												<li draggable="true" class="charttype-bar">
+													<div class="img"><img src="../../img/common/chart_type1_1.png" alt="묶음 막대 차트 세로" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type2_1.png" alt="누적 막대 차트 세로"></div>
+												<li draggable="true" class="charttype-barsum">
+													<div class="img"><img src="../../img/common/chart_type2_1.png" alt="누적 막대 차트 세로" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type3.png" alt="리스트 차트"></div>
+												<li draggable="true" class="charttype-list">
+													<div class="img"><img src="../../img/common/chart_type3.png" alt="리스트 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type4_1.png" alt="라인 차트 곡선"></div>
+												<li draggable="true" class="charttype-line">
+													<div class="img"><img src="../../img/common/chart_type4_1.png" alt="라인 차트 곡선" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type5.png" alt="파이 차트"></div>
+												<li draggable="true" class="charttype-pie">
+													<div class="img"><img src="../../img/common/chart_type5.png" alt="파이 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type9.png" alt="트리맵 차트"></div>
+												<li draggable="true" class="charttype-treemap">
+													<div class="img"><img src="../../img/common/chart_type9.png" alt="트리맵 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type10.png" alt="스칼라 차트"></div>
+												<li draggable="true" class="charttype-scatter">
+													<div class="img"><img src="../../img/common/chart_type10.png" alt="스칼라 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type11.png" alt="Funnel 차트"></div>
+												<li draggable="true" class="charttype-funnel">
+													<div class="img"><img src="../../img/common/chart_type11.png" alt="Funnel 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type12.png" alt="Multi Gauge 차트"></div>
+												<li draggable="true" class="charttype-gauge">
+													<div class="img"><img src="../../img/common/chart_type12.png" alt="Multi Gauge 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
-												<li>
-													<div class="img"><img src="../../img/common/chart_type13.png" alt="Radar 차트"></div>
+												<li draggable="true" class="charttype-radar">
+													<div class="img"><img src="../../img/common/chart_type13.png" alt="Radar 차트" draggable="false"></div>
 													<p class="tit">영업현황</p>
 												</li>
 											</ul>
@@ -318,7 +432,7 @@
 							
 							<div class="cont">
 								<div class="chart-wrap">
-									<div class="chart-box">
+									<div class="chart-box show">
 										<div class="head">
 											<div class="left">
 												<span class="ico">M</span>
@@ -329,7 +443,8 @@
 												<button type="button" class="del">삭제</button>
 											</div>
 										</div>
-										<div class="chart-view" id="chart1">
+										<div class="chart-view">
+											<div class="board" id="chart1"></div>
 											<a href="#" class="link">상세보고서 바로가기</a>
 										</div>
 									</div>
@@ -349,7 +464,22 @@
 									<div class="chart-box empty">
 										<!-- 기본 상태로 비어있을 때 -->
 									</div>
-									<div class="chart-box empty"></div>
+									<div class="chart-box show">
+										<div class="head">
+											<div class="left">
+												<span class="ico">M</span>
+												<p class="title">영업현황</p>
+											</div>
+											<div class="right">
+												<span class="date">2020.01</span>
+												<button type="button" class="del">삭제</button>
+											</div>
+										</div>
+										<div class="chart-view">
+											<div class="board" id="chart3"></div>
+											<a href="#" class="link">상세보고서 바로가기</a>
+										</div>
+									</div>
 									<div class="chart-box empty"></div>
 									<div class="chart-box empty"></div>
 									<div class="chart-box empty"></div>

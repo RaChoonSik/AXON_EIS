@@ -1154,7 +1154,8 @@ tbody.sortable td {background-color:transparent;}
 .toggle-switch, 
 .toggle-button {transition: all 0.1s ease-in;}
 
-.doc-list-wrap {display: flex;margin-top:24px;padding: 0 40px 40px;justify-content: space-between;}
+.doc-list-wrap {display: flex;display: none;margin-top:24px;padding: 0 40px 40px;justify-content: space-between;}
+.doc-list-wrap.ban-off {display: flex;}
 .doc-list-wrap .docu-box {width: calc((100% - 20px) / 2);}
 .doc-list-wrap .docu-box .head {display: table;width: 100%;background: #f2f2f2;border: 1px solid #d8d8d8;border-bottom: 0;border-radius: 5px 5px 0 0;}
 .doc-list-wrap .docu-box .head div {display:table-cell;height: 40px;font-size:var(--font-size-13); color:#888;text-align: center;vertical-align: middle;}
@@ -1215,7 +1216,7 @@ tbody.sortable td {background-color:transparent;}
 .report-wrap .cont {overflow: auto;border: 1px solid #d8d8d8;border-radius: 0 0 5px 5px;border-top: 0;}
 .report-desc {display: flex;border:1px solid #e1e1e1;}
 .report-desc p {width:120px;height: 110px;padding-top: 44px;background: #f2f2f2;flex-shrink: 0;border-right: 1px solid #e1e1e1;text-align: center;vertical-align: middle;}
-.report-desc textarea {border-radius: 0;height: 110px;padding: 16px 20px;border: 0;}
+.report-desc .comment {border-radius: 0;width: calc(100% - 110px);height: 110px;padding: 16px 20px;border: 0;}
 .ui-tabs .ui-tabs-nav {display: flex;gap: 4px;background: transparent;padding: 0;border-radius: 0;border: 0;}
 .ui-widget.ui-widget-content {border:0;}
 .report-control.ui-tabs .ui-tabs-nav li {float: none;margin: 0;padding-bottom: 1px;}
