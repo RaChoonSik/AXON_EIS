@@ -29,7 +29,12 @@
 				tolerance: "pointer",
 				placeholder: "sortable-placeholder",
 				forcePlaceholderSize: true,
-				revert: 200
+				revert: 200,
+				delay: 100,
+				activate: function( event, ui ) {
+					var item = ui.item;
+					$(ui.item).closest('li').removeClass('open');
+				}
 			});
 			$('.report-menu .folder-tree .toggle ul').sortable({
 				items: $('.report-menu .folder-tree .toggle ul li'),
@@ -37,7 +42,12 @@
 				tolerance: "pointer",
 				placeholder: "sortable-placeholder",
 				forcePlaceholderSize: true,
-				revert: 200
+				revert: 200,
+				delay: 100,
+				activate: function( event, ui ) {
+					var item = ui.item;
+					$(ui.item).closest('li').removeClass('open');
+				}
 			});
 		});
 	</script>
