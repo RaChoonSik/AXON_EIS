@@ -508,9 +508,11 @@ var fn = (function() {
 				},
 				drop: function(e) {
 					e.preventDefault();
-					$(this).removeClass('empty drag').addClass('show');
+					$(this).removeClass('empty').addClass('show',function(){
+						$(this).off();
+					});
 					$('.dashboard-menu').removeClass('hide');
-					$(this).append('<div class="head"><div class="left"><span class="ico">M</span><p class="title">영업현황</p></div><div class="right"><span class="date">2020.01</span><button type="button" class="del">삭제</button></div></div><div class="chart-view"><div class="board" id="chart4"></div><a href="#" class="link">상세보고서 바로가기</a></div>');
+					//$(this).append('<div class="head"><div class="left"><span class="ico">M</span><p class="title">영업현황</p></div><div class="right"><span class="date">2020.01</span><button type="button" class="del">삭제</button></div></div><div class="chart-view"><div class="board" id="chart4"></div><a href="#" class="link">상세보고서 바로가기</a></div>');
 				}
 			});
 
@@ -688,7 +690,7 @@ $(document).ready(function(){
 		});
 
 	//LNB 메뉴 리사이즈 핸들링
-	function ResizerDemo(element) {
+	function ResizerMo(element) {
 		element = $(element);
 		var handler = $('<div class="resizer-handler"></div>');
 		var info = $('<div class="resizer-info"></div>');
@@ -713,8 +715,8 @@ $(document).ready(function(){
 			info.html(element[0].clientWidth + 'px x ' + element[0].clientHeight + 'px');
 		})
 	}
-	$('#lnb .nav-menu').each(function(idx, element){
-        new ResizerDemo(element);
+	$('#lnb .nav-menu, #lnb .search-box').each(function(idx, element){
+        new ResizerMo(element);
     });
 
 });

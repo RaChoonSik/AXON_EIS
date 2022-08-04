@@ -44,7 +44,7 @@
 .doc-acc-list .step {font-size: var(--font-size-13); font-weight: 500;}
 .folder-tree {margin-top: 8px;height: 300px;overflow-y: scroll;padding: 12px 20px;border: 1px solid #ccc;background: #fff;}
 .folder-tree .root {width: 260px;font-size: var(--font-size-14);}
-.folder-tree .toggle {width:260px;}
+.folder-tree .toggle {/* width:260px; */}
 .folder-tree .ui-sortable-handle {background: url('../img/common/bg_sortable.png') no-repeat right 8px;}
 .folder-tree .ui-sortable-helper ul {display:none;}
 .toggle .sortable-placeholder {background-color: #f5f7ff; margin-left:30px;}
@@ -399,8 +399,8 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .comm-code-list {display:flex; gap:24px; margin-top:24px;}
 .comm-code-list .inner-table {height:417px;}
 /* .comm-code-list .inner-table tbody td {background: #fff;} */
-.comm-code-list .inner-table .ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
-.comm-code-list .inner-table .ui-sortable-handle.ui-sortable-helper {background-position: 60px center;}
+.comm-code-list .inner-table .ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 16% center;}
+.comm-code-list .inner-table .ui-sortable-handle.ui-sortable-helper {background-position: 12% center;}
 .comm-code-list .right textarea {height:204px;}
 
 .kpi-data {display: flex; gap: 20px;}
@@ -413,20 +413,32 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-data .left .table-wrap > .grid {height:100%;}
 
 /* main */
-.graph-main {padding:0 40px;margin-top: 24px;}
+.graph-main {padding:0 40px;margin-top: 10px;}
+.graph-main .chart-date {display: flex;justify-content: right;align-items: center;gap: 8px;margin-bottom: 8px;}
+.graph-main .chart-date p {display: inline-block;}
+.graph-main .chart-date .btn-wrap {display: inline-block;margin: 0;text-align: right;}
 .cate-table-wrap {display:flex;gap: 24px;}
 .cate-table {width:calc((100% - 48px) / 3 );}
+.cate-table .title-wrap {display:flex; justify-content: space-between;}
 .cate-table .grid {margin-top:8px;}
 .cate-table .grid th {background:#5668f0; color:#fff;}
-.chart-view {display: flex;}
-.chart-view .left {width:30%;}
-.chart-view .right {width:70%;}
-.chart-view .month-chart {height:300px;}
+.cate-table .grid td {font-size: var(--font-size-14) !important;}
+.cate-table .grid .percent {position: relative;padding-left:20px;}
+.cate-table .grid .percent.up {color:#5668F0;}
+.cate-table .grid .percent.down {color:#d4373c;}
+.cate-table .grid .percent:before {display:inline-block; position:absolute; left:0; content:'';}
+.cate-table .grid .percent.up:before {content:'▲';}
+.cate-table .grid .percent.down:before {content:'▼';}
+.main-chart-view {display: flex;gap: 24px;margin-top: 24px;}
+.main-chart-view .left {width:30%;border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;}
+.main-chart-view .right {width:70%;border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;}
+.main-chart-view .month-chart {height:300px;}
+.main-chart-view .pie-chart {height:300px;}
 
 
 /* kpi */
 .kpi-head {display: flex;justify-content: space-between;}
-.kpi-page .report-wrap .cont { height:auto;border: 0;}
+.kpi-page .report-wrap .cont {/* height:auto; */border: 0;overflow: hidden;}
 .kpi-page .report-wrap {background: transparent !important;}
 .kpi-page .repo-tabs {width: calc(100% - 168px);}
 .kpi-page .kpi-options {position:relative;padding:4px; background: #f6f6f6;border: 1px solid #e1e1e1;border-radius: 2px;}
@@ -464,6 +476,11 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .chart-wrap .chart-box.remove .chart-view .txt {position:absolute;width: 100%;bottom: 50px;text-align: center;}
 .chart-wrap .chart-box.remove .chart-view .txt p {display: inline-block;padding-left: 26px;background: url('../img/common/ico_mark.png') no-repeat center left;background-size: 20px 20px; font-size:var(--font-size-14); color:#666;}
 .chart-wrap .chart-box.empty {background: url('../img/common/chart_add.svg') no-repeat #f6f6f6 center center;border: 1px dashed #ccc;box-shadow: none;}
+.chart-wrap .chart-box .board .table-wrap {margin: 10px auto 0;max-width: 360px;max-height: 170px;overflow: auto;}
+.chart-wrap .chart-box .board .grid {}
+.chart-wrap .chart-box .board .grid thead th {padding:5px;}
+.chart-wrap .chart-box .board .grid tbody th,
+.chart-wrap .chart-box .board .grid tbody td {min-height: auto;height: 25px;padding: 0;line-height: 1.5;}
 .chart-wrap .chart-box.empty.drag {background-color: #e1e1e1;}
 
 /* 대시보드 */
