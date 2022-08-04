@@ -23,6 +23,140 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
+		//파이
+
+		var pieChart1  = echarts.init(document.querySelector('#pieChart1'), null);
+			var pieChart1option = {
+				tooltip: {
+				trigger: 'item'
+			},
+				legend: {
+				orient: 'vertical',
+				left: 'left'
+				},
+			series: [
+				{
+				name: '상품 매출 구성비',
+				type: 'pie',
+				radius: ['40%', '70%'],
+				avoidLabelOverlap: false,
+				itemStyle: {
+					borderRadius: 5,
+					borderColor: '#fff',
+					borderWidth: 1
+				},
+				label: {
+					show: false,
+					position: 'center'
+				},
+				labelLine: {
+					show: false
+				},
+				data: [
+					{ value: 1048, name: 'Search Engine' },
+					{ value: 735, name: 'Direct' },
+					{ value: 580, name: 'Email' },
+					{ value: 484, name: 'Union Ads' },
+					{ value: 300, name: 'Video Ads' }
+				]
+				}
+			]
+			};
+			pieChart1.setOption(pieChart1option);
+
+			window.addEventListener('resize',function(){
+				pieChart1.resize();
+			});
+
+
+		//차트
+		var monChart1  = echarts.init(document.querySelector('#monthChart1'), null);
+			var monChart1option = {
+				tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+				type: 'cross',
+				crossStyle: {
+					color: '#999'
+				},
+				}
+			},
+			title: {
+					subtext: '(백만원, %)',
+					top: '0px',
+					right: '5%'
+				},
+			legend: {
+				data: ['계획', '실적', '달성율']
+			},
+			xAxis: [
+				{
+				type: 'category',
+				data: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+				axisPointer: {
+					type: 'shadow'
+				}
+				}
+			],
+			yAxis: [
+				{
+				type: 'value',
+				min: 0,
+				max: 75000,
+				interval: 25000,
+				},
+				{
+				type: 'value',
+				min: 0,
+				max: 180,
+				interval: 60,
+				}
+			],
+			series: [
+				{
+				name: '계획',
+				type: 'bar',
+				tooltip: {
+					valueFormatter: function (value) {
+					return value + ' 원';
+					}
+				},
+				data: [
+					39900, 13212, 55544, 50000, 50000, 50000, 50000, 10000, 10000, 12400, 10000, 10000
+				]
+				},
+				{
+				name: '실적',
+				type: 'bar',
+				tooltip: {
+					valueFormatter: function (value) {
+					return value + ' 원';
+					}
+				},
+				data: [
+					19300, 33212, 15544, 30000, 20000, 10000, 30000, 45000, 9800, 2400, 10000, 10000
+				]
+				},
+				{
+				name: '달성율',
+				type: 'line',
+				yAxisIndex: 1,
+				tooltip: {
+					valueFormatter: function (value) {
+					return value + ' %';
+					}
+				},
+				data: [30, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+				}
+			]
+			};
+			monChart1.setOption(monChart1option);
+
+			window.addEventListener('resize',function(){
+				monChart1.resize();
+			});
+
+
 			$('#popMyFolder .folder-tree .toggle').sortable({
 				connectWith: '#popMyFolder .folder-tree .toggle ul',
 				tolerance: "pointer",
@@ -49,12 +183,15 @@
 				}
 			});
 		});
+		
 		function tabLast(){
 			var tIdx = $("#popMyHomeSet .repo-tabs > ul > li").length - 1;
 			$("#popMyHomeSet .report-control").tabs({
 				active : tIdx
 			})
 		}
+
+
 	</script>
 </head>
 
@@ -1762,6 +1899,123 @@
 						</div>
 					</div>
 	
+					<!-- new main -->
+					<div class="graph-main">
+						<div class="chart-date">
+							<p>기준년월 : <span>2022년 08월</span></p>
+							<div class="btn-wrap">
+								<button type="button" class="btn-clear">클리어</button>
+							</div>
+						</div>
+						<div class="cate-table-wrap">
+							<div class="cate-table">
+								<div class="title-wrap">
+									<div class="radiobox">
+										<label for="graio1"><input type="radio" id="graio1" name="graphRadio" checked=""><span>매출</span></label>
+									</div>
+									<span>(백만원)</span>
+								</div>
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">계획</th>
+											<th scope="col">실적</th>
+											<th scope="col">달성율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2,365</td>
+											<td>2,698</td>
+											<td><span class="percent up">17%</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="cate-table">
+								<div class="title-wrap">
+									<div class="radiobox">
+										<label for="graio2"><input type="radio" id="graio2" name="graphRadio"><span>영업이익</span></label>
+									</div>
+									<span>(백만원)</span>
+								</div>
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">계획</th>
+											<th scope="col">실적</th>
+											<th scope="col">달성율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2,365</td>
+											<td>2,698</td>
+											<td><span class="percent up">17%</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="cate-table">
+								<div class="title-wrap">
+									<div class="radiobox">
+										<label for="graio3"><input type="radio" id="graio3" name="graphRadio"><span>고객</span></label>
+									</div>
+									<span>(천명)</span>
+								</div>
+								<table class="grid">
+									<caption>그리드 정보</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">계획</th>
+											<th scope="col">실적</th>
+											<th scope="col">달성율</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2,365</td>
+											<td>2,698</td>
+											<td><span class="percent down">17%</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="main-chart-view">
+							<div class="left">
+								<h3 class="h3-title">상품 매출 구성비</h3>
+								<div class="pie-chart" id="pieChart1">
+									
+								</div>
+							</div>
+							<div class="right">
+								<h3 class="h3-title">최근 12개월 매출 추이</h3>
+								<div class="month-chart" id="monthChart1">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+
 					<!-- ban-off 추가 -->
 					<div class="doc-list-wrap">
 						<div class="docu-box">

@@ -429,9 +429,9 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .cate-table .grid .percent:before {display:inline-block; position:absolute; left:0; content:'';}
 .cate-table .grid .percent.up:before {content:'▲';}
 .cate-table .grid .percent.down:before {content:'▼';}
-.main-chart-view {display: flex;gap: 24px;margin-top: 24px;}
-.main-chart-view .left {width:30%;border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;}
-.main-chart-view .right {width:70%;border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;}
+.main-chart-view {display: flex;gap: 24px;margin-top: 24px;flex: 1;}
+.main-chart-view .left {width: calc((100% - 48px) / 3);border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;flex-shrink: 0;}
+.main-chart-view .right {/* width:70%; */width: calc((((100% - 48px) / 3) * 2 ) + 24px);border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;flex-shrink: 0;}
 .main-chart-view .month-chart {height:300px;}
 .main-chart-view .pie-chart {height:300px;}
 
