@@ -36,8 +36,8 @@
 
 
 			//트리맵 차트
-			var chart7  = echarts.init(document.querySelector('#chart7'), null);
-			var chart7option = {
+			var chartTreemap  = echarts.init(document.querySelector('#chart7'), null);
+			var chartTreemapoption = {
 				title: {
 					subtext: '단위:억원',
 					bottom: '12px',
@@ -131,24 +131,29 @@
 				color: COLOR_ALL[i]
 			});
 			}
-			var chart8  = echarts.init(document.querySelector('#chart8'), null);
-			var chart8option = {
-					dataset: [
+			var chartScatter  = echarts.init(document.querySelector('#chart8'), null);
+			var chartScatteroption = {
+				dataset: [
 					{
 					source: data
 					},
 					{
-					transform: {
-						type: 'ecStat:clustering',
-						// print: true,
-						config: {
-						clusterCount: CLUSTER_COUNT,
-						outputType: 'single',
-						outputClusterIndexDimension: DIENSIION_CLUSTER_INDEX
+						transform: {
+							type: 'ecStat:clustering',
+							// print: true,
+							config: {
+							clusterCount: CLUSTER_COUNT,
+							outputType: 'single',
+							outputClusterIndexDimension: DIENSIION_CLUSTER_INDEX
+							}
 						}
 					}
-					}
 				],
+				title: {
+					subtext: '단위:억원',
+					bottom: '0',
+					left: '5%'
+				},
 				tooltip: {
 					position: 'top'
 				},
@@ -184,166 +189,272 @@
 			};	
 
 
-			//막대바 차트 가로
-			var chart5  = echarts.init(document.querySelector('#chart5'), null);
-			var chart5option = {
-				title: {
-					subtext: '단위:억원',
-					bottom: '12px',
-					left: '5%'
-				},
-				xAxis: {
-				type: 'value',
-				},
-				tooltip: {
-					trigger: 'axis',
-					axisPointer: {
-					type: 'shadow'
+			//게이지 차트
+			const gaugeData = [
+				{
+					value: 20,
+					name: 'Good',
+					title: {
+					offsetCenter: ['-100%', '90%'],
+					fontSize:12
+					},
+					detail: {
+					offsetCenter: ['-100%', '120%']
 					}
 				},
-				legend: {}, //범례
-				yAxis: {
-					type: 'category',
-					data: ['Brazil', 'Indonesia', 'USA', 'India', 'China', 'World']
+				{
+					value: 40,
+					name: 'Better',
+					title: {
+					offsetCenter: ['0%', '90%'],
+					fontSize:12
+					},
+					detail: {
+					offsetCenter: ['0%', '120%']
+					}
 				},
-				//x-y축 타입 변경으로 방향 바뀜
-				grid: {
-					left: '5%',
-					right: '10%',
-					bottom: '20%',
-					top: '12%',
-					containLabel: true
+				{
+					value: 60,
+					name: 'Perfect',
+					title: {
+					offsetCenter: ['100%', '90%'],
+					fontSize:12
+					},
+					detail: {
+					offsetCenter: ['100%', '120%']
+					}
+				}
+			];
+			var chartGauge  = echarts.init(document.querySelector('#chart9'), null);
+			var chartGaugeoption = {
+				title: {
+					subtext: '단위:억원',
+					bottom: '0',
+					left: '5%'
 				},
 				series: [
-					{
-					name: '2011',
-					data: [120, 200, 150, 80, 70, 110, 130],
-					type: 'bar'
-					},
-					{
-					name: '2012',
-					data: [100, 100, 50, 180, 110, 100, 100],
-					type: 'bar'
-					}
-				]
-			};	
-
-
-			//막대바 누적 세로
-			var chart6  = echarts.init(document.querySelector('#chart6'), null);
-			var chart6option = {
-				title: {
-					subtext: '단위:억원',
-					bottom: '12px',
-					left: '5%'
-				},
-				tooltip: {
-					trigger: 'axis',
-					axisPointer: {
-					// Use axis to trigger tooltip
-					type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+				{
+				type: 'gauge',
+				radius: '75%', 
+				center: ['50%', '40%'], 
+				anchor: {
+					show: true,
+					showAbove: true,
+					size: 4,
+					itemStyle: {
+					color: '#FAC858'
 					}
 				},
-			legend: {},
-			grid: {
-				left: '3%',
-				right: '4%',
-				bottom: '20%',
-				top:'15%',
-				containLabel: true
-			},
-			xAxis: {
-				type: 'category',
-				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-			},
-			yAxis: {
-				type: 'value',
-			},
-			//x-y축 타입 변경으로 방향 바뀜
-			series: [
-				{
-				name: 'data1',
-				type: 'bar',
-				stack: 'total',
-				emphasis: {
-					focus: 'series'
+				axisLine: {
+					lineStyle: {
+						width: 8,
+					}
 				},
-				data: [320, 302, 301, 334, 390, 330, 320]
+				axisTick: {
+					distance: 4,
+					splitNumber: 2,
 				},
-				{
-				name: 'data2',
-				type: 'bar',
-				stack: 'total',
-				emphasis: {
-					focus: 'series'
+				pointer: {
+					icon: 'path://M2.9,0.7L2.9,0.7c1.4,0,2.6,1.2,2.6,2.6v115c0,1.4-1.2,2.6-2.6,2.6l0,0c-1.4,0-2.6-1.2-2.6-2.6V3.3C0.3,1.9,1.4,0.7,2.9,0.7z',
+					width: 3,
+					length: '60%',
+					offsetCenter: [0, '8%']
 				},
-				data: [120, 132, 101, 134, 90, 230, 210]
+				progress: {
+					show: true,
+					overlap: true,
+					roundCap: true,
+					width: 6
 				},
-				{
-				name: 'data3',
-				type: 'bar',
-				stack: 'total',
-				emphasis: {
-					focus: 'series'
+				axisLine: {
+					roundCap: true,
+					lineStyle: {
+						width: 6
+					}
 				},
-				data: [220, 182, 191, 234, 290, 330, 310]
+				splitLine: {
+					distance: 4
 				},
-				{
-				name: 'data4',
-				type: 'bar',
-				stack: 'total',
-				emphasis: {
-					focus: 'series'
-				},
-				data: [150, 212, 201, 154, 190, 330, 410]
-				},
-				{
-				name: 'data5',
-				type: 'bar',
-				stack: 'total',
-				emphasis: {
-					focus: 'series'
-				},
-				data: [820, 832, 901, 934, 1290, 1330, 1320]
+				data: gaugeData,
+				detail: {
+					width: 30,
+					height: 12,
+					fontSize: 12,
+					color: '#fff',
+					backgroundColor: 'auto',
+					borderRadius: 3,
+					formatter: '{value}%'
+				}
 				}
 			]
 			};	
+
+			setInterval(function () {
+				gaugeData[0].value = +(Math.random() * 100).toFixed(1);
+				gaugeData[1].value = +(Math.random() * 100).toFixed(1);
+				gaugeData[2].value = +(Math.random() * 100).toFixed(1);
+				chartGauge.setOption({
+					series: [
+					{
+						data: gaugeData
+					}
+					]
+				});
+			}, 2000);
+
+
+			//역삼각 차트
+			var chartFunnel  = echarts.init(document.querySelector('#chart10'), null);
+			var chartFunneloption = {
+				title: {
+					subtext: '단위:억원',
+					bottom: '0',
+					left: '5%'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: '{a} <br/>{b} : {c}%'
+				},
+				legend: {
+					data: ['Show', 'Click', 'Visit', 'Inquiry', 'Order']
+				},
+				series: [
+					{
+					name: 'Funnel',
+					type: 'funnel',
+					left: '10%',
+					top: 40,
+					bottom: 20,
+					width: '80%',
+					min: 0,
+					max: 100,
+					minSize: '0%',
+					maxSize: '80%',
+					sort: 'descending',
+					gap: 1,
+					label: {
+						show: true,
+						position: 'inside'
+					},
+					labelLine: {
+						length: 10,
+						lineStyle: {
+						width: 1,
+						type: 'solid'
+						}
+					},
+					itemStyle: {
+						borderColor: '#fff',
+						borderWidth: 1
+					},
+					emphasis: {
+						label: {
+						fontSize: 20
+						}
+					},
+					data: [
+						{ value: 60, name: 'Visit' },
+						{ value: 40, name: 'Inquiry' },
+						{ value: 20, name: 'Order' },
+						{ value: 80, name: 'Click' },
+						{ value: 100, name: 'Show' }
+					]
+					}
+				]
+			};	
+			
+
+			//육각형 차트
+			var chartRadar  = echarts.init(document.querySelector('#chart11'), null);
+			var chartRadaroption = {
+				title: {
+					subtext: '단위:억원',
+					bottom: '0',
+					left: '5%'
+				},
+				tooltip: {
+				},
+				legend: {
+					data: ['Allocated Budget', 'Actual Spending', '데이터3']
+				},
+				
+				radar: {
+					radius: 60,
+					center: ['50%', '55%'],
+					indicator: [
+					{ name: '항목1', max: 6500 },
+					{ name: '항목2', max: 16000 },
+					{ name: '항목3', max: 30000 },
+					{ name: '항목4', max: 38000 },
+					{ name: '항목5', max: 52000 },
+					{ name: '항목6', max: 25000 }
+					],
+					nameGap: 5
+				},
+				series: [
+					{
+					name: 'Budget vs spending',
+					type: 'radar',
+					data: [
+						{
+						value: [4200, 3000, 20000, 35000, 50000, 18000],
+						name: 'Allocated Budget'
+						},
+						{
+						value: [5000, 14000, 28000, 26000, 42000, 21000],
+						name: 'Actual Spending'
+						},
+						{
+						value: [1000, 14000, 13000, 34000, 32000, 11000],
+						name: '데이터3'
+						}
+					]
+					}
+				]
+			};	
+			
 			
 
 
 			//그리드 레이아웃 resize 관련
 			function showChartRootDom(chart, visible) {
-				chart7.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
-				chart8.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
-				chart5.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
-				chart6.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartTreemap.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartScatter.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartGauge.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartFunnel.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartRadar.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
 			}
 
 			window.addEventListener('resize',function(){
-				showChartRootDom(chart7, false);
-				showChartRootDom(chart8, false);
-				showChartRootDom(chart5, false);
-				showChartRootDom(chart6, false);
-				chart7.resize();
-				chart8.resize();
-				chart5.resize();
-				chart6.resize();
-				showChartRootDom(chart7, true);
-				showChartRootDom(chart8, true);
-				showChartRootDom(chart5, true);
-				showChartRootDom(chart6, true);
+				showChartRootDom(chartTreemap, false);
+				showChartRootDom(chartScatter, false);
+				showChartRootDom(chartGauge, false);
+				showChartRootDom(chartFunnel, false);
+				showChartRootDom(chartRadar, false);
+				chartTreemap.resize();
+				chartScatter.resize();
+				chartGauge.resize();
+				chartFunnel.resize();
+				chartRadar.resize();
+				showChartRootDom(chartTreemap, true);
+				showChartRootDom(chartScatter, true);
+				showChartRootDom(chartGauge, true);
+				showChartRootDom(chartFunnel, true);
+				showChartRootDom(chartRadar, true);
 			});
 
 			
 			window. addEventListener ("load",function(){ 
-				chart7.resize();
-				chart7.setOption(chart7option);
-				chart8.resize();
-				chart8.setOption(chart8option);
-				chart5.resize();
-				chart5.setOption(chart5option);
-				chart6.resize();
-				chart6.setOption(chart6option);
+				chartTreemap.resize();
+				chartTreemap.setOption(chartTreemapoption);
+				chartScatter.resize();
+				chartScatter.setOption(chartScatteroption);
+				chartGauge.resize();
+				chartGauge.setOption(chartGaugeoption);
+				chartFunnel.resize();
+				chartFunnel.setOption(chartFunneloption);
+				chartRadar.resize();
+				chartRadar.setOption(chartRadaroption);
 			}); 
 			
 
@@ -646,7 +757,7 @@
 										<div class="head">
 											<div class="left">
 												<span class="ico">M</span>
-												<p class="title">영업현황</p>
+												<p class="title">트리맵</p>
 											</div>
 											<div class="right">
 												<span class="date">2020.01</span>
@@ -678,7 +789,7 @@
 										<div class="head">
 											<div class="left">
 												<span class="ico">D</span>
-												<p class="title">영업현황</p>
+												<p class="title">스캐터</p>
 											</div>
 											<div class="right">
 												<span class="date">2020.01</span>
@@ -702,7 +813,7 @@
 											</div>
 										</div>
 										<div class="chart-view">
-											<div class="board" id="chart5"></div>
+											<div class="board" id="chart9"></div>
 											<a href="#" class="link">상세보고서 바로가기</a>
 										</div>
 									</div>
@@ -719,7 +830,7 @@
 											</div>
 										</div>
 										<div class="chart-view">
-											<div class="board" id="chart6"></div>
+											<div class="board" id="chart10"></div>
 											<a href="#" class="link">상세보고서 바로가기</a>
 										</div>
 									</div>
@@ -736,69 +847,8 @@
 											</div>
 										</div>
 										<div class="chart-view">
-											<div class="board" id="chart7">
-												<div class="table-wrap">
-													<table class="grid">
-														<colgroup>
-															<col style="width:80px;">
-															<col style="width:80px;">
-															<col style="width:80px;">
-															<col style="width:80px;">
-														</colgroup>
-														<thead>
-															<tr>
-																<th scope="col">항목</th>
-																<th scope="col">예상 비용</th>
-																<th scope="col">실제 비용</th>
-																<th scope="col">차액</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>비디오/DVD</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-															<tr>
-																<td>예상 비용</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-															<tr>
-																<td>실제 비용</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-															<tr>
-																<td>차액</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-															<tr>
-																<td>소계</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-															<tr>
-																<td>소계</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-															<tr>
-																<td>소계</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-																<td>1,000,000</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
+											<div class="board" id="chart11">
+												
 											</div>
 											<a href="#" class="link">상세보고서 바로가기</a>
 										</div>

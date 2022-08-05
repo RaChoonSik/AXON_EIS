@@ -32,8 +32,8 @@
 
 
 			//파이 차트
-			var chart1  = echarts.init(document.querySelector('#chart1'), null);
-			var chart1option = {
+			var chartPie= echarts.init(document.querySelector('#chart1'), null);
+			var chartPieoption = {
 				title: {
 					subtext: '단위:억원',
 					bottom: '0',
@@ -70,8 +70,8 @@
 			};		
 			
 			//////곡선 그래프
-			var chart3  = echarts.init(document.querySelector('#chart3'), null);
-			var chart3option = {
+			var chartLine  = echarts.init(document.querySelector('#chart3'), null);
+			var chartLineoption = {
 				title: {
 					subtext: '단위:억원',
 					bottom: '0',
@@ -110,8 +110,8 @@
 
 
 			//막대바 차트 가로
-			var chart5  = echarts.init(document.querySelector('#chart5'), null);
-			var chart5option = {
+			var chartBar  = echarts.init(document.querySelector('#chart5'), null);
+			var chartBaroption = {
 				title: {
 					subtext: '단위:억원',
 					bottom: '0',
@@ -155,8 +155,8 @@
 
 
 			//막대바 누적 세로
-			var chart6  = echarts.init(document.querySelector('#chart6'), null);
-			var chart6option = {
+			var chartBarSum  = echarts.init(document.querySelector('#chart6'), null);
+			var chartBarSumoption = {
 				title: {
 					subtext: '단위:억원',
 					bottom: '0',
@@ -238,37 +238,37 @@
 
 			//그리드 레이아웃 resize 관련
 			function showChartRootDom(chart, visible) {
-				chart1.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
-				chart3.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
-				chart5.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
-				chart6.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartPie.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartLine.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartBar.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
+				chartBarSum.getZr().painter.getViewportRoot().style.display = visible ? "" : "none";
 			}
 
 			window.addEventListener('resize',function(){
-				showChartRootDom(chart1, false);
-				showChartRootDom(chart3, false);
-				showChartRootDom(chart5, false);
-				showChartRootDom(chart6, false);
-				chart1.resize();
-				chart3.resize();
-				chart5.resize();
-				chart6.resize();
-				showChartRootDom(chart1, true);
-				showChartRootDom(chart3, true);
-				showChartRootDom(chart5, true);
-				showChartRootDom(chart6, true);
+				showChartRootDom(chartPie, false);
+				showChartRootDom(chartLine, false);
+				showChartRootDom(chartBar, false);
+				showChartRootDom(chartBarSum, false);
+				chartPie.resize();
+				chartLine.resize();
+				chartBar.resize();
+				chartBarSum.resize();
+				showChartRootDom(chartPie, true);
+				showChartRootDom(chartLine, true);
+				showChartRootDom(chartBar, true);
+				showChartRootDom(chartBarSum, true);
 			});
 
 			
 			window. addEventListener ("load",function(){ 
-				chart1.resize();
-				chart1.setOption(chart1option);
-				chart3.resize();
-				chart3.setOption(chart3option);
-				chart5.resize();
-				chart5.setOption(chart5option);
-				chart6.resize();
-				chart6.setOption(chart6option);
+				chartPie.resize();
+				chartPie.setOption(chartPieoption);
+				chartLine.resize();
+				chartLine.setOption(chartLineoption);
+				chartBar.resize();
+				chartBar.setOption(chartBaroption);
+				chartBarSum.resize();
+				chartBarSum.setOption(chartBarSumoption);
 			}); 
 			
 

@@ -173,11 +173,6 @@ var fn = (function() {
 					$(this).closest("li").addClass("active");
 				}
 			});
-			// $(document).on("ready", ".toggle .depth2", function(){
-			// 	if(!$(this).find('li')){
-			// 		$(this).siblings('.btn-toggle').css('background','none');
-			// 	}
-			// });
 		},
 
 		//toggleunfold
@@ -270,30 +265,6 @@ var fn = (function() {
 				}
 				
 			});
-
-			// var bFile = $(".board-file input[type='file']"), 
-			// bFilevalue, 
-			// bFilename; 
-
-			// bFile.on("change", function(){ /
-			// 	bFilevalue = $(this).val().split("\\");
-			// 	bFilename = bFilevalue[bFilevalue.length-1]; 
-			// 	var bfilesize = $(this).siblings(".file-view").find(".kb");
-			// 	if($(this).val() != ""){
-			// 		var fileSize = $(this)[0].files[0].size;
-			// 	}
-				
-			// 	var s = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'],
-			// 	e = Math.floor(Math.log(fileSize) / Math.log(1024));
-			// 	var conSize = (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
-			// 	$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">('+conSize+')</span><button class="del">삭제</button></li>')
-			// 	return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
-
-			// });
-		
-			// $(document).on("click", ".file-list li .del", function(){
-			// 	$(this).closest('li').remove();
-			// });
 			
 		},
 

@@ -81,28 +81,11 @@
 .btn-wrap .btn:first-child {margin-left:0;}
 .btn {display:inline-block;position:relative;height: 32px;min-width: 40px;line-height:30px;padding: 0 8px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
 .btn:disabled {background:#E1E1E1 !important;color:#fff;border-color:#E1E1E1 !important;pointer-events:none;}
-/* .btn.blue {color:#5668F0;}
-.btn.purple {color:#AF00EE;}
-.btn.red {color:#D4373C;}
-.btn.green {color:#1CBC91;}
-.btn.orange {color:#F9984E;}
-.btn.pink {color:#F26674;} */
 .btn.fullblue {background:#5668F0;color:#fff;border:1px solid #5668F0;}
-/* .btn.fullpurple {background:#AF00EE;color:#fff;border:1px solid #AF00EE;}
-.btn.fullred {background:#D4373C;color:#fff;border:1px solid #D4373C;}
-.btn.fullgreen {background:#1CBC91;color:#fff;border:1px solid #1CBC91;}
-.btn.fullorange {background:#F9984E;color:#fff;border:1px solid #F9984E;}
-.btn.fullpink {background:#F26674;color:#fff;border:1px solid #F26674;}
-.btn.fullblack {background:#444;color:#fff;border:1px solid #444;} */
 .btn.small {font-size: var(--font-size-12);padding: 0 7px;}
 .btn.big {min-width:130px;height: 32px;color:#444;font-size: var(--font-size-13);border-color:#E5E5E5;}
 .btn.big:disabled {background:#fff;color:#E1E1E1;border-color:#E5E5E5;}
 .btn.big.fullblue {color:#fff;border-color:#5668F0;}
-/* .btn.big.fullpurple {color:#fff;border-color:#AF00EE;}
-.btn.big.fullred {color:#fff;border-color:#D4373C;}
-.btn.big.fullgreen {color:#fff;border-color:#1CBC91;}
-.btn.big.fullorange {color:#fff;border-color:#F9984E;}
-.btn.big.fullpink {color:#fff;border-color:#F26674;} */
 .btn.plus:before {content:"";display:inline-block;width:15px;height:100%;margin-left:-2px;margin-right:3px;background:url("../img/common/btn_plus.png") no-repeat 0 45%;vertical-align:middle;}
 .btn.plusgray:before {content:"";display:inline-block;width: 24px;height:100%;margin-left:-2px;margin-right: 8px;background:url("../img/common/btn_plus_gray.png") no-repeat 0 45%;vertical-align:middle;}
 .btn.download:before {content:"";display:inline-block;width:15px;height:100%;margin-left:-2px;margin-right:3px;background:url("../img/common/btn_download.png") no-repeat 0 45%;vertical-align:middle;}
@@ -331,7 +314,6 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .service.open {display:block;}
 .cont-head .util .service a {display:block;height:30px;line-height:28px;padding-left:15px;color:#090808;font-size:var(--font-size-14);}
 .cont-head .util .service a:hover {background:#F2F2F2;}
-.main-tabs-wrap + .cont-body {/* margin-top:-16px; */}
 .cont-body {overflow: hidden;}
 .cont-body > .inner-cont {padding: 24px 40px;}
 .main .cont-body > .inner-cont {padding: 0;}
@@ -386,7 +368,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .title-area .total em {font-weight:400;}
 .title-area .select{float:right;/* width: 100px; */width: auto;margin-left:8px;background:#fff;text-align:center;}
 .title-area .select select{width:100%;}
-.list-area {/* padding:15px 20px; *//* background:#fff; */border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.list-area {border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
 .list-area > ul {display:table;width:100%;}
 .list-area > ul + ul {margin-top:15px;}
 .list-area > ul > li {display:table;float:left;width: 47%;margin-top:10px;margin-right: 6%;}
@@ -615,9 +597,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .toggle li .btn-toggle {padding: 6px 0 6px 20px;background: url("../img/common/btn_toggle.svg") no-repeat 0 0;font-size: var(--font-size-14);}
 .toggle .depth2,
 .toggle .depth3,
-.toggle .depth4 {display:none;/* margin-left: 30px; */}
-.toggle li.active > button {/* color:#5668F0; */}
-.toggle li.active > .btn-toggle {/* color:#111; */}
+.toggle .depth4 {display:none;}
 .toggle li.open > .btn-toggle,
 .toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;color: #666;/* font-weight:600; */}
 .toggle li.open > .depth2,
