@@ -514,10 +514,8 @@ var fn = (function() {
 			$(document).on("click",".accordion .head", function(){
 				var cont = $(this).closest('li');
 				if(cont.hasClass('on')){
-					//$(this).closest('li').removeClass('open');
 					cont.removeClass('on').find('.cont').slideUp('fast');
 				} else {
-					//$(this).closest('li').addClass('open');
 					cont.addClass('on').find('.cont').slideDown('fast');
 					$(this).closest('li').siblings().removeClass('on').find('.cont').slideUp('fast');
 				}
