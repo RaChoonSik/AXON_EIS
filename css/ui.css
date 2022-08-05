@@ -350,7 +350,6 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .chart-add .thumb {display:flex;height: 140px;margin-top: -20px;justify-content: center;align-items: center;}
 .chart-add .thumb img {display:none;height: 115px;}
 .chart-add .thumb img:first-child {display:inline-block;}
-.chart-add .thumb img + img {/* margin-left:30px; */}
 .chart-add .flex-group .select + .select {width:100px;}
 
 
@@ -401,7 +400,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-data .left .table-wrap > .grid {height:100%;}
 
 /* main */
-.graph-main {padding:0 40px;margin-top: 10px;}
+.graph-main {padding: 0 40px 40px;margin-top: 10px;}
 .graph-main .chart-date {display: flex;justify-content: right;align-items: center;gap: 8px;margin-bottom: 8px;}
 .graph-main .chart-date p {display: inline-block;}
 .graph-main .chart-date .btn-wrap {display: inline-block;margin: 0;text-align: right;}
@@ -420,8 +419,8 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .main-chart-view {display: flex;gap: 24px;margin-top: 24px;flex: 1;}
 .main-chart-view .left {width: calc((100% - 48px) / 3);border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;flex-shrink: 0;}
 .main-chart-view .right {/* width:70%; */width: calc((((100% - 48px) / 3) * 2 ) + 24px);border: 1px solid #ccc;border-radius: 5px;padding: 10px 16px;background: #fff;flex-shrink: 0;}
-.main-chart-view .month-chart {height:300px;}
-.main-chart-view .pie-chart {height:300px;}
+.main-chart-view .month-chart {height: 295px;}
+.main-chart-view .pie-chart {height: 295px;}
 
 
 /* kpi */
