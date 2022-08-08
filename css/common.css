@@ -687,7 +687,7 @@ tbody.sortable td {background-color:transparent;}
 */
 
 /* login */
-#login {position:relative;width:100%;min-width:1180px;height:100%;background: #fff;/* background:url('../img/common/login_bg.png') no-repeat 0 0; *//* background-size:cover; */}
+#login {position:relative;width:100%;min-width:1180px;height:100%;background: #fff;}
 #login .login-inner {display: flex;position:absolute;top: 50%;left:50%;width: 1000px;height: 560px;border-radius: 10px;overflow: hidden;text-align:center;-ms-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);box-shadow: 0px 4px 4px 0 rgb(0 0 0 / 10%);/* border: 1px solid #e1e1e1; */}
 #login .login-inner .sub-txt {margin-top: 4px;font-size:var(--font-size-24);line-height: 32px;color:#888;font-weight: normal;}
 #login .login-inner .form-box {width: 500px;padding: 60px 70px 50px;background:#fff;box-sizing:border-box;}
