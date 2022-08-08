@@ -28,12 +28,6 @@
 		var result = echarts.registerTransform(ecStat.transform.clustering);
 
 		$(document).ready(function(){
-			// $('.chart-wrap .chart-box .chart-view').on({
-			// 	drop: function(e) {
-			// 		e.preventDefault(); 
-			// 	}
-			// });
-
 
 			//트리맵 차트
 			var chartTreemap  = echarts.init(document.querySelector('#chart7'), null);
@@ -356,11 +350,11 @@
 						}
 					},
 					data: [
-						{ value: 60, name: 'Visit' },
-						{ value: 40, name: 'Inquiry' },
 						{ value: 20, name: 'Order' },
+						{ value: 40, name: 'Inquiry'},
+						{ value: 60, name: 'Visit' },
 						{ value: 80, name: 'Click' },
-						{ value: 100, name: 'Show' }
+						{ value: 100, name: 'Show' },
 					]
 					}
 				]
@@ -733,7 +727,48 @@
 									<li>
 										<div class="head"><div class="title">메뉴2</div></div>
 										<div class="cont">
-											2132312
+											<ul class="chart-type">
+												<li draggable="true" class="charttype-bar">
+													<div class="img"><img src="../../img/common/chart_type1_1.png" alt="묶음 막대 차트 세로" draggable="false"></div>
+													<p class="tit">ddf13</p>
+												</li>
+												<li draggable="true" class="charttype-barsum">
+													<div class="img"><img src="../../img/common/chart_type2_1.png" alt="누적 막대 차트 세로" draggable="false"></div>
+													<p class="tit">2343</p>
+												</li>
+												<li draggable="true" class="charttype-list">
+													<div class="img"><img src="../../img/common/chart_type3.png" alt="리스트 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-line">
+													<div class="img"><img src="../../img/common/chart_type4_1.png" alt="라인 차트 곡선" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-pie">
+													<div class="img"><img src="../../img/common/chart_type5.png" alt="파이 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-treemap">
+													<div class="img"><img src="../../img/common/chart_type9.png" alt="트리맵 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-scatter">
+													<div class="img"><img src="../../img/common/chart_type10.png" alt="스칼라 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-funnel">
+													<div class="img"><img src="../../img/common/chart_type11.png" alt="Funnel 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-gauge">
+													<div class="img"><img src="../../img/common/chart_type12.png" alt="Multi Gauge 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+												<li draggable="true" class="charttype-radar">
+													<div class="img"><img src="../../img/common/chart_type13.png" alt="Radar 차트" draggable="false"></div>
+													<p class="tit">영업현황</p>
+												</li>
+											</ul>
 										</div>
 									</li>
 									<li>

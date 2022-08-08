@@ -1198,9 +1198,9 @@ tbody.sortable td {background-color:transparent;}
 .report-desc {display: flex;border:1px solid #e1e1e1;}
 .report-desc p {width:120px;height: 110px;padding-top: 44px;background: #f2f2f2;flex-shrink: 0;border-right: 1px solid #e1e1e1;text-align: center;vertical-align: middle;}
 .report-desc .comment {border-radius: 0;width: calc(100% - 110px);height: 110px;padding: 16px 20px;border: 0;overflow: auto;}
-.ui-tabs .ui-tabs-nav {display: flex;gap: 4px;background: transparent;padding: 0;border-radius: 0;border: 0;}
+.ui-tabs .ui-tabs-nav {display: flex;/* gap: 4px; */background: transparent;padding: 0;border-radius: 0;border: 0;/* justify-content: space-between; */}
 .ui-widget.ui-widget-content {border:0;}
-.report-control.ui-tabs .ui-tabs-nav li {float: none;margin: 0;padding-bottom: 1px;}
+.report-control.ui-tabs .ui-tabs-nav li {float: none;margin: 0;padding-bottom: 1px;margin-left: 4px;}
 .report-control.ui-tabs .ui-tabs-nav li:first-child {margin-left:0;}
 .repo-tabs > ul {border-bottom: 2px solid #888 !important;}
 .repo-tabs li {position: relative;display:inline-block; border:0 !important;width: calc((100% - 16px) / 5 );color: #888 !important;background: none !important;}
