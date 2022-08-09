@@ -28,6 +28,11 @@
 		var result = echarts.registerTransform(ecStat.transform.clustering);
 
 		$(document).ready(function(){
+			$('.chart-wrap').sortable({
+				handle: ".head",
+				tolerance: "pointer",
+				connectWith: '.chart-wrap .chart-box'
+			});
 
 			//트리맵 차트
 			var chartTreemap  = echarts.init(document.querySelector('#chart7'), null);

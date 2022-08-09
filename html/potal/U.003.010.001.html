@@ -24,6 +24,11 @@
 
 	<script>
 		$(document).ready(function(){
+			$('.chart-wrap').sortable({
+				handle: ".head",
+				tolerance: "pointer",
+				connectWith: '.chart-wrap .chart-box'
+			});
 
 			//파이 차트
 			var chartPie= echarts.init(document.querySelector('#chart1'), null);
