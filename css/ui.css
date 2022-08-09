@@ -442,6 +442,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-page .kpi-options .btns button.drag-menu.on {background:url('../img/common/kpi_menu_on.png')  no-repeat center center ;}
 .kpi-page .kpi-options .opt button.on + .pops {display:block;}
 .kpi-page .kpi-options .opt button.stop.on + .pops {display:none;}
+.kpi-page li.kpi-options a.on + .close + .pops {display:block;left: 0px;right: 0;bottom: auto;top: 35px;}
 
 .kpi-options .pops {display: none;position: absolute;bottom: -50px;left: -120px;background: #fff;border-radius: 10px; padding:10px 16px;z-index: 1;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);white-space: nowrap;}
 .kpi-options .pops .select {width: 90px;}

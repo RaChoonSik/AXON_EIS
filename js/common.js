@@ -441,7 +441,7 @@ var fn = (function() {
 				$('.cont-head .drop-tg').removeClass("open").find(".info").removeClass("on");
 			});
 
-
+			//대시보드 옵션
 			$(document).on("click", ".kpi-options .btns button", function(){
 				$(this).closest('.opt').siblings('.opt').find('> button').removeClass('on');
 				$(this).toggleClass('on');
@@ -450,6 +450,17 @@ var fn = (function() {
 					$(this).removeClass('stop on');
 				}
 			});
+
+			//대시보드 탭 그룹 변경
+			$(document).on("dblclick", "li.kpi-options a", function(){
+				if($(this).hasClass('on')){
+					$(this).removeClass('on');
+				} else {
+					$(this).closest('.ui-tabs-nav').find('.kpi-options a').removeClass('on');
+					$(this).addClass('on');
+				}
+			});
+			
 			$(document).on("click", ".kpi-options .pops.play .btn", function(){
 				$(this).closest('.play').siblings('button').addClass('stop');
 			});
@@ -464,7 +475,6 @@ var fn = (function() {
 			//대시보드 드래그드랍 이벤트
 
 			$(".chart-wrap .chart-box.empty").on({
-
 				drag: function(e) {
 					e.preventDefault();
 					$('.dashboard-menu').addClass('hide');
