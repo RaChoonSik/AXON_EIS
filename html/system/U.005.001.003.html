@@ -185,7 +185,12 @@
 							<tbody>
 								<tr>
 									<th scope="row">사용자 ID</th>
-									<td><input type="text" placeholder="사용자 ID를 입력하세요." title="사용자 ID" readonly></td>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="사용자 ID를 입력하세요." title="사용자 ID" readonly style="width:80%"">
+											<button type="button" class="btn big" onclick="fn.popupOpen('#popUserTeam');">비밀번호 초기화</button>
+										</div>
+									</td>
 									<th scope="row">로그인 ID</th>
 									<td><input type="text" placeholder="사용자 ID를 입력하세요." title="로그인 ID" readonly></td>
 								</tr>
