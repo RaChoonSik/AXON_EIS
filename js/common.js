@@ -173,11 +173,6 @@ var fn = (function() {
 					$(this).closest("li").addClass("active");
 				}
 			});
-			// $(document).on("ready", ".toggle .depth2", function(){
-			// 	if(!$(this).find('li')){
-			// 		$(this).siblings('.btn-toggle').css('background','none');
-			// 	}
-			// });
 		},
 
 		//toggleunfold
@@ -221,7 +216,7 @@ var fn = (function() {
 				var tabs = $(".report-control").tabs();
 				var previouslyFocused = false;
 
-				$(".poplayer").find(tabs).find(".ui-tabs-nav").sortable({
+				$(".poplayer, .kpi-page").find(tabs).find(".ui-tabs-nav").sortable({
 					axis: "x",
 					scroll: false,
 					start: function(event, ui) {
@@ -270,30 +265,6 @@ var fn = (function() {
 				}
 				
 			});
-
-			// var bFile = $(".board-file input[type='file']"), 
-			// bFilevalue, 
-			// bFilename; 
-
-			// bFile.on("change", function(){ /
-			// 	bFilevalue = $(this).val().split("\\");
-			// 	bFilename = bFilevalue[bFilevalue.length-1]; 
-			// 	var bfilesize = $(this).siblings(".file-view").find(".kb");
-			// 	if($(this).val() != ""){
-			// 		var fileSize = $(this)[0].files[0].size;
-			// 	}
-				
-			// 	var s = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'],
-			// 	e = Math.floor(Math.log(fileSize) / Math.log(1024));
-			// 	var conSize = (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
-			// 	$(".file-list").append('<li><span class="file">'+bFilename+'</span><span class="kb">('+conSize+')</span><button class="del">삭제</button></li>')
-			// 	return (fileSize / Math.pow(1024, e)).toFixed(2) + " " + s[e];
-
-			// });
-		
-			// $(document).on("click", ".file-list li .del", function(){
-			// 	$(this).closest('li').remove();
-			// });
 			
 		},
 
@@ -470,7 +441,7 @@ var fn = (function() {
 				$('.cont-head .drop-tg').removeClass("open").find(".info").removeClass("on");
 			});
 
-
+			//대시보드 옵션
 			$(document).on("click", ".kpi-options .btns button", function(){
 				$(this).closest('.opt').siblings('.opt').find('> button').removeClass('on');
 				$(this).toggleClass('on');
@@ -479,6 +450,17 @@ var fn = (function() {
 					$(this).removeClass('stop on');
 				}
 			});
+
+			//대시보드 탭 그룹 변경
+			$(document).on("dblclick", "li.kpi-options a", function(){
+				if($(this).hasClass('on')){
+					$(this).removeClass('on');
+				} else {
+					$(this).closest('.ui-tabs-nav').find('.kpi-options a').removeClass('on');
+					$(this).addClass('on');
+				}
+			});
+			
 			$(document).on("click", ".kpi-options .pops.play .btn", function(){
 				$(this).closest('.play').siblings('button').addClass('stop');
 			});
@@ -493,7 +475,6 @@ var fn = (function() {
 			//대시보드 드래그드랍 이벤트
 
 			$(".chart-wrap .chart-box.empty").on({
-
 				drag: function(e) {
 					e.preventDefault();
 					$('.dashboard-menu').addClass('hide');
@@ -508,9 +489,11 @@ var fn = (function() {
 				},
 				drop: function(e) {
 					e.preventDefault();
-					$(this).removeClass('empty drag').addClass('show');
+					$(this).removeClass('empty').addClass('show',function(){
+						$(this).off();
+					});
 					$('.dashboard-menu').removeClass('hide');
-					$(this).append('<div class="head"><div class="left"><span class="ico">M</span><p class="title">영업현황</p></div><div class="right"><span class="date">2020.01</span><button type="button" class="del">삭제</button></div></div><div class="chart-view"><div class="board" id="chart4"></div><a href="#" class="link">상세보고서 바로가기</a></div>');
+					//$(this).append('<div class="head"><div class="left"><span class="ico">M</span><p class="title">영업현황</p></div><div class="right"><span class="date">2020.01</span><button type="button" class="del">삭제</button></div></div><div class="chart-view"><div class="board" id="chart4"></div><a href="#" class="link">상세보고서 바로가기</a></div>');
 				}
 			});
 
@@ -541,10 +524,8 @@ var fn = (function() {
 			$(document).on("click",".accordion .head", function(){
 				var cont = $(this).closest('li');
 				if(cont.hasClass('on')){
-					//$(this).closest('li').removeClass('open');
 					cont.removeClass('on').find('.cont').slideUp('fast');
 				} else {
-					//$(this).closest('li').addClass('open');
 					cont.addClass('on').find('.cont').slideDown('fast');
 					$(this).closest('li').siblings().removeClass('on').find('.cont').slideUp('fast');
 				}
@@ -688,7 +669,7 @@ $(document).ready(function(){
 		});
 
 	//LNB 메뉴 리사이즈 핸들링
-	function ResizerDemo(element) {
+	function ResizerMo(element) {
 		element = $(element);
 		var handler = $('<div class="resizer-handler"></div>');
 		var info = $('<div class="resizer-info"></div>');
@@ -713,8 +694,8 @@ $(document).ready(function(){
 			info.html(element[0].clientWidth + 'px x ' + element[0].clientHeight + 'px');
 		})
 	}
-	$('#lnb .nav-menu').each(function(idx, element){
-        new ResizerDemo(element);
+	$('#lnb .nav-menu, #lnb .search-box').each(function(idx, element){
+        new ResizerMo(element);
     });
 
 });
