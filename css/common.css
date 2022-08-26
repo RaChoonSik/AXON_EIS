@@ -1075,7 +1075,7 @@ tbody.sortable td {background-color:transparent;}
 .board-wrap .board-box {float: left;padding-right: 30px;padding-left: 36px;/* border-bottom: 1px solid #e1e1e1; *//* border-left:  1px solid #e1e1e1; */width:calc(100% / 3);/* height: 250px; */}
 .board-wrap .board-box .tit {margin-bottom: 10px;font-size: var(--font-size-14);font-weight: bold;}
 .board-wrap .board-box .tit .num{color:#4b62e8;}
-.board-wrap .board-box .tit.new::after{display: inline-block; content:"N";color: #fff;font-size:10px;vertical-align: top;border-radius:2px;padding-left:3px;line-height: 14px;font-weight:400;width:14px;height:14px;background:#f00;vertical-align:2px;}
+.board-wrap .board-box .tit.new::after{display: inline-block; content:"N";color: #fff;font-size:10px;vertical-align: center;border-radius:100%;padding-left:3px;line-height: 14px;font-weight:400;width:14px;height:14px;background:#f00;vertical-align:2px;}
 .board-wrap .board-box ul > li a {display: inline-block;/* max-width: 370px; */font-size: var(--font-size-13); color:#111;text-overflow: ellipsis;/* -webkit-line-clamp: 1; *//* -webkit-box-orient: vertical; */white-space: nowrap;overflow: hidden;text-decoration: underline;}
 .board-wrap .board-box a:hover {color:#4b62e8;}
 .board-wrap .board-box .link {display:flex;}
