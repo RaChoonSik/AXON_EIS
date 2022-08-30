@@ -50,6 +50,19 @@
 .folder-tree .toggle li.open ul {min-height: 10px;}
 .folder-tree .toggle .view {background-color: rgba(0, 0, 0, 0.15);}
 
+/* 220829수정 */
+.folder-tree.sep-sortable .ui-sortable-handle{background: none; position: relative;}
+.folder-tree.sep-sortable .btn-up,
+.folder-tree.sep-sortable .btn-dw{z-index: 9; display: block;content:"";top: 0;width: 30px;height: 33px;position: absolute;cursor: pointer;background: url('../img/common/bg_sortable_up.png') no-repeat;background-position: 50% 50%; background-size:20px 20px;padding: 0;}
+.folder-tree.sep-sortable .btn-up {right:30px; background-image: url('../img/common/bg_sortable_up.png');}
+.folder-tree.sep-sortable .btn-dw {right:5px; background-image: url('../img/common/bg_sortable_dw.png');} 
+.folder-tree.sep-sortable .sep-btns.no-up .btn-up,
+.folder-tree.sep-sortable .sep-btns.no-dw .btn-dw{opacity: 0.3;}
+.folder-tree.sep-sortable .root a{text-decoration: underline;cursor:pointer;}
+/* .folder-tree.sep-sortable .toggle ul > li, .folder-tree.sep-sortable .toggle li{width: calc(100% - 60px);}
+.folder-tree.sep-sortable .btn-up {right:-35px; background-image: url('../img/common/bg_sortable_up.png');}
+.folder-tree.sep-sortable .btn-dw {right:-60px; background-image: url('../img/common/bg_sortable_dw.png');} */
+
 
 .memo-lock {overflow: hidden;}
 .memo-lock .pop-title {float:left;}
@@ -360,7 +373,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 #popMyHomeSet .report-wrap .top + .cont {height: 314px; border-radius: 0 0 5px 5px; border-top:0;} /* 마이홈설정팝업 */
 #popMyHomeMod .report-wrap .cont,
 #popMyHomeSet .report-wrap .cont {height: 360px; border-top:1px solid #d8d8d8; border-radius: 5px;} /* 마이홈설정팝업 */
-.repo-tabs {/* margin: 0 -4px; */}
+/* .repo-tabs { margin: 0 -4px; } */
 .repo-tabs + .report-wrap .top {border-radius: 0;}
 #popMyHomeSet .repo-tabs li a {pointer-events: none;}
 #popMyHomeSet .repo-tabs li.ui-tabs-active a {pointer-events: initial;}

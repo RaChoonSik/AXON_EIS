@@ -24,33 +24,33 @@
 	<script>
 		$(document).ready(function(){
 
-			$('.report-menu .folder-tree .toggle').sortable({
-				connectWith: '.report-menu .folder-tree .toggle ul',
-				tolerance: "pointer",
-				placeholder: "sortable-placeholder",
-				forcePlaceholderSize: true,
-				revert: 200,
-				delay: 100,
-				axis: "y",
-				activate: function( event, ui ) {
-					var item = ui.item;
-					$(ui.item).closest('li').removeClass('open');
-				}
-			});
-			$('.report-menu .folder-tree .toggle ul').sortable({
-				items: $('.report-menu .folder-tree .toggle ul li'),
-				connectWith: '.report-menu .folder-tree .toggle ul',
-				tolerance: "pointer",
-				placeholder: "sortable-placeholder",
-				forcePlaceholderSize: true,
-				revert: 200,
-				delay: 100,
-				axis: "y",
-				activate: function( event, ui ) {
-					var item = ui.item;
-					$(ui.item).closest('li').removeClass('open');
-				}
-			});
+			// $('.report-menu .folder-tree .toggle').sortable({
+			// 	connectWith: '.report-menu .folder-tree .toggle ul',
+			// 	tolerance: "pointer",
+			// 	placeholder: "sortable-placeholder",
+			// 	forcePlaceholderSize: true,
+			// 	revert: 200,
+			// 	delay: 100,
+			// 	axis: "y",
+			// 	activate: function( event, ui ) {
+			// 		var item = ui.item;
+			// 		$(ui.item).closest('li').removeClass('open');
+			// 	}
+			// });
+			// $('.report-menu .folder-tree .toggle ul').sortable({
+			// 	items: $('.report-menu .folder-tree .toggle ul li'),
+			// 	connectWith: '.report-menu .folder-tree .toggle ul',
+			// 	tolerance: "pointer",
+			// 	placeholder: "sortable-placeholder",
+			// 	forcePlaceholderSize: true,
+			// 	revert: 200,
+			// 	delay: 100,
+			// 	axis: "y",
+			// 	activate: function( event, ui ) {
+			// 		var item = ui.item;
+			// 		$(ui.item).closest('li').removeClass('open');
+			// 	}
+			// });
 			$('.sort-tb tbody').sortable({});
 		});
 	</script>
@@ -207,28 +207,50 @@
 									<button type="button" class="btn small">삭제</button>
 								</div>
 							</div>
-							<div class="folder-tree">
-								<div class="root">ROOT</div>
+							<div class="folder-tree sep-sortable"><!-- 220829수정 sep-sortable추가-->
+								<div class="root"><a href="#">ROOT</a></div>
 								<ul class="toggle">
 									<li class="active"><!-- 활성화 : li class="open" 추가 -->
-										<a class="btn-toggle folder sort-item">폴더명 1 sort </a>
+										<a class="btn-toggle folder sort-item">폴더명 1 sort 
+											<div class="sep-btns">
+												<button type="button" class="btn-up"></button>
+												<button type="button" class="btn-dw"></button>
+											</div>	
+										</a>
 										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
 													<span class="last">SUB 폴더</span>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
 												</a>
 											</li>
 											<li class="active">
-												<a class="btn-toggle folder sort-item">폴더 안 폴더</a>
+												<a class="btn-toggle folder sort-item">폴더 안 폴더
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
+												</a>
 												<ul class="depth3">
 													<li class="sort-item">
 														<a href="#">
 															<span class="last">SUㄴㅁㄹㅇㄻ</span>
+															<div class="sep-btns">
+																<button type="button" class="btn-up"></button>
+																<button type="button" class="btn-dw"></button>
+															</div>	
 														</a>
 													</li>
 													<li class="sort-item">
 														<a href="#">
 															<span class="last">SUㄴㅁㄹㅇㄻ</span>
+															<div class="sep-btns">
+																<button type="button" class="btn-up"></button>
+																<button type="button" class="btn-dw"></button>
+															</div>	
 														</a>
 													</li>
 												</ul>
@@ -236,31 +258,58 @@
 										</ul>
 									</li>
 									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 2</a>
+										<a class="btn-toggle folder sort-item">폴더명 2
+											<div class="sep-btns">
+												<button type="button" class="btn-up"></button>
+												<button type="button" class="btn-dw"></button>
+											</div>	
+										</a>
 										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
 													<span class="last">SUB 폴더 44 </span>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
 												</a>
 											</li>
 										</ul>
 									</li>
 									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 3</a>
+										<a class="btn-toggle folder sort-item">폴더명 3
+											<div class="sep-btns">
+												<button type="button" class="btn-up"></button>
+												<button type="button" class="btn-dw"></button>
+											</div>	
+										</a>
 										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
 													<span class="last">SUB 폴더 13</span>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
 												</a>
 											</li>
 										</ul>
 									</li>
 									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 4</a>
+										<a class="btn-toggle folder sort-item">폴더명 4
+											<div class="sep-btns">
+												<button type="button" class="btn-up"></button>
+												<button type="button" class="btn-dw"></button>
+											</div>	
+										</a>
 										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
 													<span class="last">SUB 폴더 sub</span>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
 												</a>
 											</li>
 										</ul>

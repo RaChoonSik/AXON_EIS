@@ -597,12 +597,14 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .toggle li .btn-toggle {padding: 6px 0 6px 20px;background: url("../img/common/btn_toggle.svg") no-repeat 0 0;font-size: var(--font-size-14);}
 .toggle .depth2,
 .toggle .depth3,
-.toggle .depth4 {display:none;}
+.toggle .depth4,
+.toggle .depth5 {display:none;}
 .toggle li.open > .btn-toggle,
 .toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;color: #666;/* font-weight:600; */}
 .toggle li.open > .depth2,
 .toggle li.open > .depth3,
-.toggle li.open > .depth4 {display:block;}
+.toggle li.open > .depth4,
+.toggle li.open > .depth5 {display:block;}
 .nav-menu .toggle li.open > .btn-toggle,
 .nav-menu .toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;}
 .nav-menu .toggle li .btn-toggle {background: url('../img/common/btn_toggle_w.png') no-repeat 0 0;}
@@ -1046,7 +1048,7 @@ tbody.sortable td {background-color:transparent;}
 #lnb[data-open="set"] .nav-menu.setting {display:block;left: 240px;visibility: visible;transition: left 0.1s, visibility 0.1s;}
 .top .nav-menu {top: 58px;}
 .folder-tree .toggle li > .btn-toggle,
-.nav-menu .toggle li > .btn-toggle {display: block;width: 100%;font-size:var(--font-size-14);color: #fff;font-weight: normal;text-align: left;}
+.nav-menu .toggle li > .btn-toggle {display: block;width:100%;font-size:var(--font-size-14);color: #fff;font-weight: normal;text-align: left;}
 .folder-tree .toggle li > .btn-toggle {color:#666;}
 /* .nav-menu .toggle > li , */
 .nav-menu .toggle li > .btn-toggle:hover {background-color: rgba(0, 0, 0, 0.15);}
