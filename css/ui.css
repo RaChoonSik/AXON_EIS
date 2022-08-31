@@ -58,7 +58,9 @@
 .folder-tree.sep-sortable .btn-dw {right:5px; background-image: url('../img/common/bg_sortable_dw.png');} 
 .folder-tree.sep-sortable .no-up .btn-up{background-image: url('../img/common/bg_sortable_up_diss.png');}
 .folder-tree.sep-sortable .no-dw .btn-dw{background-image: url('../img/common/bg_sortable_dw_dis.png');}
+.folder-tree.sep-sortable .root{width: 100%;}
 .folder-tree.sep-sortable .root a{text-decoration: underline;cursor:pointer;}
+.folder-tree.sep-sortable .root.view{background: rgba(0, 0, 0, 0.15);}
 /* .folder-tree.sep-sortable .toggle ul > li, .folder-tree.sep-sortable .toggle li{width: calc(100% - 60px);}
 .folder-tree.sep-sortable .btn-up {right:-35px; background-image: url('../img/common/bg_sortable_up.png');}
 .folder-tree.sep-sortable .btn-dw {right:-60px; background-image: url('../img/common/bg_sortable_dw.png');} */
