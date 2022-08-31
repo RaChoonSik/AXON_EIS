@@ -56,8 +56,8 @@
 .folder-tree.sep-sortable .btn-dw{z-index: 9; display: block;content:"";top: 0;width: 30px;height: 33px;position: absolute;cursor: pointer;background: url('../img/common/bg_sortable_up.png') no-repeat;background-position: 50% 50%; background-size:20px 20px;padding: 0;}
 .folder-tree.sep-sortable .btn-up {right:30px; background-image: url('../img/common/bg_sortable_up.png');}
 .folder-tree.sep-sortable .btn-dw {right:5px; background-image: url('../img/common/bg_sortable_dw.png');} 
-.folder-tree.sep-sortable .sep-btns.no-up .btn-up,
-.folder-tree.sep-sortable .sep-btns.no-dw .btn-dw{opacity: 0.3;}
+.folder-tree.sep-sortable .no-up .btn-up{background-image: url('../img/common/bg_sortable_up_diss.png');}
+.folder-tree.sep-sortable .no-dw .btn-dw{background-image: url('../img/common/bg_sortable_dw_dis.png');}
 .folder-tree.sep-sortable .root a{text-decoration: underline;cursor:pointer;}
 /* .folder-tree.sep-sortable .toggle ul > li, .folder-tree.sep-sortable .toggle li{width: calc(100% - 60px);}
 .folder-tree.sep-sortable .btn-up {right:-35px; background-image: url('../img/common/bg_sortable_up.png');}
