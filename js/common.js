@@ -517,8 +517,8 @@ var fn = (function() {
 
 		},
 		accodion : function(){
-			$(document).on("click",".folder-tree a, .folder-tree button", function(){
-				$(".folder-tree a, .folder-tree button").removeClass("view");
+			$(document).on("click",".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button", function(){
+				$(".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button").removeClass("view");
 				$(this).addClass("view");
 			});
 			$(document).on("click",".accordion .head", function(){
