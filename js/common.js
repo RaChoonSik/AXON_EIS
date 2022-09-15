@@ -517,11 +517,13 @@ var fn = (function() {
 
 		},
 		accodion : function(){
-			$(document).on("click",".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button", function(){
+			$(document).on("click",".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button.btn-toggle", function(){
 				// $(".folder-tree a, .folder-tree button").removeClass("view");
 				// 220915 이서현 수정
-				$(this).closest(".folder-tree").parent().find(".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button").removeClass("view");
+				if(!$(this).hasClass("btn-toggle")){
+				$(this).closest(".folder-tree").parent().find(".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button.btn-toggle").removeClass("view");
 				$(this).addClass("view");
+				};
 			});
 			$(document).on("click",".accordion .head", function(){
 				var cont = $(this).closest('li');
