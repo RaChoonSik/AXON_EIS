@@ -518,7 +518,9 @@ var fn = (function() {
 		},
 		accodion : function(){
 			$(document).on("click",".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button", function(){
-				$(".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button").removeClass("view");
+				// $(".folder-tree a, .folder-tree button").removeClass("view");
+				// 220915 이서현 수정
+				$(this).closest(".folder-tree").parent().find(".folder-tree.sep-sortable .root, .folder-tree a, .folder-tree button").removeClass("view");
 				$(this).addClass("view");
 			});
 			$(document).on("click",".accordion .head", function(){
@@ -698,6 +700,21 @@ $(document).ready(function(){
         new ResizerMo(element);
     });
 
+
+});
+
+// 220915이서현 추가	
+//항목 위치 위로이동
+$(document).on("click",".folder-tree .btn-up",function(){	
+	console.log("위로이동");	
+	var test = $(this).parent().parent().prev();	
+	test.before($(this).parent().parent());
+});
+//항목 위치 아래로이동
+$(document).on("click",".folder-tree .btn-dw",function(){	
+	console.log("아래로이동");	
+	var test = $(this).parent().parent().next();	
+	test.after($(this).parent().parent());
 });
 
 $(window).on('beforeunload', function() {

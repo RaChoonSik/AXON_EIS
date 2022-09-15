@@ -49,6 +49,8 @@
 .toggle .sortable-placeholder {background-color: #f5f7ff; margin-left:30px;}
 .folder-tree .toggle li.open ul {min-height: 10px;}
 .folder-tree .toggle .view {background-color: rgba(0, 0, 0, 0.15);}
+/* 220915수정 */
+.folder-tree.sep-sortable .toggle .btn-toggle.view {background-color: transparent;}
 
 /* 220829수정 */
 .folder-tree.sep-sortable .ui-sortable-handle{background: none; position: relative;}
@@ -56,8 +58,8 @@
 .folder-tree.sep-sortable .btn-dw{z-index: 9; display: block;content:"";top: 0;width: 30px;height: 33px;position: absolute;cursor: pointer;background: url('../img/common/bg_sortable_up.png') no-repeat;background-position: 50% 50%; background-size:20px 20px;padding: 0;}
 .folder-tree.sep-sortable .btn-up {right:30px; background-image: url('../img/common/bg_sortable_up.png');}
 .folder-tree.sep-sortable .btn-dw {right:5px; background-image: url('../img/common/bg_sortable_dw.png');} 
-.folder-tree.sep-sortable .no-up .btn-up{background-image: url('../img/common/bg_sortable_up_diss.png');}
-.folder-tree.sep-sortable .no-dw .btn-dw{background-image: url('../img/common/bg_sortable_dw_dis.png');}
+.folder-tree.sep-sortable ul > li:first-child > .sep-btns .btn-up{background-image: url('../img/common/bg_sortable_up_dis.png');}
+.folder-tree.sep-sortable ul > li:last-child > .sep-btns .btn-dw{background-image: url('../img/common/bg_sortable_dw_dis.png');}
 .folder-tree.sep-sortable .root{width: 100%;}
 .folder-tree.sep-sortable .root a{text-decoration: underline;cursor:pointer;}
 .folder-tree.sep-sortable .root.view{background: rgba(0, 0, 0, 0.15);}
@@ -277,7 +279,7 @@
 .popsendenroll .mapping-group .graybox {width: 45%;}
 .report-menu {display: flex;gap: 20px;}
 .report-menu .left {min-width: 320px;width: 30%; flex-shrink: 0;}
-.report-menu .folder-tree {height: 458px;height: calc(100% - 42px);margin-top: 0;}
+.report-menu .folder-tree {height: 458px;overflow-y: auto; /*height: calc(100% - 42px);*/margin-top: 0;}
 .report-menu .folder-tree.comment {height: 459px;}
 .popRepoAdd .btn-area {left: 335px;}
 .sort-tb tr.ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
