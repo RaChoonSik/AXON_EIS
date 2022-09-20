@@ -343,7 +343,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 #lnb.on nav > ul > li > a span {margin-left:10px;}
 #lnb.on nav > ul > li > a:hover {color:#fff;}
 #lnb.on nav > ul > li > a:after {content:"";display:block;position:absolute;top: 8px;right: 16px;width:24px;height:24px;background:url("../img/common/lnb_navbutton.png") no-repeat;transform: rotate(-90deg);}
-#lnb nav {max-height: calc(100% - 320px);overflow: auto;}
+#lnb nav {max-height: calc(100% - 340px);overflow: auto;}
 .font-large #lnb nav {max-height: calc(100% - 360px);}
 #lnb nav.on > ul > li > a > span {padding-left: 10px;}
 #lnb nav > ul > li:hover {background:#4b62e8;}
@@ -594,8 +594,8 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /* toggle */
 .toggle li {position:relative;/* margin-top: 12px; *//* padding: 6px 0; */font-size: 0;}
 .toggle > li {padding:0;}
-.toggle ul > li {padding-left:30px;font-size: var(--font-size-14);}
-.nav-menu .toggle li > a:hover, .nav-menu .toggle ul > li:hover > a {background-color: rgb(0 0 0 / 15%);}
+.toggle ul > li {padding-left:30px;/*font-size: var(--font-size-14);*/}
+/* .nav-menu .toggle li > a:hover, .nav-menu .toggle ul > li:hover > a {background-color: rgb(0 0 0 / 15%);} */
 .nav-menu .toggle ul > li.active:hover{background-color: transparent;}
 .toggle li button {/* display: inline-block; *//* width: 100%; */padding: 6px 0;padding-left: 22px;position: relative;color:#666;font-size: var(--font-size-14);text-align: left;}
 .nav-menu .toggle li button {display:inline-block; width:100%;}
@@ -605,16 +605,20 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .toggle .depth4,
 .toggle .depth5 {display:none;}
 .toggle li.open > .btn-toggle,
-.toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;color: #666;/* font-weight:600; */}
+.toggle li.open > .clear > .btn-toggle {background-position:0 -32px;color: #666;/* font-weight:600; */}
 .toggle li.open > .depth2,
 .toggle li.open > .depth3,
 .toggle li.open > .depth4,
 .toggle li.open > .depth5 {display:block;}
 .nav-menu .toggle li.open > .btn-toggle,
-.nav-menu .toggle li.open > .clear > .btn-toggle {background-position: 0px -32px;}
-.nav-menu .toggle li .btn-toggle {background: url('../img/common/btn_toggle_w.png') no-repeat 0 0;}
-.nav-menu .toggle li.on:hover a,
-.nav-menu .toggle li.on a {background-color: #4d67ff;}
+.nav-menu .toggle li.open > .clear > .btn-toggle {background-position:4px -32px;}
+.nav-menu .toggle li .btn-toggle {background: url('../img/common/btn_toggle_w.png') no-repeat 3px 0;}
+
+/*0919이서현 수정*/
+/* .nav-menu .toggle li.on:hover a,
+.nav-menu .toggle li.on a {background-color: #4d67ff;} */
+.nav-menu.sep-menu .toggle li a:hover, 
+.nav-menu.sep-menu .toggle li.on > a  {background-color: #4d67ff;}
 
 /* toggle-unfold */
 .toggle-unfold li{position:relative;}
@@ -1035,7 +1039,12 @@ tbody.sortable td {background-color:transparent;}
 .result-wrap .result-menu ul > li > p {position: relative;padding-left: 10px;color: #fff;font-size: var(--font-size-12);}
 .result-wrap .result-menu ul > li > p:after {position: absolute; left:0;top: -1px; content:'-';color: #Fff;font-size: var(--font-size-13);}
 .result-wrap .result-menu ul > li > a {padding-left: 10px;margin-top: 2px;color: #fff;font-size: var(--font-size-13);}
-.result-wrap .result-menu ul > li > a:hover {color:#5668f0;}
+
+/* 220919 이서현 수정 */
+/* .result-wrap .result-menu ul > li > a:hover{color:#5668f0;} */
+.result-wrap .result-menu ul > li:hover a,
+.result-wrap .result-menu ul > li:hover p,
+.result-wrap .result-menu ul > li:hover p:after{color:#5668f0;}
 
 /* 메뉴 박스 */
 .depth-folder-tit {position: relative;padding: 11px 16px;border-bottom: 1px solid #5c5c5c;}
@@ -1053,7 +1062,8 @@ tbody.sortable td {background-color:transparent;}
 #lnb[data-open="set"] .nav-menu.setting {display:block;left: 240px;visibility: visible;transition: left 0.1s, visibility 0.1s;}
 .top .nav-menu {top: 58px;}
 .folder-tree .toggle li > .btn-toggle,
-.nav-menu .toggle li > .btn-toggle {display:block;width:100%;font-size:var(--font-size-14);color: #fff;font-weight: normal;text-align: left;}
+.nav-menu .toggle li > .btn-toggle,
+.nav-menu.sep-menu .toggle li > .btn-toggle + a {display:block;width:100%;font-size:var(--font-size-14);color: #fff;font-weight: normal;text-align: left;}
 .folder-tree .toggle li > .btn-toggle,
 .folder-tree.sep-sortable .toggle li > .btn-toggle + a {color:#666;}
 /* .nav-menu .toggle > li , */
@@ -1079,10 +1089,14 @@ tbody.sortable td {background-color:transparent;}
 .nav-menu .toggle > li > .error {max-width: 95%;}
 
 /*220915 수정 이서현*/
-.folder-tree.sep-sortable .toggle li > .btn-toggle{display: inline-block!important;width: 30px;height: 33px;vertical-align: middle;}
+.folder-tree.sep-sortable .toggle li > .btn-toggle,
+.nav-menu.sep-menu .toggle li > .btn-toggle{display: inline-block!important;width: 30px;height: 33px;vertical-align: middle;padding: 0;}
 .folder-tree.sep-sortable .toggle li > .btn-toggle + a{display: inline-block!important;width:calc(100% - 95px);vertical-align: middle;}
-.folder-tree.sep-sortable .toggle li > .folder{padding-left: 30px!important;}
-.folder-tree.sep-sortable .toggle li > .folder:before{left: 0;}
+.nav-menu.sep-menu .toggle li > .btn-toggle + a{display: inline-block!important;width:calc(100% - 32px);vertical-align: middle;cursor: pointer;}
+.folder-tree.sep-sortable .toggle li > .folder,
+.nav-menu.sep-menu .toggle li > .folder{padding-left: 30px!important;}
+.folder-tree.sep-sortable .toggle li > .folder:before,
+.nav-menu.sep-menu .toggle li > .folder:before{left: 0;}
 .folder-tree.sep-sortable .toggle li > a{width: calc(100% - 65px); font-size:var(--font-size-14)}
 
 
@@ -1214,11 +1228,15 @@ tbody.sortable td {background-color:transparent;}
 .report-wrap .tool .bookmark:hover {background-image: url('../img/common/report_bookmark_ac.png');}
 .report-wrap .tool .memo {background:url('../img/common/report_memo.png') no-repeat center center;}
 .report-wrap .tool .memo:hover {background-image: url('../img/common/report_memo_ac.png');}
-.report-wrap .tool .bread .full {display:none; position:absolute;top: 32px;right: -20px;width: 240px;background: #666;padding: 12px;border-radius: 5px;text-align: left;z-index: 1;}
-.report-wrap .tool .bread .full span {font-size: var(--font-size-12);color: #fff; }
-.report-wrap .tool .bread .full .btn-close {position:absolute;top: 4px;right: 4px; font-size:0; width:20px; height:20px;background: url('../img/common/ico_x_tooltip.png') no-repeat 0 0;}
-.report-wrap .tool .bread.on .full {display:block;}
-.report-wrap .tool .bread .full:after {position:absolute; display:block;top: -6px;right: 25px;width: 0px;height: 0px;border-bottom: 12px solid #666;border-left: 10px solid transparent;border-right: 10px solid transparent; content:'';}
+/* 220916 툴팁 공통화 수정 이서현 */
+.report-wrap .tool .tip{position: relative;}
+.report-wrap .tool .tip .full {display:none; position:absolute;top: 32px;right: -20px;width: auto;background: #666;padding: 12px;border-radius: 5px;text-align: left;z-index: 1;}
+.report-wrap .tool .tip .full span {font-size: var(--font-size-12);color: #fff; }
+.report-wrap .tool .tip .full .btn-close {position:absolute;top: 4px;right: 4px; font-size:0; width:20px; height:20px;background: url('../img/common/ico_x_tooltip.png') no-repeat 0 0;}
+.report-wrap .tool .tip.on .full {display:block;}
+.report-wrap .tool .tip .full:after {position:absolute; display:block;top: -6px;right: 25px;width: 0px;height: 0px;border-bottom: 12px solid #666;border-left: 10px solid transparent;border-right: 10px solid transparent; content:'';}
+.report-wrap .tool .bread.tip .full{min-width: 240px;}
+
 .report-wrap .cont {overflow: auto;border: 1px solid #d8d8d8;border-radius: 0 0 5px 5px;border-top: 0;}
 .report-desc {display: flex;border:1px solid #e1e1e1;}
 .report-desc p {width:120px;height: 110px;padding-top: 44px;background: #f2f2f2;flex-shrink: 0;border-right: 1px solid #e1e1e1;text-align: center;vertical-align: middle;}

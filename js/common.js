@@ -371,6 +371,12 @@ var fn = (function() {
 					$(this).addClass("on");
 				}
 			});
+			/*220919 이서현 추가*/
+			$(document).on("click", ".nav-menu.sep-menu .toggle li a", function(){
+				$(".nav-menu.sep-menu .toggle li").removeClass("on");
+				$(this).closest("li").addClass("on");
+			});
+			
 			$(document).on("click", ".team-tree-items .team a", function(){
 				if($(this).closest('li').hasClass('last')) {
 					return 0;
@@ -425,14 +431,26 @@ var fn = (function() {
 					$("#wrap").removeClass("top");
 				}
 			});
-			$(".report-wrap .tool .bread button").on({
+
+			//툴팁 공통 220916 이서현
+			// $(".report-wrap .tool .bread button").on({
+			// 	mouseenter: function () {
+			// 		$(this).closest(".bread").addClass("on");
+			// 	},
+			// 	mouseleave: function () {
+			// 		$(this).closest(".bread").removeClass("on");
+			// 	}
+			// });
+			$(".report-wrap .tool .tip button").on({
 				mouseenter: function () {
-					$(this).closest(".bread").addClass("on");
+					$(this).closest(".tip").addClass("on");
 				},
 				mouseleave: function () {
-					$(this).closest(".bread").removeClass("on");
+					$(this).closest(".tip").removeClass("on");
 				}
 			});
+		
+			
 			$(document).on("click", ".cont-body", function(){
 				$("#lnb").removeAttr("data-open");
 				$(".board-wrap").hide();
@@ -722,9 +740,27 @@ $(document).on("click",".folder-tree .btn-dw",function(){
 $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
-
-
 $(window).on("load", function(){
 	//init
 	fn.common();
+});
+// 220920이서현 추가	
+$(document).ready(function(){
+	// 보고서 메뉴 매핑 disabled
+	$(".folder-tree.sep-sortable.system a.check-disalbed").find("input").attr('disabled',true);	
+
+	// 보고서 메뉴 매핑 전체선택/해제
+	$(".folder-tree.sep-sortable.system a.folder input").click(function() {
+		if($(this).is(":checked")) $(this).closest(".folder").siblings("ul").find("input").prop("checked", true);
+		else $(this).closest(".folder").siblings("ul").find("input").prop("checked", false);
+	});
+	$(".folder-tree.sep-sortable.system .sort-item a input").click(function() {
+		var total = $(this).closest("ul").find("input").length;
+		var checked = $(this).closest("ul").find("input:checked").length;
+		console.log(total);
+		console.log(checked);
+
+		if(total != checked)  $(this).closest("ul").siblings(".folder").find("input").prop("checked", false);
+		else $(this).closest("ul").siblings(".folder").find("input").prop("checked", true); 
+	});
 });

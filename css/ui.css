@@ -163,7 +163,7 @@
 .popsendenroll .btn-area.sec {top:350px;}
 .popsendenroll .btn-area button {display:block;width:30px;height:30px;margin-bottom:15px;border-radius: 3px;border: 1px solid #e1e1e1;}
 .popsendenroll .btn-area .btn-add {background:url("../img/common/ico_arrow_right.png") #f6f6f6 no-repeat center center;}
-.popsendenroll .btn-area .btn-add:hover {background-image: url('../img/common/ico_arrow_right_on.png'); background-position: 11px 7px;}
+.popsendenroll .btn-area .btn-add:hover {background-image: url('../img/common/ico_arrow_right_on.png'); background-position: 11px 7.5px;}
 .popsendenroll .btn-area .btn-remove {background:url("../img/common/ico_arrow_left.png") #f6f6f6 no-repeat center center;}
 .popsendenroll .btn-area .btn-remove:hover {background-image: url('../img/common/ico_arrow_left_on.png');background-position: 9px 7px;}
 .popsendenroll .requester {display:flex;justify-content:space-between;margin-bottom:20px;padding:8px 13px 8px 23px;border-bottom:1px solid #E1E1E1;}
@@ -217,6 +217,12 @@
 .folder-tree.system .sort-item .chk {position: absolute;top: 6px; right:0;}
 .folder-tree.system .toggle .view {background-color: transparent;}
 .folder-tree .toggle ul > li .cnt {display:inline;}
+
+.folder-tree.sep-sortable.system .toggle li > a{width: 100%;}
+.folder-tree.sep-sortable.system .toggle li > a.folder{width: calc(100% - 30px);}
+.folder-tree.sep-sortable.system .sort-item .chk {position: absolute;top: 6px; right:0;}
+.folder-tree.sep-sortable.system .sort-item .check-disalbed span {color:#ccc;}
+
 
 .user-list.team-tree {margin-top:24px;}
 .user-team-list li {border-top: 1px solid #e1e1e1;font-size: 0 !important;}
