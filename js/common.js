@@ -82,16 +82,17 @@ var fn = (function() {
 				}
 			});
 
-			$(document).on("click", ".btm-option .fix, #lnb .lnb-wrap", function(){
-				if($("#lnb").hasClass("on")){
-					$("#lnb").removeClass("on");
-					$(".btm-option .fix").removeClass("on");
-					$("#lnb").removeAttr("data-open");
+			$(document).on("click", ".btm-option .fix", function () {
+				if ($(this).hasClass("on")) {
+				  $("#lnb").removeClass("on");
+				  $(this).removeClass("on");
+				  $("#lnb").removeAttr("data-open");
 				} else {
-					$("#lnb").addClass("on");
-					$(".btm-option .fix").addClass("on");
+				  $("#lnb").addClass("on");
+				  $(this).addClass("on");
 				}
 			});
+		
 
 			$(document).on("click", ".btm-option .menu", function(){
 				$(".my-menu button").removeClass("on");
@@ -748,7 +749,7 @@ $(window).on("load", function(){
 $(document).ready(function(){
 	// 보고서 메뉴 매핑 disabled
 	$(".folder-tree.sep-sortable.system a.check-disalbed").find("input").attr('disabled',true);	
-	
+
 	//폴더명 title
 	$(".folder-tree.sep-sortable.system a").find("span").attr("title", "폴더명");	
 
