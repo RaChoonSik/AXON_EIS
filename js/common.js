@@ -82,14 +82,14 @@ var fn = (function() {
 				}
 			});
 
-			$(document).on("click", ".btm-option .fix", function(){
-				if($(this).hasClass("on")){
+			$(document).on("click", ".btm-option .fix, #lnb .lnb-wrap", function(){
+				if($("#lnb").hasClass("on")){
 					$("#lnb").removeClass("on");
-					$(this).removeClass("on");
+					$(".btm-option .fix").removeClass("on");
 					$("#lnb").removeAttr("data-open");
 				} else {
 					$("#lnb").addClass("on");
-					$(this).addClass("on");
+					$(".btm-option .fix").addClass("on");
 				}
 			});
 
@@ -748,6 +748,9 @@ $(window).on("load", function(){
 $(document).ready(function(){
 	// 보고서 메뉴 매핑 disabled
 	$(".folder-tree.sep-sortable.system a.check-disalbed").find("input").attr('disabled',true);	
+	
+	//폴더명 title
+	$(".folder-tree.sep-sortable.system a").find("span").attr("title", "폴더명");	
 
 	// 보고서 메뉴 매핑 전체선택/해제
 	// $(".folder-tree.sep-sortable.system a.folder input").click(function() {
@@ -757,8 +760,6 @@ $(document).ready(function(){
 	// $(".folder-tree.sep-sortable.system .sort-item a input").click(function() {
 	// 	var total = $(this).closest("ul").find("input").length;
 	// 	var checked = $(this).closest("ul").find("input:checked").length;
-	// 	console.log(total);
-	// 	console.log(checked);
 
 	// 	if(total != checked)  $(this).closest("ul").siblings(".folder").find("input").prop("checked", false);
 	// 	else $(this).closest("ul").siblings(".folder").find("input").prop("checked", true); 
