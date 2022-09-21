@@ -750,17 +750,17 @@ $(document).ready(function(){
 	$(".folder-tree.sep-sortable.system a.check-disalbed").find("input").attr('disabled',true);	
 
 	// 보고서 메뉴 매핑 전체선택/해제
-	$(".folder-tree.sep-sortable.system a.folder input").click(function() {
-		if($(this).is(":checked")) $(this).closest(".folder").siblings("ul").find("input").prop("checked", true);
-		else $(this).closest(".folder").siblings("ul").find("input").prop("checked", false);
-	});
-	$(".folder-tree.sep-sortable.system .sort-item a input").click(function() {
-		var total = $(this).closest("ul").find("input").length;
-		var checked = $(this).closest("ul").find("input:checked").length;
-		console.log(total);
-		console.log(checked);
+	// $(".folder-tree.sep-sortable.system a.folder input").click(function() {
+	// 	if($(this).is(":checked")) $(this).closest(".folder").siblings("ul").find("input").prop("checked", true);
+	// 	else $(this).closest(".folder").siblings("ul").find("input").prop("checked", false);
+	// });
+	// $(".folder-tree.sep-sortable.system .sort-item a input").click(function() {
+	// 	var total = $(this).closest("ul").find("input").length;
+	// 	var checked = $(this).closest("ul").find("input:checked").length;
+	// 	console.log(total);
+	// 	console.log(checked);
 
-		if(total != checked)  $(this).closest("ul").siblings(".folder").find("input").prop("checked", false);
-		else $(this).closest("ul").siblings(".folder").find("input").prop("checked", true); 
-	});
+	// 	if(total != checked)  $(this).closest("ul").siblings(".folder").find("input").prop("checked", false);
+	// 	else $(this).closest("ul").siblings(".folder").find("input").prop("checked", true); 
+	// });
 });
