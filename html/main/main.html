@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="../../css/common.css">
 	<link rel="stylesheet" href="../../css/ui.css">
 	<script src="../../js/jquery_2.1.1.min.js"></script>
-	<script src="../../js/jquery_library.js"></script>ㅇㄷ
+	<script src="../../js/jquery_library.js"></script>
 	<script src="../../js/swiper.min.js"></script>
 	<script src="../../js/common.js"></script>
 	<script src="../../js/angular.min.js"></script>
@@ -206,13 +206,13 @@
 				<a href="#" class="logo"><img src="../../img/common/logo.png" alt="AXon EIS"></a>
 				<h1>AXon EIS</h1>
 	
-				<div class="my-menu">
+				<div class="my-menu side">
 					<button type="button" class="folder" data-target="folder">내폴더</button>
 					<button type="button" class="search" data-target="search">검색</button>
 				</div>
 				<!-- 메뉴// -->
 				<nav> 
-					<ul>
+					<ul class="side">
 						<li><!-- 현재페이지 : li class="active" 추가 -->
 							<a href="javascript:;" class="depth1" title="메뉴명" data-target="menu">
 								<img src="../../img/common/menu_chart01.png" alt="메뉴">
@@ -276,15 +276,15 @@
 					</ul>
 				</nav>
 				<!-- //메뉴 -->
-				<div class="btm-option">
+				<div class="btm-option side">
 					<a href="#" class="menu cont" data-target="cont">컨텐츠 관리</a>
 					<a href="#" class="menu set" data-target="set">시스템 설정</a>
-					<a href="javascript:;" class="fix on">고정</a>
+					<a href="javascript:;" class="fix side">고정</a>
 				</div>
 			</div>
 
 			<!-- 내폴더 -->
-			<div class="nav-menu folder menu-list">
+			<div class="nav-menu folder sep-menu menu-list">
 				<div class="inner-wrap">
 					<div class="depth-folder-tit">
 						<p class="dep">내폴더</p>
@@ -295,7 +295,8 @@
 						<p class="menu-txt">보고서</p>
 						<ul class="toggle">
 							<li class="active"><!-- 활성화 : li class="open" 추가 -->
-								<button type="button" class="btn-toggle folder">폴더명 1</button>
+								<button type="button" class="btn-toggle"></button>
+								<a href="#" class="folder">폴더명 1</a>
 								<ul class="depth2">
 									<li>
 										<a href="#" class="error">
@@ -320,7 +321,8 @@
 								</ul>
 							</li>
 							<li class="active">
-								<button type="button" class="btn-toggle folder">접힌 폴더명 2</button>
+								<button type="button" class="btn-toggle"></button>
+								<a href="#" class="folder">접힌 폴더명 2</a>
 								<ul class="depth2">
 									<li>
 										<a href="#" class="error">
@@ -457,7 +459,7 @@
 			<!-- //검색박스 -->
 
 			<!-- 기본메뉴 -->
-			<div class="nav-menu depth menu-list">
+			<div class="nav-menu sep-menu depth menu-list">
 				<div class="inner-wrap">
 					<div class="depth-folder-tit">
 						<p class="dep">2뎁스 메뉴명</p>
@@ -467,7 +469,8 @@
 						<p class="menu-txt">보고서</p>
 						<ul class="toggle">
 							<li><!-- 활성화 : li class="open" 추가 -->
-								<button type="button" class="btn-toggle folder">폴더명 1</button>
+								<button type="button" class="btn-toggle"></button>
+								<a href="#" class="folder">폴더명 1</a>
 								<ul class="depth2">
 									<li>
 										<a href="#" class="error">
@@ -492,13 +495,16 @@
 								</ul>
 							</li>
 							<li>
-								<button type="button" class="btn-toggle folder">접힌 폴더명 2</button>
+								<button type="button" class="btn-toggle"></button>
+								<a href="#" class="folder">접힌 폴더명 2</a>
 								<ul class="depth2">
 									<li>
-										<button type="button" class="btn-toggle folder">두번째 폴더</button>
+										<button type="button" class="btn-toggle"></button>
+										<a href="#" class="folder">두번째 폴더</a>
 										<ul class="depth3">
 											<li>
-												<button type="button" class="btn-toggle folder">세번째 폴더</button>
+												<button type="button" class="btn-toggle"></button>
+												<a href="#" class="folder">세번째 폴더</a>
 												<ul class="depth4">
 													<li>
 														<a href="#" class="error">
@@ -1548,109 +1554,90 @@
 								<div class="root"><a href="#">ROOT</a></div>
 								<ul class="toggle">
 									<li class="active"><!-- 활성화 : li class="open" 추가 -->
-										<a class="btn-toggle folder sort-item">폴더명 1 sort
-											<div class="sep-btns">
-												<button type="button" class="btn-up"></button>
-												<button type="button" class="btn-dw"></button>
-											</div>	
-										</a>
+										<a class="btn-toggle"></a>
+										<a href="#" class="folder sort-item view">폴더명 1 sort</a>
+										<div class="sep-btns">
+											<button type="button" class="btn-up"></button>
+											<button type="button" class="btn-dw"></button>
+										</div>	
+										<!-- 기능추가 -->
 										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
 													<span class="last">SUB 폴더</span>
-													<div class="sep-btns">
-														<button type="button" class="btn-up"></button>
-														<button type="button" class="btn-dw"></button>
-													</div>	
 												</a>
+												<div class="sep-btns">
+													<button type="button" class="btn-up"></button>
+													<button type="button" class="btn-dw"></button>
+												</div>	
 											</li>
 											<li class="active">
-												<a class="btn-toggle folder sort-item">폴더 안 폴더
-													<div class="sep-btns">
-														<button type="button" class="btn-up"></button>
-														<button type="button" class="btn-dw"></button>
-													</div>	
-												</a>
+												<a class="btn-toggle"></a>
+												<a href="#" class="folder sort-item">폴더 안 폴더</a>
+												<div class="sep-btns">
+													<button type="button" class="btn-up"></button>
+													<button type="button" class="btn-dw"></button>
+												</div>	
 												<ul class="depth3">
 													<li class="sort-item">
 														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ</span>
-															<div class="sep-btns">
-																<button type="button" class="btn-up"></button>
-																<button type="button" class="btn-dw"></button>
-															</div>	
+															<span class="last">SUㄴㅁㄹㅇㄻ1</span>
 														</a>
+														<div class="sep-btns">
+															<button type="button" class="btn-up"></button>
+															<button type="button" class="btn-dw"></button>
+														</div>	
 													</li>
 													<li class="sort-item">
 														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ</span>
-															<div class="sep-btns">
-																<button type="button" class="btn-up"></button>
-																<button type="button" class="btn-dw"></button>
-															</div>	
+															<span class="last">SUㄴㅁㄹㅇㄻ2</span>
 														</a>
+														<div class="sep-btns">
+															<button type="button" class="btn-up"></button>
+															<button type="button" class="btn-dw"></button>
+														</div>	
+													</li>
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">SUㄴㅁㄹㅇㄻ3</span>
+														</a>
+														<div class="sep-btns">
+															<button type="button" class="btn-up"></button>
+															<button type="button" class="btn-dw"></button>
+														</div>	
+													</li>
+													<li class="sort-item">
+														<a href="#">
+															<span class="last">SUㄴㅁㄹㅇㄻ4</span>
+														</a>
+														<div class="sep-btns">
+															<button type="button" class="btn-up"></button>
+															<button type="button" class="btn-dw"></button>
+														</div>	
 													</li>
 												</ul>
 											</li>
 										</ul>
 									</li>
 									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 2
-											<div class="sep-btns">
-												<button type="button" class="btn-up"></button>
-												<button type="button" class="btn-dw"></button>
-											</div>	
-										</a>
+										<a class="btn-toggle"></a>
+										<a href="#" class="folder sort-item">폴더명 2</a>
+										<div class="sep-btns">
+											<button type="button" class="btn-up"></button>
+											<button type="button" class="btn-dw"></button>
+										</div>	
 										<ul class="depth2">
 											<li class="sort-item">
 												<a href="#">
 													<span class="last">SUB 폴더 44 </span>
-													<div class="sep-btns">
-														<button type="button" class="btn-up"></button>
-														<button type="button" class="btn-dw"></button>
-													</div>	
 												</a>
+												<div class="sep-btns">
+													<button type="button" class="btn-up"></button>
+													<button type="button" class="btn-dw"></button>
+												</div>	
 											</li>
 										</ul>
-									</li>
-									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 3
-											<div class="sep-btns">
-												<button type="button" class="btn-up"></button>
-												<button type="button" class="btn-dw"></button>
-											</div>	
-										</a>
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더 13</span>
-													<div class="sep-btns">
-														<button type="button" class="btn-up"></button>
-														<button type="button" class="btn-dw"></button>
-													</div>	
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="active">
-										<a class="btn-toggle folder sort-item">폴더명 4
-											<div class="sep-btns">
-												<button type="button" class="btn-up"></button>
-												<button type="button" class="btn-dw"></button>
-											</div>	
-										</a>
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더 sub</span>
-													<div class="sep-btns">
-														<button type="button" class="btn-up"></button>
-														<button type="button" class="btn-dw"></button>
-													</div>	
-												</a>
-											</li>
-										</ul>
-									</li>
+									</li>											
 								</ul>
 							</div>
 
@@ -1771,8 +1758,10 @@
 					</div>
 					<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
 					<div class="drop-tg">
-						<div class="info">
-							<a href="javascript:;" class="btn-util item04">게시판</a>
+						<div class="info new">
+							<a href="javascript:;" class="btn-util item04">게시판
+								<span class="num">(10)</span>
+							</a>
 							<button type="button" class="btn-board btn-fold">열기</button>
 						</div>
 					</div>
@@ -1805,8 +1794,18 @@
 							</p>
 							<ul>
 								<li>
-									<div class="link">
+									<div class="link new">
 										<a href="#">코멘트가 있으면서 내용이 길어짐 비즈니스 성공을 열어줄 성실하고 든든한 파트너가 되어봅시다.</a>
+										<!-- <span class="comment">(3)</span> -->
+									</div>
+									<p class="desc">
+										<em>관리자</em>
+										<span class="date">22.01.01 13:00</span>
+									</p>
+								</li>
+								<li>
+									<div class="link new">
+										<a href="#">코멘트가 없으면서 내용이 길어 말줄임이 생긴다 코멘트가 없으면서 내용이 길어 말줄임이 생긴다</a>
 										<span class="comment">(3)</span>
 									</div>
 									<p class="desc">
@@ -1815,17 +1814,9 @@
 									</p>
 								</li>
 								<li>
-									<div class="link">
-										<a href="#">코멘트가 없으면서 내용이 길어 말줄임이 생긴다 코멘트가 없으면서 내용이 길어 말줄임이 생긴다</a>
-									</div>
-									<p class="desc">
-										<em>관리자</em>
-										<span class="date">22.01.01 13:00</span>
-									</p>
-								</li>
-								<li>
-									<div class="link">
+									<div class="link new">
 										<a href="#">세번째 내용</a>
+										<span class="comment">(3)</span>
 									</div>
 									<p class="desc">
 										<em>관리자</em>
@@ -1833,7 +1824,7 @@
 									</p>
 								</li>
 								<li>
-									<div class="link">
+									<div class="link new">
 										<a href="#">세번째 내용</a>
 									</div>
 									<p class="desc">
@@ -1853,10 +1844,13 @@
 							</ul>
 						</div>
 						<div class="board-box">
-							<p class="tit"><a href="#">FAQ</a></p>
+							<p class="tit new">
+								<a href="#">FAQ</a>
+								<span class="num">(10)</span>
+							</p>
 							<ul>
 								<li>
-									<div class="link">
+									<div class="link new">
 										<a href="#">비즈니스 성공을 열어줄 성실하고 든든한 파트너가 되어 든든한 파트너가 되어 말줄임 길어짐 내용이 길어</a>
 										<span class="comment">(3)</span>
 									</div>
@@ -1868,10 +1862,13 @@
 							</ul>
 						</div>
 						<div class="board-box">
-							<p class="tit"><a href="#">QnA</a></p>
+							<p class="tit new">
+								<a href="#">QnA</a>
+								<span class="num">(10)</span>
+							</p>
 							<ul>
 								<li>
-									<div class="link">
+									<div class="link new">
 										<a href="#">코멘트가 있으면서 내용이 길어짐 비즈니스 성공을 열어줄 성실하고 든든한 파트너가 되어봅시다.</a>
 										<span class="comment">(3)</span>
 									</div>
@@ -1881,8 +1878,9 @@
 									</p>
 								</li>
 								<li>
-									<div class="link">
+									<div class="link new">
 										<a href="#">코멘트가 없으면서 내용이 길어 말줄임이 생긴다 코멘트가 없으면서 내용이 길어 말줄임이 생긴다</a>
+										<span class="comment">(3)</span>
 									</div>
 									<p class="desc">
 										<em>관리자</em>
