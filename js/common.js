@@ -92,40 +92,29 @@ var fn = (function() {
 			// 	  $(this).addClass("on");
 			// 	}
 			// });
-			
-
+				
+			//220922이서현 수정
 			$('#lnb .lnb-wrap').click(function(e) {  
 				if(!$(e.target).hasClass("side")) {
 					if (!$(".btm-option .fix").hasClass("on")) { //고정이 아닐때 						
 						if ($("#lnb").hasClass("on")) {
-							  $("#lnb").removeClass("on");
-							  $(this).removeClass("on");
-							  $("#lnb").removeAttr("data-open");
-							} else {
-							  $("#lnb").addClass("on");
-							  $("#lnb .lnb-wrap").addClass("on");
-							  $(this).addClass("on");
-							}					
+								$("#lnb").removeClass("on");
+								$(this).removeClass("on");
+								$("#lnb").removeAttr("data-open");
+								$("#lnb nav > ul > li").removeClass("active");
+								$(".my-menu button, .btm-option .menu").removeClass("on");
+						} else {
+							$("#lnb").addClass("on");
+							$(this).addClass("on");
+						}					
 					}else{ //고정 일때	
-						$("#lnb").addClass("on");
 					}
 				}else{
-					$("#lnb").addClass("on");
 				}
 			});  
 
-			$('.btm-option .fix').click(function() { 				
-				if ($(this).hasClass("on")) {
-						$(this).removeClass("on");
-						$("#lnb").addClass("on");
-						$("#lnb .lnb-wrap").addClass("on");
-						// $("#lnb").addAttr("data-open");
-					} else {
-						$(this).addClass("on");
-						$("#lnb").addClass("on");		
-						$("#lnb .lnb-wrap").addClass("on");	
-						// $("#lnb").addAttr("data-open");		
-					}			
+			$('.btm-option .fix').click(function() { 	
+				$(this).toggleClass("on");			
 			});	
 
 			$(document).on("click", ".btm-option .menu", function(){
