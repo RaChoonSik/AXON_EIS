@@ -35,16 +35,24 @@
 			var chartPieoption = {
 				title: {
 					subtext: '단위:억원',
-					bottom: '0',
-					left: '5%'
+					top: '0',
+					right: '5%'
 				},
-				legend: {}, //범례
+				legend: {
+					orient: 'vertical',
+    				left: 'left'
+				}, //범례
 				tooltip: {
 					trigger: 'item'
 				},
 				grid: {
-						width:'100%',
+						// width:'100%',
+						right: '40%'
 					},
+				textStyle:{
+					fontSize:'10'
+				},
+				
 				series: [
 					{
 					name: 'Access From',
@@ -56,7 +64,13 @@
 						{ value: 735, name: 'Direct' },
 						{ value: 580, name: 'Email' },
 						{ value: 484, name: 'Union Ads' },
-						{ value: 300, name: 'Video Ads' }
+						{ value: 300, name: 'Video Ads' },
+						{ value: 300, name: 'Video Ads1' },
+						{ value: 300, name: 'Video Ads2' },
+						{ value: 300, name: 'Video Ads3' },
+						{ value: 300, name: 'Video Ads4' },
+						{ value: 300, name: 'Video Ads5' },
+						{ value: 300, name: 'Video Ads6' },
 					],
 					emphasis: {
 						itemStyle: {
@@ -66,6 +80,7 @@
 						}
 					}
 					}
+					
 				]
 			};		
 			
@@ -84,6 +99,9 @@
 					bottom: '15%',
 					top: '12%',
 					containLabel: true
+				},
+				textStyle:{
+					fontSize:'10'
 				},
 				xAxis: {
 				type: 'category',
@@ -119,6 +137,9 @@
 				},
 				xAxis: {
 				type: 'value',
+				},
+				textStyle:{
+					fontSize:'10'
 				},
 				tooltip: {
 					trigger: 'axis',
@@ -168,6 +189,9 @@
 					// Use axis to trigger tooltip
 					type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
 					}
+				},
+				textStyle:{
+					fontSize:'10'
 				},
 			legend: {},
 			grid: {
@@ -502,9 +526,12 @@
 								</ul>
 								<!-- // 220809 수정 -->
 							</div>
+							<div class="kpi-save">
+								<button type="button" class="btn fullblue ">저장</button>
+							</div>
 							<div class="kpi-options">
-								<div class="btns">
-									<div class="opt">
+								<div class="btns tool">
+									<div class="opt tip">
 										<button type="button" class="play">실행</button>
 										<div class="pops play">
 											<div class="flex-group gap8">
@@ -521,8 +548,11 @@
 												<button type="button" class="btn fullblue small">실행</button>
 											</div>
 										</div>
+										<div class="full">
+											<span>툴팁내용</span>
+										</div>
 									</div>
-									<div class="opt">
+									<div class="opt tip">
 										<button type="button" class="add">그룹추가</button>
 										<div class="pops add">
 											<div class="flex-group gap8">
@@ -530,8 +560,16 @@
 												<button type="button" class="btn fullblue small">추가</button>
 											</div>
 										</div>
+										<div class="full">
+											<span>툴팁내용</span>
+										</div>
 									</div>
-									<div class="opt"><button type="button" class="drag-menu">메뉴</button></div>
+									<div class="opt tip">
+										<button type="button" class="drag-menu">메뉴</button>
+										<div class="full">
+											<span>툴팁내용</span>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="dashboard-menu">
@@ -708,10 +746,10 @@
 												<div class="table-wrap">
 													<table class="grid">
 														<colgroup>
-															<col style="width:80px;">
-															<col style="width:80px;">
-															<col style="width:80px;">
-															<col style="width:80px;">
+															<col style="width:auto;">
+															<col style="width:auto;">
+															<col style="width:auto;">
+															<col style="width:auto;">
 														</colgroup>
 														<thead>
 															<tr>

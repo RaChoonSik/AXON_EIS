@@ -465,7 +465,7 @@ var fn = (function() {
 			// 		$(this).closest(".bread").removeClass("on");
 			// 	}
 			// });
-			$(".report-wrap .tool .tip button").on({
+			$(".tool .tip button").on({
 				mouseenter: function () {
 					$(this).closest(".tip").addClass("on");
 				},

@@ -1229,13 +1229,16 @@ tbody.sortable td {background-color:transparent;}
 .report-wrap .tool .memo {background:url('../img/common/report_memo.png') no-repeat center center;}
 .report-wrap .tool .memo:hover {background-image: url('../img/common/report_memo_ac.png');}
 /* 220916 툴팁 공통화 수정 이서현 */
-.report-wrap .tool .tip{position: relative;}
-.report-wrap .tool .tip .full {display:none; position:absolute;top: 32px;right: -20px;width: auto;background: #666;padding: 12px;border-radius: 5px;text-align: left;z-index: 1;}
-.report-wrap .tool .tip .full span {font-size: var(--font-size-12);color: #fff; }
-.report-wrap .tool .tip .full .btn-close {position:absolute;top: 4px;right: 4px; font-size:0; width:20px; height:20px;background: url('../img/common/ico_x_tooltip.png') no-repeat 0 0;}
-.report-wrap .tool .tip.on .full {display:block;}
-.report-wrap .tool .tip .full:after {position:absolute; display:block;top: -6px;right: 25px;width: 0px;height: 0px;border-bottom: 12px solid #666;border-left: 10px solid transparent;border-right: 10px solid transparent; content:'';}
-.report-wrap .tool .bread.tip .full{min-width: 240px;}
+.tool .tip{position: relative;}
+.tool .tip .full {display:none; position:absolute;top: 32px;right: -20px;width: auto;background: #666;padding: 12px;border-radius: 5px;text-align: left;z-index: 1;}
+.tool .tip .full span {font-size: var(--font-size-12);color: #fff; }
+.tool .tip .full .btn-close {position:absolute;top: 4px;right: 4px; font-size:0; width:20px; height:20px;background: url('../img/common/ico_x_tooltip.png') no-repeat 0 0;}
+.tool .tip.on .full {display:block;}
+.tool .tip .full:after {position:absolute; display:block;top: -6px;right: 25px;width: 0px;height: 0px;border-bottom: 12px solid #666;border-left: 10px solid transparent;border-right: 10px solid transparent; content:'';}
+.tool .bread.tip .full{min-width: 240px;}
+/* KPI 수정*/
+.kpi-options .tool .tip .full{right: -10px;}
+.kpi-save{margin: 0 7px;}
 
 .report-wrap .cont {overflow: auto;border: 1px solid #d8d8d8;border-radius: 0 0 5px 5px;border-top: 0;}
 .report-desc {display: flex;border:1px solid #e1e1e1;}
