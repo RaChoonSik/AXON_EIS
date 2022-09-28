@@ -473,6 +473,8 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 
 .cont-body.kpi-page {height: calc(100% - 58px);}
 .main-tabs-wrap + .cont-body.kpi-page {height: calc(100% - 106px);}
+.kpi-page .chart-wrap{min-height: 750px;overflow-y: auto;}
+
 
 /* .chart-wrap {max-height: calc(100% - 8px);height: auto; display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, calc((100vh - 200px) / 3));grid-gap: 16px;margin-top: 8px;} */
 .chart-wrap {display: block;width: 100%;height: 100%;font-size: 0;}
