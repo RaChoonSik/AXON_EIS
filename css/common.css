@@ -184,8 +184,8 @@ input[type="button"] {cursor:pointer;}
 select::-ms-expand {display:none;}
 .select {display:inline-block;position:relative;width:100%;height:32px;margin-left: 8px;}
 .select:first-child {margin-left:0;}
-.select:before {content:'';position:absolute;top:14px;right:12px;width:11px;height:6px;margin-top:-1px;background:url("../img/common/form_select.png") no-repeat 0 0;z-index: 3;}
-.select select {position:relative;width:100%;height:100%;padding-left:10px;padding-right:25px;background-color: #fff;border:1px solid #E1E1E1;border-radius:4px;z-index:2;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+/* .select:before {content:'';position:absolute;top:14px;right:12px;width:11px;height:6px;margin-top:-1px;background:url("../img/common/form_select.png") no-repeat 0 0;z-index: 3;} */
+.select select {background-image:url("../img/common/form_select.png");background-position:top 14px right 12px;background-repeat: no-repeat; position:relative;width:100%;height:100%;padding-left:10px;padding-right:25px;background-color: #fff;border:1px solid #E1E1E1;border-radius:4px;z-index:2;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .select select:disabled{background-color:#f0f0f0;}
 
 /* datepicker */
@@ -276,7 +276,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /* layout */
 #wrap {position:relative;width:100%;min-width:1180px;/* max-width:1920px; */height:100%;/* overflow: hidden; */}
 #wrap:after {content:"";display:block;clear:both;}
-#content {float: right;position:relative;padding-left: 60px;width: 100%;/* width: calc(100% - 60px); */overflow: hidden;}
+#content {float: right;position:relative;padding-left: 60px;width: 100%;/* width: calc(100% - 60px); */overflow: hidden;height: 100%;}
 #lnb.on + #content {position:relative;padding-left: 240px;width:100%;/* z-index: 1; */}
 .cont-head {position: relative;display: flex;justify-content: space-between;align-items: center;height: 58px;padding: 6px 40px 6px;background: #f6f6f6;border-bottom: 1px solid #e1e1e1;}
 .cont-head:after {/* content:""; */display:block;clear:both;}
@@ -316,7 +316,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .service.open {display:block;}
 .cont-head .util .service a {display:block;height:30px;line-height:28px;padding-left:15px;color:#090808;font-size:var(--font-size-14);}
 .cont-head .util .service a:hover {background:#F2F2F2;}
-.cont-body {overflow: hidden;}
+.cont-body {/*overflow: hidden;*/height: 100%;}
 .cont-body > .inner-cont {padding: 24px 40px;}
 .main .cont-body > .inner-cont {padding: 0;}
 .main .cont-body > #reportViewArea {padding: 24px 40px;}
@@ -617,9 +617,9 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 /*0919이서현 수정*/
 /* .nav-menu .toggle li.on:hover a,
 .nav-menu .toggle li.on a {background-color: #4d67ff;} */
-.nav-menu.sep-menu .toggle li a:hover, 
-.nav-menu.sep-menu .toggle li.on > a  {background-color: #4d67ff;}
-
+.nav-menu.sep-menu .toggle li a:hover/*, 
+.nav-menu.sep-menu .toggle li.on > a */ {background-color: #4d67ff;}
+.nav-menu .toggle ul > li > a:hover{background-color: #4d67ff;}
 /* toggle-unfold */
 .toggle-unfold li{position:relative;}
 .toggle-unfold li button {color:#666;}
@@ -1067,7 +1067,7 @@ tbody.sortable td {background-color:transparent;}
 .folder-tree .toggle li > .btn-toggle,
 .folder-tree.sep-sortable .toggle li > .btn-toggle + a {color:#666;}
 /* .nav-menu .toggle > li , */
-.nav-menu .toggle li > .btn-toggle:hover {background-color: rgba(0, 0, 0, 0.15);}
+.nav-menu .toggle li > .btn-toggle:hover {background-color: #4d67ff;}
 .folder-tree .toggle li > .folder,
 .nav-menu .toggle li > .folder {position:relative;padding-left: 50px !important;padding: 6px 0;cursor: default;}
 .folder-tree .toggle li > .folder:before,
@@ -1140,7 +1140,7 @@ tbody.sortable td {background-color:transparent;}
 .main-tabs-swiper li.on p {background: #5668f0;color: #fff;}
 .main-tabs-swiper li.on + li p:before, 
 .main-tabs-swiper li.on p:before {display:none;}
-.main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 12px 8px;}
+.main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 12px 0;}
 .main-tabs-wrap .swiper-button-prev:after,
 .main-tabs-wrap .swiper-button-next:after {display:none;}
 .main-tabs-wrap .swiper-button-prev,
@@ -1210,7 +1210,7 @@ tbody.sortable td {background-color:transparent;}
 .doc-list-wrap.ban-off .doc-list.empty .empty-result {margin-top: 270px;text-align: center;}
 
 /* 보고서 */
-.report-wrap {display:none;/* height:600px; */padding: 0 !important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;overflow: hidden;}
+.report-wrap {display:none; height:100%;padding: 0 !important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;/*overflow: hidden;*/}
 .repo-tabs + .report-wrap {border-radius: 0 0 5px 5px;}
 .report-wrap .top {display:flex;justify-content: space-between;align-items: center; padding:0 20px; height:46px;border: 1px solid #d8d8d8;border-bottom: 0;background: #f2f2f2; border-radius: 5px 5px 0 0;}
 /* .repo-tabs + .report-wrap .top {border-radius: 0;} */
@@ -1258,7 +1258,7 @@ tbody.sortable td {background-color:transparent;}
 .repo-tabs li.ui-state-active .close:hover {background-color:#b5b5b5;}
 .repo-tabs li.ui-state-active {border:0;background: 0;}
 .repo-tabs li.ui-state-active a {float: none !important;width: 100%;background: #888;border-color: #888;height: 32px;}
-.report-control.ui-widget {padding:0;background: 0;overflow: hidden;}
+.report-control.ui-widget {padding:0;background: 0;/*overflow: hidden;*/height: 100%;}
 
 /* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
 
