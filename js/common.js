@@ -465,7 +465,7 @@ var fn = (function() {
 			// 		$(this).closest(".bread").removeClass("on");
 			// 	}
 			// });
-			$(".tool .tip button").on({
+			$(".tool .tip > button").on({
 				mouseenter: function () {
 					$(this).closest(".tip").addClass("on");
 				},
@@ -542,7 +542,7 @@ var fn = (function() {
 			$(".dashboard-menu .chart-type li").on({
 				drag: function(e) {
 					e.preventDefault();
-					$(this).closest('.dashboard-menu').addClass('hide');
+					// $(this).closest('.dashboard-menu').addClass('hide');
 				},
 				dragend: function(e) {
 					e.preventDefault();

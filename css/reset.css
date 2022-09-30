@@ -70,7 +70,7 @@ a.on{height:auto;text-indent:inherit;background-image:none;}
 *, *:before, *:after{box-sizing:border-box;}
 *:focus{outline:0;}
 /* body, html */
-html,body{height:100%;}
+html,body{height:100%;overflow: initial;}
 body{background:#FCFCFC;color: #111;line-height: 1.5;font-family:"NotoSansKR", sans-serif, Malgungothic, "맑은고딕", Dotum, "돋움";font-size: var(--font-size-12);-webkit-word-break:keep-all;-moz-word-break:keep-all;word-break:keep-all;word-wrap:break-word;}
 /* 대체텍스트 and 숨김처리 */
 caption, legend, .hidden, .hide{position:absolute !important;top:0 !important;left:0 !important;padding:0 !important;border:0 !important;overflow:hidden !important;width:0 !important;height:0 !important;line-height:0 !important;}
