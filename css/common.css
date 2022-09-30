@@ -1234,7 +1234,7 @@ tbody.sortable td {background-color:transparent;}
 .report-wrap .tool .memo:hover {background-image: url('../img/common/report_memo_ac.png');}
 /* 220916 툴팁 공통화 수정 이서현 */
 .tool .tip{position: relative;}
-.tool .tip .full {display:none; position:absolute;top: 32px;right: -20px;width: auto;background: #666;padding: 12px;border-radius: 5px;text-align: left;z-index: 1;}
+.tool .tip .full {display:none; position:absolute;top: 32px;right: -20px;width: auto;background: #666;padding: 12px;border-radius: 5px;text-align: left;z-index: 2;}
 .tool .tip .full span {font-size: var(--font-size-12);color: #fff; }
 .tool .tip .full .btn-close {position:absolute;top: 4px;right: 4px; font-size:0; width:20px; height:20px;background: url('../img/common/ico_x_tooltip.png') no-repeat 0 0;}
 .tool .tip.on .full {display:block;}
