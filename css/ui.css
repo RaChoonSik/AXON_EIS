@@ -379,7 +379,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 
 /* report  */
 .cont-body > .kpi-page,
-.cont-body > .report-page {position: relative; padding:0 8px 8px;width: 100%;height: 100%;}
+.cont-body > .report-page {position: relative; padding:0 8px;width: 100%;height: 100%;}
 #popMyHomeMod .report-wrap .top + .cont,
 #popMyHomeSet .report-wrap .top + .cont {height: 314px; border-radius: 0 0 5px 5px; border-top:0;} /* 마이홈설정팝업 */
 #popMyHomeMod .report-wrap .cont,
@@ -471,8 +471,8 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-options .pops {display: none;position: absolute;bottom: -65px;left: -120px;background: #fff;border-radius: 10px; padding:10px 16px;z-index: 1;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);white-space: nowrap;}
 .kpi-options .pops .select {width: 90px;}
 
-.cont-body.kpi-page {height: calc(100% - 58px);padding-top: 8px;}
-.main-tabs-wrap + .cont-body.kpi-page {height: calc(100% - 106px);}
+.cont-body.kpi-page {height: calc(100% - 58px);}
+.main-tabs-wrap + .cont-body.kpi-page {height: calc(100% - 114px);}
 .kpi-page .chart-wrap{min-height: 750px;overflow:hidden;}
 
 /*220930 이서현 수정*/

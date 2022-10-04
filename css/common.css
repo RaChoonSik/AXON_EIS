@@ -335,11 +335,12 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 
 #lnb.on {position:fixed;top:0;left:0;height:100%;background:#242424;z-index: 11;/* transition: width 0.1s; */}
 #lnb.on .lnb-wrap {width: 240px;background: #242424;height: 100%;}
-#lnb .logo {display: block;margin: 32px auto 76px;text-align: center;}
+#lnb .logo {display: block;margin: 27px auto 71px;text-align: center;}
 #lnb .logo img {width:40px;}
-#lnb.on .logo {display:block;margin: 32px 0;padding-bottom: 33px;text-align:center;border-bottom:1px solid #3B3B3B;}
-#lnb h1 {font-size:0;}
-#lnb.on h1 {margin-top: 6px;padding-bottom: 32px;color:#fff;font-size: var(--font-size-20);font-weight:500;text-align:center;border-bottom:1px solid #3B3B3B;}
+#lnb.on .logo img {width:auto; height: 52px;}
+#lnb.on .logo {display:block;margin: 27px 0 0;padding-bottom: 26px;text-align:center;border-bottom:1px solid #3B3B3B;}
+#lnb h1 {display: none; font-size:0;}
+/* #lnb.on h1 {margin-top: 6px;padding-bottom: 27px;color:#fff;font-size: var(--font-size-20);font-weight:500;text-align:center;border-bottom:1px solid #3B3B3B;} */
 #lnb.on nav {margin-top: 40px;}
 #lnb.on nav > ul > li {position:relative;}
 #lnb nav > ul > li > a {display: block;padding: 8px 0;font-size:0;text-align: center;}
@@ -1051,14 +1052,14 @@ tbody.sortable td {background-color:transparent;}
 .result-wrap .result-menu ul > li:hover p:after{color:#5668f0;}
 
 /* 메뉴 박스 */
-.depth-folder-tit {position: relative;padding: 11px 16px;border-bottom: 1px solid #5c5c5c;}
+.depth-folder-tit {position: relative;min-height: 48px; padding: 11px 16px;border-bottom: 1px solid #5c5c5c;}
 .depth-folder-tit p {display:inline-block;position: relative; font-size: var(--font-size-14);color: #fff;margin-right:24px;}
 .depth-folder-tit .fold {display:inline-block;position: relative; padding: 2px 4px;border-radius: 4px;background: #666;}
 .depth-folder-tit .dep:before {display:block; position:absolute;right: -18px;top: 6px; width:8px; height:13px;background: url('../img/common/ico_arrow_right_666.png') no-repeat 0 0;content: '';}
 .depth-folder-tit .modify {position: absolute;right: 16px;width:24px; height:24px; font-size:0; background:url('../img/common/ico_edit.png') no-repeat center center;}
 .nav-menu {/* display: none; */position: absolute;top: 0;left: 0;max-width: 600px;bottom: 94px;width: 300px;min-width: 260px;background: #3c3c3c;/* box-shadow: 1px 2px 2px 0 #e1e1e1; */visibility: hidden;transition: left 0.1s, visibility 0.1s;}
 .nav-menu.cont,
-.nav-menu.setting {bottom:0;top: 140px !important;}
+.nav-menu.setting {top: 105px !important;}
 #lnb[data-open="menu"] .nav-menu.depth,
 #lnb[data-open="folder"] .nav-menu.folder,
 #lnb[data-open="search"] .search-box,
@@ -1144,7 +1145,7 @@ tbody.sortable td {background-color:transparent;}
 .main-tabs-swiper li.on p {background: #5668f0;color: #fff;}
 .main-tabs-swiper li.on + li p:before, 
 .main-tabs-swiper li.on p:before {display:none;}
-.main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 12px 0;}
+.main-tabs-wrap {position: relative;margin: 0 -4px;padding: 8px 12px;}
 .main-tabs-wrap .swiper-button-prev:after,
 .main-tabs-wrap .swiper-button-next:after {display:none;}
 .main-tabs-wrap .swiper-button-prev,
