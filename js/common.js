@@ -648,7 +648,8 @@ $(document).ready(function(){
 		showMonthAfterYear: true,	// true : 년 월	false : 월 년 순으로 보여줌
 		yearSuffix: '년',
 		showButtonPanel: true,	// 오늘로 가는 버튼과 달력 닫기 버튼 보기 옵션
-	}).datepicker('setDate',new Date());
+	});
+	// }).datepicker('setDate',new Date());
 
 	//시작일.
 	$('.datepickerrange.fromDate input').datepicker({
