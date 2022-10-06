@@ -624,7 +624,9 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .nav-menu .toggle li.on a {background-color: #4d67ff;} */
 .nav-menu.sep-menu .toggle li a:hover/*, 
 .nav-menu.sep-menu .toggle li.on > a */ {background-color: #4d67ff;}
-.nav-menu .toggle ul > li > a:hover{background-color: #4d67ff;}
+.nav-menu .toggle ul > li > a:hover, 
+.nav-menu .toggle li.clicked > a,
+.nav-menu .toggle li.clicked > .btn-toggle{background-color: #4d67ff;}
 /* toggle-unfold */
 .toggle-unfold li{position:relative;}
 .toggle-unfold li button {color:#666;}
