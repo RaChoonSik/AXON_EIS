@@ -101,8 +101,6 @@ var fn = (function() {
 								$("#lnb").removeClass("on");
 								$(this).removeClass("on");
 								$("#lnb").removeAttr("data-open");
-								$("#lnb nav > ul > li").removeClass("active");
-								$(".my-menu button, .btm-option .menu").removeClass("on");
 						} else {
 							$("#lnb").addClass("on");
 							$(this).addClass("on");
@@ -693,34 +691,34 @@ $(document).ready(function(){
 		}                
 	});
 
-		//datepicker 월만 선택
-		$('.monthpicker input').datepicker({
-			dateFormat: 'yy.mm', //날짜 포맷이다.
-			//prevText: '이전 달',	// 마우스 오버시 이전달 텍스트
-			//nextText: '다음 달',	// 마우스 오버시 다음달 텍스트
-			closeText: '닫기', // 닫기 버튼 텍스트 변경
-			//currentText: '오늘', // 오늘 텍스트 변경
-			changeMonth: true,
-			changeYear: true,
-			showButtonPanel: true,
-			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],	//한글 캘린더중 월 표시를 위한 부분
-			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],	//한글 캘린더 중 월 표시를 위한 부분
-			onClose: function(monthNames, inst) { 
-				var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
-				var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-				$(this).val($.datepicker.formatDate('yy.mm', new Date(year, month, 1)));
-			}
-		});
-		// 20221007 이서현 수정
-		$(".monthpicker input").focus(function () {
-			$(".ui-datepicker-calendar").hide();
-			if($(this).parents().hasClass("poplayer")){
-				$(".ui-widget.ui-widget-content").addClass("month-gray");
-			}else{
-				$(".ui-widget.ui-widget-content").removeClass("month-gray");
-			};	
-			
-		});
+	//datepicker 월만 선택
+	$('.monthpicker input').datepicker({
+		dateFormat: 'yy.mm', //날짜 포맷이다.
+		//prevText: '이전 달',	// 마우스 오버시 이전달 텍스트
+		//nextText: '다음 달',	// 마우스 오버시 다음달 텍스트
+		closeText: '닫기', // 닫기 버튼 텍스트 변경
+		//currentText: '오늘', // 오늘 텍스트 변경
+		changeMonth: true,
+		changeYear: true,
+		showButtonPanel: true,
+		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],	//한글 캘린더중 월 표시를 위한 부분
+		monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],	//한글 캘린더 중 월 표시를 위한 부분
+		onClose: function(monthNames, inst) { 
+			var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+			var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+			$(this).val($.datepicker.formatDate('yy.mm', new Date(year, month, 1)));
+		}
+	});
+	// 20221007 이서현 수정
+	$(".monthpicker input").focus(function () {
+		$(".ui-datepicker-calendar").hide();
+		if($(this).parents().hasClass("poplayer")){
+			$(".ui-widget.ui-widget-content").addClass("month-gray");
+		}else{
+			$(".ui-widget.ui-widget-content").removeClass("month-gray");
+		};	
+		
+	});
 
 	//LNB 메뉴 리사이즈 핸들링
 	function ResizerMo(element) {
