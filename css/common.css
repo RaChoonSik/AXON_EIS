@@ -1074,7 +1074,8 @@ tbody.sortable td {background-color:transparent;}
 .folder-tree .toggle li > .btn-toggle,
 .folder-tree.sep-sortable .toggle li > .btn-toggle + a {color:#666;}
 /* .nav-menu .toggle > li , */
-.nav-menu .toggle li > .btn-toggle:hover {background-color: #4d67ff;}
+.nav-menu .toggle li > .btn-toggle:hover,
+.nav-menu .toggle li > a:hover {background-color: #4d67ff;}
 .folder-tree .toggle li > .folder,
 .nav-menu .toggle li > .folder {position:relative;padding-left: 50px !important;padding: 6px 0;cursor: default;}
 .folder-tree .toggle li > .folder:before,
