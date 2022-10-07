@@ -1254,7 +1254,9 @@ tbody.sortable td {background-color:transparent;}
 .report-desc .comment {border-radius: 0;width: calc(100% - 110px);height: 110px;padding: 16px 20px;border: 0;overflow: auto;}
 .ui-tabs .ui-tabs-nav {display: flex;/* gap: 4px; */background: transparent;padding: 0;border-radius: 0;border: 0;/* justify-content: space-between; */}
 .ui-widget.ui-widget-content {border:0;}
-.report-control.ui-tabs .ui-tabs-nav li {float: none;margin: 0;padding-bottom: 1px;margin-left: 4px;}
+.ui-widget.ui-widget-content select{background: transparent;}
+.ui-widget.ui-widget-content.month-gray {border:0;background:rgb(245, 245, 245); box-shadow:0px 3px 6px rgba(0,0,0,0.16); margin-top: 5px;margin-left: 150px;padding-top: 10px;}
+.report-control.ui-tabs .ui-tabs-nav li {float: none;margin: 0;padding-bottom: 1px;margin-left: 100px;}
 .report-control.ui-tabs .ui-tabs-nav li:first-child {margin-left:0;}
 .repo-tabs > ul {border-bottom: 2px solid #888 !important;}
 .repo-tabs li {position: relative;display:inline-block; border:0 !important;width: calc((100% - 16px) / 5 );color: #888 !important;background: none !important;}

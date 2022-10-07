@@ -711,8 +711,15 @@ $(document).ready(function(){
 				$(this).val($.datepicker.formatDate('yy.mm', new Date(year, month, 1)));
 			}
 		});
+		// 20221007 이서현 수정
 		$(".monthpicker input").focus(function () {
 			$(".ui-datepicker-calendar").hide();
+			if($(this).parents().hasClass("poplayer")){
+				$(".ui-widget.ui-widget-content").addClass("month-gray");
+			}else{
+				$(".ui-widget.ui-widget-content").removeClass("month-gray");
+			};	
+			
 		});
 
 	//LNB 메뉴 리사이즈 핸들링
