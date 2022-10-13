@@ -183,7 +183,7 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">이미지</span></th>
+									<th scope="row"><span class="required">즐겨찾기 이미지</span></th>
 									<td>
 										<div class="flex-group gap8">
 											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="Enders.png">
@@ -193,6 +193,23 @@
 									<th scope="row"><span class="required">시스템명</span></th>
 									<td>
 										<input type="text" placeholder="시스템명 입력" title="시스템명" value="AXon EIS">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><span class="required">메뉴 이미지</span></th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="Enders.png">
+											<span>사이즈제한: </span>
+											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+										</div>
+									</td>
+									<th scope="row"><span class="required">메뉴 축소 이미지</span></th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="Enders.png">
+											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
@@ -252,16 +269,11 @@
 										</div>
 									</td>
 								</tr>
-								<tr>
-									<th scope="row">최종 수정자</th>
-									<td>홍길동</td>
-									<th scope="row">최종 수정일시</th>
-									<td>2020-01-01 15:00</td>
-								</tr>
 							</tbody>
 						</table>
 					</div>
-	
+	 
+
 
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue h40">수정</button>
