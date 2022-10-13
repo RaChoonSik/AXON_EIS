@@ -183,32 +183,34 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th scope="row"><span class="required">즐겨찾기 이미지</span></th>
+									<th scope="row"><span class="required">로고 이미지</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="Enders.png">
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="logo.png">
 											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
 										</div>
 									</td>
-									<th scope="row"><span class="required">시스템명</span></th>
+									<th scope="row"><span class="required">심벌 이미지</span></th>
 									<td>
-										<input type="text" placeholder="시스템명 입력" title="시스템명" value="AXon EIS">
+										<div class="flex-group gap8">
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="logo_small.png">
+											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">메뉴 이미지</span></th>
+									<th scope="row"><span class="required">즐겨찾기 아이콘</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="Enders.png">
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="favicon.ico">
 											<span>사이즈제한: </span>
 											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
 										</div>
 									</td>
-									<th scope="row"><span class="required">메뉴 축소 이미지</span></th>
+									<th scope="row"><span>확장자 및 사이즈</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="Enders.png">
-											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+											<label>로고(png) : 480 x 140 / 심벌(png) : 40 x 40 / 즐겨찾(ico) : 16 x 16 </label>
 										</div>
 									</td>
 								</tr>
@@ -272,9 +274,7 @@
 							</tbody>
 						</table>
 					</div>
-	 
-
-
+	  
 					<div class="btn-wrap">
 						<button type="button" class="btn big fullblue h40">수정</button>
 					</div>
