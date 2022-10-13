@@ -456,18 +456,24 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-page .report-wrap .cont {height:100%;  border: 0;}
 .kpi-page .report-wrap {background: transparent !important; height: calc(100% - 36px);padding-top: 8px!important;}
 .main-tabs-wrap + .cont-body .kpi-page .report-wrap {height: calc(100% - 28px);}
-.kpi-page .repo-tabs {width: calc(100% - 168px);margin: 0;}
+.kpi-page .repo-tabs {width: calc(100% - 202px);margin: 0;}
 .kpi-page .kpi-options {position:relative;padding:4px; background: #f6f6f6;border: 1px solid #e1e1e1;border-radius: 2px;}
-.kpi-page .kpi-options .btns {display:flex;width: 148px;gap:1px; }
+.kpi-page .kpi-options .btns {display:flex;width: 187px;gap:1px; }
 .kpi-page .kpi-options .btns .opt > button {width:46px;height: 24px;font-size:0;}
 .kpi-page .kpi-options .btns button.play {background: url('../img/common/kpi_play.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add {background:url('../img/common/kpi_add.png') no-repeat center center ;}
 .kpi-page .kpi-options .btns button.drag-menu {background:url('../img/common/kpi_menu.png')  no-repeat center center ;}
+.kpi-page .kpi-options .btns button.save {background:url('../img/common/kpi_save.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.play.on {background: url('../img/common/kpi_play_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add.on {background:url('../img/common/kpi_add_on.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.stop {background: url('../img/common/kpi_stop.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.stop.on {background: url('../img/common/kpi_stop_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.drag-menu.on {background:url('../img/common/kpi_menu_on.png')  no-repeat center center ;}
+.kpi-page .kpi-options .btns button.save.on {background:url('../img/common/kpi_save_on.png')  no-repeat center center ;}
+.kpi-page .kpi-options .btns button.play:disabled {background: url('../img/common/kpi_play_dis.png')  no-repeat center center;}
+.kpi-page .kpi-options .btns button.add:disabled {background:url('../img/common/kpi_add_dis.png') no-repeat center center ;}
+.kpi-page .kpi-options .btns button.drag-menu:disabled {background:url('../img/common/kpi_menu_dis.png')  no-repeat center center ;}
+.kpi-page .kpi-options .btns button.save:disabled {background:url('../img/common/kpi_save_dis.png')  no-repeat center center ;}
 .kpi-page .kpi-options .opt button.on + .pops {display:block;}
 .kpi-page .kpi-options .opt button.stop.on + .pops {display:none;}
 .kpi-page li.kpi-options a.on + .close + .pops {display:block;left: 0px;right: 0;bottom: auto;top: 35px;}
@@ -478,6 +484,21 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .cont-body.kpi-page {height: calc(100% - 58px);}
 .main-tabs-wrap + .cont-body.kpi-page {height: calc(100% - 114px);}
 .kpi-page .chart-wrap{min-height: 750px;overflow:hidden;}
+
+/* 221014 이서현 kpi-play 추가 */
+.kpi-play li.kpi-options{display: none;font-size: 0;position: relative}
+.kpi-play li.kpi-options:first-child{display:block;width: 100%;text-align: center;}
+.kpi-play li.kpi-options:first-child a{border-radius: 0;}
+.kpi-page .kpi-play .repo-tabs{width: 100%;position: relative;}
+.kpi-page .kpi-play .ui-tabs-nav{display: inline-block;width: 100%;}
+.kpi-play .repo-tabs + .kpi-options{position: absolute; top: 2px;right: 4px;width: 52px;z-index: 2; padding: 2px;}
+.kpi-play .repo-tabs + .kpi-options .opt{display: none;}
+.kpi-play .repo-tabs + .kpi-options .opt:first-child{display:block;}
+.kpi-play .repo-tabs + .kpi-options .btns{width: 46px;}
+.kpi-pagination{display: none;}
+.kpi-play .kpi-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 10;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
+.kpi-play .kpi-pagination .pg-bullet{width: 10px;height: 10px;display: inline-block;border-radius: 50%; margin: 0 3px;opacity: 0.8;background: #fff;}
+.kpi-play .kpi-pagination .pg-bullet.active{width: 18px;border-radius: 10px;background:#5668f0;}
 
 /*220930 이서현 수정*/
 /* .chart-wrap {max-height: calc(100% - 8px);height: auto; display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, calc((100vh - 200px) / 3));grid-gap: 16px;margin-top: 8px;} */
@@ -494,12 +515,13 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .chart-wrap .chart-box .ico {width:20px; height:20px;border-radius: 5px;background: #111;color: #fff;text-align: center;font-size: 14px;line-height: 20px;}
 .chart-wrap .chart-box .title {margin-left: 12px;font-size: var(--font-size-14);}
 .chart-wrap .chart-box .date {margin-right: 12px;color:#666;font-size: var(--font-size-11);}
-.chart-wrap .chart-box .del {width:24px; height:24px; background: url('../img/common/btn_popclose.svg') no-repeat 0 0; font-size: 0;}
+.chart-wrap .chart-box .del {width:24px; height:24px; background: url('../img/common/trash.png') no-repeat 0 0; font-size: 0;}
+.chart-wrap .chart-box .del:hover {background: url('../img/common/trash_hover.png') no-repeat 0 0;}
 .chart-wrap .chart-box .chart-view {position:relative;width: 100%;display: flex;justify-content: center;align-items: center; /*height: 202px;*/height: calc(100% - 40px);padding: 10px 10px 25px;/* min-width: 350px; */}
 .chart-wrap .chart-box .chart-view .link {position:absolute;bottom: 12px;right: 16px;font-size: var(--font-size-12); color:#444;text-decoration: underline;}
 .chart-wrap .chart-box .chart-view .link:hover {color:#4b62e8;}
 .chart-wrap .chart-box.remove .head {background-color: transparent;}
-.chart-wrap .chart-box.remove .chart-view {background: url('../img/common/img_graph.png') no-repeat center; position: absolute;height: 100%;left: 0;top: 0;}
+.chart-wrap .chart-box.remove .chart-view {background: url('../img/common/img_graph.png') no-repeat; background-position: 50% 25%; position: absolute;height: calc(100% - 40px);left: 0;top: 40px;}
 .chart-wrap .chart-box.remove .chart-view .txt {/*position:absolute;*/width: 100%;/*bottom: 50px;*/text-align: center;}
 .chart-wrap .chart-box.remove .chart-view .txt p {display: inline-block;padding-left: 26px;background: url('../img/common/ico_mark.png') no-repeat center left;background-size: 20px 20px; font-size:var(--font-size-14); color:#666;}
 .chart-wrap .chart-box.empty {background: url('../img/common/chart_add.svg') no-repeat #f6f6f6 center center;border: 1px dashed #ccc;box-shadow: none;}
@@ -523,6 +545,22 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .dashboard-menu .chart-type .img img {max-width: 166px;max-height: 80px;}
 .dashboard-menu .chart-type .tit {background:#f2f2f2; font-size: var(--font-size-12); line-height: 24px;}
 .dashboard-menu li .head {background-position: left 375px center;}
+
+/*chart-num 유형 추가 221012 이서현 추가*/
+.chart-num{text-align: center;padding:15px 0;}
+.chart-num .unit{position: absolute;top: 0;right:0;font-size: var(--font-size-12);color: #666;}
+.chart-num .main-num{font-size: 36px;font-weight: 500;vertical-align: middle; color: #222;}
+.chart-num .main-num::after{content:"";}
+.chart-num .plus .main-num{color: #5668f0;}
+.chart-num .plus .main-num::after{content:"▲";margin-left: 10px; font-size: 28px;}
+.chart-num .minus .main-num{color: red;}
+.chart-num .minus .main-num::after{content:"▼";margin-left: 10px;margin-top: -10px;line-height: 36px; font-size: 28px;}
+.chart-num h6{font-size: var(--font-size-20);color: #444;font-weight: normal;}
+.chart-num .sub-num{padding-top: 10px;font-size: var(--font-size-20);color: #444;font-weight:500;}
+.chart-num p{font-size: var(--font-size-16);color: #444;font-weight: normal;}
+#popChartNum .except td{height:auto; padding-top: 5px;padding-bottom: 5px;text-align: center;}
+#popChartNum .except td .select.equality{margin:4px 0;}
+#popChartNum .except td .select.equality select{width: 70px;}
 
 /* 모바일 */
 @media (max-width:740px) {

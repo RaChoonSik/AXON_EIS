@@ -474,9 +474,16 @@
 						<div class="inner-cont kpi-page">
 							<div class="report-control">
 								<!-- 보고서탭 -->
-								<div class="kpi-head">
+								<div class="kpi-head kpi-play">
 									<div class="repo-tabs">
 										<!-- 220809 수정 -->
+										<div class="kpi-pagination">
+											<span class="pg-bullet"></span>
+											<span class="pg-bullet active"></span>
+											<span class="pg-bullet"></span>
+											<span class="pg-bullet"></span>
+											<span class="pg-bullet"></span>
+										</div>
 										<ul class="ui-tabs-nav">
 											<li class="kpi-options">
 												<a href="#repo1" class="ellipsis">보고서1 보고서1 보고서1 보고서1 보고서123</a>
@@ -527,9 +534,9 @@
 										</ul>
 										<!-- // 220809 수정 -->
 									</div>
-									<div class="kpi-save">
+									<!-- <div class="kpi-save">
 										<button type="button" class="btn fullblue ">저장</button>
-									</div>
+									</div> -->
 									<div class="kpi-options">
 										<div class="btns tool">
 											<div class="opt tip">
@@ -538,12 +545,16 @@
 													<div class="flex-group gap8">
 														<div class="select">
 															<select>
-																<option>5 sec</option>
-																<option>10 sec</option>
-																<option>15 sec</option>
-																<option>30 sec</option>
-																<option>45 sec</option>
-																<option>60 sec</option>
+																<option>30 초</option>
+																<option>40 초</option>
+																<option>50 초</option>
+																<option>60 초</option>
+																<option>70 초</option>
+																<option>80 초</option>
+																<option>90 초</option>
+																<option>100 초</option>
+																<option>110 초</option>
+																<option>120 초</option>
 															</select>
 														</div>
 														<button type="button" class="btn fullblue small">실행</button>
@@ -567,6 +578,12 @@
 											</div>
 											<div class="opt tip">
 												<button type="button" class="drag-menu">메뉴</button>
+												<div class="full">
+													<span>툴팁내용</span>
+												</div>
+											</div>
+											<div class="opt tip">
+												<button type="button" class="save">저장</button>
 												<div class="full">
 													<span>툴팁내용</span>
 												</div>
@@ -618,6 +635,10 @@
 														</li>
 														<li draggable="true" class="charttype-radar">
 															<div class="img"><img src="../../img/common/chart_type13.png" alt="Radar 차트" draggable="false"></div>
+															<p class="tit">영업현황</p>
+														</li>
+														<li draggable="true" class="charttype-num">
+															<div class="img"><img src="../../img/common/chart_type14.png" alt="Radar 차트" draggable="false"></div>
 															<p class="tit">영업현황</p>
 														</li>
 													</ul>
@@ -678,8 +699,29 @@
 													<div class="txt"><p>삭제된 지표입니다.</p></div>
 												</div>
 											</div>
-											<div class="chart-box empty">
-												<!-- 기본 상태로 비어있을 때 -->
+											<div class="chart-box show">
+												<div class="head">
+													<div class="left">
+														<span class="ico">M</span>
+														<p class="title">영업현황</p>
+													</div>
+													<div class="right">
+														<span class="date">2020.01</span>
+														<button type="button" class="del">삭제</button>
+													</div>
+												</div>
+												<div class="chart-view">
+													<div class="board chart-num">
+														<span class="unit">[단위 : 만원]</span>
+														<div class="plus">
+															<div class="main-num">780.6</div>
+															<h6>매출액</h6>
+															<div class="sub-num"><span>700.7</span> (<span> +11.24</span>%)</div>
+															<p>목표매출액</p>
+														</div>
+													</div>
+													<a href="#" class="link" onclick="fn.popupOpen('#popChartNum');">상세보고서 바로가기</a>
+												</div>
 											</div>
 											<div class="chart-box show">
 												<div class="head">
@@ -713,7 +755,30 @@
 													<a href="#" class="link">상세보고서 바로가기</a>
 												</div>
 											</div>
-											<div class="chart-box empty"></div>
+											<div class="chart-box show">
+												<div class="head">
+													<div class="left">
+														<span class="ico">M</span>
+														<p class="title">영업현황</p>
+													</div>
+													<div class="right">
+														<span class="date">2020.01</span>
+														<button type="button" class="del">삭제</button>
+													</div>
+												</div>
+												<div class="chart-view">
+													<div class="board chart-num">
+														<span class="unit">[단위 : 만원]</span>
+														<div class="minus">
+															<div class="main-num">780.6</div>
+															<h6>매출액</h6>
+															<div class="sub-num"><span>700.7</span> (<span> -11.24</span>%)</div>
+															<p>목표매출액</p>
+														</div>
+													</div>
+													<a href="#" class="link">상세보고서 바로가기</a>
+												</div>
+											</div>
 											<div class="chart-box show">
 												<div class="head">
 													<div class="left">
@@ -818,6 +883,130 @@
 		</div>
 		<!-- // content -->
 	</div>
-
+	<div id="popChartNum" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>KPI 차트</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<div class="clear">
+						<div class="chart-num">
+							<div class="plus">
+								<div class="main-num">780.6</div>
+								<h6>매출액</h6>
+								<div class="sub-num"><span>700.7</span> (<span> +11.24</span>%)</div>
+								<p>목표매출액</p>
+							</div>
+						</div>
+						<div class="gray-hor-tb">
+							<table class="layout-fixed">
+								<colgroup>
+									<col style="width:110px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">범례</th>
+										<td>
+											<input type="text" placeholder="[단위:억원]" title="범례">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">KPI데이터</th>
+										<td>
+											<div class="select">
+												<select>
+													<option disabled selected>선택(필수)</option>
+													<option>-</option>
+													<option>-</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">기준항목</th>
+										<td>
+											<div class="select">
+												<select>
+													<option disabled selected>선택(필수)</option>
+													<option>-</option>
+													<option>-</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">기준 값</th>
+										<td>
+											<div class="select">
+												<select>
+													<option disabled selected>선택(필수)</option>
+													<option>-</option>
+													<option>-</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">대상항목</th>
+										<td>
+											<div class="select">
+												<select>
+													<option selected>선택(옵션)</option>
+													<option>-</option>
+													<option>-</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">대상 값</th>
+										<td>
+											<div class="select">
+												<select>
+													<option selected>선택(옵션)</option>
+													<option>-</option>
+													<option>-</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr class="except">
+										<th scope="row">조건</th>
+										<td>
+											<div class="select">
+												<select>
+													<option selected>선택(옵션)</option>
+													<option>-</option>
+													<option>-</option>
+												</select>
+											</div>
+											<div class="select equality">
+												<select>
+													<option> &#61; </option>
+													<option> &gt; </option>
+													<option> &lt; </option>
+													<option> &lt;&#61; </option>
+													<option> &gt;&#61; </option>
+												</select>
+											</div>
+											<input type="text" value="&#34;Y&#34;" title="">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btn-wrap mgt12">
+							<button type="button" class="btn fullblue big">저장</button>
+							<button type="button" class="btn big">검증</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.popupClose('#popChartNum');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popChartNum');"></span>
+	</div>
 </body>
 </html>
