@@ -690,7 +690,31 @@ $(document).ready(function(){
 			$(".datepickerrange.fromDate input").datepicker( "option", "maxDate", selectedDate );
 		}                
 	});
-
+	/* month picker 221014이서현 추가*/
+	var today = getTodayType();
+	var options = {
+		pattern: 'yyyy.mm',
+		//selectedYear: 2021,       // 선택할 연도
+		//startYear: 2010,         // 시작연도
+		//finalYear: 2022,          // 마지막연도
+		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+		//openOnFocus: true,       // focus시에 달력이 보일지 유무
+		//disableMonths : [ ]     // 월 비활성화
+	};
+	$(".monthpicker input").monthpicker(options);
+	//초기값
+	function getTodayType(){
+		var date = new Date();
+		return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2);
+	}
+	$('.monthpicker input').val(today);
+	
+	//달력버튼
+	$('.monthpicker input').on('click', function(){
+		$(this).focus();
+		$(this).monthpicker();
+	});
+/*
 	//datepicker 월만 선택
 	$('.monthpicker input').datepicker({
 		dateFormat: 'yy.mm', //날짜 포맷이다.
@@ -719,7 +743,7 @@ $(document).ready(function(){
 		};	
 		
 	});
-
+*/
 	//LNB 메뉴 리사이즈 핸들링
 	function ResizerMo(element) {
 		element = $(element);

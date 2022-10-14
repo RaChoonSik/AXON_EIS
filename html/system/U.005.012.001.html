@@ -23,9 +23,9 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			var date = new Date();
-			var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
-			$(".monthpicker input").datepicker('setDate', new Date());
+			//var date = new Date();
+			//var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
+			//$(".monthpicker input").monthpicker();
 		});
 	</script>
 </head>
@@ -181,7 +181,7 @@
 									<label>기준년월</label>
 									<div class="list-item">
 										<div class="monthpicker" style="width:300px;">
-											<label><input type="text" readonly></label>
+											<label><input type="text" name="monthPicker" class="input-date" dateformat="" readonly /></label>
 											<button type="button" class="btn fullblue small">등록</button>
 										</div>
 									</div>
@@ -309,16 +309,16 @@
 								<tr>
 									<th scope="row">시작년월</th>
 									<td>
-										<div class="monthpicker">
-											<label><input type="text" readonly></label>
+										<div class="monthpicker" id="monthpicker1">
+											<label><input type="text" readonly /></label>
 										</div>
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">종료년월</th>
 									<td>
-										<div class="monthpicker">
-											<label><input type="text" readonly></label>
+										<div class="monthpicker" id="monthpicker2">
+											<label><input type="text" readonly /></label>
 										</div>
 									</td>
 								</tr>
