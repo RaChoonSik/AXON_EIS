@@ -494,14 +494,14 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-page .chart-wrap{min-height: 750px;overflow:hidden;}
 
 /* 221013 이서현 report-play 추가 */
-.report-play .ui-tabs-nav li{display: none;font-size: 0;position: relative}
+.report-play .ui-tabs-nav li{font-size: 0;position: relative}
 .play-options{display: none;}
-.report-play .repo-tabs > ul{border-bottom: 0!important;}
+.report-play .repo-tabs > ul{border-bottom: 0!important;display: none;}
 .report-play .play-options{display:block;width: 100%; height: 34px;text-align: center; background-color: rgb(136, 136, 136);}
 .report-play .play-options a{height: 100%;line-height:34px; font-size: var(--font-size-13);font-weight: 600;}
 .report-play .ui-tabs-nav li:first-child a{border-radius: 0;}
 .report-head.report-play .repo-tabs,
-.kpi-head.report-play .repo-tabs{width: 100%;position: relative;}
+.kpi-head.report-play .repo-tabs{width: 100%;position: relative;height: 100%;}
 .report-play .ui-tabs-nav{display: inline-block;width: 100%;}
 .report-play .repo-tabs + .kpi-options{position: absolute; top: 2px;right: 4px;width: 52px;z-index: 2; padding: 2px;}
 .report-play .repo-tabs + .kpi-options .opt{display: none;}
