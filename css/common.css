@@ -1270,6 +1270,10 @@ tbody.sortable td {background-color:transparent;}
 .repo-tabs li.ui-state-active a {float: none !important;width: 100%;background: #888;border-color: #888;height: 32px;}
 .report-control.ui-widget {padding:0;background: 0;/*overflow: hidden;*/height: 100%;}
 
+
+/*221013마이홈 수정*/
+
+
 /* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
 
 .accordion li .head {background: url('../img/common/ico_arrow_down.png') #fff no-repeat center right 20px;}

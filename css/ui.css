@@ -452,30 +452,38 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 
 
 /* kpi */
-.kpi-head {display: flex;justify-content: space-between; align-items: center;/*padding-top: 8px;*/}
+.kpi-head, .report-head {display: flex;justify-content: space-between; align-items: center;/*padding-top: 8px;*/}
 .kpi-page .report-wrap .cont {height:100%;  border: 0;}
 .kpi-page .report-wrap {background: transparent !important; height: calc(100% - 36px);padding-top: 8px!important;}
 .main-tabs-wrap + .cont-body .kpi-page .report-wrap {height: calc(100% - 28px);}
 .kpi-page .repo-tabs {width: calc(100% - 202px);margin: 0;}
-.kpi-page .kpi-options {position:relative;padding:4px; background: #f6f6f6;border: 1px solid #e1e1e1;border-radius: 2px;}
+.kpi-page .kpi-options,
+.report-head .kpi-options{position:relative;padding:4px; background: #f6f6f6;border: 1px solid #e1e1e1;border-radius: 2px;}
 .kpi-page .kpi-options .btns {display:flex;width: 187px;gap:1px; }
-.kpi-page .kpi-options .btns .opt > button {width:46px;height: 24px;font-size:0;}
-.kpi-page .kpi-options .btns button.play {background: url('../img/common/kpi_play.png')  no-repeat center center;}
+/* .report-head .kpi-options .btns {display:flex;width: 46px;gap:1px; } */
+.kpi-page .kpi-options .btns .opt > button,
+.report-head .kpi-options .btns .opt > button{width:46px;height: 24px;font-size:0;}
+.kpi-page .kpi-options .btns button.play,
+.report-head .kpi-options .btns button.play{background: url('../img/common/kpi_play.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add {background:url('../img/common/kpi_add.png') no-repeat center center ;}
 .kpi-page .kpi-options .btns button.drag-menu {background:url('../img/common/kpi_menu.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.save {background:url('../img/common/kpi_save.png')  no-repeat center center ;}
-.kpi-page .kpi-options .btns button.play.on {background: url('../img/common/kpi_play_on.png')  no-repeat center center;}
+.kpi-page .kpi-options .btns button.play.on,
+.report-head .kpi-options .btns button.play.on{background: url('../img/common/kpi_play_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add.on {background:url('../img/common/kpi_add_on.png')  no-repeat center center ;}
-.kpi-page .kpi-options .btns button.stop {background: url('../img/common/kpi_stop.png')  no-repeat center center;}
-.kpi-page .kpi-options .btns button.stop.on {background: url('../img/common/kpi_stop_on.png')  no-repeat center center;}
+.kpi-page .kpi-options .btns button.stop,
+.report-head .kpi-options .btns button.stop{background: url('../img/common/kpi_stop.png')  no-repeat center center;}
+.kpi-page .kpi-options .btns button.stop.on,
+.report-head .kpi-options .btns button.stop.on{background: url('../img/common/kpi_stop_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.drag-menu.on {background:url('../img/common/kpi_menu_on.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.save.on {background:url('../img/common/kpi_save_on.png')  no-repeat center center ;}
-.kpi-page .kpi-options .btns button.play:disabled {background: url('../img/common/kpi_play_dis.png')  no-repeat center center;}
+.kpi-page .kpi-options .btns button.play:disabled,
+.report-head .kpi-options .btns button.play:disabled{background: url('../img/common/kpi_play_dis.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add:disabled {background:url('../img/common/kpi_add_dis.png') no-repeat center center ;}
 .kpi-page .kpi-options .btns button.drag-menu:disabled {background:url('../img/common/kpi_menu_dis.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.save:disabled {background:url('../img/common/kpi_save_dis.png')  no-repeat center center ;}
-.kpi-page .kpi-options .opt button.on + .pops {display:block;}
-.kpi-page .kpi-options .opt button.stop.on + .pops {display:none;}
+.kpi-options .opt button.on + .pops {display:block;}
+.kpi-options .opt button.stop.on + .pops {display:none;}
 .kpi-page li.kpi-options a.on + .close + .pops {display:block;left: 0px;right: 0;bottom: auto;top: 35px;}
 
 .kpi-options .pops {display: none;position: absolute;bottom: -65px;left: -120px;background: #fff;border-radius: 10px; padding:10px 16px;z-index: 1;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);white-space: nowrap;}
@@ -485,20 +493,23 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .main-tabs-wrap + .cont-body.kpi-page {height: calc(100% - 114px);}
 .kpi-page .chart-wrap{min-height: 750px;overflow:hidden;}
 
-/* 221014 이서현 kpi-play 추가 */
-.kpi-play li.kpi-options{display: none;font-size: 0;position: relative}
-.kpi-play li.kpi-options:first-child{display:block;width: 100%;text-align: center;}
-.kpi-play li.kpi-options:first-child a{border-radius: 0;}
-.kpi-page .kpi-play .repo-tabs{width: 100%;position: relative;}
-.kpi-page .kpi-play .ui-tabs-nav{display: inline-block;width: 100%;}
-.kpi-play .repo-tabs + .kpi-options{position: absolute; top: 2px;right: 4px;width: 52px;z-index: 2; padding: 2px;}
-.kpi-play .repo-tabs + .kpi-options .opt{display: none;}
-.kpi-play .repo-tabs + .kpi-options .opt:first-child{display:block;}
-.kpi-play .repo-tabs + .kpi-options .btns{width: 46px;}
-.kpi-pagination{display: none;}
-.kpi-play .kpi-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 10;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
-.kpi-play .kpi-pagination .pg-bullet{width: 10px;height: 10px;display: inline-block;border-radius: 50%; margin: 0 3px;opacity: 0.8;background: #fff;}
-.kpi-play .kpi-pagination .pg-bullet.active{width: 18px;border-radius: 10px;background:#5668f0;}
+/* 221013 이서현 report-play 추가 */
+.report-play .ui-tabs-nav li{display: none;font-size: 0;position: relative}
+.report-play .ui-tabs-nav li:first-child{display:block;width: 100%;text-align: center;}
+.report-play .ui-tabs-nav li:first-child a{border-radius: 0;}
+.report-head.report-play .repo-tabs{width: 100%;position: relative;}
+.report-play .ui-tabs-nav{display: inline-block;width: 100%;}
+.report-play .repo-tabs + .kpi-options{position: absolute; top: 2px;right: 4px;width: 52px;z-index: 2; padding: 2px;}
+.report-play .repo-tabs + .kpi-options .opt{display: none;}
+.report-play .repo-tabs + .kpi-options .opt:first-child{display:block;}
+.report-play .repo-tabs + .kpi-options .btns{width: 46px;}
+.repo-pagination{display: none;}
+.report-play .repo-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 10;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
+.report-play .repo-pagination .pg-bullet{width: 10px;height: 10px;display: inline-block;border-radius: 50%; margin: 0 3px;opacity: 0.8;background: #fff;}
+.report-play .repo-pagination .pg-bullet.active{width: 18px;border-radius: 10px;background:#5668f0;}
+/* 221014 이서현 myhome 상단 수정 */
+.report-head .repo-tabs{width: calc(100% - 60px);}
+.report-head .repo-tabs .kpi-options{display: inline-block; position: relative;width: 52px;}
 
 /*220930 이서현 수정*/
 /* .chart-wrap {max-height: calc(100% - 8px);height: auto; display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, calc((100vh - 200px) / 3));grid-gap: 16px;margin-top: 8px;} */
