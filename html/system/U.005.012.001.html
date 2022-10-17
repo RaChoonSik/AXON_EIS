@@ -23,9 +23,9 @@
 	<script src="../../js/ElementQueries.js"></script>
 	<script>
 		$(document).ready(function(){
-			//var date = new Date();
-			//var firstday = new Date(date.getFullYear(), date.getMonth(), "01");
-			//$(".monthpicker input").monthpicker();
+			$('.btn-calendar').on('click', function(){
+				$('#monthPicker').focus();
+			});
 		});
 	</script>
 </head>
@@ -176,7 +176,7 @@
 				<div class="inner-cont">
 					<div class="calendar-date monthpicker">
 						<button type="button" class="btn-prev">저번 주</button>
-						<input type="text" class="input-date" readonly />
+						<input type="text" class="input-date" id="monthPicker" readonly />
 						<!-- <input type="button" id="btn_monthPicker" name="btn_monthPicker" value="클릭" /> -->
 						<button type="button" class="btn-next">다음 주</button>
 						<button type="button" class="btn-calendar">달력</button>
