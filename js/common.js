@@ -701,7 +701,7 @@ $(document).ready(function(){
 		//openOnFocus: true,       // focus시에 달력이 보일지 유무
 		//disableMonths : [ ]     // 월 비활성화
 	};
-	$(".monthpicker input").monthpicker(options);
+	$(".monthpicker input, .monthpicker .btn-calendar").monthpicker(options);
 	//초기값
 	function getTodayType(){
 		var date = new Date();

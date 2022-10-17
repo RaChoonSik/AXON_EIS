@@ -174,20 +174,12 @@
 				<h3 class="page-title">캘린더 관리</h3>
 
 				<div class="inner-cont">
-					<div class="bg-box">
-						<div class="list-area">
-							<ul>
-								<li>
-									<label>기준년월</label>
-									<div class="list-item">
-										<div class="monthpicker" style="width:300px;">
-											<label><input type="text" name="monthPicker" class="input-date" dateformat="" readonly /></label>
-											<button type="button" class="btn fullblue small">등록</button>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
+					<div class="calendar-date monthpicker">
+						<button type="button" class="btn-prev">저번 주</button>
+						<input type="text" class="input-date" readonly />
+						<!-- <input type="button" id="btn_monthPicker" name="btn_monthPicker" value="클릭" /> -->
+						<button type="button" class="btn-next">다음 주</button>
+						<button type="button" class="btn-calendar">달력</button>
 					</div>
 					<div class="title-area">
 						<h3 class="h3-title">기준년월 : 2022년 8월</h3>

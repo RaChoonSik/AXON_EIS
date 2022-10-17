@@ -235,17 +235,18 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .mtz-monthpicker.ui-datepicker-header:before {content:'';position:absolute;top:19px;right:12px;width:11px;height:6px;margin-top:-1px;background:url("../img/common/form_select.png") no-repeat 0 0;}
 .mtz-monthpicker .mtz-monthpicker-month {cursor:pointer !important;}
 
+
 /* ui month picker */
-.calendar-date {position:relative;margin-top:40px;text-align:center;}
-.calendar-date .input-date {display:inline-block;width:90px;height:30px;margin:0 25px;padding:0;background:transparent;color:#111;font-size:var(--font-size-24);font-weight:500;text-align:center;vertical-align:middle;border:none;}
+.calendar-date {position:relative;margin-top:40px;justify-content:center;}
+.calendar-date .input-date {display:inline-block;width:90px;height:30px;margin:0 25px;padding:0;background:transparent!important;color:#111!important;font-size:var(--font-size-24);font-weight:500;text-align:center;vertical-align:middle;border:none;}
 .calendar-date button {display:inline-block;width:30px;height:30px;background-color:#fff;background-repeat:no-repeat;background-position:50% 50%;border:1px solid #E1E1E1;border-radius:3px;text-indent:-9999px;}
 .calendar-date button:hover {box-shadow:0px 3px 6px rgba(0,0,0,0.16);transition:all .4s;}
-.calendar-date .btn-prev {background-image:url("../img/ems/btn_calendarprev.png");}
-.calendar-date .btn-next {background-image:url("../img/ems/btn_calendarnext.png");}
-.calendar-date .btn-calendar {position:absolute;top:0;left:50%;background-image:url("../img/ems/btn_calendar.png");}
-.calendar-date .btn-prev:hover {background-image:url("../img/ems/btn_calendarprev_on.png");}
-.calendar-date .btn-next:hover {background-image:url("../img/ems/btn_calendarnext_on.png");}
-.calendar-date .btn-calendar:hover {background-image:url("../img/ems/btn_calendar_on.png");}
+.calendar-date .btn-prev {background-image:url("../img/common/btn_calendarprev.png");}
+.calendar-date .btn-next {background-image:url("../img/common/btn_calendarnext.png");}
+.calendar-date .btn-calendar {position:absolute;top:0;left:50%;margin-left: 120px;background-image:url("../img/common/btn_calendar.png");}
+.calendar-date .btn-prev:hover {background-image:url("../img/common/btn_calendarprev_on.png");}
+.calendar-date .btn-next:hover {background-image:url("../img/common/btn_calendarnext_on.png");}
+.calendar-date .btn-calendar:hover {background-image:url("../img/common/btn_calendar_on.png");}
 
 /* datepicker range */
 .datepickerrange {display:inline-block;width: calc(50% - 14px);vertical-align:middle;}
