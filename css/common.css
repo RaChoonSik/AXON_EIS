@@ -1059,6 +1059,7 @@ tbody.sortable td {background-color:transparent;}
 .result-wrap .result-menu ul > li > p:after {position: absolute; left:0;top: -1px; content:'-';color: #Fff;font-size: var(--font-size-13);}
 .result-wrap .result-menu ul > li > a {padding-left: 10px;margin-top: 2px;color: #fff;font-size: var(--font-size-13);}
 .ci-list td{padding-top: 5px;padding-bottom: 5px;}
+.ci-list td.bg-black{background: #242424;}
 .ci-list p{font-size: var(--font-size-14); color: #111;padding-top: 3px; line-height: 1;}
 
 /* 220919 이서현 수정 */

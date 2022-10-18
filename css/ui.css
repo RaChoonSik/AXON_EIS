@@ -509,7 +509,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .report-head.report-play .repo-tabs,
 .kpi-head.report-play .repo-tabs{width: 100%;position: relative;height: 100%;}
 .report-play .ui-tabs-nav{display: inline-block;width: 100%;}
-.report-play .repo-tabs + .kpi-options{position: absolute; top: 2px;right: 4px;width: 52px;z-index: 2; padding: 2px;}
+.report-play .repo-tabs + .kpi-options{position: absolute; top: 2px;right: 4px;width: 53px;z-index: 2; padding: 2px;}
 .report-play .repo-tabs + .kpi-options .opt{display: none;}
 .report-play .repo-tabs + .kpi-options .opt:first-child{display:block;}
 .report-play .repo-tabs + .kpi-options .btns{width: 46px;}
