@@ -181,7 +181,7 @@
 								<col style="width:120px;">
 								<col>
 							</colgroup>
-							<tbody>
+							<tbody class="ci-list">
 								<tr>
 									<th scope="row"><span class="required">로고 이미지</span></th>
 									<td>
@@ -189,88 +189,68 @@
 											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="logo.png">
 											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
 										</div>
-									</td>
-									<th scope="row"><span class="required">심벌 이미지</span></th>
+										<div>
+											<p>사용가능 확장자 : png</p>
+											<p>사용가능 사이즈 : (가로 최대)180px (세로 고정)45px</p>
+										</div>
+									</td>q1w2e3r4
+									<th scope="row"><span>로고 이미지 보기</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="logo_small.png">
-											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+											<div class="ci-img-wrap">
+												<div class="img-box big-logo">
+													<img src="../../img/common/logo.png" alt="logo">													
+												</div>
+											</div>	
 										</div>
-									</td>
+									</td>									
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">즐겨찾기 아이콘</span></th>
+									<th scope="row"><span class="required">심볼 이미지</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="favicon.ico">
-											<span>사이즈제한: </span>
-											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll');">등록</button>
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="logo.png">
+											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll2');">등록</button>
 										</div>
-									</td>
-									<th scope="row"><span>확장자 및 사이즈</span></th>
+										<div>
+											<p>사용가능 확장자 : png</p>
+											<p>사용가능 사이즈 : 40px * 40px</p>
+										</div>
+									</td>q1w2e3r4
+									<th scope="row"><span>심볼 이미지 보기</span></th>
 									<td>
 										<div class="flex-group gap8">
-											<label>로고(png) : 480 x 140 / 심벌(png) : 40 x 40 / 즐겨찾(ico) : 16 x 16 </label>
+											<div class="ci-img-wrap">
+												<div class="img-box small-logo">
+													<img src="../../img/common/logo_small.png" alt="logo_small">													
+												</div>
+											</div>	
 										</div>
-									</td>
+									</td>									
 								</tr>
 								<tr>
-									<th scope="row"><span class="required">미리보기</span></th>
-									<td colspan="3">
-										<div class="ci-img-wrap">
-											<div class="img-box">
-												<img src="../../img/common/logo.png" alt="AXon EIS">
-												<h1>AXon EIS</h1>
-											</div>
-											<div class="cont-head-wrap">
-												<section class="cont-head">
-													<div class="title">
-														<h2>고객사 시스템명</h2>
-													</div>
-									
-													<div class="util">
-														<div class="info"><a href="javascript:;" class="btn-util item01">KPI</a></div>
-														<div class="drop-tg">
-															<div class="info">
-																<a href="javascript:;" class="btn-util item02">홈설정</a>
-																<button type="button" class="btn-fold">열기</button>
-															</div>
-															<div class="link">
-																<a href="javascript:;">My Home 설정</a>
-																<a href="javascript:;">My Home 수정</a>
-																<a href="javascript:;">My Home 실행</a>
-															</div>
-														</div>
-														<div class="info"><a href="javascript:;" class="btn-util item03">확대</a></div>
-														<div class="drop-tg">
-															<div class="info">
-																<a href="javascript:;" class="btn-util item04">게시판</a>
-																<button type="button" class="btn-board btn-fold">열기</button>
-															</div>
-														</div>
-														
-														<div class="user drop-tg">
-															<div class="info">
-																<em>박명수</em>
-																<span>영업관리부</span>
-																<button type="button" class="btn-fold">열기</button>
-															</div>
-															<div class="link">
-																<a href="javascript:;">개인정보 수정</a>
-																<a href="javascript:;">비밀번호 변경</a>
-																<a href="javascript:;">개인 통계</a>
-																<a href="javascript:;">스케줄</a>
-																<a href="javascript:;">시스템 정보</a>
-																<a href="javascript:;">로그아웃</a>
-															</div>
-														</div>
-													</div>
-													<!-- 게시판 추가 -->
-												</section>
-											</div>
+									<th scope="row"><span class="required">즐겨찾기 이미지</span></th>
+									<td>
+										<div class="flex-group gap8">
+											<input type="text" placeholder="등록된 이미지가 없습니다." title="이미지" disabled="" value="pavi.ico">
+											<button type="button" class="btn small fullblue" onclick="fn.popupOpen('#popup_fileenroll3');">등록</button>
 										</div>
-									</td>
-								</tr>
+										<div>
+											<p>사용가능 확장자 : ico</p>
+											<p>사용가능 사이즈 : 16px * 16px</p>
+										</div>
+									</td>q1w2e3r4
+									<th scope="row"><span>즐겨찾기 이미지 보기</span></th>
+									<td>
+										<div class="flex-group gap8">
+											<div class="ci-img-wrap">
+												<div class="img-box pavi-logo">
+													<img src="../../img/common/logo.svg" alt="pavicon">													
+												</div>
+											</div>	
+										</div>
+									</td>									
+								</tr>								
 							</tbody>
 						</table>
 					</div>
@@ -291,7 +271,7 @@
 	<div id="popup_fileenroll" class="poplayer popfileenroll"><!-- id값 수정 가능 -->
 		<div class="inner small">
 			<header>
-				<h2>이미지 등록</h2>
+				<h2>로고 이미지 등록</h2>
 			</header>
 			<div class="popcont">
 				<div class="cont">
@@ -302,7 +282,7 @@
 							<div class="fileupload">
 								<div class="inputfile">
 									<input type="file" id="file1" name="file1" class="hide" onchange="fn.fileCheck(this)">
-									<input type="text" class="upload-name ellipsis" placeholder="CI 이미지 파일 선택" readonly>
+									<input type="text" class="upload-name ellipsis" placeholder="로고 이미지 파일 선택" readonly>
 								</div>
 								<label for="file1" class="btn fullblue small">첨부</label>
 								<button type="button" class="btn file-del hide" onclick="fn.fileReset(this);">삭제</button>
@@ -318,6 +298,72 @@
 			<button type="button" class="btn_popclose" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll');"><span class="hidden">팝업닫기</span></button>
 		</div>
 		<span class="poplayer-background" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll');"></span>
+	</div>
+	<!-- //팝업 -->
+	<!-- 팝업// -->
+	<div id="popup_fileenroll2" class="poplayer popfileenroll"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>심볼 이미지 등록</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<form>
+						<fieldset>
+							<legend>파일 등록</legend>
+
+							<div class="fileupload">
+								<div class="inputfile">
+									<input type="file" id="file1" name="file1" class="hide" onchange="fn.fileCheck(this)">
+									<input type="text" class="upload-name ellipsis" placeholder="심볼 이미지 파일 선택" readonly>
+								</div>
+								<label for="file1" class="btn fullblue small">첨부</label>
+								<button type="button" class="btn file-del hide" onclick="fn.fileReset(this);">삭제</button>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">등록</button>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll2');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll2');"></span>
+	</div>
+	<!-- //팝업 -->
+	<!-- 팝업// -->
+	<div id="popup_fileenroll3" class="poplayer popfileenroll3"><!-- id값 수정 가능 -->
+		<div class="inner small">
+			<header>
+				<h2>즐겨찾기 이미지 등록</h2>
+			</header>
+			<div class="popcont">
+				<div class="cont">
+					<form>
+						<fieldset>
+							<legend>파일 등록</legend>
+
+							<div class="fileupload">
+								<div class="inputfile">
+									<input type="file" id="file1" name="file1" class="hide" onchange="fn.fileCheck(this)">
+									<input type="text" class="upload-name ellipsis" placeholder="즐겨찾기 이미지 파일 선택" readonly>
+								</div>
+								<label for="file1" class="btn fullblue small">첨부</label>
+								<button type="button" class="btn file-del hide" onclick="fn.fileReset(this);">삭제</button>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn big fullblue h40">등록</button>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll3');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.fileReset(this);fn.popupClose('#popup_fileenroll3');"></span>
 	</div>
 	<!-- //팝업 -->
 
