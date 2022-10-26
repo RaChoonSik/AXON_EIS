@@ -352,13 +352,19 @@
 .data-table .excel-data .del {float:right;  width:16px; height:16px; background:url('../img/common/btn_del.png') no-repeat 0 0; background-size: 16px 16px; font-size:0;}
 .data-table .excel-data .ui-sortable-handle {background: url('../img/common/bg_sortable.png') no-repeat left 2px center;}
 .data-table .excel-data .user-list,
-.data-table .tg-table .user-list {height:auto;max-height: 323px;}
+.data-table .tg-table .user-list {height: 323px;max-height: 323px;overflow-y: auto;}
 .data-table .excel-data .user-list .data-items,
-.data-table .tg-table .user-list .inner-table {height:auto;max-height: 282px;}
-.data-table .excel-data .data-items {overflow-y: auto;}
+.data-table .tg-table .user-list .inner-table {height:auto;}
+/* .data-table .excel-data .data-items {font-size: 0;} */
 .data-table .excel-data .data-items li {overflow: hidden;border-bottom: 1px solid #e1e1e1;}
 .data-table .excel-data .data-items .left {float: left;width:35%;padding: 10px 0 10px 0;}
 .data-table .excel-data .data-items .right {float: left;width:65%;padding: 10px 0;}
+/* 221026 이서현 추가 */
+.data-table .excel-data table{border-collapse: collapse;}
+.data-table .excel-data table tbody{max-height: 323px; overflow-y: auto;font-size: 0;}
+.data-table .excel-data table tbody td{padding: 0;}
+.data-table .excel-data .numbering li {overflow: hidden;border-bottom: 1px solid #e1e1e1; padding: 10px 0;}
+
 
 .file-add {margin-top:24px;margin-bottom: 8px;}
 .file-add input[type="text"] {width:260px;}
