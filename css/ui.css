@@ -349,16 +349,22 @@
 .data-table .tg-table {flex: 1;}
 .data-table .grid tbody tr {background-color: transparent;}
 .data-table .excel-data {width: 320px; flex-grow: 0;}
-.data-table .excel-data .del {float:right;  width:16px; height:16px; background:url('../img/common/btn_del.png') no-repeat 0 0; background-size: 16px 16px; font-size:0;}
+.data-table .excel-data .del {float:right; position: absolute; top: 10px;right: 0px; width:20px; height:20px; background:url('../img/common/btn_del.png') no-repeat 0 0; background-size: 18px 18px; font-size:0;}
 .data-table .excel-data .ui-sortable-handle {background: url('../img/common/bg_sortable.png') no-repeat left 2px center;}
 .data-table .excel-data .user-list,
-.data-table .tg-table .user-list {height:auto;max-height: 323px;}
+.data-table .tg-table .user-list {height: 323px;max-height: 323px;overflow-y: auto;}
 .data-table .excel-data .user-list .data-items,
-.data-table .tg-table .user-list .inner-table {height:auto;max-height: 282px;}
-.data-table .excel-data .data-items {overflow-y: auto;}
-.data-table .excel-data .data-items li {overflow: hidden;border-bottom: 1px solid #e1e1e1;}
-.data-table .excel-data .data-items .left {float: left;width:35%;padding: 10px 0 10px 0;}
-.data-table .excel-data .data-items .right {float: left;width:65%;padding: 10px 0;}
+.data-table .tg-table .user-list .inner-table {height:auto;}
+/* .data-table .excel-data .data-items {font-size: 0;} */
+.data-table .excel-data .data-items li {overflow: hidden;height: 40px;border-bottom: 1px solid #e1e1e1;}
+.data-table .excel-data .data-items .left {float: left;position: relative;width:50%;padding: 10px 0 10px 0;}
+.data-table .excel-data .data-items .right {float: left;width:calc(50% - 10px);margin-right: 10px; padding: 10px 0 10px 10px;overflow: hidden;text-overflow: clip;white-space: nowrap;}
+/* 221026 이서현 추가 */
+.data-table .excel-data table{border-collapse: collapse;}
+.data-table .excel-data table tbody{max-height: 323px; overflow-y: auto;font-size: 0;}
+.data-table .excel-data table tbody td{padding: 0;}
+.data-table .excel-data .numbering li {overflow: hidden;border-bottom: 1px solid #e1e1e1; padding: 10px 0; height: 40px;}
+.data-table .excel-data .data-items .left span{display: block;width:80%;padding:0 20px;overflow: hidden;text-overflow: clip;white-space: nowrap;}
 
 .file-add {margin-top:24px;margin-bottom: 8px;}
 .file-add input[type="text"] {width:260px;}

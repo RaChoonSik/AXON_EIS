@@ -534,6 +534,10 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid a {text-decoration:underline;}
 .grid a:not(.btn):hover {color: #5668F0;text-decoration: underline;}
 .grid .txt-black {color:#111;font-weight:500;}
+/* 221025 이서현 추가 */
+.excel-table-scroll{max-height:202px;width: 100%; overflow: auto;}
+.excel-table-scroll table{width: auto;min-width: 100%;}
+.excel-table-scroll .grid td, th{min-width:130px}
 
 .report-list {overflow-y: auto;}
 .report-list .report-title {padding:10px 5px;color:#888;background:#f2f2f2;font-size:var(--font-size-12);text-align:center;vertical-align:middle;line-height:20px;border-top:1px solid #E1E1E1;word-break:break-word;}
@@ -1082,7 +1086,7 @@ tbody.sortable td {background-color:transparent;}
 #lnb[data-open="search"] .search-box,
 #lnb[data-open="cont"] .nav-menu.cont,
 #lnb[data-open="set"] .nav-menu.setting {display:block;left: 240px;visibility: visible;transition: left 0.1s, visibility 0.1s;}
-.top .nav-menu {top: 58px;}
+.top .nav-menu {top: 59px;}
 .folder-tree .toggle li > .btn-toggle,
 .nav-menu .toggle li > .btn-toggle,
 .nav-menu.sep-menu .toggle li > .btn-toggle + a {display:block;width:100%;font-size:var(--font-size-14);color: #fff;font-weight: normal;text-align: left;}
