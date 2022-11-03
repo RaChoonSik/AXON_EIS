@@ -31,9 +31,11 @@
 .mgt12 {margin-top:12px !important;}
 .mgt15 {margin-top:15px !important;}
 .mgt30 {margin-top:30px !important;}
+.mgb8 {margin-bottom:8px !important;}
 .mgb30 {margin-bottom:30px !important;}
 .mgl0 {margin-left:0 !important;}
 .mgl40 {margin-left:40px !important;}
+.mgr5{margin-right: 5px!important;}
 .pt0 {padding-top:0 !important;}
 .pb20 {padding-bottom:20px !important;}
 
@@ -535,7 +537,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid a:not(.btn):hover {color: #5668F0;text-decoration: underline;}
 .grid .txt-black {color:#111;font-weight:500;}
 /* 221025 이서현 추가 */
-.excel-table-scroll{max-height:202px;width: 100%; overflow: auto;}
+.excel-table-scroll{max-height:222px;width: 100%; overflow: auto;}
 .excel-table-scroll table{width: auto;min-width: 100%;}
 .excel-table-scroll .grid td, th{min-width:130px}
 
@@ -1293,7 +1295,7 @@ tbody.sortable td {background-color:transparent;}
 /*221013마이홈 수정*/
 
 
-/* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
+/* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;z-index: 0;} */
 
 .accordion li .head {background: url('../img/common/ico_arrow_down.png') #fff no-repeat center right 20px;}
 .accordion li.on .head {background-image: url('../img/common/ico_arrow_up.png');}

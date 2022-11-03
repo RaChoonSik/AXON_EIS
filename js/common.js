@@ -758,14 +758,15 @@ $(document).ready(function(){
 		]});
 	
 		var startWidth;
-		element.on('mousedown', function(e){
-			e.preventDefault();
-		});
+		// element.on('mousedown', function(e){
+			// e.preventDefault();
+		// });
 		hammer.on('panstart', function(e) {
+			
 			startWidth = element[0].clientWidth;
 		});
 	
-		hammer.on('panmove', function(e) {
+		hammer.on('panmove', function(e) {			
 			element[0].style.width = (startWidth + e.deltaX) + 'px';
 			info.html(element[0].clientWidth + 'px x ' + element[0].clientHeight + 'px');
 		})
