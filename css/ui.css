@@ -520,7 +520,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .report-play .repo-tabs + .kpi-options .opt:first-child{display:block;}
 .report-play .repo-tabs + .kpi-options .btns{width: 46px;}
 .repo-pagination{display: none;}
-.report-play .repo-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 10;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
+.report-play .repo-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 8;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
 .report-play .repo-pagination .pg-bullet{width: 10px;height: 10px;display: inline-block;border-radius: 50%; margin: 0 3px;opacity: 0.8;background: #fff;}
 .report-play .repo-pagination .pg-bullet.active{width: 18px;border-radius: 10px;background:#5668f0;}
 /* 221014 이서현 myhome 상단 수정 */

@@ -424,7 +424,7 @@ var fn = (function() {
 				var winHeight = $(window).height();
 				var tooltipHeight = $('.report-wrap .top').outerHeight();//툴팁
 				var headerHeight = $('.cont-head').outerHeight(); //헤더
-				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - pageMg - 9; //차이
+				var repoView = winHeight - (menuTabHeight + repoTabHeight) - tooltipHeight - headerHeight - pageMg - 17; //차이
 				$('.report-page .cont').height(repoView);
 			}
 			repoViewSize();
