@@ -1240,7 +1240,7 @@ tbody.sortable td {background-color:transparent;}
 
 /* 보고서 */
 .report-wrap {display:none; height:100%;padding:0!important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;/*overflow: hidden;*/}
-.repo-tabs {margin-bottom:8px!important;}
+.report-head .repo-tabs, .report-head .kpi-options {margin-bottom:8px!important;}
 .repo-tabs + .report-wrap {border-radius: 0 0 5px 5px;}
 .report-wrap .top {display:flex;justify-content: space-between;align-items: center; padding:0 20px; height:46px;border: 1px solid #d8d8d8;border-bottom: 0;background: #f2f2f2; border-radius: 5px 5px 0 0;}
 /* .repo-tabs + .report-wrap .top {border-radius: 0;} */
