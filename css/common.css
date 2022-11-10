@@ -81,7 +81,7 @@
 .btn-wrap:after {display:block;content:'';clear:both;}
 .btn-wrap .btn {margin-left: 8px;}
 .btn-wrap .btn:first-child {margin-left:0;}
-.btn {display:inline-block;position:relative;height: 32px;min-width: 40px;line-height:30px;padding: 0 8px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
+.btn {display:inline-block; position:relative;flex:none;white-space: nowrap;height: 32px;min-width: 40px;line-height:30px;padding: 0 8px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
 .btn:disabled {background:#E1E1E1 !important;color:#fff;border-color:#E1E1E1 !important;pointer-events:none;}
 .btn.fullblue {background:#5668F0;color:#fff;border:1px solid #5668F0;}
 .btn.small {font-size: var(--font-size-12);padding: 0 7px;}
@@ -295,7 +295,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util {display: flex;align-items: center;position:relative;}
 .cont-head .util .btn-util {display:inline-block;padding: 5px 0 5px 30px;font-size: var(--font-size-13);color: #444;vertical-align:top;}
 .cont-head .util .btn-util.item01 {background: url('../img/common/gnb_kpi.png') no-repeat left center;}
-.cont-head .util .btn-util.item02 {width: calc(100% - 30px);height: 100%; margin-right: 30px;background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
+.cont-head .util .btn-util.item02 {width: calc(100% - 25px);height: 100%; margin-right: 25px;padding-right: 10px; background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
 .cont-head .util .btn-util.item03 {background: url('../img/common/gnb_full_sc.png') no-repeat left center;}
 .cont-head .util .btn-util.item03.on {background-image: url('../img/common/gnb_min_sc.png');}
 .cont-head .util .btn-util.item04 {padding-right: 30px;background: url('../img/common/gnb_board.png') no-repeat 4px center;}
@@ -308,17 +308,19 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .btn-util.item03.active .alertnum {display:block;} */
 .cont-head .util .user {display:inline-block;position:relative;margin-left: 64px;vertical-align:top;}
 .cont-head .util .drop-tg {position: relative;}
-.cont-head .util .open .info.on button {background-position: left center !important;transform:rotate(-180deg);}
+.cont-head .util .open .info:not(:first-child).on button {background-position: left center !important;transform:rotate(-180deg);}
+.cont-head .util .open .info:first-child button:hover {background-position: left center !important;transform:rotate(-180deg);}
 .cont-head .util .open .link {display:block;}
 .cont-head .util .info {position:relative;padding: 0;margin-left: 28px;/* background:#fff; *//* border-radius:10px; */overflow:hidden;}
 .cont-head .util .user .info {width:90px;padding-left: 4px;margin-left: 0;}
-.cont-head .info.on {background-color: #e1e1e1; border-radius: 4px;}
-.cont-head .info.on .item02 {background-color: #e1e1e1; border-radius: 4px;}
-.cont-head .info.on .item02 + button {background-color:none;}
+.cont-head .info:not(:first-child).on {background-color: #e1e1e1; border-radius: 4px;}
+.cont-head .info:first-child.on .item02 {background-color:none;}
+.cont-head .info:first-child .item02:active{background-color: #e1e1e1; border-radius: 4px;}
+.cont-head .info:first-child.on .item02 + button {background-color: #e1e1e1; border-radius: 4px;}
 .cont-head .util .user .info em {display:block;color: #444;font-size: var(--font-size-12);font-weight: normal;}
 .cont-head .util .user .info span {display:block;margin-top: 0;color: #888;font-size: var(--font-size-11);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 .cont-head .util .info button {position:absolute;top: 0px;right: 0px;width:100%;height: 100%;background: url("../img/common/conthead_utilbutton.png") no-repeat center right;text-indent:-9999px;}
-.cont-head .util .info .item02 + button{width: 30px!important;height: 100%;}
+.cont-head .util .info .item02 + button{width: 25px!important;height: 100%;}
 .cont-head .util .info .btn-util.on + button {background-position: left center !important; transform: rotate(-180deg);}
 .cont-head .util .info .num{color:#4b62e8;}
 .cont-head .util .info.new a::after{display: inline-block; content:"N";color: #fff;font-size:10px;vertical-align: 0!important;border-radius:20%;padding-left:3px;line-height: 14px;font-weight:400;width:14px;height:14px;background:#f00;}
@@ -713,6 +715,12 @@ tbody.sortable td {background-color:transparent;}
 .poplayer .graybox .list-area.type-short > ul > li:nth-of-type(2n) {margin-right:0;}
 .poplayer .graybox .list-area.type-short > ul > li > label {width:70px;}
 .poplayer .graybox .list-area.type-short input[type="checkbox"] + span,.poplayer .graybox .list-area.type-short input[type="radio"] + span{margin-right:15px;}
+/* 모바일 */
+@media (max-width:740px) {
+
+    .poplayer .inner{width: 90%;}
+}
+
 
 /* mail 초기화 */
 .mail-reset{width:840px;height:218px;margin-top:15px;overflow-x:scroll;overflow-y:auto;}
