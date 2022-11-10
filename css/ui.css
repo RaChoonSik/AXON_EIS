@@ -559,6 +559,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .chart-wrap .chart-box .board .grid tbody td {min-height: auto;height: 24px;padding: 0;line-height: 1.5;}
 .chart-wrap .chart-box.empty.drag {background-color: #e1e1e1;}
 
+
 /* 대시보드 */
 .dashboard-menu {display: none;position: absolute;width: 424px;right: 0;bottom: 0;top: 42px;z-index: 1;border-top: 1px solid #e1e1e1;overflow-y: auto;overflow-x: hidden;}
 .dashboard-menu.hide {visibility: hidden;}
@@ -640,6 +641,8 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 
     .dimm {display: none;position: absolute;top: 0;right: 0;left: 0;bottom: 0;background: rgba(36,36,36,0.8);z-index: 9;}
     .dimm.on {display: block;}
-
+    /* 221110 이서현 추가 */
+    .chart-list .chart-box .chart-notice{display: flex;position: relative; width: 100%;height: calc(100% - 40px); justify-content: center;align-items: center;}
+    .chart-list .chart-box .chart-notice{font-size: var(--font-size-14);text-align: center;}
 }
 /* 모바일 끝 */
