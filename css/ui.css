@@ -609,7 +609,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
     
     .chart-list {/* height: 100%; */padding:12px 0;/* overflow: auto; */}
     .chart-list li + li{margin-top:12px;}
-    .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;min-height: 200px;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);overflow: hidden;}
+    .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;min-height: 250px;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);overflow: hidden;}
     .chart-list .chart-box .head {display:flex;height: 40px;padding:0 20px;background:#f2f2f2;align-items: center;justify-content: space-between;}
     .chart-list .chart-box .head .left,
     .chart-list .chart-box .head .right {display: flex; align-items: center;}
