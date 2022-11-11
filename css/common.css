@@ -716,7 +716,7 @@ tbody.sortable td {background-color:transparent;}
 .poplayer .graybox .list-area.type-short > ul > li > label {width:70px;}
 .poplayer .graybox .list-area.type-short input[type="checkbox"] + span,.poplayer .graybox .list-area.type-short input[type="radio"] + span{margin-right:15px;}
 /* 모바일 */
-@media (max-width:740px) {
+@media (max-width:1024px) {
 
     .poplayer .inner{width: 90%;}
 }
@@ -1087,7 +1087,7 @@ tbody.sortable td {background-color:transparent;}
 
 /* 메뉴 박스 */
 .depth-folder-tit {position: relative;min-height: 48px; padding: 11px 16px;border-bottom: 1px solid #5c5c5c;}
-.depth-folder-tit p {display:inline-block;position: relative; font-size: var(--font-size-14);color: #fff;margin-right:24px;}
+.depth-folder-tit p {display:inline-block;position: relative; font-size: 14;color: #fff;margin-right:24px;}
 .depth-folder-tit .fold {display:inline-block;position: relative; padding: 2px 4px;border-radius: 4px;background: #666;}
 .depth-folder-tit .dep:before {display:block; position:absolute;right: -18px;top: 6px; width:8px; height:13px;background: url('../img/common/ico_arrow_right_666.png') no-repeat 0 0;content: '';}
 .depth-folder-tit .modify {position: absolute;right: 16px;width:24px; height:24px; font-size:0; background:url('../img/common/ico_edit.png') no-repeat center center;}
@@ -1351,7 +1351,7 @@ tbody.sortable td {background-color:transparent;}
 
 
 /* 모바일 */
-@media (max-width:740px) {
+@media (max-width:1024px) {
     #wrap.mobile {width:100%;min-width: auto;max-width: 100%;}
     .mobile .cont-body {/* overflow-y: auto; *//* overflow-x: hidden; */}
     .mobile #content {height: 100%;float:none; padding:0;}
