@@ -1319,10 +1319,18 @@ tbody.sortable td {background-color:transparent;}
 .txt-view > div {padding: 12px 20px;height: 100%;overflow-y: auto;}
 .gray-hor-tb .bd-left {border-left:1px solid #fff;}
 
-
-
-
-
+/* 단일 td 적용 말줄임 */
+.td-ellipsis{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.td-ellipsis a{display: block; width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+/* 단일 td 적용 말자름 */
+.td-clip{overflow: hidden;white-space: nowrap;text-overflow: clip; }
+.td-clip a{display: block;overflow: hidden;white-space: nowrap;text-overflow: clip; }
+/* 전체 table 적용 말줄임 */
+.table-ellipsis td{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.table-ellipsis td a{display: block; width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+/* 전체 table 적용 말자름 */
+.table-clip td{overflow: hidden;white-space: nowrap;text-overflow: clip; }
+.table-clip td a{display: block;overflow: hidden;white-space: nowrap;text-overflow: clip; }
 
 
 

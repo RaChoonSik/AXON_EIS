@@ -199,7 +199,8 @@
 									<tbody>
 										<tr>
 											<td colspan="4" class="scroll-area">
-												<div class="inner-table">
+												<div class="inner-table table-ellipsis">
+													<!-- 전체 table 적용 클래스 : table-ellipsis / table-clip -->
 													<table class="grid">
 														<colgroup>
 															<col style="width:15%">
@@ -211,8 +212,15 @@
 															<tr>
 																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
 																<td><a href="#">000003</a></td>
-																<td><a href="#">KPI 01</a></td>
-																<td>아니오</td>
+																<!-- td 부분적용 클래스 :td-ellipsis / td-clip -->
+																<td class="td-clip"><a href="#">KPI 01 KPI 01KPI 01KPI 01KPI 01KPI 01KPI 01</a></td>
+																<td>아니오아니오아니오아니오아니오아니오</td>
+															</tr>
+															<tr>
+																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
+																<td><a href="#">000003</a></td>
+																<td><a href="#">KPI 01 KPI 01KPI 01KPI 01KPI 01KPI 01KPI 01</a></td>
+																<td class="td-ellipsis">아니오아니오아니오아니오아니오아니오</td>
 															</tr>
 															<tr>
 																<td><div class="chk"><label><input type="checkbox"><span class="blank"></span></label></div></td>
