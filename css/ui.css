@@ -365,8 +365,9 @@
 .data-table .excel-data table{border-collapse: collapse;}
 .data-table .excel-data table tbody{max-height: 323px; overflow-y: auto;font-size: 0;}
 .data-table .excel-data table tbody td{padding: 0;}
-.data-table .excel-data .numbering li {overflow: hidden;border-bottom: 1px solid #e1e1e1; padding: 10px 0;}
+.data-table .excel-data .numbering li {width: 100%;overflow: hidden;white-space: nowrap;text-overflow: clip; border-bottom: 1px solid #e1e1e1; padding: 10px 0;}
 .data-table .excel-data .data-items .left span{display: block;width:80%;padding:0 20px;overflow: hidden;text-overflow: clip;white-space: nowrap;}
+.data-table .tg-table table tbody td{overflow: hidden;white-space: nowrap;text-overflow:ellipsis; }
 
 .file-add {margin-top:24px;margin-bottom: 8px;}
 .file-add input[type="text"] {width:260px;}
