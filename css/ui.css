@@ -303,7 +303,7 @@
 /* .sauce-type .radiobox {width: 250px;flex-shrink: 0;} */
 .sauce-type .radiobox {min-width: 300px;flex-shrink: 0;}
 .font-medium .sauce-type .radiobox {width:280px;}
-.font-large .sauce-type .radiobox {width:300px;}
+/* .font-large .sauce-type .radiobox {width:300px;} */
 .sauce-type .radiobox + .flex-group {width:calc(100% - 250px);}
 .sauce-type .flex-group .btn,
 .report-sauce .flex-group .btn {flex-shrink: 0;}
@@ -522,7 +522,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .report-play .repo-tabs + .kpi-options .opt:first-child{display:block;}
 .report-play .repo-tabs + .kpi-options .btns{width: 46px;}
 .repo-pagination{display: none;}
-.report-play .repo-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 10;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
+.report-play .repo-pagination{position: absolute;display: block; transition: .3s opacity;transform: translate3d(0,0,0);z-index: 8;top: 50%;left: 10px;transform: translateY(-50%);width: auto; height:auto;background: transparent; border-radius: 15px;padding:4px 6px;}
 .report-play .repo-pagination .pg-bullet{width: 10px;height: 10px;display: inline-block;border-radius: 50%; margin: 0 3px;opacity: 0.8;background: #fff;}
 .report-play .repo-pagination .pg-bullet.active{width: 18px;border-radius: 10px;background:#5668f0;}
 /* 221014 이서현 myhome 상단 수정 */
@@ -561,6 +561,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .chart-wrap .chart-box .board .grid tbody td {min-height: auto;height: 24px;padding: 0;line-height: 1.5;}
 .chart-wrap .chart-box.empty.drag {background-color: #e1e1e1;}
 
+
 /* 대시보드 */
 .dashboard-menu {display: none;position: absolute;width: 424px;right: 0;bottom: 0;top: 42px;z-index: 1;border-top: 1px solid #e1e1e1;overflow-y: auto;overflow-x: hidden;}
 .dashboard-menu.hide {visibility: hidden;}
@@ -592,7 +593,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 #popChartNum .except td .select.equality select{width: 70px;}
 
 /* 모바일 */
-@media (max-width:740px) {
+@media (max-width:1024px) {
     .m-head {position: fixed;width: 100%;z-index: 10;}
     .m-inner {height: 100%;padding: 56px 8px 52px 8px;overflow-y: auto;overflow-x: hidden;}
     .m-inner .login-wrap {padding: 0 16px;}
@@ -610,21 +611,23 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
     
     .chart-list {/* height: 100%; */padding:12px 0;/* overflow: auto; */}
     .chart-list li + li{margin-top:12px;}
-    .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;min-height: 200px;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);overflow: hidden;}
+    .chart-list .chart-box {position: relative;border:1px solid #e1e1e1;min-height: 250px;border-radius: 5px;background: #fff;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);overflow: hidden;}
     .chart-list .chart-box .head {display:flex;height: 40px;padding:0 20px;background:#f2f2f2;align-items: center;justify-content: space-between;}
     .chart-list .chart-box .head .left,
     .chart-list .chart-box .head .right {display: flex; align-items: center;}
     .chart-list .chart-box .ico {width:20px; height:20px;border-radius: 5px;background: #111;color: #fff;text-align: center;font-size: 14px;line-height: 20px;}
     .chart-list .chart-box .title {margin-left: 12px;font-size:14px;}
     .chart-list .chart-box .date {margin-right: 12px;color:#666;font-size: 11px;}
-    .chart-list .chart-box .del {width:24px; height:24px; background: url('../img/common/btn_popclose.svg') no-repeat 0 0; font-size: 0;}
-    .chart-list .chart-box .chart-view {height: calc(100% - 40px);}
+    .chart-list .chart-box .del {width:24px; height:24px; background: url('../img/common/trash.png') no-repeat 0 0; font-size: 0;}
+    .chart-list .chart-box .chart-view, .chart-list .chart-box .chart-view iframe {min-height: 205px;}
+
     .chart-list .chart-box.empty {width: 100%;background: url('../img/common/chart_add.svg') no-repeat #f6f6f6 center center; border:1px dashed #ccc;}
     .btm-menu-list {position: fixed;bottom: 0;display: flex;width: 100%;height: 52px;margin: 0 -8px;border-top: 1px solid #ccc;z-index: 1;}
     .btm-menu-list .menu {display: flex;width:20%;height: 51px;padding: 0 5px;flex-shrink: 0;background: #f6f6f6;justify-content: center;align-items: center;flex-direction: column;}
     .btm-menu-list .menu .blank {padding-right: 22px;background: url('../img/common/ico_plus.svg') no-repeat center right;font-size: 12px;}
     .btm-menu-list .menu .tit {width:100%;text-align: center;}
     .btm-menu-list .menu.full {background-color: #fff;}
+    .btm-menu-list .menu.on {background-color: #bac1f7;}
 
     .menu-sec {visibility: hidden;position: absolute; top:56px;bottom:0; left:-70%;background: #f6f6f6;width: 70%;z-index: 10;transition: all 0.1s;overflow: auto;}
     .menu-sec.on {visibility: visible; left:0; transition: all 0.1s;}
@@ -641,6 +644,8 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 
     .dimm {display: none;position: absolute;top: 0;right: 0;left: 0;bottom: 0;background: rgba(36,36,36,0.8);z-index: 9;}
     .dimm.on {display: block;}
-
+    /* 221110 이서현 추가 */
+    .chart-list .chart-box .chart-notice{display: flex;position: relative; width: 100%;height: calc(100% - 40px); min-height: 210px; justify-content: center;align-items: center;}
+    .chart-list .chart-box .chart-notice p{font-size: var(--font-size-14);text-align: center;}
 }
 /* 모바일 끝 */

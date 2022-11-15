@@ -196,11 +196,28 @@
 										</div>
 										<div class="right">
 											<span class="date">2020.01</span>
-											<button type="button" class="del">삭제</button>
+											<!-- <button type="button" class="del">삭제</button> -->
 										</div>
 									</div>
 									<div class="chart-view" id="chart1">
 
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="chart-box">
+									<div class="head">
+										<div class="left">
+											<span class="ico">M</span>
+											<p class="title">영업현황</p>
+										</div>
+										<div class="right">
+											<span class="date">2020.01</span>
+											<!-- <button type="button" class="del">삭제</button> -->
+										</div>
+									</div>
+									<div class="chart-notice">
+										<p>모바일 사용불가<br>PC에서 사용가능한 보고서</p>	
 									</div>
 								</div>
 							</li>
@@ -214,11 +231,12 @@
 							</li>
 						</ul>
 					</div>
-					
+					<!-- <button type="button" class="btn small" onclick="fn.popupOpen('#popMenuName');">선택</button> -->
 					<footer>
 						<div class="btm-menu-list">
 							<!-- 내용 있는 경우 full 추가 -->
-							<a href="javascript:;" class="menu full">
+							<!-- 선택된 경우 on 추가 -->
+							<a href="javascript:;" class="menu full on">
 								<img src="../../img/common/menu_chart01.svg" alt="차트아이콘">
 								<span class="tit ellipsis">영업</span>
 							</a>
@@ -226,15 +244,38 @@
 								<img src="../../img/common/menu_chart02.svg" alt="차트아이콘">
 								<span class="tit ellipsis">마케팅 마케팅 마케팅</span>
 							</a>
+							<a href="javascript:;" class="menu full">
+								<img src="../../img/common/menu_chart03.svg" alt="차트아이콘">
+								<span class="tit ellipsis">마케팅 마케팅 마케팅</span>
+							</a>
+							<a class="menu" onclick="fn.popupOpen('#popMenuName');"><span class="blank">메뉴</span></a>
 							<a href="javascript;" class="menu"><span class="blank">메뉴</span></a>
-							<a href="javascript;" class="menu"><span class="blank">메뉴</span></a>
-							<a href="javascript;" class="menu"><span class="blank">메뉴</span></a>
+							<!-- <a href="javascript;" class="menu"><span class="blank">메뉴</span></a> -->
 						</div>
+						
 					</footer>
 				</div>
 			</section>
 			<!-- //cont-body -->
-			
+			<!-- 메뉴명 입력// -->
+			<div id="popMenuName" class="poplayer"><!-- id값 수정 가능 -->
+				<div class="inner small">
+					<header>
+						<h2>메뉴명 입력</h2>
+					</header>
+					<div class="popcont">
+						<div class="cont">
+							<input type="text" placeholder="메뉴명을 입력하세요." title="메뉴명">
+							<div class="btn-wrap mgt12">
+								<button type="button" class="btn fullblue big">입력</button>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_popclose" onclick="fn.popupClose('#popMenuName');"><span class="hidden">팝업닫기</span></button>
+				</div>
+				<span class="poplayer-background" onclick="fn.popupClose('#popMenuName');"></span>
+			</div>
+			<!-- //메뉴명 입력 -->
 		</div>
 		<!-- // content -->
 	</div>

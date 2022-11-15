@@ -31,9 +31,11 @@
 .mgt12 {margin-top:12px !important;}
 .mgt15 {margin-top:15px !important;}
 .mgt30 {margin-top:30px !important;}
+.mgb8 {margin-bottom:8px !important;}
 .mgb30 {margin-bottom:30px !important;}
 .mgl0 {margin-left:0 !important;}
 .mgl40 {margin-left:40px !important;}
+.mgr5{margin-right: 5px!important;}
 .pt0 {padding-top:0 !important;}
 .pb20 {padding-bottom:20px !important;}
 
@@ -79,7 +81,7 @@
 .btn-wrap:after {display:block;content:'';clear:both;}
 .btn-wrap .btn {margin-left: 8px;}
 .btn-wrap .btn:first-child {margin-left:0;}
-.btn {display:inline-block;position:relative;height: 32px;min-width: 40px;line-height:30px;padding: 0 8px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
+.btn {display:inline-block; position:relative;flex:none;white-space: nowrap;height: 32px;min-width: 40px;line-height:30px;padding: 0 8px;background:#fff;color:#888;font-size: var(--font-size-13);font-weight: 500;text-align:center;vertical-align:middle;border:1px solid #D8D8D8;border-radius:4px;}
 .btn:disabled {background:#E1E1E1 !important;color:#fff;border-color:#E1E1E1 !important;pointer-events:none;}
 .btn.fullblue {background:#5668F0;color:#fff;border:1px solid #5668F0;}
 .btn.small {font-size: var(--font-size-12);padding: 0 7px;}
@@ -293,7 +295,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util {display: flex;align-items: center;position:relative;}
 .cont-head .util .btn-util {display:inline-block;padding: 5px 0 5px 30px;font-size: var(--font-size-13);color: #444;vertical-align:top;}
 .cont-head .util .btn-util.item01 {background: url('../img/common/gnb_kpi.png') no-repeat left center;}
-.cont-head .util .btn-util.item02 {padding-right: 30px;background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
+.cont-head .util .btn-util.item02 {width: calc(100% - 25px);height: 100%; margin-right: 25px;padding-right: 10px; background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
 .cont-head .util .btn-util.item03 {background: url('../img/common/gnb_full_sc.png') no-repeat left center;}
 .cont-head .util .btn-util.item03.on {background-image: url('../img/common/gnb_min_sc.png');}
 .cont-head .util .btn-util.item04 {padding-right: 30px;background: url('../img/common/gnb_board.png') no-repeat 4px center;}
@@ -306,14 +308,19 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .btn-util.item03.active .alertnum {display:block;} */
 .cont-head .util .user {display:inline-block;position:relative;margin-left: 64px;vertical-align:top;}
 .cont-head .util .drop-tg {position: relative;}
-.cont-head .util .open .info.on button {background-position: left center !important;transform:rotate(-180deg);}
+.cont-head .util .open .info:not(:first-child).on button {background-position: left center !important;transform:rotate(-180deg);}
+.cont-head .util .open .info:first-child button:hover {background-position: left center !important;transform:rotate(-180deg);}
 .cont-head .util .open .link {display:block;}
 .cont-head .util .info {position:relative;padding: 0;margin-left: 28px;/* background:#fff; *//* border-radius:10px; */overflow:hidden;}
 .cont-head .util .user .info {width:90px;padding-left: 4px;margin-left: 0;}
-.cont-head .info.on {background-color: #e1e1e1; border-radius: 4px;}
+.cont-head .info:not(:first-child).on {background-color: #e1e1e1; border-radius: 4px;}
+.cont-head .info:first-child.on .item02 {background-color:none;}
+.cont-head .info:first-child .item02:active{background-color: #e1e1e1; border-radius: 4px;}
+.cont-head .info:first-child.on .item02 + button {background-color: #e1e1e1; border-radius: 4px;}
 .cont-head .util .user .info em {display:block;color: #444;font-size: var(--font-size-12);font-weight: normal;}
 .cont-head .util .user .info span {display:block;margin-top: 0;color: #888;font-size: var(--font-size-11);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 .cont-head .util .info button {position:absolute;top: 0px;right: 0px;width:100%;height: 100%;background: url("../img/common/conthead_utilbutton.png") no-repeat center right;text-indent:-9999px;}
+.cont-head .util .info .item02 + button{width: 25px!important;height: 100%;}
 .cont-head .util .info .btn-util.on + button {background-position: left center !important; transform: rotate(-180deg);}
 .cont-head .util .info .num{color:#4b62e8;}
 .cont-head .util .info.new a::after{display: inline-block; content:"N";color: #fff;font-size:10px;vertical-align: 0!important;border-radius:20%;padding-left:3px;line-height: 14px;font-weight:400;width:14px;height:14px;background:#f00;}
@@ -535,7 +542,7 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .grid a:not(.btn):hover {color: #5668F0;text-decoration: underline;}
 .grid .txt-black {color:#111;font-weight:500;}
 /* 221025 이서현 추가 */
-.excel-table-scroll{max-height:202px;width: 100%; overflow: auto;}
+.excel-table-scroll{max-height:222px;width: 100%; overflow: auto;}
 .excel-table-scroll table{width: auto;min-width: 100%;}
 .excel-table-scroll .grid td, th{min-width:130px}
 
@@ -708,6 +715,12 @@ tbody.sortable td {background-color:transparent;}
 .poplayer .graybox .list-area.type-short > ul > li:nth-of-type(2n) {margin-right:0;}
 .poplayer .graybox .list-area.type-short > ul > li > label {width:70px;}
 .poplayer .graybox .list-area.type-short input[type="checkbox"] + span,.poplayer .graybox .list-area.type-short input[type="radio"] + span{margin-right:15px;}
+/* 모바일 */
+@media (max-width:1024px) {
+
+    .poplayer .inner{width: 90%;}
+}
+
 
 /* mail 초기화 */
 .mail-reset{width:840px;height:218px;margin-top:15px;overflow-x:scroll;overflow-y:auto;}
@@ -1074,7 +1087,7 @@ tbody.sortable td {background-color:transparent;}
 
 /* 메뉴 박스 */
 .depth-folder-tit {position: relative;min-height: 48px; padding: 11px 16px;border-bottom: 1px solid #5c5c5c;}
-.depth-folder-tit p {display:inline-block;position: relative; font-size: var(--font-size-14);color: #fff;margin-right:24px;}
+.depth-folder-tit p {display:inline-block;position: relative; font-size: 14;color: #fff;margin-right:24px;}
 .depth-folder-tit .fold {display:inline-block;position: relative; padding: 2px 4px;border-radius: 4px;background: #666;}
 .depth-folder-tit .dep:before {display:block; position:absolute;right: -18px;top: 6px; width:8px; height:13px;background: url('../img/common/ico_arrow_right_666.png') no-repeat 0 0;content: '';}
 .depth-folder-tit .modify {position: absolute;right: 16px;width:24px; height:24px; font-size:0; background:url('../img/common/ico_edit.png') no-repeat center center;}
@@ -1237,7 +1250,8 @@ tbody.sortable td {background-color:transparent;}
 .doc-list-wrap.ban-off .doc-list.empty .empty-result {margin-top: 270px;text-align: center;}
 
 /* 보고서 */
-.report-wrap {display:none; height:100%;padding: 0 !important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;/*overflow: hidden;*/}
+.report-wrap {display:none; height:100%;padding:0!important;/* border: 1px solid #d8d8d8 !important; *//* border-top: 2px solid #888 !important; */border-radius: 5px;background: #fff !important;/*overflow: hidden;*/}
+.report-head .repo-tabs, .report-head .kpi-options {margin-bottom:8px!important;}
 .repo-tabs + .report-wrap {border-radius: 0 0 5px 5px;}
 .report-wrap .top {display:flex;justify-content: space-between;align-items: center; padding:0 20px; height:46px;border: 1px solid #d8d8d8;border-bottom: 0;background: #f2f2f2; border-radius: 5px 5px 0 0;}
 /* .repo-tabs + .report-wrap .top {border-radius: 0;} */
@@ -1293,7 +1307,7 @@ tbody.sortable td {background-color:transparent;}
 /*221013마이홈 수정*/
 
 
-/* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;} */
+/* .resizer-handler {position: absolute; right: 0; top: 0; bottom: 0; width: 0; padding: 0 1px;cursor:ew-resize;z-index: 0;} */
 
 .accordion li .head {background: url('../img/common/ico_arrow_down.png') #fff no-repeat center right 20px;}
 .accordion li.on .head {background-image: url('../img/common/ico_arrow_up.png');}
@@ -1337,7 +1351,7 @@ tbody.sortable td {background-color:transparent;}
 
 
 /* 모바일 */
-@media (max-width:740px) {
+@media (max-width:1024px) {
     #wrap.mobile {width:100%;min-width: auto;max-width: 100%;}
     .mobile .cont-body {/* overflow-y: auto; *//* overflow-x: hidden; */}
     .mobile #content {height: 100%;float:none; padding:0;}
