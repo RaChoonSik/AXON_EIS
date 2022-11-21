@@ -207,95 +207,102 @@
 									<button type="button" class="btn small">삭제</button>
 								</div>
 							</div>
-							<div class="folder-tree sep-sortable"><!-- 220829수정 sep-sortable추가-->
-								<div class="root"><a href="#">ROOT</a></div>
-								<ul class="toggle">
-									<li class="active"><!-- 활성화 : li class="open" 추가 -->
-										<a class="btn-toggle"></a>
-										<a href="#" class="folder sort-item view">폴더명 1 sort</a>
-										<div class="sep-btns">
-											<button type="button" class="btn-up"></button>
-											<button type="button" class="btn-dw"></button>
-										</div>	
-										<!-- 기능추가 -->
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더</span>
-												</a>
-												<div class="sep-btns">
-													<button type="button" class="btn-up"></button>
-													<button type="button" class="btn-dw"></button>
-												</div>	
-											</li>
-											<li class="active">
-												<a class="btn-toggle"></a>
-												<a href="#" class="folder sort-item">폴더 안 폴더</a>
-												<div class="sep-btns">
-													<button type="button" class="btn-up"></button>
-													<button type="button" class="btn-dw"></button>
-												</div>	
-												<ul class="depth3">
-													<li class="sort-item">
-														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ1</span>
-														</a>
-														<div class="sep-btns">
-															<button type="button" class="btn-up"></button>
-															<button type="button" class="btn-dw"></button>
-														</div>	
-													</li>
-													<li class="sort-item">
-														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ2</span>
-														</a>
-														<div class="sep-btns">
-															<button type="button" class="btn-up"></button>
-															<button type="button" class="btn-dw"></button>
-														</div>	
-													</li>
-													<li class="sort-item">
-														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ3</span>
-														</a>
-														<div class="sep-btns">
-															<button type="button" class="btn-up"></button>
-															<button type="button" class="btn-dw"></button>
-														</div>	
-													</li>
-													<li class="sort-item">
-														<a href="#">
-															<span class="last">SUㄴㅁㄹㅇㄻ4</span>
-														</a>
-														<div class="sep-btns">
-															<button type="button" class="btn-up"></button>
-															<button type="button" class="btn-dw"></button>
-														</div>	
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="active">
-										<a class="btn-toggle"></a>
-										<a href="#" class="folder sort-item">폴더명 2</a>
-										<div class="sep-btns">
-											<button type="button" class="btn-up"></button>
-											<button type="button" class="btn-dw"></button>
-										</div>	
-										<ul class="depth2">
-											<li class="sort-item">
-												<a href="#">
-													<span class="last">SUB 폴더 44 </span>
-												</a>
-												<div class="sep-btns">
-													<button type="button" class="btn-up"></button>
-													<button type="button" class="btn-dw"></button>
-												</div>	
-											</li>
-										</ul>
-									</li>											
-								</ul>
+							<!-- class loading 추가하면 로딩 페이지 생성 빼면 display:none-->
+							<div class="folder-tree sep-sortable loading"><!-- 220829수정 sep-sortable추가-->
+								<div class="content">
+									<div class="root"><a href="#">ROOT</a></div>
+									<ul class="toggle">
+										<li class="active"><!-- 활성화 : li class="open" 추가 -->
+											<a class="btn-toggle"></a>
+											<a href="#" class="folder sort-item view">폴더명 1 sort</a>
+											<div class="sep-btns">
+												<button type="button" class="btn-up"></button>
+												<button type="button" class="btn-dw"></button>
+											</div>	
+											<!-- 기능추가 -->
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SUB 폴더</span>
+													</a>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
+												</li>
+												<li class="active">
+													<a class="btn-toggle"></a>
+													<a href="#" class="folder sort-item">폴더 안 폴더</a>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
+													<ul class="depth3">
+														<li class="sort-item">
+															<a href="#">
+																<span class="last">SUㄴㅁㄹㅇㄻ1</span>
+															</a>
+															<div class="sep-btns">
+																<button type="button" class="btn-up"></button>
+																<button type="button" class="btn-dw"></button>
+															</div>	
+														</li>
+														<li class="sort-item">
+															<a href="#">
+																<span class="last">SUㄴㅁㄹㅇㄻ2</span>
+															</a>
+															<div class="sep-btns">
+																<button type="button" class="btn-up"></button>
+																<button type="button" class="btn-dw"></button>
+															</div>	
+														</li>
+														<li class="sort-item">
+															<a href="#">
+																<span class="last">SUㄴㅁㄹㅇㄻ3</span>
+															</a>
+															<div class="sep-btns">
+																<button type="button" class="btn-up"></button>
+																<button type="button" class="btn-dw"></button>
+															</div>	
+														</li>
+														<li class="sort-item">
+															<a href="#">
+																<span class="last">SUㄴㅁㄹㅇㄻ4</span>
+															</a>
+															<div class="sep-btns">
+																<button type="button" class="btn-up"></button>
+																<button type="button" class="btn-dw"></button>
+															</div>	
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="active">
+											<a class="btn-toggle"></a>
+											<a href="#" class="folder sort-item">폴더명 2</a>
+											<div class="sep-btns">
+												<button type="button" class="btn-up"></button>
+												<button type="button" class="btn-dw"></button>
+											</div>	
+											<ul class="depth2">
+												<li class="sort-item">
+													<a href="#">
+														<span class="last">SUB 폴더 44 </span>
+													</a>
+													<div class="sep-btns">
+														<button type="button" class="btn-up"></button>
+														<button type="button" class="btn-dw"></button>
+													</div>	
+												</li>
+											</ul>
+										</li>											
+									</ul>
+								</div>
+								<div class="loading-content">
+									<img src="../../img/common/ic_loading.png" alt="로딩중 이미지">
+									<p>보고서 메뉴를 가져오고 있습니다</p>
+								</div>
 							</div>
 						</div>
 	

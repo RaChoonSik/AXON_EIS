@@ -289,6 +289,21 @@
 .report-menu .left {min-width: 320px;width: 30%; flex-shrink: 0;}
 .report-menu .folder-tree {height: 458px;overflow-y: auto; /*height: calc(100% - 42px);*/margin-top: 0;}
 .report-menu .folder-tree.comment {height: 459px;}
+
+/* 221121 이서현 로딩페이지추가 */
+.report-menu .folder-tree .content{display:block;}
+.report-menu .folder-tree .loading-content{display: none;width: 100%;height: 100%;flex-direction: column; align-items: center;justify-content: center;text-align: center;}
+.report-menu .folder-tree .loading-content img{display: block;width: 55px;height: auto; animation: rotate_image 3s ease-in-out infinite;transform-origin: 50% 50%}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.report-menu .folder-tree .loading-content p{font-size:var(--font-size-17);margin-top: 20px;color: #888;}
+.report-menu .folder-tree.loading .loading-content{display: flex;}
+.report-menu .folder-tree.loading .content{display: none;}
+
+
 .popRepoAdd .btn-area {left: 335px;}
 .sort-tb tr.ui-sortable-handle {background: url('../img/common/bg_sortable.png') #fff no-repeat 85px center;}
 .grid .scroll-area {height: auto !important;padding: 0 !important;border-bottom: 0 !important;}
