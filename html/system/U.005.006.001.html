@@ -207,8 +207,9 @@
 									<button type="button" class="btn small">삭제</button>
 								</div>
 							</div>
-							<!-- class loading 추가하면 로딩 페이지 생성 빼면 display:none-->
-							<div class="folder-tree sep-sortable loading"><!-- 220829수정 sep-sortable추가-->
+							<!-- class loading~ 추가하면 로딩 페이지 생성 빼면 display:none-->
+							<!-- loading-bring:메뉴 가져오는 중 / loading-process: 정보처리중 -->
+							<div class="folder-tree sep-sortable loading-process"><!-- 220829수정 sep-sortable추가-->
 								<div class="content">
 									<div class="root"><a href="#">ROOT</a></div>
 									<ul class="toggle">
@@ -299,9 +300,13 @@
 										</li>											
 									</ul>
 								</div>
-								<div class="loading-content">
+								<div class="loading-content bring">
 									<img src="../../img/common/ic_loading.png" alt="로딩중 이미지">
 									<p>보고서 메뉴를 가져오고 있습니다</p>
+								</div>
+								<div class="loading-content process">
+									<img src="../../img/common/ic_loading_green.png" alt="로딩중 이미지">
+									<p>보고서 메뉴 변경 정보를 처리중입니다</p>
 								</div>
 							</div>
 						</div>

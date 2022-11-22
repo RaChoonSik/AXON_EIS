@@ -300,8 +300,9 @@
     }
 }
 .report-menu .folder-tree .loading-content p{font-size:var(--font-size-17);margin-top: 20px;color: #888;}
-.report-menu .folder-tree.loading .loading-content{display: flex;}
-.report-menu .folder-tree.loading .content{display: none;}
+.report-menu .folder-tree.loading-bring .loading-content.bring{display: flex;}
+.report-menu .folder-tree.loading-process .loading-content.process{display: flex;}
+.report-menu .folder-tree[class*="loading-"] .content{display: none;}
 
 
 .popRepoAdd .btn-area {left: 335px;}
