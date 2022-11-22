@@ -10,8 +10,8 @@
 .font-large #lnb.on .btm-option {display: flex;}
 .font-medium #lnb.on .btm-option a {width:30%;}
 .font-large .cont-head .util .user .info {width:110px;}
-.font-large .my-menu .search {background-position: left 10px center;}
-.font-large .my-menu .folder {background-position: left 10px center;}
+.font-large .my-menu .search {background-position: left 15px center;}
+.font-large .my-menu .folder {background-position: left 15px center;}
 .font-large .datepickerrange label input {padding-left: 5px;padding-right: 26px;}
 .font-medium .btn.small,
 .font-large .btn.small {min-width: 50px;line-height: 28px;}

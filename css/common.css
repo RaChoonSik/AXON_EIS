@@ -1034,10 +1034,10 @@ tbody.sortable td {background-color:transparent;}
 .my-menu button {display:block; width:100%;height: 40px;font-size: 0; color:#fff;}
 #lnb.on .my-menu button {padding:10px 10px 10px 30px; height:auto;}
 #lnb.on .my-menu button {display:inline-block; width:50%; padding:10px 10px 10px 30px;font-size: var(--font-size-14);color:#fff;}
-.my-menu .folder {background:url('../img/common/admin.png') no-repeat left 20px center;}
+.my-menu .folder {background:url('../img/common/admin.png') no-repeat left 17px center;}
 #lnb .my-menu button.folder:hover,
 #lnb.on .my-menu button.folder.on {background-image: url('../img/common/admin_on.png'); color:#4d67ff;}
-.my-menu .search {background:url('../img/common/search.png') no-repeat left 20px center;}
+.my-menu .search {background:url('../img/common/search.png') no-repeat left 17px center;}
 #lnb .my-menu button.search:hover,
 #lnb.on .my-menu button.search.on {background-image: url('../img/common/search_on.png'); color:#4d67ff;}
 
