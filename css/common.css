@@ -295,7 +295,9 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util {display: flex;align-items: center;position:relative;}
 .cont-head .util .btn-util {display:inline-block;padding: 5px 0 5px 30px;font-size: var(--font-size-13);color: #444;vertical-align:top;}
 .cont-head .util .btn-util.item01 {background: url('../img/common/gnb_kpi.png') no-repeat left center;}
-.cont-head .util .btn-util.item02 {width: calc(100% - 25px);height: 100%; margin-right: 25px;padding-right: 10px; background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
+/* 1차고도화 수정 */
+/* .cont-head .util .btn-util.item02 {width: calc(100% - 25px);height: 100%; margin-right: 25px;padding-right: 10px; background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;} */
+.cont-head .util .btn-util.item02 {width:100%;height: 100%; padding-right: 10px; background: url('../img/common/gnb_home_setting.png') no-repeat 4px center;}
 .cont-head .util .btn-util.item03 {background: url('../img/common/gnb_full_sc.png') no-repeat left center;}
 .cont-head .util .btn-util.item03.on {background-image: url('../img/common/gnb_min_sc.png');}
 .cont-head .util .btn-util.item04 {padding-right: 30px;background: url('../img/common/gnb_board.png') no-repeat 4px center;}
@@ -682,8 +684,8 @@ tbody.sortable td {background-color:transparent;}
 .poplayer:after {display:inline-block;content:'';height:100%;vertical-align:middle;}
 .poplayer .inner {position:relative;display:inline-block;max-width:740px;width:100%;min-height: 160px;background:#fff;vertical-align:middle;border-radius:5px;overflow:hidden;z-index:1;}
 .poplayer .inner.small {/* min-width: 450px; */max-width: 450px;}
-.poplayer .inner.medium {max-width:900px;}
-.poplayer .inner.large {width:1104px;max-width:1104px;}
+.poplayer .inner.medium {max-width:900px;max-height: 75%;}
+.poplayer .inner.large {width:1104px;max-width:1104px;max-height: 85%;}
 .poplayer header {position:relative;height: 40px;padding: 10px 60px 8px 20px;background:#F2F2F2;}
 .poplayer header h2 {color:#111;font-size: var(--font-size-14);font-weight: normal;text-align: left;}
 .poplayer .popcont {padding: 20px 20px 0 20px;overflow-y:auto;max-height: 654px;}
@@ -695,6 +697,7 @@ tbody.sortable td {background-color:transparent;}
 .poplayer .popcont .pop-title:before {/* content:""; */position:absolute;top:4px;left:0;width:2px;height:20px;background:#111;}
 .poplayer .popcont > .cont {position:relative;padding-bottom:20px;text-align:left;/* max-height: 634px; */}
 .poplayer .btn_popclose {display:block;position:absolute;right: 8px;top: 8px;width: 24px;height: 24px;background: url("../img/common/btn_popclose.svg") no-repeat 0 0;}
+.poplayer .btn_popclose.enlarge_pop {background-image: url(../img/common/gnb_min_sc.png);}
 .poplayer .poplayer-background {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(36,36,36,0.8);}
 
 /* module in popup */

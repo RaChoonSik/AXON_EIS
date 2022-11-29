@@ -31,7 +31,7 @@
 			});
 
 			//파이 차트
-			var chartPie= echarts.init(document.querySelector('#chart1'), null);
+			var chartPie= echarts.init(document.querySelector('.chart1'), null);
 			var chartPieoption = {
 				title: {
 					subtext: '단위:억원',
@@ -474,8 +474,8 @@
 						<div class="inner-cont kpi-page">
 							<div class="report-control">
 								<!-- 보고서탭 -->
-								<!-- <div class="kpi-head report-play"> -->
-								<div class="kpi-head">
+								<div class="kpi-head report-play">
+								<!-- <div class="kpi-head"> -->
 									<div class="repo-tabs">
 										<!-- 220809 수정 -->
 										<div class="repo-pagination">
@@ -485,7 +485,10 @@
 											<span class="pg-bullet"></span>
 											<span class="pg-bullet"></span>
 										</div>
-										<div class="play-options"><a>보고서명</a></div>
+										<div class="play-options">
+											<a>보고서명</a>
+											<div class="count"><span>30</span> Sec</div>
+										</div>
 										<ul class="ui-tabs-nav">
 											<li class="kpi-options">
 												<a href="#repo1" class="ellipsis">보고서1 보고서1 보고서1 보고서1 보고서123</a>
@@ -693,11 +696,12 @@
 													</div>
 													<div class="right">
 														<span class="date">2020.01</span>
+														<button type="button" onclick="fn.popupOpen('#popEnlarge');" class="enlarge">확대</button>
 														<button type="button" class="del">삭제</button>
 													</div>
 												</div>
 												<div class="chart-view">
-													<div class="board" id="chart1"></div>
+													<div class="board chart1"></div>
 													<a href="#" class="link">상세보고서 바로가기</a>
 												</div>
 											</div>
@@ -722,6 +726,7 @@
 													</div>
 													<div class="right">
 														<span class="date">2020.01</span>
+														<button type="button" class="enlarge">확대</button>
 														<button type="button" class="del">삭제</button>
 													</div>
 												</div>
@@ -824,6 +829,7 @@
 												</div>
 												<div class="chart-view">
 													<div class="board" id="chart7">
+														<span class="unit">[단위:만원]</span>
 														<div class="table-wrap">
 															<table class="grid">
 																<colgroup>
@@ -898,6 +904,32 @@
 		</div>
 		<!-- // content -->
 	</div>
+
+	<!-- kpi 확대 -->
+	
+	<div id="popEnlarge" class="poplayer"><!-- id값 수정 가능 -->
+		<div class="inner medium chart-wrap">
+			<div class="chart-box show">
+				<div class="head">
+					<div class="left">
+						<span class="ico">M</span>
+						<p class="title">영업현황</p>
+					</div>
+					<div class="right">
+						<span class="date">2020.01</span>
+					</div>
+				</div>
+				<div class="chart-view">
+					<div class="board chart1"></div>
+					<a href="#" class="link">상세보고서 바로가기</a>
+				</div>
+			</div>
+			<button type="button" class="btn_popclose enlarge_pop" onclick="fn.popupClose('#popEnlarge');"><span class="hidden">팝업닫기</span></button>
+		</div>
+		<span class="poplayer-background" onclick="fn.popupClose('#popEnlarge');"></span>
+	</div>
+	<!-- //kpi 확대 -->
+	
 	<div id="popChartNum" class="poplayer"><!-- id값 수정 가능 -->
 		<div class="inner small">
 			<header>
