@@ -488,11 +488,11 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-page .report-wrap {background: transparent !important; height: calc(100% - 36px);padding-top: 8px!important;}
 .main-tabs-wrap + .cont-body .kpi-page .report-wrap {height: calc(100% - 28px);}
 .kpi-page .repo-tabs {width: calc(100% - 202px);margin: 0;}
-.report-page.kpi-page .repo-tabs{width: calc(100% - 180px);}
+.report-page.kpi-page .repo-tabs{width: calc(100% - 220px);}
 .kpi-page .kpi-options,
 .report-head .kpi-options{position:relative;padding:4px; background: #f6f6f6;border: 1px solid #e1e1e1;border-radius: 2px;}
 .kpi-page .kpi-options .btns {display:flex;width: 187px;gap:1px; }
-.report-page.kpi-page .kpi-options .btns{width: 155px;}
+.report-page.kpi-page .kpi-options .btns{width: 200px;}
 /* .report-head .kpi-options .btns {display:flex;width: 46px;gap:1px; } */
 .kpi-page .kpi-options .btns .opt > button,
 .report-head .kpi-options .btns .opt > button{width:46px;height: 24px;font-size:0;}
