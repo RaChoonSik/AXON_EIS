@@ -315,16 +315,16 @@ select.ui-datepicker-month {width:45px !important;margin:-4px 0 0 0 !important;p
 .cont-head .util .open .link {display:block;}
 .cont-head .util .info {position:relative;padding: 0;margin-left: 28px;/* background:#fff; *//* border-radius:10px; */overflow:hidden;}
 .cont-head .util .user .info {width:90px;padding-left: 4px;margin-left: 0;}
-.cont-head .info:not(:first-child).on {background-color: #e1e1e1; border-radius: 4px;}
+/* .cont-head .info:not(:first-child).on {background-color: #e1e1e1; border-radius: 4px;} */
 .cont-head .info:first-child.on .item02 {background-color:none;}
-.cont-head .info:first-child .item02:active,
+/* .cont-head .info:first-child .item02:active,
 .cont-head .info:first-child .item02:hover{background-color: #e1e1e1; border-radius: 4px;}
-.cont-head .info:first-child.on .item02 + button {background-color: #e1e1e1; border-radius: 4px;}
+.cont-head .info:first-child.on .item02 + button {background-color: #e1e1e1; border-radius: 4px;} */
 .cont-head .util .user .info em {display:block;color: #444;font-size: var(--font-size-12);font-weight: normal;}
 .cont-head .util .user .info span {display:block;margin-top: 0;color: #888;font-size: var(--font-size-11);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 .cont-head .util .info button {position:absolute;top: -1px;right: 0px;width:100%;height: 100%;background: url("../img/common/conthead_utilbutton.png") no-repeat center right;text-indent:-9999px;}
 .cont-head .util .info .item02 + button{width: 25px!important;height: 100%;background:none;font-size:23px;color:#444; font-weight: 500;text-indent: 0;}
-.cont-head .util .info .item02 + button:hover{background-color: #e1e1e1; border-radius: 4px;}
+/* .cont-head .util .info .item02 + button:hover{background-color: #e1e1e1; border-radius: 4px;} */
 .cont-head .util .info .btn-util.on + button {background-position: left center !important; transform: rotate(-180deg);}
 .cont-head .util .info .num{color:#4b62e8;}
 .cont-head .util .info.new a::after{display: inline-block; content:"N";color: #fff;font-size:10px;vertical-align: 0!important;border-radius:20%;padding-left:3px;line-height: 14px;font-weight:400;width:14px;height:14px;background:#f00;}
