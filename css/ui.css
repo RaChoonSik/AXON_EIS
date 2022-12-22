@@ -509,7 +509,7 @@ tr.ui-sortable-handle.ui-sortable-helper {display: table; width:100%;}
 .kpi-page .kpi-options .btns button.stop.on,
 .report-head .kpi-options .btns button.stop.on{background: url('../img/common/kpi_stop_on.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.drag-menu.on {background:url('../img/common/kpi_menu_on.png')  no-repeat center center ;}
-.kpi-page .kpi-options .btns button.save.on {background:url('../img/common/kpi_save_on.png')  no-repeat center center ;}
+.kpi-page .kpi-options .btns button.save:active {background:url('../img/common/kpi_save_on.png')  no-repeat center center ;}
 .kpi-page .kpi-options .btns button.play:disabled,
 .report-head .kpi-options .btns button.play:disabled{background: url('../img/common/kpi_play_dis.png')  no-repeat center center;}
 .kpi-page .kpi-options .btns button.add:disabled {background:url('../img/common/kpi_add_dis.png') no-repeat center center ;}
